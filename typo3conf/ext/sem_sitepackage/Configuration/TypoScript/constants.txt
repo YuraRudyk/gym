@@ -1,2 +1,0 @@
-# Include TypoScript constants of sitepackage extension
-<INCLUDE_TYPOSCRIPT: source="DIR:EXT:sem_sitepackage/Configuration/TypoScript/Constants/" extensions="ts">

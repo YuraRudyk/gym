@@ -1,4 +1,0 @@
-mod.SHARED {
-    defaultLanguageFlag = gb
-    defaultLanguageLabel = English
-}
