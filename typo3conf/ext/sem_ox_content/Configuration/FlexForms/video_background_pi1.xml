@@ -1,0 +1,26 @@
+<T3DataStructure>
+    <meta>
+        <langDisable>1</langDisable>
+    </meta>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:sem_ox_jobs/Resources/Language/locallang_be.xlf:flexform.sDEF</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.textColorWhite>
+                        <TCEforms>
+                            <label>Set White Text Color</label>
+                            <config>
+                                <type>check</type>
+                                <default>0</default>
+                            </config>
+                        </TCEforms>
+                    </settings.textColorWhite>
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>

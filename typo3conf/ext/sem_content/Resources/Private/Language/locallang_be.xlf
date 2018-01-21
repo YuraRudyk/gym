@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" product-name="sem_content"
+          date="2016-07-05T22:00:00+01:00">
+        <header/>
+        <body>
+            <trans-unit id="tt_content.CType.gridelements.layout">
+                <source>Container Layout</source>
+            </trans-unit>
+            <trans-unit id="tt_content.CType.semcontent_slider">
+                <source>Slider</source>
+            </trans-unit>
+            <trans-unit id="tt_content.CType.semcontent_slider.description">
+                <source>The "Slider" content element.</source>
+            </trans-unit>
+            <trans-unit id="tt_content.CType.semcontent_slider.preview">
+                <source>Preview</source>
+            </trans-unit>
+            <trans-unit id="tt_content.CType.semcontent_slider.slidesCount">
+                <source>Number of Slides:</source>
+            </trans-unit>
+
+            <trans-unit id="tt_content.fields.layout.0">
+                <source>Please choose...</source>
+            </trans-unit>
+            <trans-unit id="tt_content.fields.slides">
+                <source>Slides</source>
+            </trans-unit>
+            <trans-unit id="tt_content.fields.slides.addSlideReference">
+                <source>Add new slide</source>
+            </trans-unit>
+
+            <trans-unit id="tt_content.fields.background_color">
+                <source>Background Color</source>
+            </trans-unit>
+            <trans-unit id="tt_content.fields.background_color.none">
+                <source>None</source>
+            </trans-unit>
+            <trans-unit id="tt_content.fields.background_color.0">
+                <source>Please choose...</source>
+            </trans-unit>
+            <trans-unit id="tt_content.fields.background_image">
+                <source>Background Image</source>
+            </trans-unit>
+            <trans-unit id="tt_content.fields.link">
+                <source>Link</source>
+            </trans-unit>
+            <trans-unit id="tt_content.fields.link_text">
+                <source>Link Text</source>
+            </trans-unit>
+            <trans-unit id="tt_content.fields.button_text">
+                <source>Button Text (Global)</source>
+            </trans-unit>
+
+            <trans-unit id="palette.slider">
+                <source>Slider</source>
+            </trans-unit>
+
+            <trans-unit id="justify">
+                <source>Justify Align</source>
+            </trans-unit>
+
+            <trans-unit id="tx_semcontent_slide">
+                <source>Slide</source>
+            </trans-unit>
+            <trans-unit id="tx_semcontent_slide.fields.image">
+                <source>Image</source>
+            </trans-unit>
+            <trans-unit id="tx_semcontent_slide.fields.header">
+                <source>Header</source>
+            </trans-unit>
+            <trans-unit id="tx_semcontent_slide.fields.subheader">
+                <source>Subheader</source>
+            </trans-unit>
+            <trans-unit id="tx_semcontent_slide.fields.subheader">
+                <source>Subheader</source>
+            </trans-unit>
+            <trans-unit id="tx_semcontent_slide.fields.bodytext">
+                <source>Text</source>
+            </trans-unit>
+            <trans-unit id="tx_semcontent_slide.fields.link_text">
+                <source>Button Text</source>
+            </trans-unit>
+            <trans-unit id="tx_semcontent_slide.fields.link">
+                <source>Button</source>
+            </trans-unit>
+            <trans-unit id="tx_semcontent_slide.fields.slider">
+                <source>Slider</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

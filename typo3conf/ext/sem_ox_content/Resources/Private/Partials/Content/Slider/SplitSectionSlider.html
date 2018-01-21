@@ -1,0 +1,19 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      xmlns:ox="http://typo3.org/ns/Media711/SemOxContent/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:if condition="{slider}" xmlns:f="http://www.w3.org/1999/html">
+    <div class="owl-carousel" data-speed="{ox:Slider.Delay(autoplay: ffContent.autoplay, delay: ffContent.delay)}"
+                              data-change-speed="{f:if(condition: ffContent.speed, then: ffContent.speed, else: '500')}">
+        <f:for each="{slider}" as="slide">
+            <v:media.exists file="{slide.image.originalResource.publicUrl}">
+                <div class="item">
+                    <f:link.typolink parameter="{slide.image.originalResource.link}" class="slider-link">
+                        <f:image image="{slide.image}" maxHeight="900" />
+                    </f:link.typolink>
+                </div>
+            </v:media.exists>
+        </f:for>
+    </div>
+</f:if>
+</html>

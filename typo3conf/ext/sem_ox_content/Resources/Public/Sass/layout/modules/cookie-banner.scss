@@ -1,0 +1,31 @@
+.cookie-banner {
+  background-color: $white;
+  color: $graphite-black;
+
+  .btn-ice-blue,
+  .cookie-text {
+    display: inline-block;
+  }
+
+  .container {
+    @include flex();
+    flex-direction: row;
+    align-items: center;
+
+    span {
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .cookie-text {
+      font-size: 14px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+
+    .btn-ice-blue {
+      margin: 15px 0px 15px 50px;
+      min-width: auto;
+    }
+  }
+}

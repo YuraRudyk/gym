@@ -1,0 +1,39 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:section name="Content">
+    <f:render section="CssClass" arguments="{_all}" />
+    <f:render section="BackgroundImage" arguments="{_all}" />
+</f:section>
+
+<!-- CSS class -->
+<f:section name="CssClass">
+    <f:if condition="{data.tx_semcontent_background_color} || {data.layout}">
+        class="{v:format.trim(characters: '\0', content: '{data.tx_semcontent_background_color} {data.layout}')
+        -> v:format.trim()}"
+    </f:if>
+</f:section>
+
+<!-- Background image -->
+<f:section name="BackgroundImage">
+    <f:if condition="{data.tx_semcontent_background_img}">
+        <f:if condition="{data.tx_semcontent_background_img} > 1">
+            <f:then>
+                <f:comment><!-- Render random image --></f:comment>
+                {v:resource.record.fal(table: 'tt_content', field: 'tx_semcontent_background_img', record: data)
+                -> v:iterator.random()
+                -> v:variable.set(name: 'backgroundImage')}
+            </f:then>
+            <f:else>
+                <f:comment><!-- Render single image --></f:comment>
+                {v:resource.record.fal(table: 'tt_content', field: 'tx_semcontent_background_img', record: data)
+                -> v:iterator.first()
+                -> v:variable.set(name: 'backgroundImage')}
+            </f:else>
+        </f:if>
+
+        <v:media.exists file="{backgroundImage.url}">
+            style="background-image: url({f:uri.image(treatIdAsReference: 1, src: backgroundImage.id)})"
+        </v:media.exists>
+    </f:if>
+</f:section>
+</html>

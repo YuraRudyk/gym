@@ -1,0 +1,94 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<v:variable.set name="appearanceClass" value="{f:render(partial: 'Container/SectionClass',
+                                               arguments: {data: data, settings: settings}, section: 'AppearanceClass')
+                                               -> v:format.trim()}" />
+
+<f:if condition="{data.parentgrid_layout} != 'no-padding-top-bottom'">
+    <a name="c{data.uid}"></a>
+    <div id="c{data.uid}" {appearanceClass -> f:format.raw()}>
+</f:if>
+    <f:if condition="{gallery.position.noWrap} != 1">
+        <f:render partial="Header" arguments="{_all}" />
+    </f:if>
+
+    <f:switch expression="{data.parentgrid_layout}">
+        <f:case value="no-padding">
+            <f:for each="{files}" as="file">
+                <f:if condition="{file.properties.layout} == 'img-mood'">
+                    <f:then>
+                        <f:render partial="Media/Picture" arguments="{_all}" />
+                    </f:then>
+                    <f:else>
+                        <f:render section="ImageDefinition" arguments="{_all}" />
+                    </f:else>
+                </f:if>
+            </f:for>
+        </f:case>
+        <f:case value="no-padding-top-bottom">
+            <f:render partial="Media/HalfBackgroundImage" arguments="{_all}" />
+        </f:case>
+        <f:case default="TRUE">
+            <f:render section="ImageDefinition" arguments="{_all}" />
+        </f:case>
+    </f:switch>
+
+    <f:render partial="Footer" arguments="{_all}" />
+
+<f:if condition="{data.parentgrid_layout} != 'no-padding-top-bottom'">
+    </div>
+</f:if>
+
+<f:section name="ImageDefinition">
+    <v:variable.set name="speakerBackground"
+                    value="{gallery.rows -> v:iterator.first() -> v:iterator.extract(key: 'media') -> v:iterator.first()}" />
+
+    <v:if stack="{0 : {0: data.parentgrid_layout, 1: '==', 2: 'speakers-grid'},
+                  1 : 'AND',
+                  2 : speakerBackground}">
+        <div style="background-image: url('{f:uri.image(image: speakerBackground)}');"></div>
+    </v:if>
+    <f:if condition="{gallery.rows}">
+        <f:then>
+            <div class="ce-textpic ce-{gallery.position.horizontal}
+                        ce-{gallery.position.vertical}{f:if(condition: gallery.position.noWrap, then: ' ce-nowrap')}
+                        {v:if(stack: {0: data.imageorient, 1: '==', 2: 25, 3: 'OR', 4: data.imageorient 5: '==', 6: 26}, then: ' row')}">
+                <f:if condition="{gallery.position.vertical} != 'below'">
+                    <f:render partial="Media/MediaGallery" arguments="{_all}" />
+                </f:if>
+
+                <div class="ce-bodytext{f:if(condition: gallery.animated, then: ' slide-up')}
+                            {v:if(stack: {0: data.imageorient, 1: '==', 2: 25, 3: 'OR', 4: data.imageorient 5: '==', 6: 26}, then: ' col-sm-6')}">
+                    <f:if condition="{gallery.position.noWrap}">
+                        <f:render partial="Header" arguments="{_all}" />
+                    </f:if>
+                    <f:format.html>{data.bodytext}</f:format.html>
+                </div>
+
+                <f:if condition="{gallery.position.vertical} == 'below'">
+                    <f:render partial="Media/MediaGallery" arguments="{_all}" />
+                </f:if>
+            </div>
+        </f:then>
+        <f:else>
+            <v:if stack="{0: {0: data.parentgrid_layout, 1: '==', 2: 'speakers-grid'}, 1: 'AND', 2: data.bodytext}">
+                <div class="speaker-with-text">
+            </v:if>
+            <f:if condition="{gallery.position.noWrap}">
+                <f:render partial="Header" arguments="{_all}" />
+            </f:if>
+            <f:if condition="{gallery.animated}">
+                <div class="slide-up">
+            </f:if>
+            <f:format.html>{data.bodytext}</f:format.html>
+            <f:if condition="{gallery.animated}">
+                </div>
+            </f:if>
+            <v:if stack="{0: {0: data.parentgrid_layout, 1: '==', 2: 'speakers-grid'}, 1: 'AND', 2: data.bodytext}">
+                </div>
+            </v:if>
+        </f:else>
+    </f:if>
+</f:section>
+</html>

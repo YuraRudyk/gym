@@ -1,0 +1,381 @@
+@media (min-width: $screen-sm-min) {
+  .mobile-svg-wrapper,
+  .slick-initialized.mobile-svg-wrapper {
+    display: none;
+  }
+
+  .locations-map-wrapper {
+    display: block;
+  }
+
+  .cover-flow-wraper {
+    .slick-arrow:before {
+      font-size: 70px;
+    }
+
+    .title {
+      padding: 0 60px;
+
+      h3 {
+        font-size: 25px;
+      }
+    }
+  }
+
+  section {
+    &.split-jurney {
+      padding-bottom: 25px !important;
+    }
+
+    &.home-hub,
+    &.no-padding-top-bottom,
+    &.product-teaser {
+      .row {
+        @include flex();
+      }
+    }
+
+    &.no-padding-top-bottom .background-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+
+    &.home-hub .news-column .row {
+      margin-right: 0;
+    }
+
+    &.speakers-grid {
+      .container .row {
+        @include flex();
+        flex-wrap: wrap;
+
+        img {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .ce-with-coin {
+    padding: 40px 130px 0;
+  }
+
+  .jumbotron {
+    font-size: 55px;
+  }
+  // hack for change password page
+  .split-white-ox-light-blue {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    .container > .row > div[class*="col-"] {
+      padding-top: 65px;
+      padding-bottom: 65px;
+
+      &:first-child {
+        background-color: #fff;
+      }
+    }
+  }
+
+  .ce-bottom {
+    position: absolute;
+    bottom: -65px;
+    left: 50%;
+    @include translate(-50%, 0);
+  }
+
+  .jobs-dropdown {
+    margin-right: 25px;
+  }
+
+  .mfp-content {
+    .ce-right .ce-gallery:not(.col-sm-6) {
+      padding-left: 50px;
+    }
+
+    .ce-left .ce-gallery:not(.col-sm-6) {
+      padding-right: 50px;
+    }
+
+    .ce-above .ce-gallery:not(.col-sm-6),
+    .ce-intext .ce-gallery:not(.col-sm-6) {
+      padding-bottom: 50px;
+    }
+
+    .ce-below .ce-gallery:not(.col-sm-6) {
+      padding-top: 50px;
+    }
+  }
+
+  .capcha {
+    div[class*="col-"] {
+      &:first-child {
+        padding-right: 10px;
+        width: 190px;
+      }
+
+      &:last-child {
+        padding-left: 10px;
+        @include calc-neg(100%, 190px);
+      }
+    }
+
+    .capcha-label .reload {
+      float: right;
+    }
+  }
+}
+@media (max-width: $screen-sm-max) {
+
+  .ce-bottom {
+    position: absolute;
+    bottom: -65px;
+    left: 50%;
+    @include translate(-50%, 0);
+  }
+
+  .bg-mobile {
+    display: none;
+  }
+
+}
+@media (max-width: $screen-sm-max) {
+  .home-slider {
+    min-height: auto;
+  }
+
+  .testimonials .item h6 {
+    font-size: 22px;
+    line-height: 120%;
+  }
+
+  .newsroom-wrapper .grid {
+    .grid-sizer {
+      width: 50%;
+    }
+
+    .grid-item {
+      @include calc-neg(50%, 2px);
+    }
+
+    .item-width-2x {
+      width: 100%;
+    }
+
+    .stamp {
+      width: 100%;
+    }
+  }
+
+  section {
+    &[style^="background-image:"] {
+      .pull-right {
+        right: auto;
+      }
+    }
+
+    &.summit-teaser {
+      .teaser-item {
+        h2 {
+          font-size: 38px;
+        }
+      }
+    }
+
+    &.split-image-responsive-html,
+    &.split-image-text,
+    &.split-text-image,
+    &.split-text-text {
+      div:not(.embed-responsive):not(.column):not(.map-text) {
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+
+      .column {
+        width: 100%!important;
+        padding: $container-padding 15px !important;
+      }
+    }
+
+    &.no-padding-top-bottom .column {
+      padding-left: 15px !important;
+      padding-right: 15px !important;
+      width: 100%!important;
+    }
+
+    &.split-jurney {
+      .ce-bodytext,
+      .ce-gallery {
+        width: 50%;
+      }
+    }
+
+    &.leadership-team .management-wrapper {
+      width: 100%;
+
+      .team-item {
+        @include clearfix();
+        max-width: 100%;
+        position: relative;
+        background-color: $gray;
+        float: none !important;
+        left: 0 !important;
+        margin-left: 0 !important;
+        top: 0 !important;
+
+        &,
+        *:not(a) {
+          color: $white;
+        }
+
+        .person-description {
+          background-color: $graphite-black;
+          padding: 20px;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .text-bottom,
+  .text-center-vertical {
+    width: -webkit-calc(100% - 30px);
+    width: -moz-calc(100% - 30px);
+    width: calc(100% - 30px);
+  }
+
+  .mfp-container {
+    padding: 0;
+  }
+
+  .popup-wrapper {
+    margin: 0;
+    border: 5px solid #000;
+    background-color: #878787;
+
+    .img-wrapper {
+      display: none;
+    }
+
+    .popup-content {
+      width: 100%;
+      padding: 80px 40px;
+
+      & + .mfp-close {
+        right: 20px;
+      }
+
+      h4 {
+        font-size: 25px;
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  .popup-img {
+    display: none;
+  }
+
+  .newsroom-mfp .mfp-arrow {
+    display: block;
+  }
+
+  .locations-mfp {
+    button.mfp-arrow {
+      display: none;
+    }
+
+    .mfp-content {
+      height: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      .location-detail {
+        padding: 0 25px;
+
+        .slide-location {
+          padding: 25px 25px 0;
+          display: none;
+        }
+
+        .slide-content-wrapper {
+          align-items: center;
+          flex-direction: column;
+
+          .text-wrapper {
+            padding: 25px;
+            @include flex();
+            flex-direction: column;
+
+            a[class^="btn"] {
+              align-self: center;
+            }
+          }
+        }
+      }
+    }
+
+    .mfp-content {
+      padding: 0;
+
+      .slick-dots {
+        display: none;
+      }
+
+      .slide-content-wrapper .location-img {
+        width: 100%;
+        padding: 0;
+      }
+    }
+  }
+
+  .locations-back-to-top {
+    display: block;
+  }
+}
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+  .home-slider .item {
+    padding-left: 25px;
+    padding-right: 25px;
+
+    .slider-content {
+      padding-left: 40px;
+    }
+  }
+
+  .sponsors .gold-sponsors div {
+    width: 50%;
+  }
+
+  section {
+    &.home-hub .h4 {
+      font-size: 22px;
+    }
+
+    &.split-text-text {
+      padding: 0;
+    }
+
+    &.speakers-grid .row > div {
+      width: 50%;
+
+      &[class*="-6"] {
+        width: 100%;
+      }
+    }
+  }
+}
+@media (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
+  .micro-banners > div {
+    width: 50%;
+  }
+
+  div[class^="col-"] .jumbotron {
+    font-size: 34px;
+  }
+}

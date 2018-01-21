@@ -1,0 +1,40 @@
+{namespace vh=In2code\Powermail\ViewHelpers}
+
+<div
+    class="form-group powermail_fieldwrap powermail_fieldwrap_type_captcha powermail_fieldwrap_{field.marker} {field.css}
+    {settings.styles.framework.fieldAndLabelWrappingClasses} {vh:Validation.ErrorClass(field:field, class:'contact_form_error')}">
+    <label for="powermail_field_{field.marker}" class="{settings.styles.framework.labelClasses}"
+           title="{field.description}">
+        <vh:string.RawAndRemoveXss>{field.title}</vh:string.RawAndRemoveXss>
+        <span class="mandatory">*</span>
+    </label>
+    <f:form.validationResults>
+        <f:if condition="{validationResults.flattenedErrors}">
+            <f:for each="{validationResults.flattenedErrors}" as="errors">
+                <f:for each="{errors}" as="singleError">
+                    <f:if condition="{singleError.code}=={field.marker}">
+                        <div class="error_message">
+                            <f:translate key="validationerror_{singleError.message}">{singleError.message}</f:translate>
+                        </div>
+                    </f:if>
+                </f:for>
+            </f:for>
+        </f:if>
+
+        <div
+            class="{settings.styles.framework.fieldWrappingClasses} {vh:Validation.ErrorClass(field: '{field}', class: 'powermail_field_error')}">
+            <f:form.textfield
+                id="powermail_field_{field.marker}"
+                property="{field.marker}"
+                value=""
+                class="form-control powermail_captcha {settings.styles.framework.fieldClasses} {vh:Validation.ErrorClass(field:field, class:'powermail_field_error')}"
+                additionalAttributes="{vh:Validation.CaptchaDataAttribute(field:field)}" />
+
+            <vh:Validation.Captcha field="{field}" alt="captcha" class="powermail_captchaimage" id="powermail_captchaimage" />
+
+            <f:if condition="{settings.validation.client}">
+                <div class="powermail_field_error_container powermail_field_error_container_{field.marker}"></div>
+            </f:if>
+        </div>
+    </f:form.validationResults>
+</div>

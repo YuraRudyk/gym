@@ -1,0 +1,53 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:if condition="{data.bodytext}">
+    <f:then>
+        <v:if stack="{0: {0: data.parentgrid_tx_gridelements_backend_layout, 1:'==', 2: '6'},
+                      1: 'OR',
+                      2: {0: data.parentgrid_tx_gridelements_backend_layout, 1: '==', 2: '8'},
+                      3: 'OR',
+                      4: {0: data.parentgrid_tx_gridelements_backend_layout, 1: '==', 2: '10'}}">
+            <f:then>
+                <div class="column full-column">
+            </f:then>
+            <f:else>
+                <div class="column {v:format.trim(characters: '\0', content: '{data.tx_semoxcontent_section_frame}') -> v:format.trim()}">
+            </f:else>
+        </v:if>
+            <div class="ce-textpic ce-{gallery.position.horizontal}
+                    ce-{gallery.position.vertical}{f:if(condition: gallery.position.noWrap, then: ' ce-nowrap')}">
+                <f:if condition="{gallery.position.vertical} != 'below'">
+                    <f:render partial="Media/MediaGallery" arguments="{_all}" />
+                </f:if>
+                <div class="ce-bodytext{f:if(condition: gallery.animated, then: ' slide-up')}">
+                    <f:if condition="{gallery.position.noWrap}">
+                        <f:render partial="Header" arguments="{_all}" />
+                    </f:if>
+                    <f:format.html>{data.bodytext}</f:format.html>
+                </div>
+
+                <f:if condition="{gallery.position.vertical} == 'below'">
+                    <f:render partial="Media/MediaGallery" arguments="{_all}" />
+                </f:if>
+            </div>
+        </div>
+    </f:then>
+    <f:else>
+        <f:if condition="{files -> f:count()} < 2">
+            <f:then>
+                <f:if condition="{files.0.type} == 2">
+                    <v:variable.set name="firstRow" value="{gallery.rows -> v:iterator.first()}" />
+                    <v:variable.set name="firstColumn" value="{firstRow.columns -> v:iterator.first()}" />
+                    <div class="background-image"
+                         style="background-image: url('{f:uri.image(image: firstColumn.media, width: column.dimensions.width, height: column.dimensions.height)}');"></div>
+                </f:if>
+            </f:then>
+            <f:else>
+                <f:render partial="Media/MediaGallery" arguments="{_all}" />
+            </f:else>
+        </f:if>
+    </f:else>
+</f:if>
+
+</html>

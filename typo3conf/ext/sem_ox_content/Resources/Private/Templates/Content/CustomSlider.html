@@ -1,0 +1,134 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      xmlns:soc="http://typo3.org/ns/Media711/SemOxContent/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<a name="c{data.uid}"></a>
+<div id="c{data.uid}" {soc:iterator.inArray(needle: data.parentgrid_tx_gridelements_backend_layout, haystack: settings.deprecatedGrids, else: '{soc:content.appearanceClass(data: data)}')}>
+    <f:comment>
+        <f:if condition="{data.header}">
+            <div class="titles">
+                <f:format.html>{data.header}</f:format.html>
+            </div>
+        </f:if>
+    </f:comment>
+
+    <f:if condition="{files -> f:count()} > 2">
+        <f:then>
+            <div class="cover-flow-wraper">
+                <div class="white-grad-left"></div>
+                <div class="white-grad-right"></div>
+
+                <div class="counter">
+                    <div class="current">1</div>
+                    <div class="array">{files -> f:count()}</div>
+                </div>
+
+                <div class="slider-cover-flow" data-speed="{data.tx_semoxcontent_slider_speed}">
+                    <f:for each="{files}" as="item">
+                        <div class="item">
+                            <f:if condition="{item.type} == 4">
+                                <div class="video-item">
+                                    <f:render section="Video" arguments="{item : item, ffContent: ffContent}" />
+                                </div>
+                            </f:if>
+                            <f:if condition="{item.type} == 2">
+                                <f:render section="Image" arguments="{item : item}" />
+                            </f:if>
+                        </div>
+                    </f:for>
+                </div>
+            </div>
+        </f:then>
+        <f:else>
+            <div class="min-gutters">
+                <f:if condition="{files -> f:count()} = 1">
+                    <f:then>
+                        <f:for each="{files}" as="item">
+                            <div class="slide-item">
+                                <f:if condition="{item.type} == 4">
+                                    <f:render section="Video" arguments="{item : item, ffContent: ffContent}" />
+                                </f:if>
+                                <f:if condition="{item.type} == 2">
+                                    <f:render section="Image" arguments="{item : item}" />
+                                </f:if>
+                            </div>
+                        </f:for>
+                    </f:then>
+                    <f:else>
+                        <div class="row">
+                            <f:for each="{files}" as="item">
+                                <div class="col-sm-6">
+                                    <div class="slide-item">
+                                        <f:if condition="{item.type} == 4">
+                                            <f:render section="Video" arguments="{item : item, ffContent: ffContent}" />
+                                        </f:if>
+
+                                        <f:if condition="{item.type} == 2">
+                                            <f:render section="Image" arguments="{item : item}" />
+                                        </f:if>
+                                    </div>
+                                </div>
+                            </f:for>
+                        </div>
+                    </f:else>
+                </f:if>
+            </div>
+        </f:else>
+    </f:if>
+</div>
+
+<f:section name="Video">
+    <f:flashMessages />
+
+    <a href="{item.publicUrl}" class="video-popup">
+        <f:image image="{item}" class="img-responsive" width="720c" height="405c" />
+    </a>
+    <div class="title">
+        <h3>{item.properties.title -> f:format.raw() -> f:format.crop(maxCharacters: 50, respectHtml: true)}</h3>
+        <f:if condition="{ffContent.videoInformation}">
+            <ul>
+                <li>
+                    <a target="_blank" class="lb-video" href="{item.publicUrl}">
+                        <i class="fa fa-play-circle-o"></i>
+                        <span>{f:translate(id: 'watch_now', extensionName: 'SemOxContent')}</span>
+                    </a>
+                </li>
+                <li>
+                    <f:if condition="{item -> soc:media.video.duration()}">
+                        <i class="fa fa-clock-o"></i> <span>{item -> soc:media.video.duration()}</span>
+                    </f:if>
+                </li>
+            </ul>
+        </f:if>
+    </div>
+</f:section>
+
+<f:section name="Image">
+    <f:image image="{item}" class="img-responsive" width="720c" height="405c" />
+
+    <v:if stack="{1: item.description, 2: 'OR', 3: item.title}">
+        <div class="title">
+            <f:if condition="{item.title}"><h3>{item.title}</h3></f:if>
+
+            <f:if condition="{item.description}">
+                <soc:uri.linkDetection url="{item.link}">
+                    <f:then>
+                        <h5>
+                        <f:link.typolink parameter="{item.link}"
+                                         class="download-link"
+                                         additionalAttributes="{download: '1'}">{item.description}</f:link.typolink>
+                        </h5>
+                    </f:then>
+                    <f:else>
+                        <h5>
+                        <f:link.typolink parameter="{item.link}"
+                                         class="external-link"
+                                         target="_blank">{item.description}</f:link.typolink>
+                        </h5>
+                    </f:else>
+                </soc:uri.linkDetection>
+            </f:if>
+        </div>
+    </v:if>
+</f:section>
+</html>

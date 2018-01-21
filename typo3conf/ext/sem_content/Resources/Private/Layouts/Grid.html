@@ -1,0 +1,33 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Grid" />
+
+<f:comment><!-- If there is parent grid, do not include 'section' to current CE --></f:comment>
+<f:if condition="{data.parentgrid_uid}">
+    <f:then>
+        <f:comment><!-- Handling of CSS classes for child containers --></f:comment>
+        <v:variable.set name="cssClass" value="{f:render(partial: 'Container/CssClass',
+                                                         arguments: {data: data}, section: 'Content')
+                                                -> v:format.trim()}" />
+
+        <f:comment><!-- The way of rendering CSS class. If partial is empty do not wrap in div tag. --></f:comment>
+        <f:if condition="{cssClass}">
+            <f:then>
+                <div {cssClass -> f:format.raw()}>
+                    <f:render section="Main" />
+                </div>
+            </f:then>
+            <f:else>
+                <f:render section="Main" />
+            </f:else>
+        </f:if>
+    </f:then>
+    <f:else>
+        <section{f:render(partial: 'Container/CssClass', arguments: {data: data}, section: 'Content')}>
+            <div class="container">
+                <f:render section="Main" />
+            </div>
+        </section>
+    </f:else>
+</f:if>
+</html>

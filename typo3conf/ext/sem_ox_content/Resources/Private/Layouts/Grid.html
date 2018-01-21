@@ -1,0 +1,70 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:layout name="Grid" />
+
+<f:comment><!-- If there is parent grid, do not include 'section' to current CE --></f:comment>
+<f:if condition="{data.parentgrid_uid}">
+    <f:then>
+        <f:comment><!-- Handling of css classes for child containers --></f:comment>
+        <v:variable.set name="cssClass" value="{f:render(partial: 'Container/SectionClass',
+                                                         arguments: {data: data}, section: 'Content')
+                                                -> v:format.trim()}" />
+
+        <f:comment><!-- The way of rendering css class. If partial is empty do not wrap in div tag. --></f:comment>
+        <f:if condition="{cssClass}">
+            <f:then>
+                <div {cssClass -> f:format.raw()}>
+                    <f:render section="Main" />
+                </div>
+            </f:then>
+            <f:else>
+                <f:render section="Main" />
+            </f:else>
+        </f:if>
+
+
+    </f:then>
+    <f:else>
+        <section{f:render(partial: 'Container/SectionClass', arguments: {data: data}, section: 'Content')}>
+            <v:if stack="{0: {0: data.layout, 1: '==', 2: 'split-text-image'},
+                          1: 'OR', 2: {0: data.layout, 1: '==', 2: 'split-text-text'},
+                          3: 'OR', 4: {0: data.layout, 1: '==', 2: 'split-image-text'},
+                          5: 'OR', 6: {0: data.layout, 1: '==', 2: 'split-image-responsive-html'},
+                          7: 'OR', 8: {0: data.layout, 1: '==', 2: 'split-image-image'},
+                          9: 'OR', 10: {0: data.layout, 1: '==', 2: 'no-padding'}
+                          11: 'OR', 12: {0: data.layout, 1: '==', 2: 'no-padding-top-bottom'}}">
+                <f:then>
+                    <f:render section="Main" />
+                </f:then>
+                <f:else>
+                    <f:comment>Was needed here for normal FE output in mob version</f:comment>
+                    <f:if condition="{data.layout} == 'full-height-bg'">
+                        {v:resource.record.fal(table: 'tt_content', field: 'tx_semcontent_background_img', record: data)
+                        -> v:iterator.first()
+                        -> v:variable.set(name: 'backgroundImage')}
+                        <v:media.exists file="{backgroundImage.url}">
+                            <f:image src="{backgroundImage.url}"  />
+                        </v:media.exists>
+                    </f:if>
+                    <f:if condition="{data.tx_semcontent_add_overlay}">
+                        <f:then>
+                            <div class="overlay">
+                                <div class="container">
+                                    <f:render section="Main" />
+                                </div>
+                            </div>
+                        </f:then>
+                        <f:else>
+                            <div class="container">
+                                <f:render section="Main" />
+                            </div>
+                        </f:else>
+                    </f:if>
+                </f:else>
+            </v:if>
+        </section>
+    </f:else>
+</f:if>
+
+</html>

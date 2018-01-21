@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+ <style type="text/css">.st0{fill:#FFFFFF;}
+	.st1{fill:#999999;}
+	.st2{fill:#666666;}</style>
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <path id="svg_1" d="m1.375546,1.567686l14,0l0,14l-14,0l0,-14z" class="st0"/>
+  <path id="svg_2" d="m0.462882,0.567686l0,15l15,0l0,-15l-15,0zm1,1l13,0l0,13l-13,0l0,-13z" class="st1"/>
+  <path stroke="null" id="svg_3" d="m2.375546,2.5l2.041096,0l0,11l-2.041096,0l0,-11z" class="st2"/>
+  <path stroke="null" id="svg_4" d="m8.366414,2.5l2.086758,0l0,11l-2.086758,0l0,-11z" class="st2"/>
+  <path stroke="null" id="svg_5" d="m5.325318,2.5l2.086758,0l0,11l-2.086758,0l0,-11z" class="st2"/>
+  <path stroke="null" id="svg_6" d="m11.42577,2.5l2.08676,0l0,11l-2.08676,0l0,-11z" class="st2"/>
+ </g>
+</svg>

@@ -1,0 +1,59 @@
+// Mixins
+@mixin fa() {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin allowed-blockstyle-classes {
+  &.text-left {
+    text-align: left;
+  }
+
+  &.text-center {
+    text-align: center;
+  }
+
+  &.text-right {
+    text-align: right;
+  }
+
+  &.text-justify {
+    text-align: justify;
+  }
+}
+
+@mixin allowed-link-classes {
+  
+}
+
+@mixin allowed-lists-classes {
+  
+}
+
+// RTE elements styles
+.htmlarea-content-body,
+.cke_editable {
+  font-size: 16px;
+  font-family: 'Open Sans';
+
+  h1, h2, h3, h4, h5, h6 {
+    @include allowed-blockstyle-classes;
+  }
+
+  p, div {
+    @include allowed-blockstyle-classes;
+  }
+
+  a {
+    @include allowed-link-classes;
+  }
+
+  ul, ol {
+    @include allowed-lists-classes;
+  }
+}
+

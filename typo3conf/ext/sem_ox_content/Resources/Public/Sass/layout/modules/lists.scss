@@ -1,0 +1,40 @@
+ul {
+  &.checkmark, &.checkmark-green, &.checkmark-blue {
+    list-style-type: none;
+    padding-left: 50px;
+
+    b {
+      font-weight: 600;
+    }
+
+    li {
+      margin-bottom: 20px;
+      line-height: 23px;
+      font-weight: normal;
+
+      &:before {
+        @include fa();
+        content: "\f058";
+        float: left;
+        margin-left: -50px;
+        font-size: 35px;
+      }
+    }
+  }
+
+  &.checkmark, &.checkmark-green {
+    li {
+      b, &:before {
+        color: $light-green;
+      }
+    }
+  }
+
+  &.checkmark-blue {
+    li {
+      b, &:before {
+        color: $light-blue;
+      }
+    }
+  }
+}

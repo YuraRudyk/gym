@@ -1,0 +1,36 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      xmlns:soc="http://typo3.org/ns/Media711/SemOxContent/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:section name="Content">
+    <div class="{f:render(section: 'GridClass', arguments: {count: count}) -> v:format.trim()} product-teaser-wrapper"
+         {f:render(section: 'BackgroundImage', arguments: {item: item})}>
+        <h6>{item.title}</h6>
+        <p>{item.subtitle}</p>
+        <soc:uri.linkType linkData="{item.link}">
+            <f:then>
+                <f:link.typolink parameter="{item.link}" class="button-default">{item.linkText}</f:link.typolink>
+            </f:then>
+            <f:else>
+                <f:link.typolink parameter="{item.link}" class="external-link">{item.linkText}</f:link.typolink>
+            </f:else>
+        </soc:uri.linkType>
+    </div>
+</f:section>
+
+<f:section name="BackgroundImage">
+    <v:media.exists file="{item.image.originalResource.publicUrl}">
+        style="background-image: url({f:uri.image(image: item.image, width: '400c', height: '300')})"
+    </v:media.exists>
+</f:section>
+
+<f:section name="GridClass">
+    <f:switch expression="{count}">
+        <f:case value="1">col-sm-12</f:case>
+        <f:case value="2">col-sm-6</f:case>
+        <f:case value="3">col-sm-4</f:case>
+        <f:case default="true">col-sm-6 col-md-3</f:case>
+    </f:switch>
+</f:section>
+
+</html>

@@ -1,0 +1,47 @@
+<T3DataStructure>
+    <meta>
+        <langDisable>1</langDisable>
+    </meta>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:sem_ox_jobs/Resources/Language/locallang_be.xlf:flexform.sDEF</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.autoplay>
+                        <TCEforms>
+                            <label>Autoplay</label>
+                            <config>
+                                <type>check</type>
+                            </config>
+                        </TCEforms>
+                    </settings.autoplay>
+
+                    <settings.speed>
+                        <TCEforms>
+                            <label>Speed</label>
+                            <config>
+                                <type>input</type>
+                                <size>8</size>
+                                <eval>num</eval>
+                            </config>
+                        </TCEforms>
+                    </settings.speed>
+
+                    <settings.delay>
+                        <TCEforms>
+                            <label>Delay</label>
+                            <config>
+                                <type>input</type>
+                                <size>8</size>
+                                <eval>num</eval>
+                            </config>
+                        </TCEforms>
+                    </settings.delay>
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>

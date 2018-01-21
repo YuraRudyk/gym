@@ -1,0 +1,169 @@
+.cover-flow-wraper {
+  position: relative;
+  padding: 20px 0;
+
+// Gradients------------------
+  .white-grad-left,
+  .white-grad-right {
+    position: absolute;
+    top: 0;
+    width: 20%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .white-grad-left {
+    left: -1px;
+  }
+
+  .white-grad-right {
+    right: -1px;
+  }
+// End grad -----------------------
+
+  .counter {
+    position: absolute;
+    left: 20%;
+    font-size: 16px;
+    font-weight: 300;
+    padding-left: 10px;
+    z-index: 1;
+
+    & > div {
+      display: inline-block;
+      float: left;
+    }
+
+    .current:after {
+      content: '/';
+    }
+  }
+
+// Slider -------------------------
+  .slider-cover-flow {
+  // buttons prew - next -----------------
+    .slick-arrow {
+      width: 1px;
+
+      &:before {
+        position: absolute;
+        top: 50%;
+        @include translate(0,-50%);
+      }
+
+      &.slick-prev {
+        left: 18%;
+
+        &:before {
+          right: 0;
+        }
+      }
+
+      &.slick-next {
+        right: 18%;
+
+        &:before {
+          left: 0;
+        }
+      }
+    }
+  // Ens buttond ---------------------
+
+    .slick-list {
+      padding-left: 20%;
+      padding-right: 20%;
+
+      .item {
+        position: relative;
+
+        &:focus {
+          outline: none!important;
+        }
+
+        &:not(.slick-center) {
+          opacity: 0.75;
+
+          .title {
+            opacity: 0;
+          }
+
+          img {
+            @include scale(0.8);
+            @include transform-origin(bottom right);
+          }
+        }
+
+        &.slick-center {
+          & + div img {
+            @include transform-origin(bottom left);
+          }
+
+          img {
+            box-shadow: 0px -5px 15px $black;
+          }
+        }
+
+        img {
+          width: 100%;
+          @include transition(all 0.5s);
+        }
+
+        .title {
+          text-align: center;
+          @include transition(opacity 0.5s);
+          margin-top: 15px;
+
+          h3 {
+            font-weight: 300;
+          }
+
+          h5 {
+            font-size: 16px;
+          }
+        }
+
+        .video-item {
+          padding-bottom: 0;
+          border-bottom: 0;
+          text-align: center;
+          min-height: auto;
+
+          & > a {
+            margin-bottom: 0;
+          }
+
+          ul {
+            li {
+              display: inline-block;
+
+              .lb-video {
+                margin-right: 8px;
+                padding-left: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+// End slider ----------------------------
+}
+
+.slide-item {
+  text-align: center;
+
+  & > a:hover {
+    opacity: 1;
+  }
+
+  ul {
+    li {
+      display: inline-block;
+
+      .lb-video {
+        margin-right: 8px;
+        padding-left: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:tw="http://typo3.org/ns/Tx/CwTwitter/ViewHelpers"
+      xmlns:soc="http://typo3.org/ns/Media711/SemOxContent/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:layout name="Default" />
+
+<f:section name="main">
+	<f:if condition="{tweets}">
+		<f:then>
+			<f:for each="{tweets}" as="orig_tweet">
+				<f:alias map="{tweet: '{f:if(condition:orig_tweet.retweeted_status,
+				                             then:orig_tweet.retweeted_status, else:orig_tweet)}'}">
+					<div class="jobs-item">
+                        <p>
+                            <b><f:format.date format="Y/m/d">{tweet.created_at}</f:format.date></b> -
+                            <tw:format.tweet>{tweet}</tw:format.tweet>
+                        </p>
+
+                        <f:if condition="{orig_tweet.retweeted_status}">
+                            <p>
+                                <f:translate key="tweetlist.retweeted_by" />
+                                <a href="https://twitter.com/{orig_tweet.user.screen_name}">{orig_tweet.user.name}</a>
+                            </p>
+                        </f:if>
+                    </div>
+				</f:alias>
+			</f:for>
+		</f:then>
+		<f:else>
+			<f:translate key="tweetlist.empty" />
+		</f:else>
+	</f:if>
+</f:section>
+
+</html>

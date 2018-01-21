@@ -1,0 +1,26 @@
+<T3DataStructure>
+    <meta>
+        <langDisable>1</langDisable>
+    </meta>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:sem_ox_jobs/Resources/Language/locallang_be.xlf:flexform.sDEF</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.videoInformation>
+                        <TCEforms>
+                            <label>Show Video Information</label>
+                            <config>
+                                <type>check</type>
+                                <default>1</default>
+                            </config>
+                        </TCEforms>
+                    </settings.videoInformation>
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>

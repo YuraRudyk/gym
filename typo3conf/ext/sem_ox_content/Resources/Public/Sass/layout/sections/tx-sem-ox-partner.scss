@@ -1,0 +1,96 @@
+.tx-sem-ox-partner {
+  .title {
+    font-size: 45px;
+    line-height: 47px;
+    font-weight: 600;
+    color: $dark-gray;
+    margin: 30px 0;
+  }
+
+  .accordion {
+    .panel {
+      box-shadow: none!important;
+
+      .panel-title a {
+        position: relative;
+        font-size: 24px;
+        line-height: 27px;
+        display: block;
+        padding: 20px 0;
+        font-weight: 600;
+        color: $dark-gray;
+        border-bottom: 1px solid $gray;
+        padding-left: 30px;
+
+        &:before {
+          font-family: FontAwesome;
+          content: "\f105";
+          font-size: 25px;
+          position: absolute;
+          top: 23px;
+          left: 0;
+          @include transition(all 0.3s);
+          display: block;
+          text-align: center;
+          vertical-align: bottom;
+          width: 27px;
+          height: 27px;
+        }
+
+        &.collapsed:before {
+          @include rotate(0deg);
+        }
+
+        &:not(.collapsed):before {
+          @include rotate(90deg);
+        }
+      }
+
+      table {
+        tr {
+          &:nth-child(even) {
+            background-color: $light-gray;
+          }
+
+          th {
+            font-size: 24px;
+            line-height: 27px;
+            font-weight: 700;
+            color: $dark-gray;
+            padding-top: 19px;
+          }
+
+          td {
+            border-top: none!important;
+            font-size: 16px;
+            width: 25%;
+
+            a {
+              color: $dark-gray;
+              position: relative;
+              padding-left: 17px;
+              font-size: 16px;
+              font-weight: 300;
+
+              &:before {
+                font-family: FontAwesome;
+                content: "\f105";
+                font-size: 20px;
+                color: $light-blue;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                @include translate(0, -50%);
+                @include transition(left 0.3s);
+              }
+
+              &:hover {
+                opacity: 0.7;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

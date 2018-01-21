@@ -1,0 +1,169 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800);
+@import "../Styles/lib/font-awesome.min.css";
+@import "common/components/variables.scss";
+
+// Mixins
+@mixin fa() {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin allowed-blockstyle-classes {
+  &.text-left {
+    text-align: left;
+  }
+
+  &.text-center {
+    text-align: center;
+  }
+
+  &.text-right {
+    text-align: right;
+  }
+
+  &.text-justify {
+    text-align: justify;
+  }
+}
+
+@mixin allowed-lists-classes {
+  &.checkmark, &.checkmark-blue {
+    list-style-type: none;
+    padding-left: 50px;
+
+    b {
+      font-weight: 600;
+    }
+
+    li {
+      margin-bottom: 20px;
+      line-height: 23px;
+      font-weight: normal;
+
+      &:before {
+        @include fa();
+        content: "\f058";
+        float: left;
+        margin-left: -50px;
+        font-size: 35px;
+      }
+    }
+  }
+
+  &.checkmark {
+    li {
+      b, &:before {
+        color: $light-green;
+      }
+    }
+  }
+
+  &.checkmark-blue {
+    li {
+      b, &:before {
+        color: $light-blue;
+      }
+    }
+  }
+}
+
+@mixin social-icons {
+  &.twitter, &.facebook, &.google, &.vimeo,
+  &.flickr, &.youtube, &.linkedin, &.rss {
+    font-size: inherit;
+    
+    &:before {
+      border-radius: 10px;
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      margin-right: 7px;
+      position: relative;
+      top: 3px;
+      background-color: $ice-blue;
+      color: $white;
+      font-family: 'FontAwesome';
+      text-align: center;
+    }
+  }
+
+  &.twitter:before {content: "\f099";}
+  &.facebook:before {content: "\f09a";}
+  &.google:before {content: "\f1a0";}
+  &.vimeo:before {content: "\f27d";}
+  &.flickr:before {content: "\f16e";}
+  &.youtube:before {content: "\f167";}
+  &.linkedin:before {content: "\f0e1";}
+  &.rss:before {content: "\f09e";}
+}
+
+
+// RTE elements styles
+.htmlarea-content-body {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-size: 16px;
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 300;
+    line-height: 1.1;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    b {
+      font-weight: 800;
+    }
+
+    @include allowed-blockstyle-classes;
+  }
+
+  p, div {
+    line-height: 23px;
+
+    @include allowed-blockstyle-classes;
+  }
+
+  h1, .h1 {
+    font-size: 55px;
+    line-height: 55px;
+  }
+
+  h2, .h2 {
+    font-size: 45px;
+  }
+
+  h3, .h3 {
+    font-size: 35px;
+    margin-top: 20px;
+  }
+
+  h4, .h4 {
+    font-size: 25px;
+  }
+
+  h5, .h5 {
+    font-size: 22px;
+  }
+
+  h6, .h6 {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  p.subtitle {
+    margin-bottom: 25px;
+    font-weight: 300;
+    font-size: 20px;
+  }
+
+  a {
+    @include social-icons;
+  }
+
+  ul, ol {
+    @include allowed-lists-classes;
+  }
+}

@@ -1,0 +1,82 @@
+.pie-chart-section {
+  text-align: center;
+
+  .text-wrapper {
+    @include flex();
+    flex-direction: column;
+    align-items: center;
+    padding: 0 25%;
+    margin-bottom: 35px;
+  }
+
+  .chart-wrapper {
+    position: relative;
+    @include flex();
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    & > div {
+      margin: 0 30px;
+    }
+
+    .legend-wrapper {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      @include translate(-50%, -50%);
+      text-align: center;
+      height: 100%;
+      width: 160px;
+      padding-top: 65px;
+    }
+
+    ul {
+      line-height: 18px;
+      padding: 0px 0px 0px 40px;
+      font-size: 14px;
+      list-style-type: none;
+      text-align: left;
+      display: inline-block;
+      position: relative;
+      margin-top: 5px;
+
+      li {
+        @include transition(opacity);
+        opacity: 0;
+      }
+
+      span {
+        position: absolute;
+        left: 0px;
+        text-align: right;
+        width: 27px;
+      }
+    }
+
+    p {
+      text-align: center;
+      font-size: 20px;
+      line-height: 23px;
+      font-weight: 700;
+    }
+
+    svg circle {
+      @include rotate(270deg);
+      @include transition (stroke-dashoffset 4s cubic-bezier(0, 1.06, 0.55, 1));
+    }
+
+    li {
+      @include transition (opacity 2s cubic-bezier(0.15, 0.27, 0.02, 1.02));
+    }
+
+    .animated {
+      li {
+        opacity: 1;
+      }
+
+      svg circle {
+        stroke-dashoffset: 848; // length of the circle
+      }
+    }
+  }
+}

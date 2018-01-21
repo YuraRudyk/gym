@@ -1,0 +1,57 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:layout name="Blog" />
+
+<f:section name="Main">
+    <main>
+        <f:if condition="{blog_header}">
+            <section class='blue-gradient'>
+                <div class="container">
+                    <f:format.raw>{blog_header}</f:format.raw>
+                </div>
+            </section>
+        </f:if>
+
+        <f:switch expression="{data.uid}">
+            <f:case value="{settings.blogPid}">
+                <section class="blog-list">
+                    <f:render section="Content" arguments="{_all}" />
+                </section>
+            </f:case>
+            <f:case value="{settings.releasePid}">
+                <section class="blog-list">
+                    <f:render section="Content" arguments="{_all}" />
+                </section>
+            </f:case>
+            <f:case default="true">
+                <section class="blog-detail">
+                    <f:render section="Content" arguments="{_all}" />
+                </section>
+            </f:case>
+        </f:switch>
+    </main>
+</f:section>
+
+<f:section name="Content">
+    <div class="row custom-grid">
+        <div class="col-sm-8">
+            <div class="bg-white">
+                <div class="column">
+                    <f:format.raw>{content_main}</f:format.raw>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="bg-ice-blue">
+                <div class="column">
+                    <div class="blog-sidebar">
+                        <f:format.raw>{blog_sidebar}</f:format.raw>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</f:section>
+
+</html>

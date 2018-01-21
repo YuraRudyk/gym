@@ -1,0 +1,22 @@
+editor:
+  config:
+    contentsCss: "EXT:sem_content/Resources/Public/Styles/rte.css"
+
+    extraPlugins:
+      - find
+
+    removeButtons:
+      - Anchor
+      - Strike
+      - Cut
+      - Copy
+      - Paste
+      - Maximize
+      - Superscript
+      - Subscript
+
+    justifyClasses:
+      - text-left
+      - text-center
+      - text-right
+      - text-justify

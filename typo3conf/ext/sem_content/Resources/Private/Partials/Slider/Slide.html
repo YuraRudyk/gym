@@ -1,0 +1,26 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-7">
+                <h2>{slide.header -> f:format.raw()}</h2>
+                <p class="h3">{slide.subheader -> f:format.raw()}</p>
+
+                <f:format.html>{slide.bodytext}</f:format.html>
+
+                <f:link.typolink class="btn btn-default" parameter="{slide.link}">{v:or(
+                                                            content: slide.linkText,
+                                                            alternative: data.tx_semcontent_linktext)}</f:link.typolink>
+            </div>
+            <div class="col-sm-5">
+                <v:media.exists file="{slide.image.originalResource.publicUrl}">
+                    <f:image image="{slide.image}" class="img-responsive" alt="{slide.header}" />
+                </v:media.exists>
+            </div>
+        </div>
+    </div>
+</div>
+
+</html>

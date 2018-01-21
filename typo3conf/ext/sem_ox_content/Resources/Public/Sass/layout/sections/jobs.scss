@@ -1,0 +1,242 @@
+.jobs-list {
+
+  .jobs-filter {
+    margin-bottom: 95px;
+
+    .close {
+      float: right;
+      margin-bottom: 0;
+      font-size: 12px;
+      line-height: 22px;
+
+      &,
+      &:before {
+        color: $grey;
+      }
+    }
+
+    .dropdown {
+      button {
+        text-align: left;
+        color: $grey;
+      }
+
+      .dropdown-menu {
+        width: 100%;
+        top: 25px;
+        left: -10px;
+      }
+    }
+  }
+
+  .jobs-results {
+    padding-left: 0;
+
+    .jobs-region {
+      & + .jobs-region {
+        margin-top: 70px;
+      }
+
+      &:last-child {
+        margin-bottom: 70px;
+      }
+
+      h2 {
+        font-weight: 500;
+        color: $ice-blue;
+        margin-bottom: 0;
+
+        & + p {
+          margin-top: 50px;
+          margin-bottom: 5px;
+        }
+      }
+    }
+
+    li {
+      list-style: none;
+
+      *:not([class*="btn"]):not(h2) {
+        color: $graphite-black;
+      }
+
+      a[class*="btn"] {
+        margin-top: 25px;
+      }
+
+      a[class*="link"],
+      a[class*="btn"] {
+        margin-bottom: 0;
+      }
+
+      a:not([class*="link"]):not([class*="btn"]) {
+        font-size: 28px;
+        margin-bottom: 15px;
+        font-weight: 600;
+        display: inline-block;
+      }
+    }
+  }
+
+  ul:not(.dropdown-menu):not(.jobs-results) {
+    @include normalize-list();
+
+    li {
+      border-bottom: 1px solid $silver-grey;
+      padding: 50px 0;
+
+      span {
+        font-weight: 600;
+        font-size: 18px;
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      p {
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
+.jobs-collapse .panel-title a:before {
+  color: $graphite-black;
+}
+
+.lang_nav {
+  margin-bottom: 0;
+}
+
+form[name="request"] {
+  .file {
+    padding-bottom: 0;
+
+    .file-input {
+      &:after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+    }
+  }
+}
+
+/** Page Career
+ * special case for Main Banner bg image on page career
+ */
+#c5557 div.col-sm-6[style*="background-image"] {
+  background-position: bottom right;
+  background-size: contain;
+  background-color: #fab900;
+}
+
+/* New responsive rules */
+
+
+.jobs-dropdown {
+  .dropdown-menu {
+    z-index: 1;
+  }
+}
+
+
+@media screen and (max-width: $screen-xs-max) {
+
+  .dropdown-backdrop {
+    display: none;
+  }
+
+  .jobs-dropdown>div {
+    text-align: center;
+    //background: ;
+
+    &:after {
+      position: relative;
+      top: auto;
+      right: auto;
+      transform: none;
+      margin-left: 10px;
+    }
+  }
+
+  .jobs-pages {
+
+    [class*="btn-"] {
+      display: block;
+      margin: 0 auto;
+      margin-top: 10px;
+      max-width: 225px;
+    }
+
+    #c5831 {
+      .row.flex {
+        display: flex !important;
+      }
+
+      .col-sm-6 {
+        &:first-of-type {
+          order: 2;
+        }
+      }
+    }
+
+
+    .ce-bottom {
+      position: relative;
+      transform: none;
+      bottom: auto;
+      left: auto;
+    }
+
+    > section:first-of-type {
+      text-align: center;
+
+      .col-sm-6:first-of-type {
+        .column {
+          float: none;
+
+          .padding-top-large.padding-bottom-large {
+            padding-bottom: 0;
+          }
+        }
+      }
+    }
+
+    #c5313 {
+      padding-bottom: 0;
+    }
+
+    .ce-gallery {
+      max-width: 75%;
+      margin: 0 auto !important;
+    }
+
+    .typo3-search-exclude {
+      padding: 30px 0;
+
+      .remove-filters {
+        float: right !important;
+      }
+
+      p.clearfix {
+        margin-bottom: 0;
+      }
+
+      .jobs-list {
+        .jobs-filter {
+          .dropdown {
+            button {
+              border: 1px solid #878787;
+              box-shadow: none;
+            }
+          }
+        }
+      }
+    }
+
+    .flex [style*="background-image:"] {
+      min-height: 195px;
+    }
+  }
+
+}

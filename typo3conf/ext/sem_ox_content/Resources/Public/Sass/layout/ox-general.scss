@@ -1,0 +1,308 @@
+.svg-flag {
+  background-image: url("/typo3conf/ext/sem_ox_content/Resources/Public/Images/flag-icon-de.svg");
+  background-size: cover;
+  width: 22px;
+  height: 16px;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.ce-with-coin {
+  position: relative;
+  padding-top: 40px;
+
+  &.ce-textpic {
+    overflow: initial;
+  }
+
+  .coin {
+    position: absolute;
+    top: -65px;
+    width: 120px;
+    height: 120px;
+    right: 50%;
+    @include translate(50%, -50%);
+    @extend .img-circle;
+  }
+}
+// NOT REWRITTEN CODE =============================================================================
+
+.subtitle {
+  margin-bottom: 16px;
+  font-weight: 300;
+  line-height: 28px;
+}
+// Custom select -----
+
+.select-wrapper {
+  position: relative;
+
+  &:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 6px solid #2d2d2d;
+    position: absolute;
+    left: 100%;
+    margin-left: -18px;
+    top: 55%;
+    margin-top: 10px;
+  }
+
+  select::-ms-expand {
+    display: none;
+  }
+
+  select {
+    // background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1…on points="0,0 32,0 16,24" style="fill: rgb(51, 51, 51)"></polygon></svg>');
+    background-size: 9px 6px;
+    background-position: right 8px center;
+    background-repeat: no-repeat;
+  }
+}
+// End form --------------------------------------------------------
+
+.ce-gallery {
+  margin: 0 !important;
+}
+
+.bottom-text {
+  color: $white;
+  position: absolute;
+  bottom: 30px;
+  height: 250px;
+}
+
+.contact-form {
+  margin-top: 40px;
+}
+
+.parsley-errors-list {
+  font-size: 14px;
+  list-style-type: none;
+  padding-left: 0;
+
+  &,
+  * {
+    color: #ff0000;
+  }
+}
+
+.errors .mm-listview li {
+  font-size: 14px;
+  color: #b42369;
+  padding-bottom: 15px;
+}
+
+.error-page {
+  text-align: center;
+  background-color: #fff;
+
+  .error-code {
+    margin-top: 35px;
+    margin-bottom: 50px;
+    font-size: 16px;
+    font-weight: normal;
+  }
+
+  .form-group {
+    padding: 65px 0;
+  }
+}
+
+.titles {
+  margin-bottom: 45px;
+
+  h3 {
+    font-weight: 600;
+    font-size: 24px;
+    color: $graphite-black;
+    line-height: 27px;
+    margin-bottom: 17px;
+  }
+
+  p {
+    font-weight: 300;
+    color: $graphite-black;
+    font-size: 16px;
+  }
+}
+
+.file {
+  padding-bottom: 40px;
+
+  input[type="file"] {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .file-input {
+    width: 100%;
+    z-index: 1;
+
+    span {
+      float: left;
+      cursor: pointer;
+    }
+
+    .file-name {
+      display: inline-block;
+      border: 1px solid #cacaca;
+      width: 200px;
+      height: 40px;
+      @include calc-neg(100%, 160px);
+      line-height: 40px;
+      padding-left: 15px;
+    }
+
+    [class*="btn-"] {
+      margin: 0;
+      min-width: 160px;
+
+      &:before {
+        content: "\f115";
+        font-family: FontAwesome;
+        margin-right: 10px;
+        font-size: 18px;
+        line-height: 11px;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+.capcha {
+  .capcha-label {
+    display: block;
+
+    a {
+      color: $graphite-black;
+    }
+
+    .reload {
+      margin-left: 10px;
+
+      &:before {
+        content: "\f021";
+        font-family: FontAwesome;
+        margin-right: 10px;
+        color: $ice-blue;
+      }
+    }
+  }
+
+  .powermail_captchaimage {
+    height: 39px;
+  }
+}
+
+.mandatory {
+  color: $grey;
+}
+
+.panel-group {
+  .panel {
+    box-shadow: none;
+    border: none;
+    // margin-bottom: 20px;
+    .panel-heading {
+      background-color: $white;
+      border: none;
+      padding: 10px 0 0;
+
+      .panel-title {
+        border-bottom: 1px solid #878787;
+        font-size: 24px;
+        line-height: 26px;
+
+        .arrow-down {
+          margin-bottom: 20px;
+          font-weight: 300;
+
+          &:before {
+            color: $graphite-black;
+            @include transition(all 0.3s);
+            font-size: 25px;
+            width: 25px;
+            height: 25px;
+            top: 4px;
+            font-weight: 400;
+          }
+        }
+
+        .collapsed:before {
+          @include rotate(-90deg);
+          top: 0;
+        }
+      }
+    }
+  }
+}
+
+.ce-column {
+  margin-right: 50px;
+  padding-bottom: 15px;
+}
+
+.newsroom-mfp.text-media-zoom-in {
+  .mfp-bottom-bar {
+    .mfp-title {
+      padding-left: 15px;
+      position: absolute;
+      top: 50%;
+      @include translate(0, -50%);
+    }
+    .mfp-counter {
+      padding-right: 15px;
+    }
+  }
+}
+
+.font-small {
+  font-size: 12px;
+}
+
+.noscroll {
+  overflow: hidden;
+}
+
+/*---- fix color in footer form -----*/
+
+footer {
+  .main-footer {
+    .newsletter {
+      form {
+        input {
+          &[type=email], &[type=text] {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}
+
+.rss-link {
+  margin-top: 30px;
+  display: block;
+  font-weight: 800;
+  position: relative;
+
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background: url('/typo3conf/ext/sem_ox_content/Resources/Public/Icons/rss_icon.png') no-repeat;
+    background-size: cover;
+    margin-left: 6px;
+    margin-bottom: -5px;
+  }
+}

@@ -1,0 +1,637 @@
+<IfModule mod_rewrite.c>
+
+    RewriteEngine On
+    RewriteCond %{HTTP_HOST} ^legion.lh$ [NC]
+    RewriteRule ^(.*)$ http%{ENV:protossl}://www.legion.lh/$1 [L,R=301]
+</IfModule>
+#####
+#
+# Example .htaccess file for TYPO3 CMS - for use with Apache Webserver
+#
+# This file includes settings for the following configuration options:
+#
+# - Compression
+# - Caching
+# - MIME types
+# - Cross Origin requests
+# - Rewriting and Access
+# - Miscellaneous
+# - PHP optimisation
+#
+# If you want to use it, you have to copy it to the root folder of your TYPO3 installation (if its
+# not there already) and rename it to '.htaccess'. To make .htaccess files work, you might need to
+# adjust the 'AllowOverride' directive in your Apache configuration file.
+#
+# IMPORTANT: You may need to change this file depending on your TYPO3 installation!
+#            Consider adding this file's content to your webserver's configuration directly for speed improvement
+#
+# Lots of the options are taken from https://github.com/h5bp/html5-boilerplate/blob/master/dist/.htaccess
+#
+####
+
+
+### Begin: Compression ###
+
+# Compressing resource files will save bandwidth and so improve loading speed especially for users
+# with slower internet connections. TYPO3 can compress the .js and .css files for you.
+# *) Uncomment the following lines and
+# *) Set $GLOBALS['TYPO3_CONF_VARS']['BE']['compressionLevel'] = 9 for the Backend
+# *) Set $GLOBALS['TYPO3_CONF_VARS']['FE']['compressionLevel'] = 9 together with the TypoScript properties
+#    config.compressJs and config.compressCss for GZIP compression of Frontend JS and CSS files.
+
+#<FilesMatch "\.js\.gzip$">
+#   AddType "text/javascript" .gzip
+#</FilesMatch>
+#<FilesMatch "\.css\.gzip$">
+#   AddType "text/css" .gzip
+#</FilesMatch>
+#AddEncoding gzip .gzip
+
+<IfModule mod_deflate.c>
+    # Force compression for mangled `Accept-Encoding` request headers
+    <IfModule mod_setenvif.c>
+        <IfModule mod_headers.c>
+            SetEnvIfNoCase ^(Accept-EncodXng|X-cept-Encoding|X{15}|~{15}|-{15})$ ^((gzip|deflate)\s*,?\s*)+|[X~-]{4,13}$ HAVE_Accept-Encoding
+            RequestHeader append Accept-Encoding "gzip,deflate" env=HAVE_Accept-Encoding
+        </IfModule>
+    </IfModule>
+
+    # Compress all output labeled with one of the following media types.
+    #
+    # (!) For Apache versions below version 2.3.7 you don't need to
+    # enable `mod_filter` and can remove the `<IfModule mod_filter.c>`
+    # and `</IfModule>` lines as `AddOutputFilterByType` is still in
+    # the core directives.
+    #
+    # https://httpd.apache.org/docs/current/mod/mod_filter.html#addoutputfilterbytype
+
+    <IfModule mod_filter.c>
+        AddOutputFilterByType DEFLATE application/atom+xml \
+            application/javascript \
+            application/json \
+            application/ld+json \
+            application/manifest+json \
+            application/rdf+xml \
+            application/rss+xml \
+            application/schema+json \
+            application/vnd.geo+json \
+            application/vnd.ms-fontobject \
+            application/x-font-ttf \
+            application/x-javascript \
+            application/x-web-app-manifest+json \
+            application/xhtml+xml \
+            application/xml \
+            font/eot \
+            font/opentype \
+            image/bmp \
+            image/svg+xml \
+            image/vnd.microsoft.icon \
+            image/x-icon \
+            text/cache-manifest \
+            text/css \
+            text/html \
+            text/javascript \
+            text/plain \
+            text/vcard \
+            text/vnd.rim.location.xloc \
+            text/vtt \
+            text/x-component \
+            text/x-cross-domain-policy \
+            text/xml
+    </IfModule>
+
+    <IfModule mod_mime.c>
+        AddEncoding gzip              svgz
+    </IfModule>
+</IfModule>
+
+### End: Compression ###
+
+
+
+### Begin: Browser caching of resource files ###
+
+# This affects Frontend and Backend and increases performance.
+<IfModule mod_expires.c>
+
+    ExpiresActive on
+    ExpiresDefault                                      "access plus 1 month"
+
+    ExpiresByType text/css                              "access plus 1 year"
+
+    ExpiresByType application/json                      "access plus 0 seconds"
+    ExpiresByType application/ld+json                   "access plus 0 seconds"
+    ExpiresByType application/schema+json               "access plus 0 seconds"
+    ExpiresByType application/vnd.geo+json              "access plus 0 seconds"
+    ExpiresByType application/xml                       "access plus 0 seconds"
+    ExpiresByType text/xml                              "access plus 0 seconds"
+
+    ExpiresByType image/vnd.microsoft.icon              "access plus 1 week"
+    ExpiresByType image/x-icon                          "access plus 1 week"
+
+    ExpiresByType text/x-component                      "access plus 1 month"
+
+    ExpiresByType text/html                             "access plus 0 seconds"
+
+    ExpiresByType application/javascript                "access plus 1 year"
+    ExpiresByType application/x-javascript              "access plus 1 year"
+    ExpiresByType text/javascript                       "access plus 1 year"
+
+    ExpiresByType application/manifest+json             "access plus 1 week"
+    ExpiresByType application/x-web-app-manifest+json   "access plus 0 seconds"
+    ExpiresByType text/cache-manifest                   "access plus 0 seconds"
+
+    ExpiresByType audio/ogg                             "access plus 1 month"
+    ExpiresByType image/bmp                             "access plus 1 month"
+    ExpiresByType image/gif                             "access plus 1 month"
+    ExpiresByType image/jpeg                            "access plus 1 month"
+    ExpiresByType image/png                             "access plus 1 month"
+    ExpiresByType image/svg+xml                         "access plus 1 month"
+    ExpiresByType image/webp                            "access plus 1 month"
+    ExpiresByType video/mp4                             "access plus 1 month"
+    ExpiresByType video/ogg                             "access plus 1 month"
+    ExpiresByType video/webm                            "access plus 1 month"
+
+    ExpiresByType application/atom+xml                  "access plus 1 hour"
+    ExpiresByType application/rdf+xml                   "access plus 1 hour"
+    ExpiresByType application/rss+xml                   "access plus 1 hour"
+
+    ExpiresByType application/vnd.ms-fontobject         "access plus 1 month"
+    ExpiresByType font/eot                              "access plus 1 month"
+    ExpiresByType font/opentype                         "access plus 1 month"
+    ExpiresByType application/x-font-ttf                "access plus 1 month"
+    ExpiresByType application/font-woff                 "access plus 1 month"
+    ExpiresByType application/x-font-woff               "access plus 1 month"
+    ExpiresByType font/woff                             "access plus 1 month"
+    ExpiresByType application/font-woff2                "access plus 1 month"
+
+    ExpiresByType text/x-cross-domain-policy            "access plus 1 week"
+
+</IfModule>
+
+### End: Browser caching of resource files ###
+
+
+### Begin: MIME types ###
+
+# Proper MIME types for all files
+<IfModule mod_mime.c>
+
+    # Data interchange
+    AddType application/atom+xml                        atom
+    AddType application/json                            json map topojson
+    AddType application/ld+json                         jsonld
+    AddType application/rss+xml                         rss
+    AddType application/vnd.geo+json                    geojson
+    AddType application/xml                             rdf xml
+
+    # JavaScript
+    AddType application/javascript                      js
+
+    # Manifest files
+    AddType application/manifest+json                   webmanifest
+    AddType application/x-web-app-manifest+json         webapp
+    AddType text/cache-manifest                         appcache
+
+    # Media files
+
+    AddType audio/mp4                                   f4a f4b m4a
+    AddType audio/ogg                                   oga ogg opus
+    AddType image/bmp                                   bmp
+    AddType image/svg+xml                               svg svgz
+    AddType image/webp                                  webp
+    AddType video/mp4                                   f4v f4p m4v mp4
+    AddType video/ogg                                   ogv
+    AddType video/webm                                  webm
+    AddType video/x-flv                                 flv
+    AddType image/x-icon                                cur ico
+
+    # Web fonts
+    AddType application/font-woff                       woff
+    AddType application/font-woff2                      woff2
+    AddType application/vnd.ms-fontobject               eot
+    AddType application/x-font-ttf                      ttc ttf
+    AddType font/opentype                               otf
+
+    # Other
+    AddType application/octet-stream                    safariextz
+    AddType application/x-bb-appworld                   bbaw
+    AddType application/x-chrome-extension              crx
+    AddType application/x-opera-extension               oex
+    AddType application/x-xpinstall                     xpi
+    AddType text/vcard                                  vcard vcf
+    AddType text/vnd.rim.location.xloc                  xloc
+    AddType text/vtt                                    vtt
+    AddType text/x-component                            htc
+
+</IfModule>
+
+# UTF-8 encoding
+AddDefaultCharset utf-8
+<IfModule mod_mime.c>
+    AddCharset utf-8 .atom .css .js .json .manifest .rdf .rss .vtt .webapp .webmanifest .xml
+</IfModule>
+
+### End: MIME types ###
+
+
+
+### Begin: Cross Origin ###
+
+# Send the CORS header for images when browsers request it.
+<IfModule mod_setenvif.c>
+    <IfModule mod_headers.c>
+        <FilesMatch "\.(bmp|cur|gif|ico|jpe?g|png|svgz?|webp)$">
+            SetEnvIf Origin ":" IS_CORS
+            Header set Access-Control-Allow-Origin "*" env=IS_CORS
+        </FilesMatch>
+    </IfModule>
+</IfModule>
+
+# Allow cross-origin access to web fonts.
+<IfModule mod_headers.c>
+    <FilesMatch "\.(eot|otf|tt[cf]|woff2?)$">
+        Header set Access-Control-Allow-Origin "*"
+    </FilesMatch>
+</IfModule>
+
+### End: Cross Origin ###
+
+
+
+### Begin: Rewriting and Access ###
+
+# You need rewriting, if you use a URL-Rewriting extension (RealURL, CoolUri).
+
+<IfModule mod_rewrite.c>
+
+    # Enable URL rewriting
+    RewriteEngine On
+
+    # Store the current location in an environment variable CWD to use
+    # mod_rewrite in .htaccess files without knowing the RewriteBase
+    RewriteCond $0#%{REQUEST_URI} ([^#]*)#(.*)\1$
+    RewriteRule ^.*$ - [E=CWD:%2]
+
+    ### REDIRECTS ###
+
+    RewriteRule ^fr/entreprise/carrières.html$ kasto.lh/fr/entreprise/carrieres.html? [L,R=301]
+    RewriteRule ^fr/entreprise/carrières/$ kasto.lh/fr/entreprise/carrieres.html? [L,R=301]
+    RewriteRule ^fr/entreprise/actualités/nouveautés.html$ kasto.lh/fr/entreprise/nouveautes-acutalites/nouveautes.html? [L,R=301]
+    RewriteRule ^fr/produits/machinesàscier/machinesàscier.html$ kasto.lh/fr/produits/machines-a-scier/machines-a-scier.html? [L,R=301]
+    RewriteRule ^fr/produkte/lager/neue-lager.html$ kasto.lh/fr/produits/systeme-de-stockage/systemes-de-stockage.html? [L,R=301]
+    RewriteRule ^fr/produkte/systeme/neue-systeme.html$ kasto.lh/fr/produits/systemes/systemes.html? [L,R=301]
+    RewriteRule ^fr/contact/oùnoustrouver.html$ kasto.lh/fr/contact/ou-nous-trouver.html? [L,R=301]
+    RewriteRule ^de/produkte/kundenzufriedenheit.html$ kasto.lh/de/produkte/service/zufriedenheitsstudie.html? [L,R=301]
+    #RedirectMatch permanent fr/produits/machinesàscier/machinesàscier(.*) http://wwww.kasto.lh/fr/produits/machines-a-scier/machines-a-scier-detail$1
+
+    #Redirect 301 /de/kontakt/anfrage/KASTO-Partner+werden.html kasto.lh/de/kontakt/anfrage.html
+
+    #RewriteRule ^de/kontakt/anfrage/KASTO-Partner\+werden.html$ kasto.lh/de/kontakt/anfrage.html? [L,R=301]
+
+    Redirect 301 /de/produkte/kundenzufriedenheit.html kasto.lh/de/produkte/service/zufriedenheitsstudie.html
+    Redirect 301 /de/produkte/lager/gebraucht/back.html kasto.lh/de/produkte/lager/gebraucht.html
+    Redirect 301 /de/produkte/lager/gebraucht/detailseite/gebrauchtes-stapeljoch-system-unibloc.html kasto.lh/de/produkte/lager/lager-detail/gebrauchtes-stapeljoch-system-unibloc.html
+    Redirect 301 /de/produkte/lager/gebraucht/detailseite/unicompact-35-gebrauchtes-wabenlager-1580.html kasto.lh/de/produkte/lager/lager-detail/unicompact-35-gebrauchtes-wabenlager-1580.html
+    Redirect 301 /de/produkte/lager/gebraucht/detailseite/unicompact-35-gebrauchtes-wabenlager.html kasto.lh/de/produkte/lager/lager-detail/unicompact-35-gebrauchtes-wabenlager.html
+    Redirect 301 /de/produkte/lager/lager-uebersicht.html kasto.lh/de/produkte/lager/uebersicht-lager.html
+    Redirect 301 /de/produkte/lager/neue-lager/back.html kasto.lh/de/produkte/lager/neue-lager.html
+    Redirect 301 /de/produkte/lager/neue-lager/detailseite/energieeffizienz.html kasto.lh/de/produkte/lager/lager-detail/energieeffizienz.html
+    Redirect 301 /de/produkte/lager/neue-lager/detailseite/kastoecostore.html kasto.lh/de/produkte/lager/lager-detail/kastoecostore.html
+    Redirect 301 /de/produkte/lager/neue-lager/detailseite/unibloc-285.html kasto.lh/de/produkte/lager/lager-detail/unibloc-285.html
+    Redirect 301 /de/produkte/lager/neue-lager/detailseite/unicompact-289.html kasto.lh/de/produkte/lager/lager-detail/unicompact-289.html
+    Redirect 301 /de/produkte/lager/neue-lager/detailseite/unigrip-288.html kasto.lh/de/produkte/lager/lager-detail/unigrip-288.html
+    Redirect 301 /de/produkte/lager/neue-lager/detailseite/uniline-293.html kasto.lh/de/produkte/lager/lager-detail/uniline-293.html
+    Redirect 301 /de/produkte/lager/neue-lager/detailseite/uniportal-286.html kasto.lh/de/produkte/lager/lager-detail/uniportal-286.html
+    Redirect 301 /de/produkte/lager/neue-lager/detailseite/unitop-287.html kasto.lh/de/produkte/lager/lager-detail/unitop-287.html
+    Redirect 301 /de/produkte/lager/neue-lager/detailseite/unitower-290.html kasto.lh/de/produkte/lager/lager-detail/unitower-290.html
+    Redirect 301 /de/produkte/lager/neue-lager/detailseite/unitower-b-291.html kasto.lh/de/produkte/lager/lager-detail/unitower-b-291.html
+    Redirect 301 /de/produkte/saegen/details/kastosort-1668.html kasto.lh/de/produkte/systeme/systeme-detail/kastosort-1668.html
+    Redirect 301 /de/produkte/saegen/details/kastovertical_m.html kasto.lh/de/produkte/saegen/details/kastovertical-m.html
+    Redirect 301 /de/produkte/saegen/details/kastowin-a-10.6-319-319.html kasto.lh/de/produkte/saegen/details/kastowin-a-106-319-319.html
+    Redirect 301 /de/produkte/saegen/details/kastowin-a-3.3-314.html kasto.lh/de/produkte/saegen/details/kastowin-a-33-314.html
+    Redirect 301 /de/produkte/saegen/details/kastowin-a-4.6-315.html kasto.lh/de/produkte/saegen/details/kastowin-a-46-315.html
+    Redirect 301 /de/produkte/saegen/details/kastowin-a-5.6-317.html kasto.lh/de/produkte/saegen/details/kastowin-a-56-317.html
+    Redirect 301 /de/produkte/saegen/details/kastowin-a-8.6-318.html kasto.lh/de/produkte/saegen/details/kastowin-a-86-318.html
+    Redirect 301 /de/produkte/saegen/gebraucht/back.html kasto.lh/de/produkte/saegen/saegengebraucht.html
+    Redirect 301 /de/produkte/saegen/gebraucht/detailseite/gebrauchte-maschinen.html kasto.lh/de/produkte/saegen/details/gebrauchte-maschinen.html
+    Redirect 301 /de/produkte/saegen/gebraucht/detailseite/kastoradial-vorfuehrmaschinen.html kasto.lh/de/produkte/saegen/details/kastoradial-vorfuehrmaschinen.html
+    Redirect 301 /de/produkte/saegen/gebraucht/detailseite/kastotec-ac-5-kpc-vorfuehrmaschine.html kasto.lh/de/produkte/saegen/details/kastotec-ac-5-kpc-vorfuehrmaschine.html
+    Redirect 301 /de/produkte/saegen/gebraucht/detailseite/kastowin-a-46.html kasto.lh/de/produkte/saegen/details/kastowin-a-46.html
+    Redirect 301 /de/produkte/saegen/gebraucht/detailseite/kastowin-a-56-vorfuehrmaschin.html kasto.lh/de/produkte/saegen/details/kastowin-a-56-vorfuehrmaschin.html
+    Redirect 301 /de/produkte/saegen/neue-saegen/back.html kasto.lh/de/produkte/saegen/neue-saegen.html
+    Redirect 301 /de/produkte/service/services/back.html kasto.lh/de/produkte/service/services.html
+    Redirect 301 /de/produkte/service/services/detailseite/ersatzteile.html kasto.lh/de/produkte/service/service-detail/ersatzteile.html
+    Redirect 301 /de/produkte/service/services/detailseite/erweiterter-support.html kasto.lh/de/produkte/service/service-detail/erweiterter-support.html
+    Redirect 301 /de/produkte/service/services/detailseite/id-247-hotline.html kasto.lh/de/produkte/service/service-detail/id-247-hotline.html
+    Redirect 301 /de/produkte/service/services/detailseite/kasto-teleservice-274.html kasto.lh/de/produkte/service/service-detail/kasto-teleservice-274.html
+    Redirect 301 /de/produkte/service/services/detailseite/kastoretrofit.html kasto.lh/de/produkte/service/service-detail/kastoretrofit.html
+    Redirect 301 /de/produkte/service/services/detailseite/technische-beratung.html kasto.lh/de/produkte/service/service-detail/technische-beratung.html
+    Redirect 301 /de/produkte/service/services/detailseite/wartung-uvv-pruefungen.html kasto.lh/de/produkte/service/service-detail/wartung-uvv-pruefungen.html
+    Redirect 301 /de/produkte/service/services/detailseite/werksreparaturen.html kasto.lh/de/produkte/service/service-detail/werksreparaturen.html
+    Redirect 301 /de/produkte/systeme/neue-systeme.html kasto.lh/de/produkte/systeme/systeme.html
+    Redirect 301 /de/produkte/systeme/neue-systeme/back.html kasto.lh/de/produkte/systeme/systeme.html
+    Redirect 301 /de/produkte/systeme/neue-systeme/detailseite/kastocenter.html kasto.lh/de/produkte/systeme/systeme-detail/kastocenter.html
+    Redirect 301 /de/produkte/systeme/neue-systeme/detailseite/kastosawcell-320.html kasto.lh/de/produkte/systeme/systeme-detail/kastosawcell-320.html
+    Redirect 301 /de/produkte/systeme/neue-systeme/detailseite/kombi-lagerloesung.html kasto.lh/de/produkte/systeme/systeme-detail/kombi-lagerloesung.html
+    Redirect 301 /de/produkte/systeme/neue-systeme/detailseite/s-machines.html kasto.lh/de/produkte/systeme/systeme-detail/s-machines.html
+    Redirect 301 /de/produkte/systeme/systeme-uebersicht.html kasto.lh/de/produkte/systeme/uebersicht-system.html
+    Redirect 301 /de/unternehmen/aktuelles-neuigkeiten/news/details/finale-first-lego-league-regionalwettbewerb-ortenau-16012016.html kasto.lh/de/unternehmen/aktuelles-neuigkeiten/news.html
+    Redirect 301 /de/unternehmen/aktuelles-neuigkeiten/news/details/kasto-auf-der-berufsinformationsmesse-bim-2016.html kasto.lh/de/unternehmen/aktuelles-neuigkeiten/news.html
+    Redirect 301 /de/unternehmen/aktuelles-neuigkeiten/news/details/kasto-erhaelt-das-bisnode-bonitaetszertifikat-2016-57.html kasto.lh/de/unternehmen/aktuelles-neuigkeiten/news.html
+    Redirect 301 /de/unternehmen/aktuelles-neuigkeiten/news/details/kasto-inc-aenderung-in-der-geschaeftsfuehrung.html kasto.lh/de/unternehmen/aktuelles-neuigkeiten/news.html
+    Redirect 301 /de/unternehmen/aktuelles-neuigkeiten/news/details/kasto-praesentiert-die-weltneuheit-in-der-intralogistik.html kasto.lh/de/unternehmen/aktuelles-neuigkeiten/news.html
+    Redirect 301 /de/unternehmen/aktuelles-neuigkeiten/news/details/kasto-praesentiert-ein-praezises-kraftpaket-fuer-bis-zu-50-prozent-kuerzere-schnittzeiten.html kasto.lh/de/unternehmen/aktuelles-neuigkeiten/news.html
+    Redirect 301 /de/unternehmen/aktuelles-neuigkeiten/news/details/kasto-praesentiert-eine-kompakte-lager-loesung-fuer-alles-im-blechformat.html kasto.lh/de/unternehmen/aktuelles-neuigkeiten/news.html
+    Redirect 301 /de/unternehmen/aktuelles-neuigkeiten/news/details/kasto-praesentiert-einen-vielseitigen-helfer-zum-saegen-in-der-werkstatt.html kasto.lh/de/unternehmen/aktuelles-neuigkeiten/news.html
+    Redirect 301 /de/unternehmen/aktuelles-neuigkeiten/news/details/kasto-schalkau-in-thueringen-feiert-sein-25-jaehriges-bestehen.html kasto.lh/de/unternehmen/aktuelles-neuigkeiten/news.html
+    Redirect 301 /de/unternehmen/aktuelles-neuigkeiten/news/details/kasto-schweiz-ag-neuer-standort-in-der-naehe-der-kunden.html kasto.lh/de/unternehmen/aktuelles-neuigkeiten/news.html
+    Redirect 301 /de/unternehmen/aktuelles-neuigkeiten/news/details/regionalwettbewerb-in-der-ortenau.html kasto.lh/de/unternehmen/aktuelles-neuigkeiten/news.html
+    Redirect 301 /de/unternehmen/aktuelles-neuigkeiten/news/details/wenk-handelsgesellschaft-mbh-showroom.html kasto.lh/de/unternehmen/aktuelles-neuigkeiten/news.html
+    Redirect 301 /en/company/aboutus.html kasto.lh/en/company/about-us.html
+    Redirect 301 /en/company/latestnews/exhibitions.html kasto.lh/en/company/latestnews/exhibitions.html
+    Redirect 301 /en/company/latestnews/news.html kasto.lh/en/company/latest-news/news.html
+    Redirect 301 /en/company/latestnews/news/detailpage/In-house-trade-fair-at-KASTO-Inc..html kasto.lh/en/company/latest-news/news.html
+    Redirect 301 /en/company/latestnews/news/detailpage/kasto-inc-announces-management-changes-67.html kasto.lh/en/company/latest-news/news.html
+    Redirect 301 /en/company/latestnews/news/detailpage/kasto-schalkau-in-thueringen-feiert-sein-25-jaehriges-bestehen-59.html kasto.lh/en/company/latest-news/news.html
+    Redirect 301 /en/company/latestnews/news/detailpage/kasto-schweiz-ag-new-location-near-customers.html kasto.lh/en/company/latest-news/news.html
+    Redirect 301 /en/company/latestnews/news/detailpage/opening-ceremony-of-kasto-asia-pacific-pte-ltd.html kasto.lh/en/company/latest-news/news.html
+    Redirect 301 /en/company/latestnews/press.html kasto.lh/en/company/latest-news/news.html
+    Redirect 301 /en/company/latestnews/publishedaboutKASTO.html kasto.lh/en/company/latest-news/published-about-kasto.html
+    Redirect 301 /en/contact/inquiry/KASTO-Partner+werden.html kasto.lh/en/contact/inquiry.html
+    Redirect 301 /en/products/customer-survey.html kasto.lh/en/products/customer-survey.html
+    Redirect 301 /en/products/saegen/saegen-uebersicht.html kasto.lh/en/products/sawing-machines/overview-saws.html
+    Redirect 301 /en/products/sawingmachines/sawing-machines.html kasto.lh/en/products/sawing-machines/saws.html
+    Redirect 301 /en/products/sawingmachines/sawing-machines/back.html kasto.lh/en/products/sawing-machines/saws.html
+    Redirect 301 /en/products/sawingmachines/sawingmachines/detailpage/kastoalu-a-13-5.html kasto.lh/en/products/sawing-machines/sawing-machines-detail-page/kastoalu-a-13-5.html
+    Redirect 301 /en/products/sawingmachines/sawingmachines/detailpage/kastoalu-u-12-7.html kasto.lh/en/products/sawing-machines/sawing-machines-detail-page/kastoalu-u-12-7.html
+    Redirect 301 /en/products/sawingmachines/sawingmachines/detailpage/kastoalu-u-14-8.html kasto.lh/en/products/sawing-machines/sawing-machines-detail-page/kastoalu-u-14-8.html
+    Redirect 301 /en/products/sawingmachines/sawingmachines/detailpage/kastoalu-u-20-9.html kasto.lh/en/products/sawing-machines/sawing-machines-detail-page/kastoalu-u-20-9.html
+    Redirect 301 /en/products/sawingmachines/sawingmachines/detailpage/kastobbs-a-3x20-10.html kasto.lh/en/products/sawing-machines/sawing-machines-detail-page/kastobbs-a-3x20-10.html
+    Redirect 301 /en/products/sawingmachines/sawingmachines/detailpage/kastobbs-a-4x16-11.html kasto.lh/en/products/sawing-machines/sawing-machines-detail-page/kastobbs-u-4x16-13.html
+
+    RewriteRule ^en/products/sawingmachines/sawingmachines/detailpage/kastobbs-u-(.+) kasto.lh/en/products/sawing-machines/saws.html? [L,R=301]
+    RewriteRule ^en/products/sawingmachines/sawingmachines/detailpage/kastobloc(.+) kasto.lh/en/products/sawing-machines/saws.html? [L,R=301]
+    RewriteRule ^en/products/sawingmachines/sawingmachines/detailpage/kastoc(.+) kasto.lh/en/products/sawing-machines/saws.html? [L,R=301]
+    RewriteRule ^en/products/sawingmachines/sawingmachines/detailpage/kastoflex(.+) kasto.lh/en/products/sawing-machines/saws.html? [L,R=301]
+    RewriteRule ^en/products/sawingmachines/sawingmachines/detailpage/kastogripspeed(.+) kasto.lh/en/products/sawing-machines/saws.html? [L,R=301]
+    RewriteRule ^en/products/sawingmachines/sawingmachines/detailpage/kastoh(.+) kasto.lh/en/products/sawing-machines/saws.html? [L,R=301]
+    RewriteRule ^en/products/sawingmachines/sawingmachines/detailpage/kastom(.+) kasto.lh/en/products/sawing-machines/saws.html? [L,R=301]
+    RewriteRule ^en/products/sawingmachines/sawingmachines/detailpage/kastop(.+) kasto.lh/en/products/sawing-machines/saws.html? [L,R=301]
+    RewriteRule ^en/products/sawingmachines/sawingmachines/detailpage/kastor(.+) kasto.lh/en/products/sawing-machines/saws.html? [L,R=301]
+    RewriteRule ^en/products/sawingmachines/sawingmachines/detailpage/kastos(.+) kasto.lh/en/products/sawing-machines/saws.html? [L,R=301]
+    RewriteRule ^en/products/sawingmachines/sawingmachines/detailpage/kastot(.+) kasto.lh/en/products/sawing-machines/saws.html? [L,R=301]
+    RewriteRule ^en/products/sawingmachines/sawingmachines/detailpage/kastov(.+) kasto.lh/en/products/sawing-machines/saws.html? [L,R=301]
+    RewriteRule ^en/products/sawingmachines/sawingmachines/detailpage/kastow(.+) kasto.lh/en/products/sawing-machines/saws.html? [L,R=301]
+
+    Redirect 301 /en/products/service/services/back.html kasto.lh/en/products/service/services.html
+    Redirect 301 /en/products/service/services/detailpage/ersatzteile.html kasto.lh/en/products/service/service-detail-page/spare-parts.html
+    Redirect 301 /en/products/service/services/detailpage/erweiterter-support.html kasto.lh/en/products/service/service-detail-page/extended-support.html
+    Redirect 301 /en/products/service/services/detailpage/id-247-hotline.html kasto.lh/en/products/service/service-detail-page/id-247-hotline.html
+    Redirect 301 /en/products/service/services/detailpage/kasto-teleservice-274.html kasto.lh/en/products/service/service-detail-page/id-247-hotline.html
+    Redirect 301 /en/products/service/services/detailpage/kastoretrofit.html kasto.lh/en/products/service/service-detail-page/kastoretrofit.html
+    Redirect 301 /en/products/service/services/detailpage/technische-beratung.html kasto.lh/en/products/service/service-detail-page/technische-beratung.html
+    Redirect 301 /en/products/service/services/detailpage/wartung-uvv-pruefungen.html kasto.lh/en/products/service/service-detail-page/repairs-at-manufacturers-site.html
+    Redirect 301 /en/products/service/services/detailpage/werksreparaturen.html kasto.lh/en/products/service/service-detail-page/wartung-uvv-pruefungen.html
+    Redirect 301 /en/products/storage-sawing-systems/overview-storage-sawing-systems.html kasto.lh/en/products/storage-systems/overview-storage-systems.html
+
+    RewriteRule ^en/products/storagesystems/storagesystems(.+) kasto.lh/en/products/storage-systems/storage-systems.html? [L,R=301]
+
+    Redirect 301 /en/products/systems/systems/back.html kasto.lh/en/products/storage-systems/storage-systems.html
+    Redirect 301 /en/products/systems/systems/detailpage/kastocenter.html kasto.lh/en/products/systems/systems-detail-page/kastocenter.html
+    Redirect 301 /en/products/systems/systems/detailpage/kastosawcell-320.html kasto.lh/en/products/systems/systems-detail-page/kastosawcell-320.html
+    Redirect 301 /en/products/systems/systems/detailpage/kombi-lagerloesung.html kasto.lh/en/products/systems/systems-detail-page/kombi-lagerloesung.html
+    Redirect 301 /en/products/systems/systems/detailpage/s-machines.html kasto.lh/en/products/systems/systems-detail-page/s-machines.html
+    Redirect 301 /ff/contact/demande/KASTO-Partner+werden.html kasto.lh/ff/contact/demande.html
+    Redirect 301 /ff/entreprise/actualites/communiques-de-presse.html kasto.lh/ff/entreprise/nouveautes-acutalites/communiques-de-presse.html
+    Redirect 301 /ff/entreprise/actualites/kasto-dans-la-presse.html kasto.lh/ff/entreprise/nouveautes-acutalites/kasto-dans-la-presse.html
+
+    RewriteRule ^ff/entreprise/actualites/nouveautes(.+) kasto.lh/ff/entreprise/nouveautes-acutalites/nouveautes.html? [L,R=301]
+
+    Redirect 301 /ff/entreprise/actualites/salons.html kasto.lh/ff/entreprise/nouveautes-acutalites/salons.html
+    Redirect 301 /ff/produits/machines-a-scier/machines-a-scier/back.html kasto.lh/ff/produits/machines-a-scier/machines-a-scier.html
+
+    RewriteRule ^ff/produits/machines-a-scier/machines-a-scier/detail-page/kasto(.+) kasto.lh/ff/produits/machines-a-scier/machines-a-scier.html? [L,R=301]
+
+    Redirect 301 /ff/produits/service/services.html kasto.lh/ff/produits/service/service.html
+    Redirect 301 /ff/produits/service/services/back.html kasto.lh/ff/produits/service/service.html
+    Redirect 301 /ff/produits/service/services/detail-page/ersatzteile.html kasto.lh/ff/produits/service/service-detail/ersatzteile.html
+    Redirect 301 /ff/produits/service/services/detail-page/erweiterter-support.html kasto.lh/ff/produits/service/service-detail/erweiterter-support.html
+    Redirect 301 /ff/produits/service/services/detail-page/id-247-hotline.html kasto.lh/ff/produits/service/service-detail/id-247-hotline.html
+    Redirect 301 /ff/produits/service/services/detail-page/kasto-teleservice-274.html kasto.lh/ff/produits/service/service-detail/kasto-teleservice-274.html
+    Redirect 301 /ff/produits/service/services/detail-page/kastoretrofit.html kasto.lh/ff/produits/service/service-detail/kastoretrofit.html
+    Redirect 301 /ff/produits/service/services/detail-page/technische-beratung.html kasto.lh/ff/produits/service/service-detail/technische-beratung.html
+    Redirect 301 /ff/produits/service/services/detail-page/wartung-uvv-pruefungen.html kasto.lh/ff/produits/service/service-detail/wartung-uvv-pruefungen.html
+    Redirect 301 /ff/produits/service/services/detail-page/werksreparaturen.html kasto.lh/ff/produits/service/service-detail/werksreparaturen.html
+    Redirect 301 /ff/produits/systemes-de-stockage/apercu-des-systemes-de-stockage.html kasto.lh/ff/produits/machines-a-scier/apercu-scies.html
+
+    RewriteRule ^ff/produits/systemes-de-stockage/systemes-de-stockage(.+) kasto.lh/ff/produits/systemes-de-stockage/systemes-de-stockage.html? [L,R=301]
+
+    Redirect 301 /ff/produits/systemes/systemes/back.html kasto.lh/ff/produits/systemes/systemes.html
+    Redirect 301 /ff/produits/systemes/systemes/detail-page/kastocenter.html kasto.lh/ff/produits/systemes/systemes-detail/kastocenter.html
+    Redirect 301 /ff/produits/systemes/systemes/detail-page/kastosawcell-320.html kasto.lh/ff/produits/systemes/systemes-detail/kastosawcell-320.html
+    Redirect 301 /ff/produits/systemes/systemes/detail-page/kombi-lagerloesung.html kasto.lh/ff/produits/systemes/systemes-detail/kombi-lagerloesung.html
+    Redirect 301 /ff/produits/systemes/systemes/detail-page/s-machines.html kasto.lh/ff/produits/systemes/systemes-detail/s-machines.html
+    Redirect 301 /fr/contact/conseiletventes.html kasto.lh/fr/contact/conseil-et-ventes.html
+    Redirect 301 /fr/contact/demande/KASTO-Partner+werden.html kasto.lh/fr/contact/demande.html
+    Redirect 301 /fr/contact/oÃ¹noustrouver.html kasto.lh/fr/entreprise/nouveautes-acutalites/nouveautes.html
+
+    Redirect 301 /fr/entreprise/actualitÃ©s/nouveautÃ©s/salons.html kasto.lh/fr/entreprise/nouveautes-acutalites/salons.html
+    RewriteRule ^fr/entreprise/actualitÃ©s/nouveautÃ©s(.+) kasto.lh/fr/entreprise/nouveautes-acutalites/nouveautes.html? [L,R=301]
+
+    Redirect 301 /fr/entreprise/aproposdenous.html kasto.lh/fr/entreprise/a-propos-de-nous.html
+    Redirect 301 /fr/entreprise/carriÃ¨res.html kasto.lh/fr/entreprise/carrieres.html
+    Redirect 301 /fr/prodiuts/service/aperÃ§uservices.html kasto.lh/fr/page-daccueil.html
+    Redirect 301 /fr/produits/machinesÃ scier/aperÃ§uscies.html kasto.lh/fr/page-daccueil.html
+    Redirect 301 /fr/produits/machinesÃ scier/machinesÃ scier.html kasto.lh/fr/produits/machines-a-scier/machines-a-scier.html
+    Redirect 301 /fr/produits/machinesÃ scier/machinesÃ scier/back.html kasto.lh/fr/produits/machines-a-scier/machines-a-scier.html
+
+    RewriteRule ^fr/produits/machinesÃ scier/machinesÃ scier/detailpage/kasto(.+) kasto.lh/fr/produits/machines-a-scier/machines-a-scier.html? [L,R=301]
+
+    Redirect 301 /fr/produits/service/service/detailpage/ersatzteile.html kasto.lh/ff/produits/service/service-detail/ersatzteile.html
+    Redirect 301 /fr/produits/service/service/detailpage/erweiterter-support.html kasto.lh/ff/produits/service/service-detail/erweiterter-support.html
+    Redirect 301 /fr/produits/service/service/detailpage/id-247-hotline.html kasto.lh/ff/produits/service/service-detail/id-247-hotline.html
+    Redirect 301 /fr/produits/service/service/detailpage/kasto-teleservice-274.html kasto.lh/ff/produits/service/service-detail/kasto-teleservice-274.html
+    Redirect 301 /fr/produits/service/service/detailpage/kastoretrofit.html kasto.lh/ff/produits/service/service-detail/kastoretrofit.html
+    Redirect 301 /fr/produits/service/service/detailpage/technische-beratung.html kasto.lh/fr/produits/service/service-detail/technische-beratung.html
+    Redirect 301 /fr/produits/service/service/detailpage/wartung-uvv-pruefungen.html kasto.lh/ff/produits/service/service-detail/wartung-uvv-pruefungen.html
+    Redirect 301 /fr/produits/service/service/detailpage/werksreparaturen.html kasto.lh/ff/produits/service/service-detail/werksreparaturen.html
+    Redirect 301 /fr/Produits/Service/tÃ©lÃ©chargertouslesdocuments.html kasto.lh/fr/page-daccueil.html
+    Redirect 301 /fr/produits/systÃ¨mes/systÃ¨mes/aperÃ§udessytÃ¨mes.html kasto.lh/fr/produits/systemes/systemes.html
+
+    RewriteRule ^fr/produits/systÃ¨mes/systÃ¨mes/detailpage/(.+) kasto.lh/fr/produits/systemes/systemes.html? [L,R=301]
+    RewriteRule ^fr/produits/systÃ¨mesdestockage/systÃ¨mesdestockage/(.+) kasto.lh/fr/produits/systeme-de-stockage/systemes-de-stockage.html? [L,R=301]
+
+    Redirect 301 /fr/produkte/lager/neue-lager.html kasto.lh/fr/produits/systeme-de-stockage/systemes-de-stockage.html
+    Redirect 301 /fr/produkte/lager/neue-lager/back.html kasto.lh/fr/produits/systeme-de-stockage/systemes-de-stockage.html
+    Redirect 301 /fr/produkte/service/services.html kasto.lh/fr/produits/service/service.html
+    Redirect 301 /fr/produkte/service/services/back.html kasto.lh/fr/produits/service/service.html
+    Redirect 301 /fr/produkte/systeme/neue-systeme.html kasto.lh/fr/produits/systemes/systemes.html
+    Redirect 301 /fr/produkte/systeme/neue-systeme/back.html kasto.lh/fr/produits/systemes/systemes.html
+    Redirect 301 /uk/about-us.html kasto.lh/uk/company/about-us.html
+
+    RewriteRule ^uk/company/latest-news/news/detail-page/(.+) kasto.lh/uk/company/latest-news/news.html? [L,R=301]
+
+    Redirect 301 /uk/contact/inquiry/KASTO-Partner+werden.html kasto.lh/uk/contact/inquiry.html
+    Redirect 301 /uk/products/sawing-machines/sawing-machines.html kasto.lh/uk/products/sawing-machines/saws.html
+    Redirect 301 /uk/products/sawing-machines/sawing-machines/back.html kasto.lh/uk/products/sawing-machines/saws.html
+
+    RewriteRule ^uk/products/sawing-machines/sawing-machines/detail-page/kasto/(.+) kasto.lh/uk/products/sawing-machines/saws.html? [L,R=301]
+
+    Redirect 301 /uk/products/service-252/customer-survey.html kasto.lh/uk/products/service/customer-survey.html
+    Redirect 301 /uk/products/service-252/downloads.html kasto.lh/uk/products/service/downloads.html
+    Redirect 301 /uk/products/service-252/overview-service.html kasto.lh/uk/products/service/service-overview.html
+    Redirect 301 /uk/products/service-252/services.html kasto.lh/uk/products/service/service-overview.html
+    Redirect 301 /uk/products/service-252/services/back.html kasto.lh/uk/products/service/service-overview.html
+    Redirect 301 /uk/products/service-252/services/detail-page/ersatzteile.html kasto.lh/uk/products/service/service-detail-page/ersatzteile.html
+    Redirect 301 /uk/products/service-252/services/detail-page/erweiterter-support.html kasto.lh/uk/products/service/service-detail-page/erweiterter-support.html
+    Redirect 301 /uk/products/service-252/services/detail-page/id-247-hotline.html kasto.lh/uk/products/service/service-detail-page/id-247-hotline.html
+    Redirect 301 /uk/products/service-252/services/detail-page/kasto-teleservice-274.html kasto.lh/uk/products/service/service-detail-page/kasto-teleservice-274.html
+    Redirect 301 /uk/products/service-252/services/detail-page/kastoretrofit.html kasto.lh/uk/products/service/service-detail-page/kastoretrofit.html
+    Redirect 301 /uk/products/service-252/services/detail-page/technische-beratung.html kasto.lh/uk/products/service/service-detail-page/technische-beratung.html
+    Redirect 301 /uk/products/service-252/services/detail-page/wartung-uvv-pruefungen.html kasto.lh/uk/products/service/service-detail-page/wartung-uvv-pruefungen.html
+    Redirect 301 /uk/products/service-252/services/detail-page/werksreparaturen.html kasto.lh/uk/products/service/service-detail-page/werksreparaturen.html
+    Redirect 301 /uk/products/storage-systems/storage-systems/back.html kasto.lh/uk/products/storage-systems/storage-systems.html
+
+    RewriteRule ^uk/products/storage-systems/storage-systems/detail-page/(.+) kasto.lh/uk/products/storage-systems/storage-systems.html? [L,R=301]
+
+    Redirect 301 /uk/products/systems/systems/back.html kasto.lh/uk/products/systems/systems.html
+    Redirect 301 /uk/products/systems/systems/detailseite/kastocenter.html kasto.lh/uk/products/systems/systems.html
+    Redirect 301 /uk/products/systems/systems/detailseite/kastosawcell-320.html kasto.lh/uk/products/systems/systems.html
+    Redirect 301 /uk/products/systems/systems/detailseite/kombi-lagerloesung.html kasto.lh/uk/products/systems/systems.html
+    Redirect 301 /uk/products/systems/systems/detailseite/s-machines.html kasto.lh/uk/products/systems/systems.html
+    Redirect 301 /us/company/latest-news/news/detail-page/in-house-trade-fair-at-kasto-inc.html kasto.lh/us/company/latest-news/news.html
+    Redirect 301 /us/company/latest-news/news/detail-page/kasto-inc-announces-management-changes.html kasto.lh/us/company/latest-news/news.html
+    Redirect 301 /us/company/latest-news/news/detail-page/kasto-schweiz-ag-new-location-near-customers-56.html kasto.lh/us/company/latest-news/news.html
+    Redirect 301 /us/contact/inquiry/KASTO-Partner+werden.html kasto.lh/us/contact/inquiry.html
+    Redirect 301 /us/products//overview-storage-systems.html kasto.lh/uk/products/storage-systems/overview-storage-systems.html
+    Redirect 301 /us/products/sawing-machines/sawing-machines.html kasto.lh/us/products/sawing-machines/saws.html
+    Redirect 301 /us/products/sawing-machines/sawing-machines/back.html kasto.lh/us/products/sawing-machines/saws.html
+
+    RewriteRule ^us/products/sawing-machines/sawing-machines/detail-page/kasto(.+) kasto.lh/us/products/sawing-machines/saws.html? [L,R=301]
+
+    Redirect 301 /us/products/service/overview-service.html kasto.lh/us/products/service/service-overview.html
+    Redirect 301 /us/products/service/services/back.html kasto.lh/us/products/service/service-overview.html
+    Redirect 301 /us/products/service/services/detail-page/ersatzteile.html kasto.lh/us/products/service/service-detail-page/spare-parts.html
+    Redirect 301 /us/products/service/services/detail-page/erweiterter-support.html kasto.lh/us/products/service/service-detail-page/extended-support.html
+    Redirect 301 /us/products/service/services/detail-page/id-247-hotline.html kasto.lh/us/products/service/service-detail-page/id-247-hotline.html
+    Redirect 301 /us/products/service/services/detail-page/kasto-teleservice-274.html kasto.lh/us/products/service/service-detail-page/kasto-teleservice.html
+    Redirect 301 /us/products/service/services/detail-page/kastoretrofit.html kasto.lh/us/products/service/service-detail-page/kastoretrofit.html
+    Redirect 301 /us/products/service/services/detail-page/technische-beratung.html kasto.lh/us/products/service/service-detail-page/technische-beratung.html
+    Redirect 301 /us/products/service/services/detail-page/wartung-uvv-pruefungen.html kasto.lh/us/products/service/service-detail-page/wartung-uvv-pruefungen.html
+    Redirect 301 /us/products/service/services/detail-page/werksreparaturen.html kasto.lh/us/products/service/service-detail-page/repairs-at-manufacturers-site.html
+
+    RewriteRule ^us/products/storage-systems/detail-page/(.+) kasto.lh/us/products/storage-systems/storage-systems.html? [L,R=301]
+
+    Redirect 301 /us/products/storage-systems/storage-systems/back.html kasto.lh/us/products/storage-systems/storage-systems.html
+    Redirect 301 /us/products/systems/systems/back.html kasto.lh/us/products/systems/systems.html
+    Redirect 301 /us/products/systems/systems/detailseite/kastocenter.html kasto.lh/us/products/systems/systems.html
+    Redirect 301 /us/products/systems/systems/detailseite/kastosawcell-320.html kasto.lh/us/products/systems/systems.html
+    Redirect 301 /us/products/systems/systems/detailseite/kombi-lagerloesung.html kasto.lh/us/products/systems/systems.html
+    Redirect 301 /us/products/systems/systems/detailseite/s-machines.html kasto.lh/us/products/systems/systems.html
+
+    ### END REDIRECTS ###
+
+    # Rules to set ApplicationContext based on hostname
+    #RewriteCond %{HTTP_HOST} ^dev\.example\.com$
+    #RewriteRule .? - [E=TYPO3_CONTEXT:Development]
+    #RewriteCond %{HTTP_HOST} ^staging\.example\.com$
+    #RewriteRule .? - [E=TYPO3_CONTEXT:Production/Staging]
+    #RewriteCond %{HTTP_HOST} ^www\.example\.com$
+    #RewriteRule .? - [E=TYPO3_CONTEXT:Production]
+
+    # Rule for versioned static files, configured through:
+    # - $GLOBALS['TYPO3_CONF_VARS']['BE']['versionNumberInFilename']
+    # - $GLOBALS['TYPO3_CONF_VARS']['FE']['versionNumberInFilename']
+    # IMPORTANT: This rule has to be the very first RewriteCond in order to work!
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.+)\.(\d+)\.(php|js|css|png|jpg|gif|gzip)$ %{ENV:CWD}$1.$3 [L]
+
+    # Access block for folders
+    RewriteRule _(?:recycler|temp)_/ - [F]
+    RewriteRule fileadmin/templates/.*\.(?:txt|ts)$ - [F]
+    RewriteRule ^(?:vendor|typo3_src|typo3temp/var) - [F]
+    RewriteRule (?:typo3conf/ext|typo3/sysext|typo3/ext)/[^/]+/(?:Configuration|Resources/Private|Tests?|Documentation|docs?)/ - [F]
+
+    # Block access to all hidden files and directories with the exception of
+    # the visible content from within the `/.well-known/` hidden directory (RFC 5785).
+    RewriteCond %{REQUEST_URI} "!(^|/)\.well-known/([^./]+./?)+$" [NC]
+    RewriteCond %{SCRIPT_FILENAME} -d [OR]
+    RewriteCond %{SCRIPT_FILENAME} -f
+    RewriteRule (?:^|/)\. - [F]
+
+    # Stop rewrite processing, if we are in the typo3/ directory or any other known directory
+    # NOTE: Add your additional local storages here
+    RewriteRule ^(?:typo3/|fileadmin/|typo3conf/|typo3temp/|uploads/|favicon\.ico) - [L]
+
+    # If the file/symlink/directory does not exist => Redirect to index.php.
+    # For httpd.conf, you need to prefix each '%{REQUEST_FILENAME}' with '%{DOCUMENT_ROOT}'.
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-l
+    RewriteRule ^.*$ %{ENV:CWD}index.php [QSA,L]
+
+</IfModule>
+
+# Access block for files
+<FilesMatch "(?i:^\.|^#.*#|^(?:ChangeLog|ToDo|Readme|License)(?:\.md|\.txt)?|^composer\.(?:json|lock)|^ext_conf_template\.txt|^ext_typoscript_constants\.txt|^ext_typoscript_setup\.txt|flexform[^.]*\.xml|locallang[^.]*\.(?:xml|xlf)|\.(?:bak|co?nf|cfg|ya?ml|ts|dist|fla|in[ci]|log|sh|sql(?:\..*)?|sw[op]|git.*)|.*(?:~|rc))$">
+    # Apache < 2.3
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+        Satisfy All
+    </IfModule>
+
+    # Apache ≥ 2.3
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+</FilesMatch>
+
+# Block access to vcs directories
+<IfModule mod_alias.c>
+    RedirectMatch 404 /\.(?:git|svn|hg)/
+</IfModule>
+
+### End: Rewriting and Access ###
+
+
+
+### Begin: Miscellaneous ###
+
+# 404 error prevention for non-existing redirected folders
+Options -MultiViews
+
+# Make sure that directory listings are disabled.
+<IfModule mod_autoindex.c>
+    Options -Indexes
+</IfModule>
+
+<IfModule mod_headers.c>
+    # Force IE to render pages in the highest available mode
+    Header set X-UA-Compatible "IE=edge"
+    <FilesMatch "\.(appcache|crx|css|eot|gif|htc|ico|jpe?g|js|m4a|m4v|manifest|mp4|oex|oga|ogg|ogv|otf|pdf|png|safariextz|svgz?|ttf|vcf|webapp|webm|webp|woff2?|xml|xpi)$">
+        Header unset X-UA-Compatible
+    </FilesMatch>
+
+    # Reducing MIME type security risks
+    Header set X-Content-Type-Options "nosniff"
+</IfModule>
+
+# ETag removal
+<IfModule mod_headers.c>
+    Header unset ETag
+</IfModule>
+FileETag None
+
+### End: Miscellaneous ###
+
+
+# Add your own rules here.
+
+php_value upload_max_filesize 25M
+php_value post_max_size 27M
+php_value always_populate_raw_post_data -1
+php_value max_execution_time 240
+php_value max_input_vars 1500

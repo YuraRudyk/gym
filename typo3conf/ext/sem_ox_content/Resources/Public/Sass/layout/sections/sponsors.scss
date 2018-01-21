@@ -1,0 +1,100 @@
+.sponsors {
+  h2 {
+    text-align: center;
+  }
+
+  a {
+    margin-bottom: 0;
+    display: inline-block;
+  }
+
+  img {
+    height: auto;
+    width: auto;
+    max-height: 80px;
+    max-width: 100%;
+  }
+
+  .gold-sponsors {
+    @include flex();
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 35px;
+
+    div {
+      height: 80px;
+    }
+  }
+
+  .all-sponsors {
+    &.panel {
+      background-color: transparent;
+      margin-bottom: 0;
+      @include box-shadow(none);
+
+      .panel-collapse {
+        padding: 0;
+      }
+
+      .panel-title {
+        padding-top: 25px;
+        height: 50px;
+
+        a {
+          display: block;
+          position: absolute;
+          height: 50px;
+          width: 60px;
+          @include translate(-50%, 0);
+          left: 50%;
+
+          &:hover,
+          &:focus {
+            color: inherit;
+          }
+
+          .arrow-down,
+          .arrow-up {
+            @include translate(-50%, 0);
+            position: absolute;
+            left: 50%;
+            white-space: nowrap;
+            padding-left: 0;
+
+            &:before {
+              @include translate(-50%, 0);
+              left: 50%;
+              font-size: 50px;
+              width: 38px;
+            }
+
+            &.arrow-down:before {
+              top: 28px;
+            }
+
+            &.arrow-up {
+              top: 28px;
+
+              &:before {
+                top: -28px;
+              }
+            }
+          }
+
+          &.collapsed .arrow-up {
+            opacity: 0;
+          }
+
+          &:not(.collapsed) .arrow-down {
+            opacity: 0;
+          }
+        }
+      }
+    }
+
+    [class^="col"] {
+      text-align: center;
+    }
+  }
+}

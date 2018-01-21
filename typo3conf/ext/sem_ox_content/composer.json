@@ -1,0 +1,20 @@
+{
+    "name": "media711/sem-ox-content",
+    "type": "typo3-cms-extension",
+    "description": "Site package for each TYPO3 CMS projects.",
+    "homepage": "https://example.com",
+    "license": ["GPL-2.0+"],
+    "keywords": ["TYPO3 CMS", "foo bar"],
+    "require": {
+        "typo3/cms-core": "^7.6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Media711\\SemOxContent\\": "Classes/"
+        }
+    },
+    "replace": {
+        "sem_ox_content": "self.version",
+        "typo3-ter/sem-ox-content": "self.version"
+    }
+}

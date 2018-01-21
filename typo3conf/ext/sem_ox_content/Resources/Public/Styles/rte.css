@@ -1,0 +1,199 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800);
+@import url(../Styles/lib/font-awesome.min.css);
+.htmlarea-content-body {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400; }
+  .htmlarea-content-body p.text-left, .htmlarea-content-body div.text-left {
+    text-align: left; }
+  .htmlarea-content-body p.text-center, .htmlarea-content-body div.text-center {
+    text-align: center; }
+  .htmlarea-content-body p.text-right, .htmlarea-content-body div.text-right {
+    text-align: right; }
+  .htmlarea-content-body p.text-justify, .htmlarea-content-body div.text-justify {
+    text-align: justify; }
+  .htmlarea-content-body p.jumbotron, .htmlarea-content-body div.jumbotron {
+    font-size: 55px; }
+  .htmlarea-content-body p.subtitle, .htmlarea-content-body div.subtitle {
+    font-size: 24px;
+    margin-bottom: 20px; }
+  .htmlarea-content-body h1, .htmlarea-content-body .h1, .htmlarea-content-body h2, .htmlarea-content-body .h2, .htmlarea-content-body h3, .htmlarea-content-body .h3, .htmlarea-content-body h4, .htmlarea-content-body .h4, .htmlarea-content-body h5, .htmlarea-content-body .h5, .htmlarea-content-body h6, .htmlarea-content-body .h6 {
+    margin-top: 0;
+    font-weight: 300; }
+    .htmlarea-content-body h1.text-left, .htmlarea-content-body .h1.text-left, .htmlarea-content-body h2.text-left, .htmlarea-content-body .h2.text-left, .htmlarea-content-body h3.text-left, .htmlarea-content-body .h3.text-left, .htmlarea-content-body h4.text-left, .htmlarea-content-body .h4.text-left, .htmlarea-content-body h5.text-left, .htmlarea-content-body .h5.text-left, .htmlarea-content-body h6.text-left, .htmlarea-content-body .h6.text-left {
+      text-align: left; }
+    .htmlarea-content-body h1.text-center, .htmlarea-content-body .h1.text-center, .htmlarea-content-body h2.text-center, .htmlarea-content-body .h2.text-center, .htmlarea-content-body h3.text-center, .htmlarea-content-body .h3.text-center, .htmlarea-content-body h4.text-center, .htmlarea-content-body .h4.text-center, .htmlarea-content-body h5.text-center, .htmlarea-content-body .h5.text-center, .htmlarea-content-body h6.text-center, .htmlarea-content-body .h6.text-center {
+      text-align: center; }
+    .htmlarea-content-body h1.text-right, .htmlarea-content-body .h1.text-right, .htmlarea-content-body h2.text-right, .htmlarea-content-body .h2.text-right, .htmlarea-content-body h3.text-right, .htmlarea-content-body .h3.text-right, .htmlarea-content-body h4.text-right, .htmlarea-content-body .h4.text-right, .htmlarea-content-body h5.text-right, .htmlarea-content-body .h5.text-right, .htmlarea-content-body h6.text-right, .htmlarea-content-body .h6.text-right {
+      text-align: right; }
+    .htmlarea-content-body h1.text-justify, .htmlarea-content-body .h1.text-justify, .htmlarea-content-body h2.text-justify, .htmlarea-content-body .h2.text-justify, .htmlarea-content-body h3.text-justify, .htmlarea-content-body .h3.text-justify, .htmlarea-content-body h4.text-justify, .htmlarea-content-body .h4.text-justify, .htmlarea-content-body h5.text-justify, .htmlarea-content-body .h5.text-justify, .htmlarea-content-body h6.text-justify, .htmlarea-content-body .h6.text-justify {
+      text-align: justify; }
+    .htmlarea-content-body h1.jumbotron, .htmlarea-content-body .h1.jumbotron, .htmlarea-content-body h2.jumbotron, .htmlarea-content-body .h2.jumbotron, .htmlarea-content-body h3.jumbotron, .htmlarea-content-body .h3.jumbotron, .htmlarea-content-body h4.jumbotron, .htmlarea-content-body .h4.jumbotron, .htmlarea-content-body h5.jumbotron, .htmlarea-content-body .h5.jumbotron, .htmlarea-content-body h6.jumbotron, .htmlarea-content-body .h6.jumbotron {
+      font-size: 55px; }
+    .htmlarea-content-body h1.subtitle, .htmlarea-content-body .h1.subtitle, .htmlarea-content-body h2.subtitle, .htmlarea-content-body .h2.subtitle, .htmlarea-content-body h3.subtitle, .htmlarea-content-body .h3.subtitle, .htmlarea-content-body h4.subtitle, .htmlarea-content-body .h4.subtitle, .htmlarea-content-body h5.subtitle, .htmlarea-content-body .h5.subtitle, .htmlarea-content-body h6.subtitle, .htmlarea-content-body .h6.subtitle {
+      font-size: 24px;
+      margin-bottom: 20px; }
+  .htmlarea-content-body h1, .htmlarea-content-body .h1, .htmlarea-content-body h2, .htmlarea-content-body .h2, .htmlarea-content-body h3, .htmlarea-content-body .h3, .htmlarea-content-body h4, .htmlarea-content-body .h4 {
+    margin-bottom: 30px; }
+  .htmlarea-content-body h1, .htmlarea-content-body .h1 {
+    font-size: 45px; }
+  .htmlarea-content-body h2, .htmlarea-content-body .h2 {
+    font-size: 40px; }
+  .htmlarea-content-body h3, .htmlarea-content-body .h3 {
+    font-size: 38px; }
+  .htmlarea-content-body h4, .htmlarea-content-body .h4 {
+    font-size: 32px; }
+  .htmlarea-content-body h5, .htmlarea-content-body .h5 {
+    font-size: 28px;
+    margin-bottom: 25px; }
+  .htmlarea-content-body h6, .htmlarea-content-body .h6, .htmlarea-content-body .subtitle {
+    font-size: 24px;
+    margin-bottom: 20px; }
+  .htmlarea-content-body h6 {
+    line-height: 26px; }
+  .htmlarea-content-body b,
+  .htmlarea-content-body b * {
+    font-weight: 800; }
+  .htmlarea-content-body p {
+    margin-bottom: 15px; }
+  .htmlarea-content-body a.button-link {
+    display: inline-block;
+    position: relative;
+    font-size: 16px; }
+    .htmlarea-content-body a.button-link:after {
+      display: inline-block;
+      font: normal normal normal 14px/1 FontAwesome;
+      font-size: inherit;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      content: "\f105";
+      margin-left: 10px; }
+  .htmlarea-content-body a.button-default, .htmlarea-content-body a.btn-dark-gray, .htmlarea-content-body a.btn-dark-blue, .htmlarea-content-body a.btn-lime-green, .htmlarea-content-body a.btn-large-oxgrey, .htmlarea-content-body a.btn-blue, .htmlarea-content-body a.btn-red-raspberry, .htmlarea-content-body a.btn-ice-blue, .htmlarea-content-body a.btn-mandarin, .htmlarea-content-body a.btn-mango {
+    display: inline-block;
+    text-align: center;
+    line-height: 1;
+    cursor: none;
+    -webkit-appearance: none;
+    transition: all 0.25s ease-out;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    border-radius: 0;
+    padding: 0.85em 1em;
+    margin: 16px 16px 16px 0;
+    font-size: 14px;
+    background-color: #00a0e1;
+    color: #fff;
+    text-decoration: none; }
+  .htmlarea-content-body a.btn-dark-gray {
+    background-color: #2d2d2d; }
+    .htmlarea-content-body a.btn-dark-gray:hover {
+      background: #2d2d2d; }
+  .htmlarea-content-body a.btn-dark-blue {
+    background-color: #052d4b; }
+    .htmlarea-content-body a.btn-dark-blue:hover {
+      background: #052d4b; }
+  .htmlarea-content-body a.btn-lime-green {
+    background-color: #96c300; }
+    .htmlarea-content-body a.btn-lime-green:hover {
+      background-color: #96c300; }
+  .htmlarea-content-body a.btn-large-oxgrey {
+    background-color: grey;
+    padding: 25px;
+    font-size: 22px; }
+    .htmlarea-content-body a.btn-large-oxgrey:hover {
+      background: #c8c8c8; }
+  .htmlarea-content-body a.btn-dark-blue {
+    background-color: #052d4b; }
+  .htmlarea-content-body a.btn-blue {
+    background-color: #284b73; }
+  .htmlarea-content-body a.btn-red-raspberry {
+    background-color: #b42369; }
+  .htmlarea-content-body a.btn-ice-blue {
+    background-color: #00a0e1; }
+  .htmlarea-content-body a.btn-mandarin {
+    background-color: #e66e00; }
+  .htmlarea-content-body a.btn-mango {
+    background-color: #fab900; }
+  .htmlarea-content-body a.download-ox-ice-blue, .htmlarea-content-body a.download-ox-grey, .htmlarea-content-body a.external-link-ox-ice-blue, .htmlarea-content-body a.external-link-ox-grey, .htmlarea-content-body a.arrow-up, .htmlarea-content-body a.arrow-down, .htmlarea-content-body a.share, .htmlarea-content-body a.save-the-date {
+    color: #2d2d2d;
+    opacity: 1;
+    text-decoration: none; }
+    .htmlarea-content-body a.download-ox-ice-blue:before, .htmlarea-content-body a.download-ox-grey:before, .htmlarea-content-body a.external-link-ox-ice-blue:before, .htmlarea-content-body a.external-link-ox-grey:before, .htmlarea-content-body a.arrow-up:before, .htmlarea-content-body a.arrow-down:before, .htmlarea-content-body a.share:before, .htmlarea-content-body a.save-the-date:before {
+      font-family: FontAwesome;
+      display: inline-block;
+      width: 32px;
+      height: 20px;
+      text-align: center;
+      font-size: 20px; }
+  .htmlarea-content-body a.download-ox-ice-blue:before {
+    content: '\f019';
+    color: #00a0e1; }
+  .htmlarea-content-body a.download-ox-grey:before {
+    content: '\f019';
+    color: #878787; }
+  .htmlarea-content-body a.external-link-ox-ice-blue:before {
+    content: '\f105';
+    color: #00a0e1; }
+  .htmlarea-content-body a.external-link-ox-grey:before {
+    content: '\f105';
+    color: #878787; }
+  .htmlarea-content-body a.arrow-down:before {
+    content: '\f107';
+    color: #00a0e1; }
+  .htmlarea-content-body a.arrow-up:before {
+    content: '\f106';
+    color: #00a0e1; }
+  .htmlarea-content-body a.arrow-down:before {
+    content: '\f107';
+    color: #00a0e1; }
+  .htmlarea-content-body a.share:before {
+    content: '\f1e0';
+    color: #00a0e1; }
+  .htmlarea-content-body a.save-the-date:before {
+    content: '\f073';
+    color: #00a0e1; }
+  .htmlarea-content-body ul.standard-bullet-list, .htmlarea-content-body ul.list-subtext, .htmlarea-content-body ol.standard-bullet-list, .htmlarea-content-body ol.list-subtext {
+    padding-left: 30px; }
+    .htmlarea-content-body ul.standard-bullet-list li, .htmlarea-content-body ul.list-subtext li, .htmlarea-content-body ol.standard-bullet-list li, .htmlarea-content-body ol.list-subtext li {
+      list-style: none;
+      margin-bottom: 10px; }
+  .htmlarea-content-body ul.standard-bullet-list li:before, .htmlarea-content-body ol.standard-bullet-list li:before {
+    content: "\f111";
+    font-family: FontAwesome;
+    color: #000000;
+    font-size: 11px;
+    position: absolute;
+    left: 10px; }
+  .htmlarea-content-body ul.list-subtext li a, .htmlarea-content-body ol.list-subtext li a {
+    margin-left: -30px; }
+  .htmlarea-content-body ul.list-subtext li br ~ a, .htmlarea-content-body ol.list-subtext li br ~ a {
+    margin-left: 0; }
+  .htmlarea-content-body ul.checkmark, .htmlarea-content-body ul.checkmark-blue, .htmlarea-content-body ol.checkmark, .htmlarea-content-body ol.checkmark-blue {
+    list-style-type: none;
+    padding-left: 50px; }
+    .htmlarea-content-body ul.checkmark b, .htmlarea-content-body ul.checkmark-blue b, .htmlarea-content-body ol.checkmark b, .htmlarea-content-body ol.checkmark-blue b {
+      font-weight: 600; }
+    .htmlarea-content-body ul.checkmark li, .htmlarea-content-body ul.checkmark-blue li, .htmlarea-content-body ol.checkmark li, .htmlarea-content-body ol.checkmark-blue li {
+      margin-bottom: 20px;
+      line-height: 23px;
+      font-weight: normal; }
+      .htmlarea-content-body ul.checkmark li:before, .htmlarea-content-body ul.checkmark-blue li:before, .htmlarea-content-body ol.checkmark li:before, .htmlarea-content-body ol.checkmark-blue li:before {
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        content: "\f058";
+        float: left;
+        margin-left: -50px;
+        font-size: 35px; }
+  .htmlarea-content-body ul.checkmark li b, .htmlarea-content-body ul.checkmark li:before, .htmlarea-content-body ol.checkmark li b, .htmlarea-content-body ol.checkmark li:before {
+    color: #96c300; }
+  .htmlarea-content-body ul.checkmark-blue li b, .htmlarea-content-body ul.checkmark-blue li:before, .htmlarea-content-body ol.checkmark-blue li b, .htmlarea-content-body ol.checkmark-blue li:before {
+    color: #78aad2; }
+  .htmlarea-content-body ul.list-subtext, .htmlarea-content-body ol.list-subtext {
+    opacity: 1; }
+  .htmlarea-content-body ul.standard-bullet-list, .htmlarea-content-body ol.standard-bullet-list {
+    opacity: 1; }

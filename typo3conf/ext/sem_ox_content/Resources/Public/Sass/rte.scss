@@ -1,0 +1,350 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800);
+@import "../Styles/lib/font-awesome.min.css";
+@import "ox-common-styles/components/variables.scss";
+
+// Mixins
+@mixin fa() {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin allowed-blockstyle-classes {
+  &.text-left {
+    text-align: left;
+  }
+
+  &.text-center {
+    text-align: center;
+  }
+
+  &.text-right {
+    text-align: right;
+  }
+
+  &.text-justify {
+    text-align: justify;
+  }
+
+  &.jumbotron {
+    font-size: 55px;
+  }
+
+  &.subtitle {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+}
+
+@mixin allowed-link-classes {
+  &.button-link {
+    display: inline-block;
+    position: relative;
+    font-size: 16px;
+
+    &:after {
+      display: inline-block;
+      font: normal normal normal 14px/1 FontAwesome;
+      font-size: inherit;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      content: "\f105";
+      margin-left: 10px;
+    }
+  }
+
+  &.button-default {
+    display: inline-block;
+    text-align: center;
+    line-height: 1;
+    cursor: none;
+    -webkit-appearance: none;
+    transition: all 0.25s ease-out;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    border-radius: 0;
+    padding: 0.85em 1em;
+    margin: 16px 16px 16px 0;
+    font-size: 14px;
+    background-color: #00a0e1;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  &.btn-dark-gray {
+    @extend .button-default;
+    background-color: #2d2d2d;
+
+    &:hover {
+      background: #2d2d2d;
+    }
+  }
+
+  &.btn-dark-blue {
+    @extend .button-default;
+    background-color: #052d4b;
+
+    &:hover {
+      background: #052d4b;
+    }
+  }
+
+  &.btn-lime-green {
+    @extend .button-default;
+    background-color: $lime-green;
+
+    &:hover {
+      background-color: $lime-green;
+    }
+  }
+
+  &.btn-large-oxgrey {
+    @extend .button-default;
+    background-color: grey;
+    padding: 25px;
+    font-size: 22px;
+
+    &:hover {
+      background: rgb(200,200,200);
+    }
+  }
+
+  &.btn-dark-blue {
+    @extend .button-default;
+    background-color: $dark-blue;
+  }
+
+  &.btn-blue {
+    @extend .button-default;
+    background-color: $blue;
+  }
+
+  &.btn-red-raspberry {
+    @extend .button-default;
+    background-color: $raspberry-red;
+  }
+
+  &.btn-ice-blue {
+    @extend .button-default;
+    background-color: $ice-blue;
+  }
+
+  &.btn-mandarin {
+    @extend .button-default;
+    background-color: $mandarin;
+  }
+  &.btn-mango {
+    @extend .button-default;
+    background-color: $mango;
+  }
+
+
+  &.download-ox-ice-blue,
+  &.download-ox-grey,
+  &.external-link-ox-ice-blue,
+  &.external-link-ox-grey,
+  &.arrow-up,
+  &.arrow-down,
+  &.share,
+  &.save-the-date {
+    color: $graphite-black;
+    opacity: 1;
+    text-decoration: none;
+
+    &:before {
+      font-family: FontAwesome;
+      display: inline-block;
+      width: 32px;
+      height: 20px;
+      text-align: center;
+      font-size: 20px;
+    }
+  }
+
+  &.download-ox-ice-blue:before {
+    content: '\f019';
+    color: $ice-blue;
+  }
+
+  &.download-ox-grey:before {
+    content: '\f019';
+    color: $grey;
+  }
+
+  &.external-link-ox-ice-blue:before {
+    content: '\f105';
+    color: $ice-blue;
+  }
+
+  &.external-link-ox-grey:before {
+    content: '\f105';
+    color: $grey;
+  }
+
+  &.arrow-down:before {
+    content: '\f107';
+    color: $ice-blue;
+  }
+
+  &.arrow-up:before {
+    content: '\f106';
+    color: $ice-blue;
+  }
+
+  &.arrow-down:before {
+    content: '\f107';
+    color: $ice-blue;
+  }
+
+  &.share:before {
+    content: '\f1e0';
+    color: $ice-blue;
+  }
+
+  &.save-the-date:before {
+    content: '\f073';
+    color: $ice-blue;
+  }
+}
+
+@mixin allowed-lists-classes {
+  &.checkmark, &.checkmark-blue {
+    list-style-type: none;
+    padding-left: 50px;
+
+    b {
+      font-weight: 600;
+    }
+
+    li {
+      margin-bottom: 20px;
+      line-height: 23px;
+      font-weight: normal;
+
+      &:before {
+        @include fa();
+        content: "\f058";
+        float: left;
+        margin-left: -50px;
+        font-size: 35px;
+      }
+    }
+  }
+
+  &.checkmark {
+    li {
+      b, &:before {
+        color: $light-green;
+      }
+    }
+  }
+
+  &.checkmark-blue {
+    li {
+      b, &:before {
+        color: $light-blue;
+      }
+    }
+  }
+
+  &.list-subtext {
+    opacity: 1;
+  }
+
+  &.standard-bullet-list {
+    opacity: 1;
+  }
+
+}
+
+// RTE elements styles
+.htmlarea-content-body {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+
+  p, div {
+    @include allowed-blockstyle-classes;
+  }
+
+  h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    margin-top: 0;
+    font-weight: 300;
+    @include allowed-blockstyle-classes;
+  }
+
+  h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
+    margin-bottom: 30px;
+  }
+
+  h1, .h1 {font-size: 45px;}
+  h2, .h2 {font-size: 40px;}
+  h3, .h3 {font-size: 38px;}
+  h4, .h4 {font-size: 32px;}
+  h5, .h5 {
+    font-size: 28px;
+    margin-bottom: 25px;
+  }
+  h6, .h6, .subtitle {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  h6 {line-height: 26px;}
+
+  b {
+    &,
+    * {
+      font-weight: 800;
+    }
+  }
+
+  p {
+    margin-bottom: 15px;
+  }
+
+
+  a {
+    @include allowed-link-classes;
+  }
+
+  ul, ol {
+    &.standard-bullet-list,
+    &.list-subtext {
+      padding-left: 30px;
+
+      li {
+        list-style: none;
+        margin-bottom: 10px;
+      }
+    }
+
+    &.standard-bullet-list {
+      li:before {
+        content: "\f111";
+        font-family: FontAwesome;
+        color: $black;
+        font-size: 11px;
+        position: absolute;
+        left: 10px;
+      }
+    }
+
+    &.list-subtext {
+      li {
+        a {
+          margin-left: -30px;
+        }
+
+        br ~ a {
+          margin-left: 0;
+        }
+      }
+    }
+
+    @include allowed-lists-classes;
+  }
+}

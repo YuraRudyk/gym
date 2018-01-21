@@ -1,0 +1,46 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<div id="c{data.uid}" class="sponsors">
+    <f:if condition="{data.header}">
+        <f:format.raw>{data.header}</f:format.raw>
+    </f:if>
+
+    <f:if condition="{images}">
+        <div class="gold-sponsors">
+            <f:for each="{images}" as="goldSponsor">
+                <div>
+                    <f:link.typolink parameter="{goldSponsor.link}">
+                        <f:image image="{goldSponsor}" maxHeight="80" />
+                    </f:link.typolink>
+                </div>
+            </f:for>
+        </div>
+    </f:if>
+
+    <f:if condition="{files}">
+        <div class="panel all-sponsors">
+            <div class="panel-collapse collapse" role="tabpanel" id="all-sponsors-c{data.uid}"
+                 aria-labelledby="headingOne" aria-expanded="true">
+                <div class="row">
+                    <f:for each="{files}" as="otherSponsor">
+                        <div class="col-xs-6 col-sm-3 col-md-2">
+                            <f:link.typolink parameter="{otherSponsor.link}">
+                                <f:image image="{otherSponsor}" maxHeight="80" />
+                            </f:link.typolink>
+                        </div>
+                    </f:for>
+                </div>
+            </div>
+
+            <div class="panel-title">
+                <a href="#all-sponsors-c{data.uid}" role="button" data-toggle="collapse" aria-expanded="true"
+                   aria-controls="collapseOne" class="collapsed">
+                    <span class="arrow-down"><f:translate id="sponsors.all" extensionName="SemOxContent" /></span>
+                    <span class="arrow-up"><f:translate id="sponsors.close" extensionName="SemOxContent" /></span>
+                </a>
+            </div>
+        </div>
+    </f:if>
+</div>
+</html>

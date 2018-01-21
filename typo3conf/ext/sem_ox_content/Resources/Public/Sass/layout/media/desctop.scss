@@ -1,0 +1,128 @@
+@media (min-width: $screen-md-min) {
+  .home-slider {
+    p.h5 {
+      font-size: 22px;
+    }
+
+    .h1,
+    h1 {
+      font-size: 55px;
+    }
+  }
+
+  .sponsors .gold-sponsors div {
+    max-width: 33%;
+    flex: 1;
+  }
+
+  section {
+    &.split-image-responsive-html,
+    &.split-text-image {
+      & > .row > div:first-child .column {
+        padding: $container-padding 100px !important;
+      }
+    }
+
+    &.split-image-text > .row > div:last-child .column {
+      padding: $container-padding 100px !important;
+    }
+
+    &.split-text-text > .row > div {
+      &:first-child .column {
+        padding: 0 65px 0 0 !important;
+      }
+
+      &:last-child .column {
+        padding: 0 0 0 65px !important;
+      }
+    }
+
+    &.no-padding-top-bottom .row > div {
+      &:first-child .column:not(.full-column) {
+        float: right;
+      }
+
+      &:first-child .column:not(.full-column):not([class*='indent']) {
+        padding-left: 0 !important;
+        padding-right: 15px !important;
+      }
+
+      &:last-child .column:not(.full-column):not([class*='indent']) {
+        padding-left: 15px !important;
+        padding-right: 0 !important;
+      }
+    }
+
+    &.full-height-bg {
+      height: 1000px;
+    }
+  }
+
+  .micro-banners > div {
+    width: 25%;
+  }
+}
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+  .text-bottom,
+  .text-center-vertical {
+    width: $container-md;
+  }
+
+  .leadership-team {
+    h4 {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    p {
+      line-height: 20px;
+      font-size: 14px;
+    }
+  }
+
+  .micro-banners .description {
+    padding: 15px 15px 25px 25px !important;
+  }
+  .locations-mfp .mfp-content {
+    width: 1010px;
+  }
+}
+@media (max-width: $screen-md-max) {
+  .testimonials .container {
+    width: 100vw !important;
+    padding: 0;
+  }
+
+  .leadership-team .management-wrapper .team-item {
+    top: 10px;
+    margin-left: 50px;
+  }
+}
+@media (min-width: $screen-lg-min) {
+  .sponsors .gold-sponsors div {
+    max-width: 25%;
+  }
+  .locations-mfp .mfp-content {
+    width: 1200px;
+  }
+}
+@media (min-width: $screen-md-min) and (max-width: $screen-md-mid-min) {
+  .newsroom-wrapper .grid {
+    .grid-sizer {
+      width: 33.3%;
+    }
+
+    .grid-item {
+      @include calc-neg(33.3%, 2px);
+    }
+
+    .item-width-2x {
+      @include calc-neg(66.6%, 2px);
+    }
+
+    .stamp {
+      @include calc-neg(66.6%, 2px);
+    }
+  }
+}
