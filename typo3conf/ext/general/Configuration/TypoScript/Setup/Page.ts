@@ -2,6 +2,8 @@ page = PAGE
 page {
     typeNum = 0
 
+    includeCSS.main = EXT:general/Resources/Public/Css/main.css
+
     10 = FLUIDTEMPLATE
     10 {
         templateName = Default

@@ -115,6 +115,7 @@ class ComposerStaticInit0acd21796be310350ceaeaf1665b461f
         'M' => 
         array (
             'Mso\\IdnaConvert\\' => 16,
+            'Media711\\SemSitepackage\\' => 24,
             'Media711\\SemOxContent\\' => 22,
             'Media711\\SemContent\\' => 20,
         ),
@@ -485,6 +486,10 @@ class ComposerStaticInit0acd21796be310350ceaeaf1665b461f
         'Mso\\IdnaConvert\\' => 
         array (
             0 => __DIR__ . '/..' . '/mso/idna-convert/src',
+        ),
+        'Media711\\SemSitepackage\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/typo3conf/ext/sem_sitepackage/Classes',
         ),
         'Media711\\SemOxContent\\' => 
         array (
@@ -967,13 +972,6 @@ class ComposerStaticInit0acd21796be310350ceaeaf1665b461f
         'GuzzleHttp\\RetryMiddleware' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/RetryMiddleware.php',
         'GuzzleHttp\\TransferStats' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/TransferStats.php',
         'GuzzleHttp\\UriTemplate' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/UriTemplate.php',
-        'Media711\\SemContent\\DataProcessing\\AbstractDataProcessor' => __DIR__ . '/../..' . '/typo3conf/ext/sem_content/Classes/DataProcessing/AbstractDataProcessor.php',
-        'Media711\\SemContent\\DataProcessing\\SliderDataProcessor' => __DIR__ . '/../..' . '/typo3conf/ext/sem_content/Classes/DataProcessing/SliderDataProcessor.php',
-        'Media711\\SemContent\\Domain\\Model\\ContentType\\SliderTrait' => __DIR__ . '/../..' . '/typo3conf/ext/sem_content/Classes/Domain/Model/ContentType/SliderTrait.php',
-        'Media711\\SemContent\\Domain\\Model\\Row' => __DIR__ . '/../..' . '/typo3conf/ext/sem_content/Classes/Domain/Model/Row.php',
-        'Media711\\SemContent\\Domain\\Model\\Slide' => __DIR__ . '/../..' . '/typo3conf/ext/sem_content/Classes/Domain/Model/Slide.php',
-        'Media711\\SemContent\\Domain\\Repository\\RowRepository' => __DIR__ . '/../..' . '/typo3conf/ext/sem_content/Classes/Domain/Repository/RowRepository.php',
-        'Media711\\SemContent\\Hooks\\PageLayoutView\\SliderPreviewRenderer' => __DIR__ . '/../..' . '/typo3conf/ext/sem_content/Classes/Hooks/PageLayoutView/SliderPreviewRenderer.php',
         'Mso\\IdnaConvert\\EncodingHelper' => __DIR__ . '/..' . '/mso/idna-convert/src/EncodingHelper.php',
         'Mso\\IdnaConvert\\IdnaConvert' => __DIR__ . '/..' . '/mso/idna-convert/src/IdnaConvert.php',
         'Mso\\IdnaConvert\\NamePrepData' => __DIR__ . '/..' . '/mso/idna-convert/src/NamePrepData.php',

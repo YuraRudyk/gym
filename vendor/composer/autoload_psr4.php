@@ -94,6 +94,7 @@ return array(
     'Psr\\Log\\' => array($vendorDir . '/psr/log/Psr/Log'),
     'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-message/src'),
     'Mso\\IdnaConvert\\' => array($vendorDir . '/mso/idna-convert/src'),
+    'Media711\\SemSitepackage\\' => array($baseDir . '/typo3conf/ext/sem_sitepackage/Classes'),
     'Media711\\SemOxContent\\' => array($baseDir . '/typo3conf/ext/sem_ox_content/Classes'),
     'Media711\\SemContent\\' => array($baseDir . '/typo3conf/ext/sem_content/Classes'),
     'GuzzleHttp\\Psr7\\' => array($vendorDir . '/guzzlehttp/psr7/src'),

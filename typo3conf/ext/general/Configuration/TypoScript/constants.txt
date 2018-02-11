@@ -1,0 +1,2 @@
+# Include TypoScript constants of sem_sitepackage extension
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:aimeos/Configuration/TypoScript/constants.txt">

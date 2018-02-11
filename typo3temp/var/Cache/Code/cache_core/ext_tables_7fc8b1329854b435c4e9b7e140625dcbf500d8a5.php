@@ -1035,6 +1035,40 @@ if (TYPO3_MODE === 'BE') {
 }
 
 /**
+ * Extension: scheduler
+ * File: /var/www/legion/source/typo3/sysext/scheduler/ext_tables.php
+ */
+
+$_EXTKEY = 'scheduler';
+$_EXTCONF = $GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf'][$_EXTKEY] ?? null;
+
+
+defined('TYPO3_MODE') or die();
+
+if (TYPO3_MODE === 'BE') {
+    // Add module
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addModule(
+        'system',
+        'txschedulerM1',
+        '',
+        '',
+        [
+            'routeTarget' => \TYPO3\CMS\Scheduler\Controller\SchedulerModuleController::class . '::mainAction',
+            'access' => 'admin',
+            'name' => 'system_txschedulerM1',
+            'icon' => 'EXT:scheduler/Resources/Public/Icons/module-scheduler.svg',
+            'labels' => 'LLL:EXT:scheduler/Resources/Private/Language/locallang_mod.xlf'
+        ]
+    );
+
+    // Add context sensitive help (csh) to the backend module
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr(
+        '_MOD_system_txschedulerM1',
+        'EXT:scheduler/Resources/Private/Language/locallang_csh_scheduler.xlf'
+    );
+}
+
+/**
  * Extension: sv
  * File: /var/www/legion/source/typo3/sysext/sv/ext_tables.php
  */
@@ -1153,6 +1187,239 @@ if (TYPO3_MODE === 'BE' && !(TYPO3_REQUESTTYPE & TYPO3_REQUESTTYPE_INSTALL)) {
 }
 
 /**
+ * Extension: static_info_tables
+ * File: /var/www/legion/source/typo3conf/ext/static_info_tables/ext_tables.php
+ */
+
+$_EXTKEY = 'static_info_tables';
+$_EXTCONF = $GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf'][$_EXTKEY] ?? null;
+
+
+defined('TYPO3_MODE') or die();
+
+if (TYPO3_MODE == 'BE' && !(TYPO3_REQUESTTYPE & TYPO3_REQUESTTYPE_INSTALL)) {
+	/**
+	 * Registers the Static Info Tables Manager backend module, if enabled
+	 */
+	if ($GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['static_info_tables']['enableManager']) {
+		\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerModule(
+			'SJBR.static_info_tables',
+			// Make module a submodule of 'tools'
+			'tools',
+			// Submodule key
+			'Manager',
+			// Position
+			'',
+			// An array holding the controller-action combinations that are accessible
+			array(
+				'Manager' => 'information,newLanguagePack,createLanguagePack,testForm,testFormResult,sqlDumpNonLocalizedData'
+			),
+			array(
+				'access' => 'user,group',
+				'icon' => 'EXT:static_info_tables/Resources/Public/Icons/Extension.svg',
+				'labels' => 'LLL:EXT:static_info_tables/Resources/Private/Language/locallang_mod.xlf'
+			)
+		);
+		// Add module configuration setup
+		\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScript('static_info_tables', 'setup', '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:static_info_tables/Configuration/TypoScript/Manager/setup.txt">');
+	}
+}
+
+/**
+ * Extension: aimeos
+ * File: /var/www/legion/source/typo3conf/ext/aimeos/ext_tables.php
+ */
+
+$_EXTKEY = 'aimeos';
+$_EXTCONF = $GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf'][$_EXTKEY] ?? null;
+
+
+
+if ( ! defined( 'TYPO3_MODE' ) ) {
+	die ( 'Access denied.' );
+}
+
+
+$localautoloader = __DIR__ . '/Resources/Libraries/autoload.php';
+
+if( file_exists( $localautoloader ) === true ) {
+	require_once $localautoloader;
+}
+
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile( $_EXTKEY, 'Configuration/TypoScript/', 'Aimeos Shop configuration' );
+
+
+if ( TYPO3_MODE === 'BE' )
+{
+	$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['cms']['db_new_content_el']['wizardItemsHook'][] = 'Aimeos\\Aimeos\\Custom\\WizardItem';
+	$TBE_MODULES_EXT['xMOD_db_new_content_el']['addElClasses']['Aimeos\\Aimeos\\Custom\\Wizicon'] =
+		\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath( $_EXTKEY ) . 'Classes/Custom/Wizicon.php';
+
+    $_moduleConfiguration = array(
+        'access' => 'user,group',
+        'icon' => 'EXT:' . $_EXTKEY . '/Resources/Public/Icons/Extension.svg',
+        'labels' => 'LLL:EXT:' . $_EXTKEY . '/Resources/Private/Language/admin.xlf',
+    );
+    if ( ! (bool)\Aimeos\Aimeos\Base::getExtConfig('showPageTree', true)) {
+        $_moduleConfiguration['navigationComponentId'] = null;
+        $_moduleConfiguration['inheritNavigationComponentFromMainModule'] = false;
+    }
+
+    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerModule(
+		'Aimeos.' . $_EXTKEY,
+		'web',
+		'tx_aimeos_admin',
+		'', // position
+		array(
+			'Admin' => 'index',
+			'Jqadm' => 'search,copy,create,delete,export,get,import,save,file',
+			'Extadm' => 'index,do,file',
+			'Jsonadm' => 'index',
+		),
+		$_moduleConfiguration
+	);
+}
+
+
+$pluginName = str_replace( '_', '', $_EXTKEY );
+
+
+$TCA['tt_content']['types']['list']['subtypes_addlist'][$pluginName . '_jsonapi'] = 'pi_flexform';
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue( $pluginName . '_jsonapi', 'FILE:EXT:' . $_EXTKEY . '/Configuration/FlexForms/Jsonapi.xml' );
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin( 'Aimeos.' . $_EXTKEY, 'jsonapi', 'Aimeos Shop - JSON REST API' );
+
+
+$TCA['tt_content']['types']['list']['subtypes_addlist'][$pluginName . '_locale-select'] = 'pi_flexform';
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue( $pluginName . '_locale-select', 'FILE:EXT:' . $_EXTKEY . '/Configuration/FlexForms/LocaleSelect.xml' );
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin( 'Aimeos.' . $_EXTKEY, 'locale-select', 'Aimeos Shop - Locale selector' );
+
+
+$TCA['tt_content']['types']['list']['subtypes_addlist'][$pluginName . '_catalog-count'] = 'pi_flexform';
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue( $pluginName . '_catalog-count', 'FILE:EXT:' . $_EXTKEY . '/Configuration/FlexForms/CatalogCount.xml' );
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin( 'Aimeos.' . $_EXTKEY, 'catalog-count', 'Aimeos Shop - Catalog count JSON' );
+
+$TCA['tt_content']['types']['list']['subtypes_addlist'][$pluginName . '_catalog-detail'] = 'pi_flexform';
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue( $pluginName . '_catalog-detail', 'FILE:EXT:' . $_EXTKEY . '/Configuration/FlexForms/CatalogDetail.xml' );
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin( 'Aimeos.' . $_EXTKEY, 'catalog-detail', 'Aimeos Shop - Catalog detail' );
+
+$TCA['tt_content']['types']['list']['subtypes_addlist'][$pluginName . '_catalog-filter'] = 'pi_flexform';
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue( $pluginName . '_catalog-filter', 'FILE:EXT:' . $_EXTKEY . '/Configuration/FlexForms/CatalogFilter.xml' );
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin( 'Aimeos.' . $_EXTKEY, 'catalog-filter', 'Aimeos Shop - Catalog filter' );
+
+$TCA['tt_content']['types']['list']['subtypes_addlist'][$pluginName . '_catalog-list'] = 'pi_flexform';
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue( $pluginName . '_catalog-list', 'FILE:EXT:' . $_EXTKEY . '/Configuration/FlexForms/CatalogList.xml' );
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin( 'Aimeos.' . $_EXTKEY, 'catalog-list', 'Aimeos Shop - Catalog list' );
+
+$TCA['tt_content']['types']['list']['subtypes_addlist'][$pluginName . '_catalog-suggest'] = 'pi_flexform';
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue( $pluginName . '_catalog-suggest', 'FILE:EXT:' . $_EXTKEY . '/Configuration/FlexForms/CatalogSuggest.xml' );
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin( 'Aimeos.' . $_EXTKEY, 'catalog-suggest', 'Aimeos Shop - Catalog suggest JSON' );
+
+$TCA['tt_content']['types']['list']['subtypes_addlist'][$pluginName . '_catalog-session'] = 'pi_flexform';
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue( $pluginName . '_catalog-session', 'FILE:EXT:' . $_EXTKEY . '/Configuration/FlexForms/CatalogSession.xml' );
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin( 'Aimeos.' . $_EXTKEY, 'catalog-session', 'Aimeos Shop - Catalog user related session' );
+
+$TCA['tt_content']['types']['list']['subtypes_addlist'][$pluginName . '_catalog-stage'] = 'pi_flexform';
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue( $pluginName . '_catalog-stage', 'FILE:EXT:' . $_EXTKEY . '/Configuration/FlexForms/CatalogStage.xml' );
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin( 'Aimeos.' . $_EXTKEY, 'catalog-stage', 'Aimeos Shop - Catalog stage area' );
+
+$TCA['tt_content']['types']['list']['subtypes_addlist'][$pluginName . '_catalog-stock'] = 'pi_flexform';
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue( $pluginName . '_catalog-stock', 'FILE:EXT:' . $_EXTKEY . '/Configuration/FlexForms/CatalogStock.xml' );
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin( 'Aimeos.' . $_EXTKEY, 'catalog-stock', 'Aimeos Shop - Catalog stock JSON' );
+
+
+$TCA['tt_content']['types']['list']['subtypes_addlist'][$pluginName . '_basket-related'] = 'pi_flexform';
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue( $pluginName . '_basket-related', 'FILE:EXT:' . $_EXTKEY . '/Configuration/FlexForms/BasketRelated.xml' );
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin( 'Aimeos.' . $_EXTKEY, 'basket-related', 'Aimeos Shop - Basket related' );
+
+$TCA['tt_content']['types']['list']['subtypes_addlist'][$pluginName . '_basket-small'] = 'pi_flexform';
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue( $pluginName . '_basket-small', 'FILE:EXT:' . $_EXTKEY . '/Configuration/FlexForms/BasketSmall.xml' );
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin( 'Aimeos.' . $_EXTKEY, 'basket-small', 'Aimeos Shop - Basket small' );
+
+$TCA['tt_content']['types']['list']['subtypes_addlist'][$pluginName . '_basket-standard'] = 'pi_flexform';
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue( $pluginName . '_basket-standard', 'FILE:EXT:' . $_EXTKEY . '/Configuration/FlexForms/BasketStandard.xml' );
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin( 'Aimeos.' . $_EXTKEY, 'basket-standard', 'Aimeos Shop - Basket standard' );
+
+
+$TCA['tt_content']['types']['list']['subtypes_addlist'][$pluginName . '_checkout-confirm'] = 'pi_flexform';
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue( $pluginName . '_checkout-confirm', 'FILE:EXT:' . $_EXTKEY . '/Configuration/FlexForms/CheckoutConfirm.xml' );
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin( 'Aimeos.' . $_EXTKEY, 'checkout-confirm', 'Aimeos Shop - Checkout confirm' );
+
+$TCA['tt_content']['types']['list']['subtypes_addlist'][$pluginName . '_checkout-standard'] = 'pi_flexform';
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue( $pluginName . '_checkout-standard', 'FILE:EXT:' . $_EXTKEY . '/Configuration/FlexForms/CheckoutStandard.xml' );
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin( 'Aimeos.' . $_EXTKEY, 'checkout-standard', 'Aimeos Shop - Checkout standard' );
+
+$TCA['tt_content']['types']['list']['subtypes_addlist'][$pluginName . '_checkout-update'] = 'pi_flexform';
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue( $pluginName . '_checkout-update', 'FILE:EXT:' . $_EXTKEY . '/Configuration/FlexForms/CheckoutUpdate.xml' );
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin( 'Aimeos.' . $_EXTKEY, 'checkout-update', 'Aimeos Shop - Checkout payment update' );
+
+
+$TCA['tt_content']['types']['list']['subtypes_addlist'][$pluginName . '_account-download'] = 'pi_flexform';
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue( $pluginName . '_account-download', 'FILE:EXT:' . $_EXTKEY . '/Configuration/FlexForms/AccountDownload.xml' );
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin( 'Aimeos.' . $_EXTKEY, 'account-download', 'Aimeos Shop - Account download' );
+
+$TCA['tt_content']['types']['list']['subtypes_addlist'][$pluginName . '_account-history'] = 'pi_flexform';
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue( $pluginName . '_account-history', 'FILE:EXT:' . $_EXTKEY . '/Configuration/FlexForms/AccountHistory.xml' );
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin( 'Aimeos.' . $_EXTKEY, 'account-history', 'Aimeos Shop - Account history' );
+
+$TCA['tt_content']['types']['list']['subtypes_addlist'][$pluginName . '_account-favorite'] = 'pi_flexform';
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue( $pluginName . '_account-favorite', 'FILE:EXT:' . $_EXTKEY . '/Configuration/FlexForms/AccountFavorite.xml' );
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin( 'Aimeos.' . $_EXTKEY, 'account-favorite', 'Aimeos Shop - Account favorite' );
+
+$TCA['tt_content']['types']['list']['subtypes_addlist'][$pluginName . '_account-profile'] = 'pi_flexform';
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue( $pluginName . '_account-profile', 'FILE:EXT:' . $_EXTKEY . '/Configuration/FlexForms/AccountProfile.xml' );
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin( 'Aimeos.' . $_EXTKEY, 'account-profile', 'Aimeos Shop - Account profile' );
+
+$TCA['tt_content']['types']['list']['subtypes_addlist'][$pluginName . '_account-watch'] = 'pi_flexform';
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue( $pluginName . '_account-watch', 'FILE:EXT:' . $_EXTKEY . '/Configuration/FlexForms/AccountWatch.xml' );
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin( 'Aimeos.' . $_EXTKEY, 'account-watch', 'Aimeos Shop - Account watch list' );
+
+
+
+/**
+ * Extension: bootstrap_package
+ * File: /var/www/legion/source/typo3conf/ext/bootstrap_package/ext_tables.php
+ */
+
+$_EXTKEY = 'bootstrap_package';
+$_EXTCONF = $GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf'][$_EXTKEY] ?? null;
+
+
+
+/*
+ * This file is part of the package bk2k/bootstrap-package.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE file that was distributed with this source code.
+ */
+
+if (!defined('TYPO3_MODE')) {
+    die('Access denied.');
+}
+
+/***************
+ * Allow Carousel Item & Accordion Item on Standart Pages
+ */
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_bootstrappackage_carousel_item');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_bootstrappackage_accordion_item');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_bootstrappackage_tab_item');
+
+/**
+ * Extension: aimeos_dist
+ * File: /var/www/legion/source/typo3conf/ext/aimeos_dist/ext_tables.php
+ */
+
+$_EXTKEY = 'aimeos_dist';
+$_EXTCONF = $GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf'][$_EXTKEY] ?? null;
+
+
+if (!defined('TYPO3_MODE')) {
+	die('Access denied.');
+}
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript', 'Aimeos Distribution');
+
+/**
  * Extension: general
  * File: /var/www/legion/source/typo3conf/ext/general/ext_tables.php
  */
@@ -1261,5 +1528,104 @@ $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\
 $iconRegistry->registerIcon('gridelements-default', \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class, array(
     'source' => 'EXT:gridelements/Resources/Public/Icons/gridelements.svg'
 ));
+
+/**
+ * Extension: news
+ * File: /var/www/legion/source/typo3conf/ext/news/ext_tables.php
+ */
+
+$_EXTKEY = 'news';
+$_EXTCONF = $GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf'][$_EXTKEY] ?? null;
+
+
+defined('TYPO3_MODE') or die();
+
+$boot = function () {
+
+    // CSH - context sensitive help
+    foreach (['news', 'media', 'tag', 'link'] as $table) {
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_news_domain_model_' . $table);
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr(
+            'tx_news_domain_model_' . $table, 'EXT:news/Resources/Private/Language/locallang_csh_' . $table . '.xlf');
+    }
+
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr(
+        'tt_content.pi_flexform.news_pi1.list', 'EXT:news/Resources/Private/Language/locallang_csh_flexforms.xlf');
+
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr(
+        'sys_file_reference', 'EXT:news/Resources/Private/Language/locallang_csh_sys_file_reference.xlf');
+
+    $configuration = \GeorgRinger\News\Utility\EmConfiguration::getSettings();
+
+    if (TYPO3_MODE === 'BE') {
+        $isVersion9Up = \TYPO3\CMS\Core\Utility\VersionNumberUtility::convertVersionNumberToInteger(TYPO3_version) >= 9000000;
+        if ($isVersion9Up) {
+            $mappings = ['common', 'general', 'mod_web_list', 'tca'];
+            foreach ($mappings as $mapping) {
+                $GLOBALS['TYPO3_CONF_VARS']['SYS']['locallangXMLOverride']['EXT:lang/locallang_' . $mapping . '.xlf'][] = 'EXT:lang/Resources/Private/Language/locallang_' . $mapping . '.xlf';
+            }
+        }
+
+        // Extend user settings
+        $GLOBALS['TYPO3_USER_SETTINGS']['columns']['newsoverlay'] = [
+            'label' => 'LLL:EXT:news/Resources/Private/Language/locallang_be.xlf:usersettings.overlay',
+            'type' => 'select',
+            'itemsProcFunc' => \GeorgRinger\News\Hooks\ItemsProcFunc::class . '->user_categoryOverlay',
+        ];
+        $GLOBALS['TYPO3_USER_SETTINGS']['showitem'] .= ',
+            --div--;LLL:EXT:news/Resources/Private/Language/locallang_be.xlf:pi1_title,newsoverlay';
+
+        // Add tables to livesearch (e.g. "#news:fo" or "#newscat:fo")
+        $GLOBALS['TYPO3_CONF_VARS']['SYS']['livesearch']['news'] = 'tx_news_domain_model_news';
+        $GLOBALS['TYPO3_CONF_VARS']['SYS']['livesearch']['newstag'] = 'tx_news_domain_model_tag';
+
+        /* ===========================================================================
+            Register BE-Modules
+        =========================================================================== */
+        if ($configuration->getShowImporter()) {
+            \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerModule(
+                'GeorgRinger.news',
+                'system',
+                'tx_news_m1',
+                '',
+                ['Import' => 'index, runJob, jobInfo'],
+                [
+                    'access' => 'user,group',
+                    'icon' => 'EXT:news/Resources/Public/Icons/module_import.svg',
+                    'labels' => 'LLL:EXT:news/Resources/Private/Language/locallang_mod.xlf',
+                ]
+            );
+        }
+
+        /* ===========================================================================
+            Register BE-Module for Administration
+        =========================================================================== */
+        if ($configuration->getShowAdministrationModule()) {
+            \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerModule(
+                'GeorgRinger.news',
+                'web',
+                'tx_news_m2',
+                '',
+                ['Administration' => 'index,newNews,newCategory,newTag,newsPidListing'],
+                [
+                    'access' => 'user,group',
+                    'icon' => 'EXT:news/Resources/Public/Icons/module_administration.svg',
+                    'labels' => 'LLL:EXT:news/Resources/Private/Language/locallang_modadministration.xlf',
+                    'navigationComponentId' => $configuration->getHidePageTreeForAdministrationModule() ? '' : ($isVersion9Up ? 'TYPO3/CMS/Backend/PageTree/PageTreeElement' : 'typo3-pagetree')
+                ]
+            );
+        }
+    }
+
+    /* ===========================================================================
+        Default configuration
+    =========================================================================== */
+    $GLOBALS['TYPO3_CONF_VARS']['EXT']['news']['orderByCategory'] = 'uid,title,tstamp,sorting';
+    $GLOBALS['TYPO3_CONF_VARS']['EXT']['news']['orderByNews'] = 'tstamp,datetime,crdate,title' . ($configuration->getManualSorting() ? ',sorting' : '');
+    $GLOBALS['TYPO3_CONF_VARS']['EXT']['news']['orderByTag'] = 'tstamp,crdate,title';
+};
+
+$boot();
+unset($boot);
 
 #

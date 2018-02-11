@@ -1147,6 +1147,126 @@ $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_befunc.php']['displ
 
 
 /**
+ * Extension: scheduler
+ * File: /var/www/legion/source/typo3/sysext/scheduler/ext_localconf.php
+ */
+
+$_EXTKEY = 'scheduler';
+$_EXTCONF = $GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf'][$_EXTKEY] ?? null;
+
+
+defined('TYPO3_MODE') or die();
+
+// Register the Scheduler as a possible key for CLI calls
+// Using cliKeys is deprecated as of TYPO3 v8 and will be removed in TYPO3 v9, use Configuration/Commands.php instead
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['GLOBAL']['cliKeys']['scheduler'] = [
+    function ($input, $output) {
+        $app = new \Symfony\Component\Console\Application('TYPO3 Scheduler', TYPO3_version);
+        $app->add(new \TYPO3\CMS\Scheduler\Command\SchedulerCommand('scheduler'));
+        $app->setDefaultCommand('scheduler');
+        $app->run($input, $output);
+    }
+];
+
+// Get the extensions's configuration
+$extConf = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['scheduler'], ['allowed_classes' => false]);
+// If sample tasks should be shown,
+// register information for the test and sleep tasks
+if (!empty($extConf['showSampleTasks'])) {
+    $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['scheduler']['tasks'][\TYPO3\CMS\Scheduler\Example\TestTask::class] = [
+        'extension' => 'scheduler',
+        'title' => 'LLL:EXT:scheduler/Resources/Private/Language/locallang.xlf:testTask.name',
+        'description' => 'LLL:EXT:scheduler/Resources/Private/Language/locallang.xlf:testTask.description',
+        'additionalFields' => \TYPO3\CMS\Scheduler\Example\TestTaskAdditionalFieldProvider::class
+    ];
+    $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['scheduler']['tasks'][\TYPO3\CMS\Scheduler\Example\SleepTask::class] = [
+        'extension' => 'scheduler',
+        'title' => 'LLL:EXT:scheduler/Resources/Private/Language/locallang.xlf:sleepTask.name',
+        'description' => 'LLL:EXT:scheduler/Resources/Private/Language/locallang.xlf:sleepTask.description',
+        'additionalFields' => \TYPO3\CMS\Scheduler\Example\SleepTaskAdditionalFieldProvider::class
+    ];
+}
+
+// Add caching framework garbage collection task
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['scheduler']['tasks'][\TYPO3\CMS\Scheduler\Task\CachingFrameworkGarbageCollectionTask::class] = [
+    'extension' => 'scheduler',
+    'title' => 'LLL:EXT:scheduler/Resources/Private/Language/locallang.xlf:cachingFrameworkGarbageCollection.name',
+    'description' => 'LLL:EXT:scheduler/Resources/Private/Language/locallang.xlf:cachingFrameworkGarbageCollection.description',
+    'additionalFields' => \TYPO3\CMS\Scheduler\Task\CachingFrameworkGarbageCollectionAdditionalFieldProvider::class
+];
+
+// Add task to index file in a storage
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['scheduler']['tasks'][\TYPO3\CMS\Scheduler\Task\FileStorageIndexingTask::class] = [
+    'extension' => 'scheduler',
+    'title' => 'LLL:EXT:scheduler/Resources/Private/Language/locallang.xlf:fileStorageIndexing.name',
+    'description' => 'LLL:EXT:scheduler/Resources/Private/Language/locallang.xlf:fileStorageIndexing.description',
+    'additionalFields' => \TYPO3\CMS\Scheduler\Task\FileStorageIndexingAdditionalFieldProvider::class
+];
+
+// Add task for extracting metadata from files in a storage
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['scheduler']['tasks'][\TYPO3\CMS\Scheduler\Task\FileStorageExtractionTask::class] = [
+    'extension' => 'scheduler',
+    'title' => 'LLL:EXT:scheduler/Resources/Private/Language/locallang.xlf:fileStorageExtraction.name',
+    'description' => 'LLL:EXT:scheduler/Resources/Private/Language/locallang.xlf:fileStorageExtraction.description',
+    'additionalFields' => \TYPO3\CMS\Scheduler\Task\FileStorageExtractionAdditionalFieldProvider::class
+
+];
+
+// Add recycler directory cleanup task
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['scheduler']['tasks'][\TYPO3\CMS\Scheduler\Task\RecyclerGarbageCollectionTask::class] = [
+    'extension' => 'scheduler',
+    'title' => 'LLL:EXT:scheduler/Resources/Private/Language/locallang.xlf:recyclerGarbageCollection.name',
+    'description' => 'LLL:EXT:scheduler/Resources/Private/Language/locallang.xlf:recyclerGarbageCollection.description',
+    'additionalFields' => \TYPO3\CMS\Scheduler\Task\RecyclerGarbageCollectionAdditionalFieldProvider::class
+];
+
+// Save any previous option array for table garbage collection task
+// to temporary variable so it can be pre-populated by other
+// extensions and LocalConfiguration/AdditionalConfiguration
+$garbageCollectionTaskOptions = [];
+if (is_array($GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['scheduler']['tasks'][\TYPO3\CMS\Scheduler\Task\TableGarbageCollectionTask::class]['options'])) {
+    $garbageCollectionTaskOptions = $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['scheduler']['tasks'][\TYPO3\CMS\Scheduler\Task\TableGarbageCollectionTask::class]['options'];
+}
+// Initialize tables sub-array if not set already
+if (!is_array($garbageCollectionTaskOptions['tables'])) {
+    $garbageCollectionTaskOptions['tables'] = [];
+}
+// Add table garbage collection task
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['scheduler']['tasks'][\TYPO3\CMS\Scheduler\Task\TableGarbageCollectionTask::class] = [
+    'extension' => 'scheduler',
+    'title' => 'LLL:EXT:scheduler/Resources/Private/Language/locallang.xlf:tableGarbageCollection.name',
+    'description' => 'LLL:EXT:scheduler/Resources/Private/Language/locallang.xlf:tableGarbageCollection.description',
+    'additionalFields' => \TYPO3\CMS\Scheduler\Task\TableGarbageCollectionAdditionalFieldProvider::class,
+    'options' => $garbageCollectionTaskOptions
+];
+unset($garbageCollectionTaskOptions);
+
+// Register sys_log and sys_history table in table garbage collection task
+if (!is_array($GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['scheduler']['tasks'][\TYPO3\CMS\Scheduler\Task\TableGarbageCollectionTask::class]['options']['tables']['sys_log'])) {
+    $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['scheduler']['tasks'][\TYPO3\CMS\Scheduler\Task\TableGarbageCollectionTask::class]['options']['tables']['sys_log'] = [
+        'dateField' => 'tstamp',
+        'expirePeriod' => 180
+    ];
+}
+
+if (!is_array($GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['scheduler']['tasks'][\TYPO3\CMS\Scheduler\Task\TableGarbageCollectionTask::class]['options']['tables']['sys_history'])) {
+    $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['scheduler']['tasks'][\TYPO3\CMS\Scheduler\Task\TableGarbageCollectionTask::class]['options']['tables']['sys_history'] = [
+        'dateField' => 'tstamp',
+        'expirePeriod' => 30
+    ];
+}
+
+// Add task for optimizing database tables
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['scheduler']['tasks'][\TYPO3\CMS\Scheduler\Task\OptimizeDatabaseTableTask::class] = [
+    'extension' => 'scheduler',
+    'title' => 'LLL:EXT:scheduler/Resources/Private/Language/locallang.xlf:optimizeDatabaseTable.name',
+    'description' => 'LLL:EXT:scheduler/Resources/Private/Language/locallang.xlf:optimizeDatabaseTable.description',
+    'additionalFields' => \TYPO3\CMS\Scheduler\Task\OptimizeDatabaseTableAdditionalFieldProvider::class
+
+];
+
+
+/**
  * Extension: sv
  * File: /var/www/legion/source/typo3/sysext/sv/ext_localconf.php
  */
@@ -1232,6 +1352,640 @@ $GLOBALS['TYPO3_CONF_VARS']['SYS']['formEngine']['nodeRegistry'][1433089350] = [
 
 
 /**
+ * Extension: static_info_tables
+ * File: /var/www/legion/source/typo3conf/ext/static_info_tables/ext_localconf.php
+ */
+
+$_EXTKEY = 'static_info_tables';
+$_EXTCONF = $GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf'][$_EXTKEY] ?? null;
+
+
+defined('TYPO3_MODE') or die();
+
+call_user_func(
+    function($extKey)
+    {
+		// Get the extensions's configuration
+		$extConf = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf'][$extKey]);
+		// Register cache static_info_tables
+		if (!is_array($GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations'][$extKey])) {
+			$GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations'][$extKey] = [];
+			$GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations'][$extKey]['groups'] = ['all'];
+		}
+		if (!isset($GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['static_info_tables']['frontend'])) {
+			$GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations'][$extKey]['frontend'] = \TYPO3\CMS\Core\Cache\Frontend\PhpFrontend::class;
+		}
+		if (!isset($GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['static_info_tables']['backend'])) {
+			$GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations'][$extKey]['backend'] = \TYPO3\CMS\Core\Cache\Backend\FileBackend::class;
+		}
+		// Configure clear cache post processing for extended domain model
+		$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['clearCachePostProc']['static_info_tables'] = \SJBR\StaticInfoTables\Cache\ClassCacheManager::class . '->reBuild';
+		// Names of static entities
+		$GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$extKey]['entities'] = ['Country', 'CountryZone', 'Currency', 'Language', 'Territory'];
+		// Register cached domain model classes autoloader
+		require_once(\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($extKey) . 'Classes/Cache/CachedClassLoader.php');
+		\SJBR\StaticInfoTables\Cache\CachedClassLoader::registerAutoloader();
+		// Possible label fields for different languages. Default as last.
+		$labelTable = [
+			'static_territories' => [
+				'label_fields' => [
+					'tr_name_##', 'tr_name_en',
+				],
+				'isocode_field' => [
+					'tr_iso_##',
+				]
+			],
+			'static_countries' => [
+				'label_fields' => [
+					'cn_short_##', 'cn_short_en',
+				],
+				'isocode_field' => [
+					'cn_iso_##',
+				]
+			],
+			'static_country_zones' => [
+				'label_fields' => [
+					'zn_name_##', 'zn_name_local',
+				],
+				'isocode_field' => [
+					'zn_code', 'zn_country_iso_##',
+				]
+			],
+			'static_languages' => [
+				'label_fields' => [
+					'lg_name_##', 'lg_name_en',
+				],
+				'isocode_field' => [
+					'lg_iso_##', 'lg_country_iso_##',
+				]
+			],
+			'static_currencies' => [
+				'label_fields' => [
+					'cu_name_##', 'cu_name_en',
+				],
+				'isocode_field' => [
+					'cu_iso_##',
+				]
+			]
+		];
+		if (isset($GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$extKey]['tables']) && is_array($GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$extKey]['tables'])) {
+			$GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$extKey]['tables'] = array_merge($labelTable, $GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$extKey]['tables']);
+		} else {
+			$GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$extKey]['tables'] = $labelTable;
+		}
+		// Add data handling hook to manage ISO codes redundancies on records
+		$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['processDatamapClass'][] = \SJBR\StaticInfoTables\Hook\Core\DataHandling\ProcessDataMap::class;
+		// Register slot for AfterExtensionInstall signal
+		$dispatcher = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Extbase\SignalSlot\Dispatcher::class);
+		$dispatcher->connect(\TYPO3\CMS\Extensionmanager\Utility\InstallUtility::class, 'afterExtensionInstall', \SJBR\StaticInfoTables\Slot\Extensionmanager\AfterExtensionInstall::class, 'executeUpdateScript');
+		// Enabling the Static Info Tables Manager module
+		$GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$extKey]['enableManager'] = isset($extConf['enableManager']) ? $extConf['enableManager'] : '0';
+		// Make the extension version and constraints available when creating language packs and to other extensions
+		$emConfUtility = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Extensionmanager\Utility\EmConfUtility::class);
+		$emConf = $emConfUtility->includeEmConf(['key' => $extKey, 'siteRelPath' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::siteRelPath($extKey)]);
+		$GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$extKey]['version'] = $emConf[$extKey]['version'];
+		$GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$extKey]['constraints'] = $emConf[$extKey]['constraints'];
+		// Configure translation of suggestions labels
+		\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $extKey . '/Configuration/PageTSconfig/Suggest.tsconfig">');
+		$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS'][\TYPO3\CMS\Recordlist\RecordList\DatabaseRecordList::class]['buildQueryParameters'][] = \SJBR\StaticInfoTables\Hook\Backend\Recordlist\BuildQueryParameters::class;
+	},
+	'static_info_tables'
+);
+
+
+/**
+ * Extension: aimeos
+ * File: /var/www/legion/source/typo3conf/ext/aimeos/ext_localconf.php
+ */
+
+$_EXTKEY = 'aimeos';
+$_EXTCONF = $GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf'][$_EXTKEY] ?? null;
+
+
+
+if ( ! defined( 'TYPO3_MODE' ) ) {
+	die ( 'Access denied.' );
+}
+
+
+$localautoloader = __DIR__ . '/Resources/Libraries/autoload.php';
+
+if( file_exists( $localautoloader ) === true ) {
+	require_once $localautoloader;
+}
+
+
+/**
+ * Include Aimeos extension directory
+ */
+
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$_EXTKEY]['confDirs']['0_'.$_EXTKEY] = 'EXT:' . $_EXTKEY . '/Resources/Private/Config/';
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$_EXTKEY]['extDirs']['0_'.$_EXTKEY] = 'EXT:' . $_EXTKEY . '/Resources/Private/Extensions/';
+
+
+/**
+ * Aimeos plugins
+ */
+
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+	'Aimeos.' . $_EXTKEY,
+	'locale-select',
+	array( 'Locale' => 'select' ),
+	array( 'Locale' => 'select' )
+);
+
+
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+	'Aimeos.' . $_EXTKEY,
+	'catalog-filter',
+	array( 'Catalog' => 'filter' ),
+	array( 'Catalog' => 'filter' )
+);
+
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+	'Aimeos.' . $_EXTKEY,
+	'catalog-stage',
+	array( 'Catalog' => 'stage' ),
+	array( 'Catalog' => 'stage' )
+);
+
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+	'Aimeos.' . $_EXTKEY,
+	'catalog-count',
+	array( 'Catalog' => 'count' ),
+	array( 'Catalog' => 'count' )
+);
+
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+	'Aimeos.' . $_EXTKEY,
+	'catalog-stock',
+	array( 'Catalog' => 'stock' ),
+	array( 'Catalog' => 'stock' )
+);
+
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+	'Aimeos.' . $_EXTKEY,
+	'catalog-list',
+	array( 'Catalog' => 'list' ),
+	array( 'Catalog' => 'list' )
+);
+
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+	'Aimeos.' . $_EXTKEY,
+	'catalog-suggest',
+	array( 'Catalog' => 'suggest' ),
+	array( 'Catalog' => 'suggest' )
+);
+
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+	'Aimeos.' . $_EXTKEY,
+	'catalog-detail',
+	array( 'Catalog' => 'detail' ),
+	array( 'Catalog' => 'detail' )
+);
+
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+	'Aimeos.' . $_EXTKEY,
+	'catalog-session',
+	array( 'Catalog' => 'session' ),
+	array( 'Catalog' => 'session' )
+);
+
+
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+	'Aimeos.' . $_EXTKEY,
+	'basket-related',
+	array( 'Basket' => 'related' ),
+	array( 'Basket' => 'related' )
+);
+
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+	'Aimeos.' . $_EXTKEY,
+	'basket-small',
+	array( 'Basket' => 'small' ),
+	array( 'Basket' => 'small' )
+);
+
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+	'Aimeos.' . $_EXTKEY,
+	'basket-standard',
+	array( 'Basket' => 'index' ),
+	array( 'Basket' => 'index' )
+);
+
+
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+	'Aimeos.' . $_EXTKEY,
+	'checkout-standard',
+	array( 'Checkout' => 'index' ),
+	array( 'Checkout' => 'index' )
+);
+
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+	'Aimeos.' . $_EXTKEY,
+	'checkout-confirm',
+	array( 'Checkout' => 'confirm' ),
+	array( 'Checkout' => 'confirm' )
+);
+
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+	'Aimeos.' . $_EXTKEY,
+	'checkout-update',
+	array( 'Checkout' => 'update' ),
+	array( 'Checkout' => 'update' )
+);
+
+
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+	'Aimeos.' . $_EXTKEY,
+	'account-download',
+	array( 'Account' => 'download' ),
+	array( 'Account' => 'download' )
+);
+
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+		'Aimeos.' . $_EXTKEY,
+		'account-history',
+		array( 'Account' => 'history' ),
+		array( 'Account' => 'history' )
+);
+
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+	'Aimeos.' . $_EXTKEY,
+	'account-favorite',
+	array( 'Account' => 'favorite' ),
+	array( 'Account' => 'favorite' )
+);
+
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+	'Aimeos.' . $_EXTKEY,
+	'account-profile',
+	array( 'Account' => 'profile' ),
+	array( 'Account' => 'profile' )
+);
+
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+	'Aimeos.' . $_EXTKEY,
+	'account-watch',
+	array( 'Account' => 'watch' ),
+	array( 'Account' => 'watch' )
+);
+
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+	'Aimeos.' . $_EXTKEY,
+	'jsonapi',
+	array( 'Jsonapi' => 'index' ),
+	array( 'Jsonapi' => 'index' )
+);
+
+
+/**
+ * Aimeos scheduler tasks
+ */
+
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['scheduler']['tasks']['Aimeos\\Aimeos\\Scheduler\\Task\\Typo6'] = array(
+	'extension'        => $_EXTKEY,
+	'title'            => 'LLL:EXT:' . $_EXTKEY . '/Resources/Private/Language/scheduler.xlf:default.name',
+	'description'      => 'LLL:EXT:' . $_EXTKEY . '/Resources/Private/Language/scheduler.xlf:default.description',
+	'additionalFields' => 'Aimeos\\Aimeos\\Scheduler\\Provider\\Typo6',
+);
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['scheduler']['tasks']['Aimeos\\Aimeos\\Scheduler\\Task\\Email6'] = array(
+	'extension'        => $_EXTKEY,
+	'title'            => 'LLL:EXT:' . $_EXTKEY . '/Resources/Private/Language/scheduler.xlf:email.name',
+	'description'      => 'LLL:EXT:' . $_EXTKEY . '/Resources/Private/Language/scheduler.xlf:email.description',
+	'additionalFields' => 'Aimeos\\Aimeos\\Scheduler\\Provider\\Email6',
+);
+
+
+/**
+ * Add RealURL configuration
+ */
+
+if( ( $aimeosExtConf = unserialize( $GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['aimeos'] ) ) !== false
+	&& isset( $aimeosExtConf['useRealUrlAutoConfig'] ) && $aimeosExtConf['useRealUrlAutoConfig'] != 0
+) {
+	$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/realurl/class.tx_realurl_autoconfgen.php']['extensionConfiguration']['aimeos'] =
+		'EXT:aimeos/Classes/Custom/Realurl.php:Aimeos\\Aimeos\\Custom\\Realurl->addAutoConfig';
+}
+
+
+/**
+ * Add cache configuration
+ */
+
+if( !is_array( $TYPO3_CONF_VARS['SYS']['caching']['cacheConfigurations']['aimeos'] ) ) {
+    $TYPO3_CONF_VARS['SYS']['caching']['cacheConfigurations']['aimeos'] = array();
+}
+
+if( !isset($TYPO3_CONF_VARS['SYS']['caching']['cacheConfigurations']['aimeos']['frontend'] ) ) {
+    $TYPO3_CONF_VARS['SYS']['caching']['cacheConfigurations']['aimeos']['frontend'] = 'TYPO3\\CMS\\Core\\Cache\\Frontend\\StringFrontend';
+}
+
+if( !isset($TYPO3_CONF_VARS['SYS']['caching']['cacheConfigurations']['aimeos']['options'] ) ) {
+	$TYPO3_CONF_VARS['SYS']['caching']['cacheConfigurations']['aimeos']['options'] = array( 'defaultLifetime' => 0 );
+}
+
+if( !isset($TYPO3_CONF_VARS['SYS']['caching']['cacheConfigurations']['aimeos']['groups'] ) ) {
+	$TYPO3_CONF_VARS['SYS']['caching']['cacheConfigurations']['aimeos']['groups'] = array( 'pages' );
+}
+
+
+
+/**
+ * Execute the setup tasks automatically to create the required tables
+ */
+
+if (TYPO3_MODE === 'BE') {
+	$signalSlotDispatcher = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\\CMS\\Extbase\\SignalSlot\\Dispatcher');
+	$signalSlotDispatcher->connect(
+		'TYPO3\\CMS\\Extensionmanager\\Service\\ExtensionManagementService',
+		'hasInstalledExtensions',
+		'Aimeos\\Aimeos\\Setup',
+		'executeOnSignal'
+	);
+}
+
+
+
+
+/**
+ * Extension: bootstrap_package
+ * File: /var/www/legion/source/typo3conf/ext/bootstrap_package/ext_localconf.php
+ */
+
+$_EXTKEY = 'bootstrap_package';
+$_EXTCONF = $GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf'][$_EXTKEY] ?? null;
+
+
+
+/*
+ * This file is part of the package bk2k/bootstrap-package.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE file that was distributed with this source code.
+ */
+
+if (!defined('TYPO3_MODE')) {
+    die('Access denied.');
+}
+
+/***************
+ * Define TypoScript as content rendering template
+ */
+$GLOBALS['TYPO3_CONF_VARS']['FE']['contentRenderingTemplates'][] = 'bootstrappackage/Configuration/TypoScript/';
+
+/***************
+ * Make the extension configuration accessible
+ */
+if (class_exists('TYPO3\CMS\Core\Configuration\ExtensionConfiguration')) {
+    $extensionConfiguration = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
+        \TYPO3\CMS\Core\Configuration\ExtensionConfiguration::class
+    );
+    $bootstrapPackageConfiguration = $extensionConfiguration->get('bootstrap_package');
+} else {
+    // Fallback for CMS8
+    // @extensionScannerIgnoreLine
+    $bootstrapPackageConfiguration = $GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['bootstrap_package'];
+    if (!is_array($bootstrapPackageConfiguration)) {
+        $bootstrapPackageConfiguration = unserialize($bootstrapPackageConfiguration);
+    }
+}
+
+/***************
+ * PageTS
+ */
+
+// Add Bootstrap Content Elements to newContentElement Wizard
+if (!$bootstrapPackageConfiguration['disablePageTsNewContentElementWizard']) {
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/PageTS/Mod/Wizards/newContentElement.txt">');
+}
+
+// Add Previews for Bootstrap Content Elements
+if (!$bootstrapPackageConfiguration['disablePageTsTtContentPreviews']) {
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/PageTS/Mod/WebLayout/TtContent/preview.txt">');
+}
+
+// Add BackendLayouts BackendLayouts for the BackendLayout DataProvider
+if (!$bootstrapPackageConfiguration['disablePageTsBackendLayouts']) {
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/PageTS/Mod/WebLayout/BackendLayouts.txt">');
+}
+
+// RTE
+if (!$bootstrapPackageConfiguration['disablePageTsRTE']) {
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/PageTS/RTE.txt">');
+}
+
+// TCEMAIN
+if (!$bootstrapPackageConfiguration['disablePageTsTCEMAIN']) {
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/PageTS/TCEMAIN.txt">');
+}
+
+// TCEFORM
+if (!$bootstrapPackageConfiguration['disablePageTsTCEFORM']) {
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/PageTS/TCEFORM.txt">');
+}
+
+if (TYPO3_MODE === 'BE') {
+    $signalSlotDispatcher = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Extbase\SignalSlot\Dispatcher::class);
+
+    /**
+     * Provide example webserver configuration after extension is installed.
+     */
+    $signalSlotDispatcher->connect(
+        \TYPO3\CMS\Extensionmanager\Service\ExtensionManagementService::class,
+        'hasInstalledExtensions',
+        \BK2K\BootstrapPackage\Service\InstallService::class,
+        'generateApacheHtaccess'
+    );
+
+    /**
+     * Add backend styling
+     */
+    $signalSlotDispatcher->connect(
+        \TYPO3\CMS\Extensionmanager\Service\ExtensionManagementService::class,
+        'hasInstalledExtensions',
+        \BK2K\BootstrapPackage\Service\BrandingService::class,
+        'setBackendStyling'
+    );
+}
+
+/***************
+ * Register hook for processing less files
+ */
+if (!$bootstrapPackageConfiguration['disableLessProcessing']) {
+    if (TYPO3_MODE === 'FE') {
+        require_once(\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath('bootstrap_package') . '/Contrib/less.php/Less.php');
+        $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_pagerenderer.php']['render-preProcess'][] = 'BK2K\\BootstrapPackage\\Hooks\\PageRenderer\\PreProcessHook->execute';
+    }
+    $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['clearCachePostProc'][] = 'BK2K\\BootstrapPackage\\Hooks\\TceMain\\ClearCacheHook->clearLessCache';
+}
+
+/***************
+ * Set alias for menu processor as fallback if the core menu
+ * processor does not exist for TYPO3 Versions below 8.5
+ */
+if (!class_exists('TYPO3\CMS\Frontend\DataProcessing\MenuProcessor')) {
+    class_alias(
+        \BK2K\BootstrapPackage\DataProcessing\MenuProcessor::class,
+        'TYPO3\CMS\Frontend\DataProcessing\MenuProcessor'
+    );
+}
+
+/***************
+ * Add default RTE configuration for bootstrap package
+ */
+$GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['bootstrap'] = 'EXT:bootstrap_package/Configuration/RTE/Default.yaml';
+
+/***************
+ * Extend TYPO3 upgrade wizards to handle boostrap package specific upgrades
+ */
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update'][\TYPO3\CMS\Install\Updates\SectionFrameToFrameClassUpdate::class]
+    = \BK2K\BootstrapPackage\Updates\SectionFrameToFrameClassUpdate::class;
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update'][\BK2K\BootstrapPackage\Updates\TableContentElementUpdate::class]
+    = \BK2K\BootstrapPackage\Updates\TableContentElementUpdate::class;
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update'][\BK2K\BootstrapPackage\Updates\PanelContentElementUpdate::class]
+    = \BK2K\BootstrapPackage\Updates\PanelContentElementUpdate::class;
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update'][\BK2K\BootstrapPackage\Updates\TexticonContentElement::class]
+    = \BK2K\BootstrapPackage\Updates\TexticonContentElement::class;
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update'][\BK2K\BootstrapPackage\Updates\ListGroupContentElement::class]
+    = \BK2K\BootstrapPackage\Updates\ListGroupContentElement::class;
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update'][\BK2K\BootstrapPackage\Updates\ExternalMediaContentElement::class]
+    = \BK2K\BootstrapPackage\Updates\ExternalMediaContentElement::class;
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update'][\BK2K\BootstrapPackage\Updates\BulletContentElementUpdate::class]
+    = \BK2K\BootstrapPackage\Updates\BulletContentElementUpdate::class;
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update'][\BK2K\BootstrapPackage\Updates\TabContentElementUpdate::class]
+    = \BK2K\BootstrapPackage\Updates\TabContentElementUpdate::class;
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update'][\BK2K\BootstrapPackage\Updates\AccordionContentElementUpdate::class]
+    = \BK2K\BootstrapPackage\Updates\AccordionContentElementUpdate::class;
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update'][\BK2K\BootstrapPackage\Updates\CarouselContentElementUpdate::class]
+    = \BK2K\BootstrapPackage\Updates\CarouselContentElementUpdate::class;
+
+/***************
+ * Register Icons
+ */
+$iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
+$iconRegistry->registerIcon(
+    'content-bootstrappackage-tab',
+    \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+    ['source' => 'EXT:bootstrap_package/Resources/Public/Icons/ContentElements/tab.svg']
+);
+$iconRegistry->registerIcon(
+    'content-bootstrappackage-tab-item',
+    \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+    ['source' => 'EXT:bootstrap_package/Resources/Public/Icons/ContentElements/tab-item.svg']
+);
+$iconRegistry->registerIcon(
+    'content-bootstrappackage-texticon',
+    \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+    ['source' => 'EXT:bootstrap_package/Resources/Public/Icons/ContentElements/texticon.svg']
+);
+$iconRegistry->registerIcon(
+    'content-bootstrappackage-accordion',
+    \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+    ['source' => 'EXT:bootstrap_package/Resources/Public/Icons/ContentElements/accordion.svg']
+);
+$iconRegistry->registerIcon(
+    'content-bootstrappackage-accordion-item',
+    \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+    ['source' => 'EXT:bootstrap_package/Resources/Public/Icons/ContentElements/accordion-item.svg']
+);
+$iconRegistry->registerIcon(
+    'content-bootstrappackage-carousel',
+    \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+    ['source' => 'EXT:bootstrap_package/Resources/Public/Icons/ContentElements/carousel.svg']
+);
+$iconRegistry->registerIcon(
+    'content-bootstrappackage-carousel-item',
+    \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+    ['source' => 'EXT:bootstrap_package/Resources/Public/Icons/ContentElements/carousel-item.svg']
+);
+$iconRegistry->registerIcon(
+    'content-bootstrappackage-carousel-item-header',
+    \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+    ['source' => 'EXT:bootstrap_package/Resources/Public/Icons/ContentElements/carousel-item-header.svg']
+);
+$iconRegistry->registerIcon(
+    'content-bootstrappackage-carousel-item-textandimage',
+    \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+    ['source' => 'EXT:bootstrap_package/Resources/Public/Icons/ContentElements/carousel-item-textandimage.svg']
+);
+$iconRegistry->registerIcon(
+    'content-bootstrappackage-carousel-item-backgroundimage',
+    \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+    ['source' => 'EXT:bootstrap_package/Resources/Public/Icons/ContentElements/carousel-item-backgroundimage.svg']
+);
+$iconRegistry->registerIcon(
+    'content-bootstrappackage-carousel-item-html',
+    \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+    ['source' => 'EXT:bootstrap_package/Resources/Public/Icons/ContentElements/carousel-item-html.svg']
+);
+$iconRegistry->registerIcon(
+    'content-bootstrappackage-externalmedia',
+    \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+    ['source' => 'EXT:bootstrap_package/Resources/Public/Icons/ContentElements/externalmedia.svg']
+);
+$iconRegistry->registerIcon(
+    'content-bootstrappackage-listgroup',
+    \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+    ['source' => 'EXT:bootstrap_package/Resources/Public/Icons/ContentElements/listgroup.svg']
+);
+
+/***************
+ * Backend Styling for CMS8
+ * Please see \BK2K\BootstrapPackage\Service\BrandingService for CMS9
+ */
+if (TYPO3_MODE == 'BE' && !class_exists('TYPO3\CMS\Core\Configuration\ExtensionConfiguration')) {
+    // @extensionScannerIgnoreLine
+    $backendConfiguration = $GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['backend'];
+    if (!is_array($backendConfiguration)) {
+        $backendConfiguration = unserialize($backendConfiguration);
+    }
+    // Login Logo
+    if (!isset($backendConfiguration['loginLogo']) || empty(trim($backendConfiguration['loginLogo']))) {
+        $backendConfiguration['loginLogo'] = 'EXT:bootstrap_package/Resources/Public/Images/Backend/login-logo.svg';
+    }
+    // Login Background
+    if (!isset($backendConfiguration['loginBackgroundImage']) || empty(trim($backendConfiguration['loginBackgroundImage']))) {
+        $backendConfiguration['loginBackgroundImage'] = 'EXT:bootstrap_package/Resources/Public/Images/Backend/login-background-image.jpg';
+    }
+    // Backend Logo
+    if (!isset($backendConfiguration['backendLogo']) || empty(trim($backendConfiguration['backendLogo']))) {
+        $backendConfiguration['backendLogo'] = 'EXT:bootstrap_package/Resources/Public/Images/Backend/backend-logo.svg';
+    }
+    $GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['backend'] = serialize($backendConfiguration);
+}
+
+
+/**
+ * Extension: aimeos_dist
+ * File: /var/www/legion/source/typo3conf/ext/aimeos_dist/ext_localconf.php
+ */
+
+$_EXTKEY = 'aimeos_dist';
+$_EXTCONF = $GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf'][$_EXTKEY] ?? null;
+
+
+
+if ( ! defined( 'TYPO3_MODE' ) ) {
+	die ( 'Access denied.' );
+}
+
+
+/**
+ * Updates the required data
+ */
+if (TYPO3_MODE === 'BE') {
+	$signalSlotDispatcher = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\\CMS\\Extbase\\SignalSlot\\Dispatcher');
+	$signalSlotDispatcher->connect(
+			'TYPO3\\CMS\\Extensionmanager\\Service\\ExtensionManagementService',
+			'hasInstalledExtensions',
+			'Aimeos\\AimeosDist\\Setup',
+			'process'
+	);
+}
+
+
+/**
  * Extension: vhs
  * File: /var/www/legion/source/typo3conf/ext/vhs/ext_localconf.php
  */
@@ -1293,6 +2047,10 @@ if (!defined('TYPO3_MODE')) {
 
 $ll = 'EXT:' . $_EXTKEY . '/Resources/Private/Language/locallang.xlf';
 
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+    '<INCLUDE_TYPOSCRIPT: source="DIR:EXT:general/Configuration/TsConfig/Page/" extensions="ts">'
+);
+
 ############################## Add PageTS config ##############################
 
 
@@ -1331,6 +2089,174 @@ if ($_EXTCONF['nestingInListModule']) {
 
 $signalSlotDispatcher = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Extbase\SignalSlot\Dispatcher::class);
 $signalSlotDispatcher->connect(\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::class, 'tcaIsBeingBuilt', \GridElementsTeam\Gridelements\Slots\ExtTablesInclusionPostProcessing::class, 'processData');
+
+
+/**
+ * Extension: news
+ * File: /var/www/legion/source/typo3conf/ext/news/ext_localconf.php
+ */
+
+$_EXTKEY = 'news';
+$_EXTCONF = $GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf'][$_EXTKEY] ?? null;
+
+
+defined('TYPO3_MODE') or die();
+
+$boot = function () {
+    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+        'GeorgRinger.news',
+        'Pi1',
+        [
+            'News' => 'list,detail,selectedList,dateMenu,searchForm,searchResult',
+            'Category' => 'list',
+            'Tag' => 'list',
+        ],
+        [
+            'News' => 'searchForm,searchResult',
+        ]
+    );
+
+    // Page module hook
+    $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['cms/layout/class.tx_cms_layout.php']['list_type_Info']['news' . '_pi1']['news'] =
+        \GeorgRinger\News\Hooks\PageLayoutView::class . '->getExtensionSummary';
+
+    $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['clearCachePostProc']['news_clearcache'] =
+        \GeorgRinger\News\Hooks\DataHandler::class . '->clearCachePostProc';
+
+    // Edit restriction for news records
+    $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['processCmdmapClass']['news'] =
+        \GeorgRinger\News\Hooks\DataHandler::class;
+
+    // FormEngine: Rendering of fields
+    $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tceforms.php']['getSingleFieldClass']['news'] =
+        \GeorgRinger\News\Hooks\FormEngine::class;
+
+    // FormEngine: Rendering of the whole FormEngine
+    $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tceforms.php']['getMainFieldsClass']['news'] =
+        \GeorgRinger\News\Hooks\FormEngine::class;
+
+    // Modify flexform values
+    $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_befunc.php']['getFlexFormDSClass']['news'] =
+        \GeorgRinger\News\Hooks\BackendUtility::class;
+    $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS'][\TYPO3\CMS\Core\Configuration\FlexForm\FlexFormTools::class]['flexParsing']['news']
+        = \GeorgRinger\News\Hooks\BackendUtility::class;
+
+    // Modify flexform fields since core 8.5 via formEngine: Inject a data provider between TcaFlexPrepare and TcaFlexProcess
+    if (\TYPO3\CMS\Core\Utility\VersionNumberUtility::convertVersionNumberToInteger(TYPO3_version) >= 8005000) {
+        $GLOBALS['TYPO3_CONF_VARS']['SYS']['formEngine']['formDataGroup']['tcaDatabaseRecord'][\GeorgRinger\News\Backend\FormDataProvider\NewsFlexFormManipulation::class] = [
+            'depends' => [
+                \TYPO3\CMS\Backend\Form\FormDataProvider\TcaFlexPrepare::class,
+            ],
+            'before' => [
+                \TYPO3\CMS\Backend\Form\FormDataProvider\TcaFlexProcess::class,
+            ],
+        ];
+    }
+
+    // Hide content elements in page module
+    if (\TYPO3\CMS\Core\Utility\VersionNumberUtility::convertVersionNumberToInteger(TYPO3_version) >= 8000000) {
+        $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['TYPO3\\CMS\\Recordlist\\RecordList\\DatabaseRecordList']['buildQueryParameters'][]
+            = \GeorgRinger\News\Hooks\Backend\RecordListQueryHook8::class;
+    } else {
+        $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['typo3/class.db_list.inc']['makeQueryArray']['news'] =
+            \GeorgRinger\News\Hooks\Backend\RecordListQueryHook::class;
+    }
+
+    // Inline records hook
+    $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tceforms_inline.php']['tceformsInlineHook']['news'] =
+        \GeorgRinger\News\Hooks\InlineElementHook::class;
+
+    // Xclass InlineRecordContainer
+    $GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects'][\TYPO3\CMS\Backend\Form\Container\InlineRecordContainer::class] = [
+        'className' => \GeorgRinger\News\Xclass\InlineRecordContainerForNews::class,
+    ];
+
+    /* ===========================================================================
+        Custom cache, done with the caching framework
+    =========================================================================== */
+    if (empty($GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['cache_news_category'])) {
+        $GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['cache_news_category'] = [];
+    }
+    // Define string frontend as default frontend, this must be set with TYPO3 4.5 and below
+    // and overrides the default variable frontend of 4.6
+    if (!isset($GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['cache_news_category']['frontend'])) {
+        $GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['cache_news_category']['frontend'] = \TYPO3\CMS\Core\Cache\Frontend\StringFrontend::class;
+    }
+
+    /* ===========================================================================
+        Add TSconfig
+    =========================================================================== */
+    // For linkvalidator
+    if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('linkvalidator')) {
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:news/Configuration/TSconfig/Page/mod.linkvalidator.txt">');
+    }
+    if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('guide')) {
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('  <INCLUDE_TYPOSCRIPT: source="DIR:EXT:news/Configuration/TSconfig/Tours" extensions="ts">');
+    }
+
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('
+    <INCLUDE_TYPOSCRIPT: source="FILE:EXT:news/Configuration/TSconfig/ContentElementWizard.txt">
+    <INCLUDE_TYPOSCRIPT: source="FILE:EXT:news/Configuration/TSconfig/Administration.txt">
+    ');
+
+    /* ===========================================================================
+        Hooks
+    =========================================================================== */
+    if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('realurl')) {
+        $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/realurl/class.tx_realurl_autoconfgen.php']['extensionConfiguration']['news'] =
+            \GeorgRinger\News\Hooks\RealUrlAutoConfiguration::class . '->addNewsConfig';
+    }
+
+    // Register cache frontend for proxy class generation
+    $GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['news'] = [
+        'frontend' => \TYPO3\CMS\Core\Cache\Frontend\PhpFrontend::class,
+        'backend' => \TYPO3\CMS\Core\Cache\Backend\FileBackend::class,
+        'groups' => [
+            'all',
+            'system',
+        ],
+        'options' => [
+            'defaultLifetime' => 0,
+        ]
+    ];
+
+    $GLOBALS['TYPO3_CONF_VARS']['SYS']['formEngine']['formDataGroup']['tcaDatabaseRecord'][\GeorgRinger\News\Backend\FormDataProvider\NewsRowInitializeNew::class] = [
+        'depends' => [
+            \TYPO3\CMS\Backend\Form\FormDataProvider\DatabaseRowInitializeNew::class,
+        ]
+    ];
+    \GeorgRinger\News\Utility\ClassLoader::registerAutoloader();
+
+    if (TYPO3_MODE === 'BE') {
+        $icons = [
+            'apps-pagetree-folder-contains-news' => 'ext-news-folder-tree.svg',
+            'ext-news-wizard-icon' => 'plugin_wizard.svg',
+            'ext-news-type-default' => 'news_domain_model_news.svg',
+            'ext-news-type-internal' => 'news_domain_model_news_internal.svg',
+            'ext-news-type-external' => 'news_domain_model_news_external.svg',
+            'ext-news-tag' => 'news_domain_model_tag.svg',
+            'ext-news-link' => 'news_domain_model_link.svg'
+        ];
+        $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
+        foreach ($icons as $identifier => $path) {
+            $iconRegistry->registerIcon(
+                $identifier,
+                \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+                ['source' => 'EXT:news/Resources/Public/Icons/' . $path]
+            );
+        }
+    }
+
+    if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('dd_googlesitemap')) {
+        $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['dd_googlesitemap']['sitemap']['txnews']
+            = \GeorgRinger\News\Hooks\TxNewsSitemapGenerator::class . '->main';
+    }
+
+    $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['extbase']['commandControllers'][] = \GeorgRinger\News\Command\NewsImportCommandController::class;
+};
+
+$boot();
+unset($boot);
 
 
 #

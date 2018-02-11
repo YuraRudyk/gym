@@ -101,6 +101,9 @@ return [
         'reports' => [
             'packagePath' => 'typo3/sysext/reports/',
         ],
+        'scheduler' => [
+            'packagePath' => 'typo3/sysext/scheduler/',
+        ],
         'sv' => [
             'packagePath' => 'typo3/sysext/sv/',
         ],
@@ -116,6 +119,18 @@ return [
         'viewpage' => [
             'packagePath' => 'typo3/sysext/viewpage/',
         ],
+        'static_info_tables' => [
+            'packagePath' => 'typo3conf/ext/static_info_tables/',
+        ],
+        'aimeos' => [
+            'packagePath' => 'typo3conf/ext/aimeos/',
+        ],
+        'bootstrap_package' => [
+            'packagePath' => 'typo3conf/ext/bootstrap_package/',
+        ],
+        'aimeos_dist' => [
+            'packagePath' => 'typo3conf/ext/aimeos_dist/',
+        ],
         'vhs' => [
             'packagePath' => 'typo3conf/ext/vhs/',
         ],
@@ -124,6 +139,9 @@ return [
         ],
         'gridelements' => [
             'packagePath' => 'typo3conf/ext/gridelements/',
+        ],
+        'news' => [
+            'packagePath' => 'typo3conf/ext/news/',
         ],
     ],
     'version' => 5,
