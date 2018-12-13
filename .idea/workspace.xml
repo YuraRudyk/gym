@@ -2,18 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b0eca77-44f8-4f72-9012-99becd2eb86c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Code/cache_core/PackageObjects_5beb3d416ba60640392897.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Code/fluid_template/Frontend_action_contentelement_a61da317cec02c32d59135d2bca17a1d454162c5.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Code/fluid_template/Standard_action_index_0ffd50674b6b7e51e29c2735664bb2a2dc00e47a.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Code/fluid_template/Standard_action_index_78eee1afd062d9bf7bc94650182c764012f77d12.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Code/fluid_template/layout_Login_html_07604ed1c6a5864cc826ff4a6d052838b8d5e1c5.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Code/fluid_template/partial_LoginNews_e78d6c5a56d361ece757ea369efa17fa82a1fe24.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Code/fluid_template/partial_Login_InterfaceSelector_f17291448ba251b0e54d57110f38fd7aa3530d74.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Code/cache_core/BackendRoutesFromPackages_18218ddcde5ee9f527cf596a99b235bba5ecab50.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Code/cache_core/PackageManager_47a2e39818e88431edbed20d249098cc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Code/cache_core/PackageObjects_5c12d024228dc587795924.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Code/cache_core/ext_localconf_944f752bd74eab5d00841c84266dcca181df6e52.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Code/cache_core/ext_tables_bef316c7a1b1b872e833909f7fb005a7fc48f3c4.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Code/cache_core/tca_base_92288f2b848d86ab4e637bca24d71d90d5e7f233.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Code/fluid_template/Frontend_action_contentelement_3c8577009afc63ecd9ed7f1cbf6f392e83380b93.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Code/fluid_template/Standard_action_Header_280cd8ef9cead5ba94749d1d213478c53650f51d.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Code/fluid_template/Standard_action_Main_222682e0660a3620c9f1eaebed570a4274d089cb.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Code/fluid_template/layout_Default_html_b93c17900048b03b0567f0d08ed9fa327930c672.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Code/fluid_template/layout_Page_html_5f9352133cad8a664022ea9bfd4728db99acc71b.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Code/fluid_template/partial_DropIn_After_All_e40884b4b3a3a97b8596d8190efb33ab9619b901.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Code/fluid_template/partial_DropIn_Before_All_6e969860f64648c7bb2ff547b2f2a8e40fd182d1.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Code/fluid_template/partial_Footer_All_2e24e091483efd3c2b0be66fd7ea9b22830489b1.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Code/fluid_template/partial_Header_All_f4ac5f1da9b2d078cb87483fd53fd534f7919d55.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Code/fluid_template/partial_Header_Date_06724dab4434a4eba967b62dc3c3f506239e7e58.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Code/fluid_template/partial_Header_Header_676da78f39ee2024c482b895c0c0d67c342b6c77.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Code/fluid_template/partial_Header_SubHeader_41b63b10b9a24aefcdac81bbcfeb791da9289924.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/typo3conf/ext/gridelements" afterPath="$PROJECT_DIR$/public/typo3conf/ext/gridelements" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/typo3conf/deprecation_e693ae6e9f.log" afterPath="$PROJECT_DIR$/public/typo3conf/deprecation_e693ae6e9f.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Code/cache_core/PackageManager_47a2e39818e88431edbed20d249098cc.php" afterPath="$PROJECT_DIR$/public/typo3temp/var/Cache/Code/cache_core/PackageManager_47a2e39818e88431edbed20d249098cc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Data/assets/requireJS_9d6fe3e65daae217082019ef776e3245" afterPath="$PROJECT_DIR$/public/typo3temp/var/Cache/Data/assets/requireJS_9d6fe3e65daae217082019ef776e3245" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -40,8 +50,8 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+            <state relative-caret-position="108">
+              <caret line="6" column="43" lean-forward="false" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -301,12 +311,12 @@
       <workItem from="1537693305378" duration="599000" />
       <workItem from="1540927437351" duration="599000" />
       <workItem from="1542134255021" duration="6334000" />
-      <workItem from="1544733322754" duration="1306000" />
+      <workItem from="1544733322754" duration="1681000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20455000" />
+    <option name="totallyTimeSpent" value="20830000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="25" width="1368" height="744" extended-state="0" />
@@ -673,8 +683,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+        <state relative-caret-position="108">
+          <caret line="6" column="43" lean-forward="false" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
           <folding />
         </state>
       </provider>

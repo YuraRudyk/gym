@@ -3,4 +3,6 @@
 
 # Ignore cache
 public/typo3conf/
+.idea/workspace.xml
+public/typo3conf/deprecation_e693ae6e9f.log
 
