@@ -489,6 +489,6 @@ array (
   'composerNameToPackageKeyMap' => 
   array (
   ),
-  'packageObjectsCacheEntryIdentifier' => 'PackageObjects_5beb3d416ba60640392897',
+  'packageObjectsCacheEntryIdentifier' => 'PackageObjects_5c12d024228dc587795924',
 );
 #

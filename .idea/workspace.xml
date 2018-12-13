@@ -2,55 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b0eca77-44f8-4f72-9012-99becd2eb86c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Code/cache_core/PackageManager_2a270cb748a68ec67c2f806176479e83.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Code/cache_core/PackageObjects_5b6369c545f5b206814811.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Code/fluid_template/BuilderModule_action_domainmodelling_4970d13e72471ac0f0e4a963894c2202285339c9.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Code/fluid_template/Configuration_action_showConfigurationForm_41b0ae16e42a497dd2db941246a75f390fb60867.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Code/fluid_template/Frontend_action_contentelement_5507f30cd23a03bfb56dc54f20542e4970143577.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Code/fluid_template/Frontend_action_contentelement_8c636980471137db3e36fadcddfc00107e46c648.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Code/fluid_template/Frontend_action_contentelement_c64078deeb41604da1533451a39a6e48b9bb768c.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Code/fluid_template/Standard_action_Main_f0a711ac9d47b276eed072f03afa391ad14a693c.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Code/fluid_template/WizardContent_action_list_d7471c08cfdc05afa38e29d1de1f9e81b2460e67.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Code/fluid_template/WizardPage_action_list_1b7279c3e24de248ecd12e2a0ad1909dec0675fe.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Code/fluid_template/layout_Default_html_1fdfb3fca612297320c444f7d476f46ced07c7d5.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Code/fluid_template/layout_Default_html_d40f6c46bd88ba3bbc498c94020b400a27bb7b82.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Code/fluid_template/layout_main_html_d30b430edfbbc7c40113b09a7fc03c9db456c600.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Code/fluid_template/partial_General_Tabs_6ffa614aaded1dfbca378fb617725d4b98165bc3.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Data/l10n/21808aa53fbc3a4740fa520170a40787" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Data/l10n/35464f77ebd113760ad5af6e8f88928b" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Data/l10n/5496ea6e55fd6632e0a589a4359d27a1" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Data/l10n/ac8c9b212187f0cd1a6cf943203df407" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Data/l10n/c88f0162c4fc5fdc728fc51407f2fec8" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Data/l10n/eb1d9d364f48e8cd3f9977b9b8acf886" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Data/l10n/f6dcee348c182c525f2c3799dd6aed16" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Data/l10n/ff37554c9e61bf56b9c4793fea146067" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/InstallToolSessions/2e05694596c964012d95a5efd71aabd5ee5485ec/hash_01ae1f4a1cbec87cdae1ce5c451d3a2a" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/InstallToolSessions/2e05694596c964012d95a5efd71aabd5ee5485ec/hash_3af21221de65a1baa579b08feb8f2ead" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/InstallToolSessions/2e05694596c964012d95a5efd71aabd5ee5485ec/hash_933bb1d1664a542c363ec8e73cf5cbb0" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/InstallToolSessions/2e05694596c964012d95a5efd71aabd5ee5485ec/hash_a4d1ee07fe45c8ff925a033790c114e2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/locks/flock_9f45897f8a919fb9526e362634248f9c" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/typo3conf/ENABLE_INSTALL_TOOL" afterPath="$PROJECT_DIR$/public/typo3conf/ENABLE_INSTALL_TOOL" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Code/cache_core/PackageObjects_5beb3d416ba60640392897.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Code/fluid_template/Frontend_action_contentelement_a61da317cec02c32d59135d2bca17a1d454162c5.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Code/fluid_template/Standard_action_index_0ffd50674b6b7e51e29c2735664bb2a2dc00e47a.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Code/fluid_template/Standard_action_index_78eee1afd062d9bf7bc94650182c764012f77d12.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Code/fluid_template/layout_Login_html_07604ed1c6a5864cc826ff4a6d052838b8d5e1c5.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Code/fluid_template/partial_LoginNews_e78d6c5a56d361ece757ea369efa17fa82a1fe24.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Code/fluid_template/partial_Login_InterfaceSelector_f17291448ba251b0e54d57110f38fd7aa3530d74.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/typo3conf/ext/gridelements" afterPath="$PROJECT_DIR$/public/typo3conf/ext/gridelements" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/access.log" afterPath="$PROJECT_DIR$/access.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fileadmin/_temp_/.htaccess" afterPath="$PROJECT_DIR$/public/fileadmin/_temp_/.htaccess" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fileadmin/_temp_/index.html" afterPath="$PROJECT_DIR$/public/fileadmin/_temp_/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fileadmin/user_upload/_temp_/importexport/.htaccess" afterPath="$PROJECT_DIR$/public/fileadmin/user_upload/_temp_/importexport/.htaccess" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fileadmin/user_upload/_temp_/importexport/index.html" afterPath="$PROJECT_DIR$/public/fileadmin/user_upload/_temp_/importexport/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fileadmin/user_upload/_temp_/index.html" afterPath="$PROJECT_DIR$/public/fileadmin/user_upload/_temp_/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fileadmin/user_upload/index.html" afterPath="$PROJECT_DIR$/public/fileadmin/user_upload/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/typo3conf/PackageStates.php" afterPath="$PROJECT_DIR$/public/typo3conf/PackageStates.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/typo3conf/deprecation_e693ae6e9f.log" afterPath="$PROJECT_DIR$/public/typo3conf/deprecation_e693ae6e9f.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/typo3conf/ext/ls_template/Configuration/TypoScript/Setup/Page.ts" afterPath="$PROJECT_DIR$/public/typo3conf/ext/ls_template/Configuration/TypoScript/Setup/Page.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/typo3conf/ext/ls_template/Resources/Private/Templates/Mask/footer.html" afterPath="$PROJECT_DIR$/public/typo3conf/ext/ls_template/Resources/Private/Templates/Mask/footer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/typo3conf/ext/ls_template/Resources/Private/Templates/Page/Main.html" afterPath="$PROJECT_DIR$/public/typo3conf/ext/ls_template/Resources/Private/Templates/Page/Main.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/typo3conf/mask.json" afterPath="$PROJECT_DIR$/public/typo3conf/mask.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/typo3temp/index.html" afterPath="$PROJECT_DIR$/public/typo3temp/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/typo3temp/var/.htaccess" afterPath="$PROJECT_DIR$/public/typo3temp/var/.htaccess" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Code/cache_core/tca_base_92288f2b848d86ab4e637bca24d71d90d5e7f233.php" afterPath="$PROJECT_DIR$/public/typo3temp/var/Cache/Code/cache_core/tca_base_92288f2b848d86ab4e637bca24d71d90d5e7f233.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Code/cache_core/PackageManager_47a2e39818e88431edbed20d249098cc.php" afterPath="$PROJECT_DIR$/public/typo3temp/var/Cache/Code/cache_core/PackageManager_47a2e39818e88431edbed20d249098cc.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/typo3temp/var/Cache/Data/assets/requireJS_9d6fe3e65daae217082019ef776e3245" afterPath="$PROJECT_DIR$/public/typo3temp/var/Cache/Data/assets/requireJS_9d6fe3e65daae217082019ef776e3245" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/uploads/index.html" afterPath="$PROJECT_DIR$/public/uploads/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/uploads/media/index.html" afterPath="$PROJECT_DIR$/public/uploads/media/index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -62,14 +25,24 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="footer.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="footer.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/ls_template/Resources/Private/Templates/Mask/footer.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="36">
-              <caret line="2" column="13" lean-forward="true" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="18">
+              <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -153,6 +126,7 @@
         <option value="$PROJECT_DIR$/public/typo3conf/ext/ls_template/Configuration/TypoScript/Setup/Page.ts" />
         <option value="$PROJECT_DIR$/public/typo3conf/ext/ls_template/Resources/Private/Templates/Page/Main.html" />
         <option value="$PROJECT_DIR$/public/typo3conf/ext/ls_template/Resources/Private/Templates/Mask/footer.html" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -209,276 +183,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="legion-sport" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="legion-sport" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="typo3conf" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="legion-sport" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="legion-sport" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="typo3conf" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ext" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="legion-sport" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="legion-sport" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="typo3conf" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ext" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ls_template" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="legion-sport" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="legion-sport" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="typo3conf" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ext" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ls_template" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="legion-sport" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="legion-sport" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="typo3conf" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ext" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ls_template" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Private" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="legion-sport" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="legion-sport" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="typo3conf" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ext" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ls_template" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Private" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Templates" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Page" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="legion-sport" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="legion-sport" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="typo3conf" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ext" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ls_template" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Private" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Templates" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Mask" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="legion-sport" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="legion-sport" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="typo3conf" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ext" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ls_template" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Private" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Layouts" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="legion-sport" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="legion-sport" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fileadmin" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -597,15 +301,15 @@
       <workItem from="1537693305378" duration="599000" />
       <workItem from="1540927437351" duration="599000" />
       <workItem from="1542134255021" duration="6334000" />
-      <workItem from="1544733322754" duration="1203000" />
+      <workItem from="1544733322754" duration="1306000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20352000" />
+    <option name="totallyTimeSpent" value="20455000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="25" width="1368" height="744" extended-state="1" />
+    <frame x="-1" y="25" width="1368" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -620,12 +324,23 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.275" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -949,10 +664,18 @@
     <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/ls_template/Resources/Private/Templates/Mask/footer.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
-          <caret line="2" column="13" lean-forward="true" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>

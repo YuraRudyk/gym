@@ -1,0 +1,6 @@
+### TYPO3 CMS
+## Composer mode
+
+# Ignore cache
+public/typo3conf/
+
