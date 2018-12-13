@@ -2,7 +2,7 @@
 ## Composer mode
 
 # Ignore cache
-public/typo3conf/
+public/typo3temp/
 .idea/workspace.xml
 public/typo3conf/deprecation_e693ae6e9f.log
 
