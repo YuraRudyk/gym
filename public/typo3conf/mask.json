@@ -1,0 +1,311 @@
+{
+    "tt_content": {
+        "elements": {
+            "footer": {
+                "label": "LS Footer",
+                "key": "footer",
+                "shortLabel": "Footer for all site",
+                "description": "",
+                "icon": "",
+                "color": "#000000",
+                "columns": {
+                    "0": "tx_mask_footer_background",
+                    "1": "tx_mask_logo",
+                    "2": "tx_mask_newtworkstitle",
+                    "3": "tx_mask_networks",
+                    "6": "tx_mask_work_time",
+                    "7": "tx_mask_footer_contacts",
+                    "8": "tx_mask_copyright"
+                },
+                "labels": {
+                    "0": "Footer Background",
+                    "1": "Logo",
+                    "2": "Social Networks Title",
+                    "3": "Social Networks",
+                    "6": "Work Time",
+                    "7": "Contacts",
+                    "8": "Copyright"
+                },
+                "options": {
+                    "6": "rte",
+                    "7": "rte"
+                }
+            }
+        },
+        "sql": {
+            "tx_mask_footer_background": {
+                "tt_content": {
+                    "tx_mask_footer_background": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_logo": {
+                "tt_content": {
+                    "tx_mask_logo": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_newtworkstitle": {
+                "tt_content": {
+                    "tx_mask_newtworkstitle": "tinytext"
+                }
+            },
+            "tx_mask_networks": {
+                "tt_content": {
+                    "tx_mask_networks": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_work_time": {
+                "tt_content": {
+                    "tx_mask_work_time": "text"
+                }
+            },
+            "tx_mask_footer_contacts": {
+                "tt_content": {
+                    "tx_mask_footer_contacts": "text"
+                }
+            },
+            "tx_mask_copyright": {
+                "tt_content": {
+                    "tx_mask_copyright": "text"
+                }
+            }
+        },
+        "tca": {
+            "tx_mask_footer_background": {
+                "exclude": "1",
+                "options": "file",
+                "config": {
+                    "appearance": {
+                        "collapseAll": "1",
+                        "expandSingle": "1",
+                        "useSortable": "1",
+                        "showSynchronizationLink": "1",
+                        "showAllLocalizationLink": "1"
+                    },
+                    "behaviour": {
+                        "localizeChildrenAtParentLocalization": "1"
+                    },
+                    "minitems": "",
+                    "maxitems": "1",
+                    "filter": [
+                        {
+                            "parameters": {
+                                "allowedFileExtensions": "gif,png,jpeg,jpg"
+                            }
+                        }
+                    ]
+                },
+                "l10n_mode": "copy",
+                "key": "footer_background"
+            },
+            "tx_mask_logo": {
+                "exclude": "1",
+                "options": "file",
+                "config": {
+                    "appearance": {
+                        "collapseAll": "1",
+                        "fileUploadAllowed": "1",
+                        "showSynchronizationLink": "1",
+                        "showAllLocalizationLink": "1"
+                    },
+                    "behaviour": {
+                        "localizeChildrenAtParentLocalization": "1"
+                    },
+                    "minitems": "1",
+                    "maxitems": "1",
+                    "filter": [
+                        {
+                            "parameters": {
+                                "allowedFileExtensions": ""
+                            }
+                        }
+                    ]
+                },
+                "l10n_mode": "copy",
+                "key": "logo"
+            },
+            "tx_mask_newtworkstitle": {
+                "config": {
+                    "type": "input",
+                    "eval": "",
+                    "default": "",
+                    "placeholder": "",
+                    "size": "",
+                    "max": "",
+                    "is_in": ""
+                },
+                "exclude": "1",
+                "key": "newtworkstitle"
+            },
+            "tx_mask_networks": {
+                "config": {
+                    "type": "inline",
+                    "foreign_table": "--inlinetable--",
+                    "foreign_field": "parentid",
+                    "foreign_table_field": "parenttable",
+                    "foreign_sortby": "sorting",
+                    "appearance": {
+                        "enabledControls": {
+                            "dragdrop": "1"
+                        },
+                        "collapseAll": "1",
+                        "expandSingle": "1",
+                        "newRecordLinkTitle": "",
+                        "levelLinksPosition": "top",
+                        "useSortable": "1",
+                        "showSynchronizationLink": "1",
+                        "showAllLocalizationLink": "1"
+                    },
+                    "minitems": "",
+                    "maxitems": "",
+                    "behaviour": {
+                        "localizeChildrenAtParentLocalization": "1"
+                    }
+                },
+                "exclude": "1",
+                "inlineLabel": "",
+                "inlineIcon": "",
+                "l10n_mode": "copy",
+                "key": "networks"
+            },
+            "tx_mask_work_time": {
+                "config": {
+                    "type": "text",
+                    "eval": "",
+                    "richtextConfiguration": "default",
+                    "enableRichtext": "1",
+                    "cols": "",
+                    "rows": "",
+                    "default": "",
+                    "placeholder": "",
+                    "max": ""
+                },
+                "exclude": "1",
+                "key": "work_time"
+            },
+            "tx_mask_footer_contacts": {
+                "config": {
+                    "type": "text",
+                    "eval": "",
+                    "richtextConfiguration": "default",
+                    "enableRichtext": "1",
+                    "cols": "",
+                    "rows": "",
+                    "default": "",
+                    "placeholder": "",
+                    "max": ""
+                },
+                "exclude": "1",
+                "key": "footer_contacts"
+            },
+            "tx_mask_copyright": {
+                "config": {
+                    "type": "text",
+                    "eval": "",
+                    "cols": "",
+                    "rows": "",
+                    "default": "",
+                    "placeholder": "",
+                    "max": "",
+                    "format": ""
+                },
+                "exclude": "1",
+                "key": "copyright"
+            }
+        }
+    },
+    "sys_file_reference": {
+        "sql": {
+            "tx_mask_icon": {
+                "sys_file_reference": {
+                    "tx_mask_icon": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_footer_background": {
+                "sys_file_reference": {
+                    "tx_mask_footer_background": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_logo": {
+                "sys_file_reference": {
+                    "tx_mask_logo": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            }
+        }
+    },
+    "tx_mask_networks": {
+        "sql": {
+            "tx_mask_link": {
+                "tx_mask_networks": {
+                    "tx_mask_link": "tinytext"
+                }
+            },
+            "tx_mask_icon": {
+                "tx_mask_networks": {
+                    "tx_mask_icon": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            }
+        },
+        "tca": {
+            "tx_mask_link": {
+                "config": {
+                    "type": "input",
+                    "renderType": "inputLink",
+                    "softref": "typolink",
+                    "fieldControl": {
+                        "linkPopup": {
+                            "options": {
+                                "title": "Link",
+                                "windowOpenParameters": "height=300,width=500,status=0,menubar=0,scrollbars=1",
+                                "blindLinkOptions": ""
+                            }
+                        }
+                    },
+                    "wizards": {
+                        "link": {
+                            "icon": "actions-wizard-link",
+                            "params": {
+                                "allowedExtensions": ""
+                            }
+                        }
+                    },
+                    "eval": "required",
+                    "default": "",
+                    "placeholder": "link",
+                    "size": ""
+                },
+                "exclude": "1",
+                "inlineParent": "tx_mask_networks",
+                "label": "Link for Social Network",
+                "key": "link"
+            },
+            "tx_mask_icon": {
+                "exclude": "1",
+                "options": "file",
+                "config": {
+                    "appearance": {
+                        "collapseAll": "1",
+                        "fileUploadAllowed": "1",
+                        "showSynchronizationLink": "1",
+                        "showAllLocalizationLink": "1"
+                    },
+                    "behaviour": {
+                        "localizeChildrenAtParentLocalization": "1"
+                    },
+                    "minitems": "1",
+                    "maxitems": "1",
+                    "filter": [
+                        {
+                            "parameters": {
+                                "allowedFileExtensions": ""
+                            }
+                        }
+                    ]
+                },
+                "l10n_mode": "copy",
+                "inlineParent": "tx_mask_networks",
+                "label": "Icon",
+                "key": "icon"
+            }
+        }
+    }
+}

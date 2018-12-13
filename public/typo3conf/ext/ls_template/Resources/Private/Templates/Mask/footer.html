@@ -1,0 +1,28 @@
+<div class="footer-outer" style='background-image: url("{data.tx_mask_footer_background.0.publicUrl}"); background-size: cover'>
+    <div>
+        <div>
+            <f:image image="{data.tx_mask_logo.0}" alt="{data.tx_mask_logo.0.alternative}" title="{data.tx_mask_logo.0.title}"  />
+
+            <f:if condition="{data.tx_mask_networks}">
+                <p>{data.tx_mask_newtworkstitle}</p>
+                <f:for each="{data.tx_mask_networks}" as="network">
+                    <f:link.typolink parameter="{network.tx_mask_link}" target="_blank">
+                        <f:image image="{network.tx_mask_icon.0}" alt="{network.tx_mask_icon.0.alternative}" title="{network.tx_mask_icon.0.title}"  />
+                    </f:link.typolink>
+                </f:for>
+            </f:if>
+        </div>
+        <div>
+            <f:if condition="{data.tx_mask_work_time}">
+                <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.tx_mask_work_time}</f:format.html><br />
+            </f:if>
+        </div>
+        <div>
+            <f:if condition="{data.tx_mask_footer_contacts}">
+                <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.tx_mask_footer_contacts}</f:format.html><br />
+            </f:if>
+        </div>
+    </div>
+
+    <div>{data.tx_mask_copyright}</div>
+</div>
