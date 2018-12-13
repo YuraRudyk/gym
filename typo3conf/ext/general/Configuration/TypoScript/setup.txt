@@ -1,5 +1,0 @@
-# Include TypoScript setup of sem_ox_femanager extension
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:aimeos/Configuration/TypoScript/setup.txt">
-
-# Include TypoScript setup of general extension
-<INCLUDE_TYPOSCRIPT: source="DIR:EXT:general/Configuration/TypoScript/Setup/" extensions="ts">

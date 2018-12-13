@@ -1,3 +1,0 @@
-tx_aimeos.basket.target = 28
-tx_aimeos.customer.pid = 18
-tx_aimeos.myaccount.target = 20
