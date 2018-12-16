@@ -75,19 +75,15 @@ page {
         }
     }
 
-#    includeCSS {
-#        bootstrap = EXT:ex_template/Resources/Public/Styles/bootstrap.css
-#        font = https://fonts.googleapis.com/icon?family=Material+Icons
-#        style = EXT:ex_template/Resources/Public/Styles/style.css
-#    }
-#
-#    includeJSFooter {
+    includeCSS {
+        font = https://fonts.googleapis.com/icon?family=Material+Icons
+        style = EXT:ls_template/Resources/Public/Css/Main.css
+    }
+
+    includeJSFooter {
 #        ajax = https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js
 #        bootstrap = EXT:ex_template/Resources/Public/JavaScript/bootstrap.js
-#        myjs = EXT:ex_template/Resources/Public/JavaScript/script.js
-#        button = EXT:ex_template/Resources/Public/JavaScript/button.js
-#        select_build = EXT:ex_template/Resources/Public/JavaScript/select_build.js
-#
-#    }
+        mainJs = EXT:ls_template/Resources/Public/JavaScript/Main.js
+    }
 
 }
