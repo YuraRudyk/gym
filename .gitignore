@@ -4,6 +4,8 @@
 # Ignore cache
 public/typo3temp/
 
-.idea/workspace.xml
+.idea/
 public/typo3conf/deprecation_e693ae6e9f.log
 
+access.log
+error.log
