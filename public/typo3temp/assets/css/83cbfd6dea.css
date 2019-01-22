@@ -1,0 +1,93 @@
+        .single-item{
+          margin:0;
+        }
+        .slick-slide figure {
+          margin:0;
+        }
+        .border {
+          border-left: 20px solid #c0c;
+        }
+        .slick-header,
+        .slick-text {
+          display: inline;
+          position: absolute;
+          z-index: 1;
+        }
+        .slick-header {
+          bottom: inherit;
+          top: 1em;
+        }
+        .slick-text {
+          bottom: inherit;
+          top: 7em;
+        }
+        .slick-header .span,
+        .slick-text .span {
+        }
+        .slick-header .span {
+          display: inline;
+        }
+        .slick-header .span h1 {
+          background-color: rgba(0,0,0,0.5);
+          color: #FFF;
+          font-size: 2em;
+          font-weight: bold;
+        }
+        .slick-text .span {
+          display: inline;
+        }
+        .slick-text .span p {
+          background-color: rgba(0,0,0,0.5);
+          color: #FFF;
+          font-size: 1.4em;
+          font-weight: bold;
+        }
+        /* color */
+        #slickcarousel1 .slick-next:before,
+				#slickcarousel1 .slick-prev:before, 
+        #slickcarousel2 .slick-next:before,
+				#slickcarousel2 .slick-prev:before, 
+        #slickcarousel3 .slick-next:before,
+				#slickcarousel3 .slick-prev:before {
+          color: #000;
+        }
+        #slickcarousel1 .slick-dots li button:before,
+        #slickcarousel2 .slick-dots li button:before,
+        #slickcarousel3 .slick-dots li button:before {
+          color: #000;
+        }
+        #slickcarousel1 .slick-dots li.slick-active button:before,
+        #slickcarousel2 .slick-dots li.slick-active button:before,
+        #slickcarousel3 .slick-dots li.slick-active button:before {
+          color: #000;
+        }
+        .slider1 .slick-next:before,
+				.slider1 .slick-prev:before, 
+        .slider2 .slick-next:before,
+				.slider2 .slick-prev:before, 
+        .slider3 .slick-next:before,
+				.slider3 .slick-prev:before {
+          color: #000;
+        }
+        .slider1 .slick-dots li button:before,
+        .slider2 .slick-dots li button:before,
+        .slider3 .slick-dots li button:before {
+          color: #000;
+        }
+        .slider1 .slick-dots li.slick-active button:before,
+        .slider2 .slick-dots li.slick-active button:before,
+        .slider3 .slick-dots li.slick-active button:before {
+          color: #000;
+        }
+        /* position */
+        .slick-dots {
+          bottom: -45px;
+          margin-left:0;
+          margin-right:0;
+        }
+        .slick-next {
+          right: -25px;
+        }
+        .slick-prev {
+          left: -25px;
+        }
