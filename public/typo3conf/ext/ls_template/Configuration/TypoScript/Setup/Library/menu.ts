@@ -4,10 +4,10 @@ lib.menu {
     10 = HMENU
     10 {
         entryLevel = 0
-        excludeUidList = 7
+        excludeUidList = 30
         1 = TMENU
         1 {
-            wrap = <div class="main-menu"><ul>|</ul></div>
+            wrap = <div class="menu_1"><ul>|</ul></div>
             target = _top
             NO {
                 wrapItemAndSub = <li>|</li>
@@ -59,12 +59,13 @@ lib.menu {
     20 = HMENU
     20 {
         special       = list
-        special.value = 7
+        special.value = 30
 
         1 = TMENU
         1 {
-            wrap = <div class="cart"><ul>|</ul></div>
             expAll = 1
+
+
             NO {
                 ATagParams = class="footer-link"
 
@@ -73,7 +74,7 @@ lib.menu {
                 stdWrap.override.cObject{
                     10 = IMAGE
                     10.file = {$plugin.tx_general.settings.basket}
-                    10.file.width = 50
+#                    10.file.width = 50
                 }
                 wrapItemAndSub = <li>|</li>
             }

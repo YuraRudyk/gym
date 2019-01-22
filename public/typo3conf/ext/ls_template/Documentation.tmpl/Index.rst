@@ -23,13 +23,12 @@ LS Template
 		en
 
 	:Description:
-		just text description
 
 	:Keywords:
 		comma,separated,list,of,keywords
 
 	:Copyright:
-		2019
+		2018
 
 	:Author:
 

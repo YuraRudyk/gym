@@ -1,12 +1,12 @@
 # fluid_content configuration
-lib.contentElement {
+lib.fluidContent {
     templateRootPaths {
-        10 = EXT:ls_template/Resources/Private/Templates/
+        20 = EXT:ls_template/Resources/Private/Templates/
     }
     partialRootPaths {
-        10 = EXT:ls_template/Resources/Private/Partials/
+        20 = EXT:ls_template/Resources/Private/Partials/
     }
     layoutRootPaths {
-        10 = EXT:ls_template/Resources/Private/Layouts/
+        20 = EXT:ls_template/Resources/Private/Layouts/
     }
 }

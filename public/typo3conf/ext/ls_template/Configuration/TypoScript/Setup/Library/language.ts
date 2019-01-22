@@ -11,7 +11,8 @@ lib.language {
         1 {
             NO {
                 linkWrap = <li>|</li>
-                stdWrap.override = EN ||| UA ||| RU
+                stdWrap.override = UA ||| EN ||| RU
+                
             }
 
             ACT < .NO
