@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+	<file source-language="en" target-language="uk" datatype="plaintext" original="messages" date="2018-12-16T02:28:25Z" product-name="form">
+		<header/>
+		<body>
+			<trans-unit id="element.DatePicker.properties.timeSelectorHourLabel" xml:space="preserve">
+                <source>Hour</source>
+            <target/></trans-unit>
+			<trans-unit id="element.DatePicker.properties.timeSelectorMinuteLabel" xml:space="preserve">
+                <source>Minute</source>
+            <target/></trans-unit>
+			<trans-unit id="element.ImageUpload.properties.SummaryPage.altText" xml:space="preserve">
+                <source>Uploaded image</source>
+            <target/></trans-unit>
+			<trans-unit id="form_new_wizard_description" xml:space="preserve">
+                <source>A form that allows website users to submit messages.</source>
+            <target/></trans-unit>
+			<trans-unit id="form_new_wizard_title" xml:space="preserve">
+                <source>Form</source>
+            <target/></trans-unit>
+			<trans-unit id="validation.error.1221551320" xml:space="preserve">
+                <source>You can only enter letters or digits.</source>
+            <target/></trans-unit>
+			<trans-unit id="validation.error.1221559976" xml:space="preserve">
+                <source>You must enter a valid email address.</source>
+            <target/></trans-unit>
+			<trans-unit id="validation.error.1221560288" xml:space="preserve">
+                <source>You must enter a valid floating point number.</source>
+            <target/></trans-unit>
+			<trans-unit id="validation.error.1221560494" xml:space="preserve">
+                <source>You must enter a valid number.</source>
+            <target/></trans-unit>
+			<trans-unit id="validation.error.1221560718" xml:space="preserve">
+                <source>This field is mandatory.</source>
+            <target/></trans-unit>
+			<trans-unit id="validation.error.1221560910" xml:space="preserve">
+                <source>This field is mandatory.</source>
+            <target/></trans-unit>
+			<trans-unit id="validation.error.1221561046" xml:space="preserve">
+                <source>You must enter a valid number between %s and %s.</source>
+            <target/></trans-unit>
+			<trans-unit id="validation.error.1221563685" xml:space="preserve">
+                <source>You must enter a valid number.</source>
+            <target/></trans-unit>
+			<trans-unit id="validation.error.1221565130" xml:space="preserve">
+                <source>You must enter a valid value. Please refer to the description of this field.</source>
+            <target/></trans-unit>
+			<trans-unit id="validation.error.1221565786" xml:space="preserve">
+                <source>You can only enter non formatted text without any markup (e.g without XML tags).</source>
+            <target/></trans-unit>
+			<trans-unit id="validation.error.1238087674" xml:space="preserve">
+                <source>You must enter a valid date.</source>
+            <target/></trans-unit>
+			<trans-unit id="validation.error.1238108068" xml:space="preserve">
+                <source>You must enter text which is longer than %s characters.</source>
+            <target/></trans-unit>
+			<trans-unit id="validation.error.1238108069" xml:space="preserve">
+                <source>You must enter text which is no longer than %s characters.</source>
+            <target/></trans-unit>
+			<trans-unit id="validation.error.1238110957" xml:space="preserve">
+                <source>You can only enter non formatted text without any markup (e.g without XML tags).</source>
+            <target/></trans-unit>
+			<trans-unit id="validation.error.1269883975" xml:space="preserve">
+                <source>You can only enter non formatted text without any markup (e.g without XML tags).</source>
+            <target/></trans-unit>
+			<trans-unit id="validation.error.1347992400" xml:space="preserve">
+                <source>This field is mandatory.</source>
+            <target/></trans-unit>
+			<trans-unit id="validation.error.1347992453" xml:space="preserve">
+                <source>This field is mandatory.</source>
+            <target/></trans-unit>
+			<trans-unit id="validation.error.1428504122" xml:space="preserve">
+                <source>Your text must be a minimum of %s characters in length and no longer than %s.</source>
+            <target/></trans-unit>
+			<trans-unit id="validation.error.1471708997" xml:space="preserve">
+                <source>You must enter an instance of \TYPO3\CMS\Extbase\Domain\Model\FileReference or \TYPO3\CMS\Core\Resource\File.</source>
+            <target/></trans-unit>
+			<trans-unit id="validation.error.1471708998" xml:space="preserve">
+                <source>You entered an incorrect media type, "%s" is not allowed for this file. Please refer to the description of this field.</source>
+            <target/></trans-unit>
+			<trans-unit id="validation.error.1475002976" xml:space="preserve">
+                <source>You must enter a countable subject.</source>
+            <target/></trans-unit>
+			<trans-unit id="validation.error.1475002994" xml:space="preserve">
+                <source>You must select between %s to %s elements.</source>
+            <target/></trans-unit>
+			<trans-unit id="validation.error.1476396435" xml:space="preserve">
+                <source>You must NOT fill this field.</source>
+            <target/></trans-unit>
+		</body>
+	</file>
+</xliff>

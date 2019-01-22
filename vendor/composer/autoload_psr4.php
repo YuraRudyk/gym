@@ -49,6 +49,7 @@ return array(
     'Symfony\\Component\\Process\\' => array($vendorDir . '/symfony/process'),
     'Symfony\\Component\\Finder\\' => array($vendorDir . '/symfony/finder'),
     'Symfony\\Component\\Console\\' => array($vendorDir . '/symfony/console'),
+    'Rudyk\\LsTemplate\\' => array($baseDir . '/public/typo3conf/ext/ls_template/Classes'),
     'Psr\\Log\\' => array($vendorDir . '/psr/log/Psr/Log'),
     'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-message/src'),
     'PhpParser\\' => array($baseDir . '/public/typo3conf/ext/extension_builder/Resources/Private/PHP/PHP-Parser/lib/PhpParser'),
@@ -69,4 +70,5 @@ return array(
     'Doctrine\\Common\\Cache\\' => array($vendorDir . '/doctrine/cache/lib/Doctrine/Common/Cache'),
     'Doctrine\\Common\\Annotations\\' => array($vendorDir . '/doctrine/annotations/lib/Doctrine/Common/Annotations'),
     'Doctrine\\Common\\' => array($vendorDir . '/doctrine/common/lib/Doctrine/Common'),
+    'BK2K\\BootstrapPackage\\' => array($baseDir . '/public/typo3conf/ext/bootstrap_package/Classes'),
 );

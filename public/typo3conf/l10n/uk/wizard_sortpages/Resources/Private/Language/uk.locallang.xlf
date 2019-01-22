@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+	<file source-language="en" target-language="uk" datatype="plaintext" original="messages" date="2018-12-16T07:17:56Z" product-name="wizard_sortpages">
+		<header/>
+		<body>
+			<trans-unit id="no_subpages">
+				<source>Please select a page with subpages.</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="not_available_in_draft_workspace">
+				<source>Sorry, this function is not available in the current draft workspace!</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="wiz_changeOrder" approved="yes">
+				<source>Sort these pages by</source>
+				<target state="translated">Сортувати по</target>
+			</trans-unit>
+			<trans-unit id="wiz_changeOrder_msg1" approved="yes">
+				<source>You're about to change the order of the above pages. Are you sure you want to continue?</source>
+				<target state="translated">Ви змінюєте порядок цих сторінок. Ви впевнені, що так треба?</target>
+			</trans-unit>
+			<trans-unit id="wiz_changeOrder_REVERSE" approved="yes">
+				<source>Reverse current order</source>
+				<target state="translated">Протилежно поточному порядку</target>
+			</trans-unit>
+			<trans-unit id="wiz_changeOrder_subtitle" approved="yes">
+				<source>Subtitle</source>
+				<target state="translated">Підзаголовку</target>
+			</trans-unit>
+			<trans-unit id="wiz_changeOrder_tChange" approved="yes">
+				<source>Change-time</source>
+				<target state="translated">Часу зміни</target>
+			</trans-unit>
+			<trans-unit id="wiz_changeOrder_tCreate" approved="yes">
+				<source>Create-time</source>
+				<target state="translated">Часу створення</target>
+			</trans-unit>
+			<trans-unit id="wiz_changeOrder_title" approved="yes">
+				<source>Page title</source>
+				<target state="translated">Заголовку сторінки</target>
+			</trans-unit>
+			<trans-unit id="wiz_currentPageOrder" approved="yes">
+				<source>Current page order</source>
+				<target state="translated">Поточний порядок сторінок</target>
+			</trans-unit>
+			<trans-unit id="wiz_sort" approved="yes">
+				<source>Sort pages</source>
+				<target state="translated">Сортувати сторінки</target>
+			</trans-unit>
+			<trans-unit id="wiz_W" approved="yes">
+				<source>W!</source>
+				<target state="translated">Д!</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

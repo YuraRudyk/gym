@@ -1,0 +1,15 @@
+<f:if condition="{data.tx_mask_header}">
+{data.tx_mask_header}<br />
+</f:if>
+
+<f:if condition="{data.tx_mask_description}">
+<f:format.html parseFuncTSPath="lib.parseFunc_RTE">{data.tx_mask_description}</f:format.html><br />
+</f:if>
+
+<f:if condition="{data.tx_mask_video}">
+<f:for each="{data.tx_mask_video}" as="file">
+  <f:image image="{file}" alt="{file.alternative}" title="{file.title}" width="200" /><br />
+  {file.description} / {file.identifier}<br />
+</f:for>
+</f:if>
+

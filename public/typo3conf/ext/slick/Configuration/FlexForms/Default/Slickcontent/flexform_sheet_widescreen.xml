@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+	<ROOT>
+		<TCEforms>
+			<sheetTitle>LLL:EXT:slick/Resources/Private/Language/Flexform.xlf:sheet.widescreen.title</sheetTitle>
+		</TCEforms>
+		<type>array</type>
+		<el>
+			<slidesToShow-widescreen type="array">
+				<TCEforms type="array">
+					<label>LLL:EXT:slick/Resources/Private/Language/Flexform.xlf:sheet.all.slidesToShow
+					</label>
+					<config type="array">
+						<type>input</type>
+						<size>1</size>
+						<default>4</default>
+					</config>
+				</TCEforms>
+			</slidesToShow-widescreen>
+			<slidesToScroll-widescreen type="array">
+				<TCEforms type="array">
+					<label>LLL:EXT:slick/Resources/Private/Language/Flexform.xlf:sheet.all.slidesToScroll
+					</label>
+					<config type="array">
+						<type>input</type>
+						<size>1</size>
+						<default>1</default>
+					</config>
+				</TCEforms>
+			</slidesToScroll-widescreen>
+			<arrows-widescreen type="array">
+				<TCEforms type="array">
+					<label>LLL:EXT:slick/Resources/Private/Language/Flexform.xlf:sheet.all.arrows</label>
+					<config type="array">
+						<type>select</type>
+						<items type="array">
+							<numIndex index="0" type="array">
+								<numIndex index="0">LLL:EXT:slick/Resources/Private/Language/Flexform.xlf:sheet.all.disabled</numIndex>
+								<numIndex index="1">false</numIndex>
+							</numIndex>
+							<numIndex index="1" type="array">
+								<numIndex index="0">LLL:EXT:slick/Resources/Private/Language/Flexform.xlf:sheet.all.enabled</numIndex>
+								<numIndex index="1">true</numIndex>
+							</numIndex>
+						</items>
+						<default>true</default>
+					</config>
+				</TCEforms>
+			</arrows-widescreen>
+			<dots-widescreen type="array">
+				<TCEforms type="array">
+					<label>LLL:EXT:slick/Resources/Private/Language/Flexform.xlf:sheet.all.dots</label>
+					<config type="array">
+						<type>select</type>
+						<items type="array">
+							<numIndex index="0" type="array">
+								<numIndex index="0">LLL:EXT:slick/Resources/Private/Language/Flexform.xlf:sheet.all.disabled</numIndex>
+								<numIndex index="1">false</numIndex>
+							</numIndex>
+							<numIndex index="1" type="array">
+								<numIndex index="0">LLL:EXT:slick/Resources/Private/Language/Flexform.xlf:sheet.all.enabled</numIndex>
+								<numIndex index="1">true</numIndex>
+							</numIndex>
+						</items>
+						<default>true</default>
+					</config>
+				</TCEforms>
+			</dots-widescreen>
+			<rows-widescreen type="array">
+				<TCEforms type="array">
+					<label>LLL:EXT:slick/Resources/Private/Language/Flexform.xlf:sheet.all.rows</label>
+					<config type="array">
+						<type>input</type>
+						<size>1</size>
+						<default>1</default>
+					</config>
+				</TCEforms>
+			</rows-widescreen>
+			<slidesPerRow-widescreen type="array">
+				<TCEforms type="array">
+					<label>LLL:EXT:slick/Resources/Private/Language/Flexform.xlf:sheet.all.slidesPerRow
+					</label>
+					<config type="array">
+						<type>input</type>
+						<size>1</size>
+						<default>1</default>
+					</config>
+				</TCEforms>
+			</slidesPerRow-widescreen>
+		</el>
+	</ROOT>
+</T3DataStructure>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="283.465pt" version="1.1" xmlns="http://www.w3.org/2000/svg" height="283.465pt" viewBox="0 0 283.465 283.465" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <linearGradient id="Grad0" y1="0" x1="0" y2="283.465" gradientUnits="userSpaceOnUse" x2="283.465">
+   <stop offset="0%" stop-color="#ffffff" stop-opacity="1"/>
+   <stop offset="50%" stop-color="#ff5e00" stop-opacity="1"/>
+  </linearGradient>
+  <clipPath id="Clip0">
+   <path d="M0 0 L538.583 0 L538.583 170.079 L0 170.079 L0 0 Z" transform="translate(-127.559, 28.3465)"/>
+  </clipPath>
+ </defs>
+ <g id="Hintergrund">
+  <g transform="translate(0, 0)">
+   <path style="fill:url(#Grad0); fill-rule:evenodd;" d="M0 0 L283.465 0 L283.465 283.465 L0 283.465 L0 0 Z"/>
+   <path style="fill:none; stroke:none;" d="M0 0 L283.465 0 L283.465 283.465 L0 283.465 L0 0 Z"/>
+  </g>
+  <g id="Gruppe2" clip-path="url(#Clip0)">
+   <path style="fill:none;stroke:#ffffff; stroke-width:28.3465; stroke-linecap:butt; stroke-linejoin:miter; stroke-dasharray:none;" d="M0 0 L141.732 0 L141.732 141.732 L0 141.732 L0 0 Z" transform="translate(70.8661, 42.5197)"/>
+   <path style="fill:none;stroke:#ffffff; stroke-width:28.3465; stroke-linecap:butt; stroke-linejoin:miter; stroke-dasharray:none;" d="M0 0 L141.732 0 L141.732 141.732 L0 141.732 L0 0 Z" transform="translate(255.118, 42.5197)"/>
+   <path style="fill:none;stroke:#ffffff; stroke-width:28.3465; stroke-linecap:butt; stroke-linejoin:miter; stroke-dasharray:none;" d="M0 0 L141.732 0 L141.732 141.732 L0 141.732 L0 0 Z" transform="translate(-113.386, 42.5197)"/>
+  </g>
+  <path style="fill:#ffffff; fill-rule:evenodd;stroke:none;" d="M28.3465 14.1732 C28.3465 22.0012 22.0012 28.3465 14.1732 28.3465 C6.34557 28.3465 0 22.0012 0 14.1732 C0 6.34557 6.34557 0 14.1732 0 C22.0012 0 28.3465 6.34557 28.3465 14.1732 Z" transform="translate(127.559, 215.433)"/>
+  <path style="fill:#ffffff; fill-rule:evenodd;stroke:none;" d="M28.3465 14.1732 C28.3465 22.0012 22.0012 28.3465 14.1732 28.3465 C6.34557 28.3465 0 22.0012 0 14.1732 C0 6.34557 6.34557 0 14.1732 0 C22.0012 0 28.3465 6.34557 28.3465 14.1732 Z" transform="translate(175.748, 215.433)"/>
+  <path style="fill:#ffffff; fill-rule:evenodd;stroke:none;" d="M28.3465 14.1732 C28.3465 22.0012 22.0012 28.3465 14.1732 28.3465 C6.34557 28.3465 0 22.0012 0 14.1732 C0 6.34557 6.34557 0 14.1732 0 C22.0012 0 28.3465 6.34557 28.3465 14.1732 Z" transform="translate(79.3701, 215.433)"/>
+ </g>
+</svg>

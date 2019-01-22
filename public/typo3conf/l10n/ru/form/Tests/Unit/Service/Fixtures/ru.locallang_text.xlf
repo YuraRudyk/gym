@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+	<file source-language="en" target-language="ru" datatype="plaintext" original="messages" date="2018-12-16T02:27:54Z" product-name="form">
+		<header/>
+		<body>
+			<trans-unit id="element.form-element-identifier.properties.label" xml:space="preserve" approved="yes">
+                <source>form-element-identifier LABEL EN 1</source>
+            <target state="translated">form-element-identifier LABEL EN 1</target></trans-unit>
+			<trans-unit id="element.options-form-element-identifier.properties.options.optionValue1" xml:space="preserve" approved="yes">
+                <source>options-form-element-identifier option 1 EN</source>
+            <target state="translated">options-form-element-identifier option 1 EN</target></trans-unit>
+			<trans-unit id="element.options-form-element-identifier.properties.options.optionValue2" xml:space="preserve" approved="yes">
+                <source>options-form-element-identifier option 2 EN</source>
+            <target state="translated">options-form-element-identifier option 2 EN</target></trans-unit>
+			<trans-unit id="element.Page.renderingOptions.nextButtonLabel" xml:space="preserve" approved="yes">
+                <source>TEXT EN</source>
+            <target state="translated">TEXT EN</target></trans-unit>
+			<trans-unit id="element.Text.properties.label" xml:space="preserve" approved="yes">
+                <source>form-element-identifier LABEL EN 2</source>
+            <target state="translated">form-element-identifier LABEL EN 2</target></trans-unit>
+			<trans-unit id="finisher.SaveToDatabase.subject" xml:space="preserve" approved="yes">
+                <source>form-element-identifier SaveToDatabase subject EN 1</source>
+            <target state="translated">form-element-identifier SaveToDatabase subject EN 1</target></trans-unit>
+			<trans-unit id="form-runtime-identifier.element.form-element-identifier-page.renderingOptions.nextButtonLabel" xml:space="preserve" approved="yes">
+                <source>form-element-identifier nextButtonLabel EN</source>
+            <target state="translated">form-element-identifier nextButtonLabel EN</target></trans-unit>
+			<trans-unit id="form-runtime-identifier.element.form-element-identifier.properties.label" xml:space="preserve" approved="yes">
+                <source>form-element-identifier LABEL EN</source>
+            <target state="translated">form-element-identifier LABEL EN</target></trans-unit>
+			<trans-unit id="form-runtime-identifier.element.form-element-identifier.properties.placeholder" xml:space="preserve" approved="yes">
+                <source>form-element-identifier PLACEHOLDER EN</source>
+            <target state="translated">form-element-identifier PLACEHOLDER EN</target></trans-unit>
+			<trans-unit id="form-runtime-identifier.element.options-form-element-identifier.properties.options.optionValue1" xml:space="preserve" approved="yes">
+                <source>options-form-element-identifier option 1 EN</source>
+            <target state="translated">options-form-element-identifier option 1 EN</target></trans-unit>
+			<trans-unit id="form-runtime-identifier.element.options-form-element-identifier.properties.options.optionValue2" xml:space="preserve" approved="yes">
+                <source>options-form-element-identifier option 2 EN</source>
+            <target state="translated">options-form-element-identifier option 2 EN</target></trans-unit>
+			<trans-unit id="form-runtime-identifier.finisher.SaveToDatabase.subject" xml:space="preserve" approved="yes">
+                <source>form-element-identifier SaveToDatabase subject EN</source>
+            <target state="translated">form-element-identifier SaveToDatabase subject EN</target></trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group name="quick_shop"/>
+        <group name="slick">
+            <file>file:/var/www/typo3_61.local/typo3conf/ext/slick/Configuration/TCA/Overrides/tt_content.php</file>
+            <file>file:/var/www/typo3_61.local/typo3conf/ext/slick/ext_tables.php</file>
+            <file>file:/var/www/typo3_61.local/typo3conf/ext/slick/ext_emconf.php</file>
+            <file>file:/var/www/typo3_61.local/typo3conf/ext/slick/ChangeLog</file>
+        </group>
+        <group name="startgreen"/>
+        <group name="Upgrade TYPO3 8.x"/>
+        <group name="start"/>
+    </open-files>
+</project-private>

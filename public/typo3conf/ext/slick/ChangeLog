@@ -1,0 +1,302 @@
+4.0.8
+  18-04-30
+	Improvement
+	* #i0033: New documentation:
+						* Docs - Developers - Third Party Extensions
+						* Docs - Known Bugs - Css Styled Content
+						* Docs - Known Bugs - jQuery
+
+4.0.7
+  18-01-14
+	Improvement
+	* #i0032: Update Copyright 2018
+
+4.0.6
+  18-01-09
+	Improvement
+	* #i0031: Default.html is moved to EXT:browser (9.0.2). Reference EXT:slick #t1836
+
+4.0.5
+  17-12-26
+	Improvement
+	* #i0030: TYPO3 8.7: labelling of include static template
+
+4.0.4
+  17-12-22
+	Improvement
+	* #i0029: TYPO3 8.7: moved jquery(.. to $(..
+	* #i0028: icon for tt_content type
+
+4.0.3
+  17-12-17
+	Improvement
+	* #t1836: IS CANCELED BY #i0031 above!
+						Slick Slider: Remove waste a-tag
+						Heavy intervention: Fluid template Default.html is overriden! See
+						* Resources/Private/Fluid/FluidStyledContent/Layouts/Default.html
+	* #t1833:	CSS Styled Content > Fluid Styled Content
+	* #i0027: Update for t3foundation 3.0
+						* additional start CSS classes are removed from
+							* slickcarousel
+							* slickcontent
+							* slickgallery
+	* #i0026: Slick item and fluid_styled_content: div-wrap is moved from figure to figure and text. See
+						* Resources/Private/Fluid/Slick/Templates/Slickitem.html
+
+4.0.2
+  17-12-14
+  Improvement
+	* #i0025: Fluid template: <v:asset.script> is removed
+
+4.0.1
+  17-12-05
+  Improvement
+	* #i0024: Upgrade TCA for TYPO3 8.7
+						* bodytext;;;richtext[]:rte_transform[mode=ts];*,
+
+4.0.0
+  17-10-15
+  Feature
+	* #i0023: Plugins
+						* Slick Slider for Content Elements
+						* Slick Slider for Images
+
+3.0.0
+  17-10-14
+  UPGRADE TYPO3 8.x
+	BE AWARE: You should include static templates again!
+	THANKS to Andrea Herzog-Kienast to contract the upgrade :) http://www.kienastdv.de/
+	* #t1686: Template for fluid_styled_content
+						* Moved:
+							* Resources/Private/* to Resources/Private/Fluid/Slick/*
+						Constant Editor
+						* Moved:
+							* plugin.slick.item.view.* > plugin.slick.item.template.+
+	* #t1683: TYPO3 8.x
+						BUGFIX
+						* Uncaught UnexpectedValueException: Missing "type" in TCA of field "['tt_content']['section_frame']['config']"
+						* SpriteManager > IconRegistry
+						Removed Features
+						* slick slideshow
+	Features
+	* #i0022: Slick Carousel for images (from TYPO3 8.x)
+	* #i0021: ReST-Documentation
+
+2.6.2
+  17-10-12
+  Feature
+	* #i0020: new: controlling slick items by classes. So far it was possible: controlling by id.
+						I.e: grid-elements have a clasas field. Enter slider1, slider2 or slider3
+
+2.6.1
+  17-10-11
+  UPGRADE slick
+	* #t1682: new property pauseOnHover
+
+2.6.0
+  17-10-11
+  UPGRADE slick
+	* #t1682: 1.5.0 > 1.8.0
+
+2.5.2
+  17-05-16
+	Improvement
+	* #t1228: slickcarousel: compatibillity with Bootstrap Package (bootstrap_package). See:
+						Configuration/TypoScript/Base/tt_content/_setup.ts
+						Thanks to Andrea Herzog-Kienast for the contract
+
+2.5.1
+  17-03-20
+  Improvement
+  * #i0019: CSS is optimised for merging
+
+2.5.0
+  17-03-02
+  Feature
+  * #i0018: Slick can handle up to three carousels now
+						* content element: Slick: Carousel [1-3]
+						* Constant Editor > Category > Slick - Carousel [1-3] - Javascript ...
+
+2.4.1
+  16-06-20
+  Bugfix
+  * #i0017: tx_imagecrop_crop and tx_imagecrop_gravity were missed
+
+2.4.0
+  16-06-20
+  Improvement
+  * #i0016: TYPO3 7.x compatibility
+            Effected files:
+            * ext_tables.php
+            * Configuration/TCA/Overrides/tt_content.php
+
+2.3.2
+  16-06-16
+  Improvement
+  * #i0015: TypoScript comments
+
+2.3.1
+  16-06-08
+  Improvement
+  * #71043: Static template is moved to an include static template.
+            You MUST now include the static template called basis
+
+2.2.7
+  16-01-15
+  Improvement
+  * #i0014: New TypoScript template for removing html anchors in localised context
+
+2.2.6
+  15-10-26
+  Improvement
+  * #71039: Use jQuery instead of $ for compatibility
+            Thanks to Philipp Winterle for the suggestion
+            See: ext_localconf.php#264-265
+
+2.2.5
+  15-10-13
+  Bugfix
+  * #70635: Missing brace in item constants
+
+2.2.4
+  15-10-01
+  Improvement
+  * #i0023: favicon
+
+2.2.3
+  15-09-25
+  Bugfix
+  * #i0022: Default values for constants
+            * plugin.slick.carousel.javascript.properties.adaptiveHeight
+            * plugin.slick.carousel.javascript.properties.autoplaySpeed
+            * plugin.slick.carousel.javascript.properties.initialSlide
+            * plugin.slick.carousel.javascript.properties.rows
+            * plugin.slick.carousel.javascript.properties.slidesPerRow
+            * plugin.slick.carousel.javascript.responsive.large.breakpoint
+            * plugin.slick.carousel.javascript.responsive.large.settings.autoplaySpeed
+            * plugin.slick.carousel.javascript.responsive.large.settings.slidesToShow
+            * plugin.slick.carousel.javascript.responsive.large.settings.slidesToScroll
+            * plugin.slick.carousel.javascript.responsive.medium.breakpoint
+            * plugin.slick.carousel.javascript.responsive.medium.settings.autoplaySpeed
+            * plugin.slick.carousel.javascript.responsive.medium.settings.slidesToShow
+            * plugin.slick.carousel.javascript.responsive.medium.settings.slidesToScroll
+            * plugin.slick.carousel.javascript.responsive.small.breakpoint
+            * plugin.slick.carousel.javascript.responsive.small.settings.autoplaySpeed
+            * plugin.slick.carousel.javascript.responsive.small.settings.slidesToShow
+            * plugin.slick.carousel.javascript.responsive.small.settings.slidesToScroll
+
+2.2.2
+  15-09-20
+  Bugfix
+  * #i0021: Default value for constant plugin.slick.carousel.html.id
+
+2.2.1
+  15-09-08
+  New Feature
+  * #i0020: header tag of a slick item is configureable by the Constant Editor
+
+2.2.0
+  15-09-07
+  New Feature
+  * #69589: Cropping Images
+
+2.1.1
+  15-09-01
+ 	Improvement
+ 	* #i0019: Manual
+
+2.1.0
+  15-09-01
+  New Feature
+  * #69419: Template for tt_news
+
+2.0.2
+  15-08-31
+ 	Improvement
+ 	* #i0018: Wrong order of constant editors properties
+
+2.0.1
+  15-07-16
+ 	Bugfix
+ 	* #i0017: TypoScript: An end brace is in excess
+
+2.0.0
+  15-06-05
+ 	Major Feature
+ 	* #69418: New content element [Slick: Slide Show]
+ 	Feature
+ 	* #i0017: Configurable HTML slick id
+
+1.1.2
+  15-06-05
+ 	Improvement
+ 	* #i0015: Slick gallery got an a tag. This is removed.
+            See:
+            * Configuration/TypoScript/Item/tt_content/setup.ts
+
+1.1.1
+  15-05-06
+ 	Feature
+ 	* #i0014: New properties: adaptiveHeight, fade, initial slide, rows, slidesPerRow
+            Effected files:
+            * ext_localconf.php
+            * Configuration/TypoScript/Carousel/constants.txt
+
+1.1.0
+  15-04-29
+ 	Improvement
+ 	* #i0013: JavaScript properties for slick responsive by Constant Editor
+ 	* #i0012: new frame "Slick: no frame"
+ 	* #i0011: Slick default theme css can disabled by Constant Editor
+            See Constant Editor:
+            * SLICK - CAROUSEL CSS FILES > plugin.slick.carousel.css.file.theme.if
+ 	* #i0010: Update slick from 1.3.6 to 1.5.0
+
+1.0.2
+  15-04-14
+ 	Feature
+ 	* #i0009: CSS dots bottom by Constant Editor
+
+1.0.1
+  14-10-28
+ 	Improvement
+ 	* #i0007: move state from alpha to beta
+  Bugfix
+  * #i0008: Manual had wrong SVN sample code
+
+1.0.0
+  14-10-25
+  Features
+  * #62478: Configurabale CSS
+            * Removed: Resources/Public/CSS/extension.css
+            * New TypoScript property:
+              * page.cssInline.62478
+  * #62474: Use image field for carroussel / gallery
+  * #62473:	Make responsive display configurable
+  * #62472: SVN Repository
+            See
+            * https://tickets.die-netzmacher.de/projects/slick/repository
+            * https://tickets.die-netzmacher.de/projects/slick/wiki
+ 	Improvement
+ 	* #i0006: slick.js: includeJSFooterlibs is moved to includeJSFooter
+
+0.1.0
+  14-08-05
+ 	Improvement
+ 	* #i0005: Screenshots for the manual
+
+0.0.3
+  14-08-05
+ 	Improvement
+ 	* #i0004: Extension CSS
+ 	* #i0003: Manual
+
+0.0.2
+  14-08-05
+  Improvement
+  * #i0002: Manual
+
+0.0.1
+  14-08-04
+  Initial release
+  * Dirk Wildt (Die Netzmacher) http://wildt.at.die-netzmacher.de

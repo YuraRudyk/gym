@@ -1,0 +1,60 @@
+.. ==================================================
+.. FOR YOUR INFORMATION
+.. --------------------------------------------------
+.. -*- coding: utf-8 -*- with BOM.
+
+.. This is 'Includes.txt'. It is included at the very top of each and
+   every ReST source file in this documentation project (= manual).
+
+
+.. ==================================================
+.. DEFINE SOME TEXT ROLES
+.. --------------------------------------------------
+
+.. role::   typoscript(code)
+
+.. role::   ts(typoscript)
+   :class:  typoscript
+
+.. role::   php(code)
+
+.. highlight:: php
+
+.. role::   raw-html(raw)
+   :format: html
+
+.. ==================================================
+.. DEFINE SOME GENERAL LINKS
+.. --------------------------------------------------
+
+.. _Bugtracker: https://gitlab.die-netzmacher.de/typo3/slick/issues
+.. _Forum: https://typo3-browser-forum.de/foren/slick/
+.. _gitlab.die-netzmacher.de: https://gitlab.die-netzmacher.de/typo3/
+.. _Sponsoring: https://typo3-browser-forum.de/sponsoring/slick
+
+.. _Browser: http://typo3-browser.de/
+.. _Caddy: http://typo3-caddy.de/
+.. _Foundation: http://foundation.zurb.com/
+.. _Launch TYPO3 GRUENE!: https://docs.typo3.org/typo3cms/extensions/launchstartgreen/
+.. _Organiser: http://typo3-organiser.de/
+.. _Quick Shop: http://typo3-quick-shop.de/
+.. _Slick: http://typo3-slick.de/
+.. _Start: https://start-typo3-responsive.de/
+.. _Startgreen: https://typo3-gruene.de/
+.. _Startcustomer: https://start-typo3-responsive.de/
+
+.. _Browser (Git): https://gitlab.die-netzmacher.de/typo3/browser
+.. _Caddy (Git): https://gitlab.die-netzmacher.de/typo3/caddy
+.. _Launch it! (Git): https://gitlab.die-netzmacher.de/typo3/launch
+.. _Launch TYPO3 GRUENE! (Git): https://gitlab.die-netzmacher.de/typo3/launchstartgreen
+.. _Launch TYPO3 Responsive! (Git): https://gitlab.die-netzmacher.de/typo3/launchstart
+.. _Organiser (Git): https://gitlab.die-netzmacher.de/typo3/org
+.. _Organiser Installer (Git): https://gitlab.die-netzmacher.de/typo3/org_installer
+.. _Quick Shop (Git): https://gitlab.die-netzmacher.de/typo3/quick_shop
+.. _Quick Shop Installer (Git): https://gitlab.die-netzmacher.de/typo3/quickshopinstaller
+.. _Radialsearch (Git): https://gitlab.die-netzmacher.de/typo3/radialsearch
+.. _Seo Dynamic Tag (Git): https://gitlab.die-netzmacher.de/typo3/seo_dynamic_tag
+.. _Slick (Git): https://gitlab.die-netzmacher.de/typo3/slick
+.. _Start (Git): https://gitlab.die-netzmacher.de/typo3/start
+.. _Start Customer (Git): https://gitlab.die-netzmacher.de/typo3/startcustomer
+.. _TYPO3 GRUENE (Git): https://gitlab.die-netzmacher.de/typo3/startgreen

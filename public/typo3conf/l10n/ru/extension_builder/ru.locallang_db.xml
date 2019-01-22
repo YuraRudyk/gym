@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3locallangExt>
+  <data type="array">
+    <languageKey index="ru" type="array">
+			<label index="Tx_ExtensionBuilder_extension">Архитектор расширений: Расширение</label>
+			<label index="Tx_ExtensionBuilder_extension.extensionkey">extensionKey</label>
+			<label index="Tx_ExtensionBuilder_extension.title">Название</label>
+			<label index="Tx_ExtensionBuilder_extension.description">Описание</label>
+			<label index="Tx_ExtensionBuilder_extension.state">Состояние</label>
+			<label index="Tx_ExtensionBuilder_extension.languages">Языки</label>
+			<label index="Tx_ExtensionBuilder_extension.persons">Персоны</label>
+			<label index="Tx_ExtensionBuilder_extension.domainobjects">Объекты предметной области</label>
+			<label index="Tx_ExtensionBuilder_person">Архитектор расширений: персона</label>
+			<label index="Tx_ExtensionBuilder_person.name">Имя</label>
+			<label index="Tx_ExtensionBuilder_person.email">Email</label>
+			<label index="Tx_ExtensionBuilder_person.role">Роль</label>
+			<label index="Tx_ExtensionBuilder_person.extension">Расширение</label>
+			<label index="Tx_ExtensionBuilder_domainObjects">Архитектор расширений: объекты предметной области</label>
+			<label index="Tx_ExtensionBuilder_domainObjects.name">Название</label>
+			<label index="Tx_ExtensionBuilder_domainObjects.description">Описание</label>
+			<label index="Tx_ExtensionBuilder_domainObjects.relateddomainobjects">Связанные объекты</label>
+			<label index="Tx_ExtensionBuilder_domainObjects.extension">Расширение этого объекта предметной области относится к</label>
+			<label index="Tx_ExtensionBuilder_domainObjects.backendconfigurationoptions">Параметры настройки внутреннего интерфейса</label>
+			<label index="Tx_ExtensionBuilder_domainObjects.properties">Свойства</label>
+			<label index="Tx_ExtensionBuilder_properties">Архитектор расширений: свойства</label>
+			<label index="Tx_ExtensionBuilder_properties.name">Название</label>
+			<label index="Tx_ExtensionBuilder_properties.description">Описание</label>
+			<label index="Tx_ExtensionBuilder_properties.validationrules">validationRules</label>
+			<label index="Tx_ExtensionBuilder_properties.isrequired">isRequired</label>
+			<label index="Tx_ExtensionBuilder_properties.accessmethods">Методы доступа</label>
+		</languageKey>
+  </data>
+</T3locallangExt>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+	<file source-language="en" target-language="ru" datatype="plaintext" original="messages" date="2018-12-16T01:43:55Z" product-name="documentation">
+		<header/>
+		<body>
+			<trans-unit id="cancel">
+				<source>Cancel</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="delete">
+				<source>Delete</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="deleteFailed">
+				<source>Deletion of documentation failed.</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="deleteModalDescription">
+				<source>Are you sure you want to delete this record?</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="documentation.actions" approved="yes">
+				<source>Actions</source>
+				<target state="translated">Действия</target>
+			</trans-unit>
+			<trans-unit id="documentation.actions.download" approved="yes">
+				<source>Download document</source>
+				<target state="translated">Скачать документ</target>
+			</trans-unit>
+			<trans-unit id="documentationList.search" approved="yes">
+				<source>Search</source>
+				<target state="translated">Поиск</target>
+			</trans-unit>
+			<trans-unit id="documentation_manager" approved="yes">
+				<source>Documentation Manager</source>
+				<target state="translated">Управление документацией</target>
+			</trans-unit>
+			<trans-unit id="documentation.shortcut" approved="yes">
+				<source>Extension key</source>
+				<target state="translated">Идентификатор расширения</target>
+			</trans-unit>
+			<trans-unit id="documentation.title" approved="yes">
+				<source>Title</source>
+				<target state="translated">Заголовок</target>
+			</trans-unit>
+			<trans-unit id="documentation.type" approved="yes">
+				<source>Type</source>
+				<target state="translated">Тип</target>
+			</trans-unit>
+			<trans-unit id="downloadDocumentation" approved="yes">
+				<source>Download Documentation</source>
+				<target state="translated">Скачать документацию</target>
+			</trans-unit>
+			<trans-unit id="downloadFailed" approved="yes">
+				<source>Download failed</source>
+				<target state="translated">Загрузка прервана</target>
+			</trans-unit>
+			<trans-unit id="downloadFailedDetails" approved="yes">
+				<source>The documentation for "%s" could not be downloaded, because of the following error: %s (%d).</source>
+				<target state="translated">Документация для "%s" не была загружена из-за следующей ошибки: %s (%d).</target>
+			</trans-unit>
+			<trans-unit id="downloadFailedNoArchive" approved="yes">
+				<source>No rendered documentation archive could be found on docs.typo3.org.</source>
+				<target state="translated">На docs.typo3.org не найдено архива с обработанной документацией.</target>
+			</trans-unit>
+			<trans-unit id="downloadSucceeded" approved="yes">
+				<source>The rendered documentation was downloaded successfully.</source>
+				<target state="translated">Обработанная документация успешно загружена.</target>
+			</trans-unit>
+			<trans-unit id="searchTemplate.submitButton" approved="yes">
+				<source>Go</source>
+				<target state="translated">Готово</target>
+			</trans-unit>
+			<trans-unit id="showDocumentation" approved="yes">
+				<source>Show Documentation</source>
+				<target state="translated">Показать документацию</target>
+			</trans-unit>
+			<trans-unit id="tx_documentation_domain_model_document" approved="yes">
+				<source>Document</source>
+				<target state="translated">Документ</target>
+			</trans-unit>
+			<trans-unit id="tx_documentation_domain_model_document.extension_key" approved="yes">
+				<source>Extension Key</source>
+				<target state="translated">Идентификатор расширения</target>
+			</trans-unit>
+			<trans-unit id="tx_documentation_domain_model_documentformat" approved="yes">
+				<source>Document Format</source>
+				<target state="translated">Формат документа</target>
+			</trans-unit>
+			<trans-unit id="tx_documentation_domain_model_documentformat.format" approved="yes">
+				<source>Format</source>
+				<target state="translated">Формат</target>
+			</trans-unit>
+			<trans-unit id="tx_documentation_domain_model_documentformat.format.title" approved="yes">
+				<source>Show documentation as %s</source>
+				<target state="translated">Показать документацию в виде %s</target>
+			</trans-unit>
+			<trans-unit id="tx_documentation_domain_model_documentformat.path" approved="yes">
+				<source>Path</source>
+				<target state="translated">Путь</target>
+			</trans-unit>
+			<trans-unit id="tx_documentation_domain_model_document.package_key" approved="yes">
+				<source>Package Key</source>
+				<target state="translated">Идентификатор пакета</target>
+			</trans-unit>
+			<trans-unit id="tx_documentation_domain_model_document.title" approved="yes">
+				<source>Title</source>
+				<target state="translated">Заголовок</target>
+			</trans-unit>
+			<trans-unit id="tx_documentation_domain_model_documenttranslation" approved="yes">
+				<source>Document Translation</source>
+				<target state="translated">Переводы документа</target>
+			</trans-unit>
+			<trans-unit id="tx_documentation_domain_model_documenttranslation.actions" approved="yes">
+				<source>Actions</source>
+				<target state="translated">Действия</target>
+			</trans-unit>
+			<trans-unit id="tx_documentation_domain_model_documenttranslation.description" approved="yes">
+				<source>Description</source>
+				<target state="translated">Описание</target>
+			</trans-unit>
+			<trans-unit id="tx_documentation_domain_model_documenttranslation.language" approved="yes">
+				<source>Language</source>
+				<target state="translated">Язык</target>
+			</trans-unit>
+			<trans-unit id="tx_documentation_domain_model_document.translations" approved="yes">
+				<source>Translations</source>
+				<target state="translated">Переводы</target>
+			</trans-unit>
+			<trans-unit id="tx_documentation_domain_model_documenttranslation.title" approved="yes">
+				<source>Title</source>
+				<target state="translated">Заголовок</target>
+			</trans-unit>
+			<trans-unit id="tx_documentation_domain_model_document.version" approved="yes">
+				<source>Version</source>
+				<target state="translated">Версия</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

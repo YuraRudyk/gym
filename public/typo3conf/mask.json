@@ -30,6 +30,27 @@
                     "6": "rte",
                     "7": "rte"
                 }
+            },
+            "lsvideo": {
+                "label": "LS-Video",
+                "key": "lsvideo",
+                "shortLabel": "",
+                "description": "",
+                "icon": "",
+                "color": "#000000",
+                "columns": [
+                    "tx_mask_header",
+                    "tx_mask_description",
+                    "tx_mask_test1"
+                ],
+                "labels": [
+                    "Header",
+                    "Description",
+                    "test"
+                ],
+                "options": {
+                    "1": "rte"
+                }
             }
         },
         "sql": {
@@ -66,6 +87,21 @@
             "tx_mask_copyright": {
                 "tt_content": {
                     "tx_mask_copyright": "text"
+                }
+            },
+            "tx_mask_header": {
+                "tt_content": {
+                    "tx_mask_header": "tinytext"
+                }
+            },
+            "tx_mask_description": {
+                "tt_content": {
+                    "tx_mask_description": "text"
+                }
+            },
+            "tx_mask_test1": {
+                "tt_content": {
+                    "tx_mask_test1": "int(11) unsigned DEFAULT '0' NOT NULL"
                 }
             }
         },
@@ -210,6 +246,74 @@
                 },
                 "exclude": "1",
                 "key": "copyright"
+            },
+            "tx_mask_header": {
+                "config": {
+                    "type": "input",
+                    "eval": "",
+                    "default": "",
+                    "placeholder": "",
+                    "size": "",
+                    "max": "",
+                    "is_in": ""
+                },
+                "exclude": "1",
+                "key": "header"
+            },
+            "tx_mask_description": {
+                "config": {
+                    "type": "text",
+                    "eval": "",
+                    "richtextConfiguration": "default",
+                    "enableRichtext": "1",
+                    "cols": "",
+                    "rows": "",
+                    "default": "",
+                    "placeholder": "",
+                    "max": ""
+                },
+                "exclude": "1",
+                "key": "description"
+            },
+            "tx_mask_test1": {
+                "config": {
+                    "type": "inline",
+                    "foreign_table": "tt_content",
+                    "overrideChildTca": {
+                        "columns": {
+                            "colPos": {
+                                "config": {
+                                    "default": "999"
+                                }
+                            }
+                        }
+                    },
+                    "foreign_sortby": "sorting",
+                    "appearance": {
+                        "collapseAll": "1",
+                        "levelLinksPosition": "top",
+                        "showSynchronizationLink": "1",
+                        "showPossibleLocalizationRecords": "1",
+                        "showAllLocalizationLink": "1",
+                        "useSortable": "1",
+                        "enabledControls": {
+                            "dragdrop": "1"
+                        },
+                        "expandSingle": "1",
+                        "newRecordLinkTitle": ""
+                    },
+                    "minitems": "",
+                    "maxitems": "",
+                    "behaviour": {
+                        "localizeChildrenAtParentLocalization": "1"
+                    }
+                },
+                "exclude": "1",
+                "cTypes": [
+                    "textmedia"
+                ],
+                "l10n_mode": "copy",
+                "key": "test1"
             }
         }
     },

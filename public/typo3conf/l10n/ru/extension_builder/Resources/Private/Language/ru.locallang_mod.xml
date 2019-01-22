@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3locallangExt>
+  <data type="array">
+    <languageKey index="ru" type="array">
+			<label index="mlang_tabs_tab">Архитектор расширений</label>
+			<label index="mlang_labels_tabdescr">Просмотр / изменение объектов расширения</label>
+			<label index="mlang_Tx_ExtensionBuilder_domain_model_person_developer">Разработчик</label>
+			<label index="mlang_Tx_ExtensionBuilder_domain_model_person_product_manager">Руководитель проекта</label>
+		</languageKey>
+  </data>
+</T3locallangExt>

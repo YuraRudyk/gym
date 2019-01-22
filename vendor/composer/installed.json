@@ -3931,7 +3931,7 @@
         "version_normalized": "8.2.3.0",
         "source": {
             "type": "git",
-            "url": "https://git.typo3.org/TYPO3CMS/Extensions/gridelements.git",
+            "url": "https://gitlab.com/coderscare/gridelements.git",
             "reference": "fc617c5e2359613afec7a881ca93fcff53a1c545"
         },
         "require": {
@@ -3959,6 +3959,126 @@
             "Gridelements",
             "TYPO3 CMS",
             "grids"
+        ]
+    },
+    {
+        "name": "typo3-ter/slick",
+        "version": "4.0.8",
+        "version_normalized": "4.0.8.0",
+        "dist": {
+            "type": "zip",
+            "url": "https://extensions.typo3.org/extension/download/slick/4.0.8/zip/",
+            "reference": null,
+            "shasum": null
+        },
+        "require": {
+            "typo3/cms-core": ">= 6.0.0, <= 8.9.99"
+        },
+        "replace": {
+            "slick": "self.version"
+        },
+        "suggest": {
+            "typo3-ter/image-crop": "*"
+        },
+        "time": "2018-04-30T15:25:12+00:00",
+        "type": "typo3-cms-extension",
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                ""
+            ],
+            "exclude-from-classmap": [
+                "Migrations",
+                "Tests",
+                "tests",
+                "class.ext_update.php"
+            ]
+        },
+        "authors": [
+            {
+                "name": "Dirk Wildt (Die Netzmacher)",
+                "email": "http://wildt.at.die-netzmacher.de/",
+                "company": "",
+                "username": "dwildt"
+            }
+        ],
+        "description": "Slick carousel slider by Ken Wheeler. Fully responsive. Scales with its container. Separate settings per breakpoint. Swipe, desktop mouse dragging, infinite looping among others. Slick is ready-for-use with the organiser, quick-shop and tt_news.",
+        "homepage": "https://extensions.typo3.org/extension/slick/"
+    },
+    {
+        "name": "bk2k/bootstrap-package",
+        "version": "10.0.5",
+        "version_normalized": "10.0.5.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/benjaminkott/bootstrap_package.git",
+            "reference": "d34a866a7c1051bd78c00343ca36bd637419c319"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/benjaminkott/bootstrap_package/zipball/d34a866a7c1051bd78c00343ca36bd637419c319",
+            "reference": "d34a866a7c1051bd78c00343ca36bd637419c319",
+            "shasum": ""
+        },
+        "require": {
+            "ext-dom": "*",
+            "ext-libxml": "*",
+            "ext-simplexml": "*",
+            "php": ">=7.0.0",
+            "typo3/cms-backend": "^8.7.0 || ^9.0",
+            "typo3/cms-core": "^8.7.0 || ^9.0",
+            "typo3/cms-extbase": "^8.7.0 || ^9.0",
+            "typo3/cms-extensionmanager": "^8.7.0 || ^9.0",
+            "typo3/cms-fluid": "^8.7.0 || ^9.0",
+            "typo3/cms-frontend": "^8.7.0 || ^9.0",
+            "typo3/cms-install": "^8.7.0 || ^9.0",
+            "typo3/cms-rte-ckeditor": "^8.7.0 || ^9.0"
+        },
+        "replace": {
+            "bootstrap_package": "self.version",
+            "typo3-ter/bootstrap-package": "self.version"
+        },
+        "require-dev": {
+            "friendsofphp/php-cs-fixer": "^2.3.1",
+            "typo3/testing-framework": "^1.2 || ^4.9"
+        },
+        "time": "2018-12-15T15:54:04+00:00",
+        "type": "typo3-cms-extension",
+        "extra": {
+            "typo3/cms": {
+                "cms-package-dir": "{$vendor-dir}/typo3/cms",
+                "web-dir": ".build/web"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "BK2K\\BootstrapPackage\\": "Classes"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Benjamin Kott",
+                "email": "info@bk2k.info",
+                "homepage": "http://www.bk2k.info/",
+                "role": "Developer"
+            }
+        ],
+        "description": "Bootstrap Package delivers a full configured frontend theme for TYPO3, based on the Bootstrap CSS Framework.",
+        "homepage": "https://github.com/benjaminkott/bootstrap_package",
+        "keywords": [
+            "TYPO3 CMS",
+            "bootstrap",
+            "frontend",
+            "introduction",
+            "responsive",
+            "sitepackage",
+            "theme",
+            "web"
         ]
     }
 ]

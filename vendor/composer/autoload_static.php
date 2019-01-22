@@ -68,6 +68,10 @@ class ComposerStaticInitfc63e3e7a3c032324ed0778fa3b0d0d4
             'Symfony\\Component\\Finder\\' => 25,
             'Symfony\\Component\\Console\\' => 26,
         ),
+        'R' => 
+        array (
+            'Rudyk\\LsTemplate\\' => 17,
+        ),
         'P' => 
         array (
             'Psr\\Log\\' => 8,
@@ -108,6 +112,10 @@ class ComposerStaticInitfc63e3e7a3c032324ed0778fa3b0d0d4
             'Doctrine\\Common\\Cache\\' => 22,
             'Doctrine\\Common\\Annotations\\' => 28,
             'Doctrine\\Common\\' => 16,
+        ),
+        'B' => 
+        array (
+            'BK2K\\BootstrapPackage\\' => 22,
         ),
     );
 
@@ -284,6 +292,10 @@ class ComposerStaticInitfc63e3e7a3c032324ed0778fa3b0d0d4
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
         ),
+        'Rudyk\\LsTemplate\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/public/typo3conf/ext/ls_template/Classes',
+        ),
         'Psr\\Log\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
@@ -365,6 +377,10 @@ class ComposerStaticInitfc63e3e7a3c032324ed0778fa3b0d0d4
         array (
             0 => __DIR__ . '/..' . '/doctrine/common/lib/Doctrine/Common',
         ),
+        'BK2K\\BootstrapPackage\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/public/typo3conf/ext/bootstrap_package/Classes',
+        ),
     );
 
     public static $prefixesPsr0 = array (
@@ -394,6 +410,9 @@ class ComposerStaticInitfc63e3e7a3c032324ed0778fa3b0d0d4
 
     public static $classMap = array (
         'Composer\\Autoload\\ClassMapGenerator' => __DIR__ . '/../..' . '/public/typo3/sysext/core/Resources/PHP/ClassMapGenerator.php',
+        'Netzmacher\\Slick\\DataProcessing\\FlexFormProcessor' => __DIR__ . '/../..' . '/public/typo3conf/ext/slick/Classes/DataProcessing/FlexFormProcessor.php',
+        'Netzmacher\\Slick\\Utility\\UserFunc\\TCAPrompt' => __DIR__ . '/../..' . '/public/typo3conf/ext/slick/Classes/Utility/Userfunc/TCAPrompt.php',
+        'Netzmacher\\Slick\\ViewHelpers\\FalViewHelper' => __DIR__ . '/../..' . '/public/typo3conf/ext/slick/Classes/ViewHelpers/FalViewHelper.php',
         'RemoveXSS' => __DIR__ . '/../..' . '/public/typo3/sysext/core/Resources/PHP/RemoveXSS.php',
     );
 

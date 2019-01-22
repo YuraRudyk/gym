@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+	<file source-language="en" target-language="ru" datatype="plaintext" original="messages" date="2018-12-16T02:11:56Z" product-name="fluid_styled_content">
+		<header/>
+		<body>
+			<trans-unit id="editIcon.bullets" approved="yes">
+				<source>Edit bullet list</source>
+				<target state="translated">Править маркированный список</target>
+			</trans-unit>
+			<trans-unit id="editIcon.header" approved="yes">
+				<source>Edit header</source>
+				<target state="translated">Правка заголовка</target>
+			</trans-unit>
+			<trans-unit id="editIcon.html" approved="yes">
+				<source>Edit pure HTML content</source>
+				<target state="translated">Править чистый HTML</target>
+			</trans-unit>
+			<trans-unit id="editIcon.image">
+				<source>Edit image</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="editIcon.list" approved="yes">
+				<source>Change/configure plugin</source>
+				<target state="translated">Изменить/настроить дополнение</target>
+			</trans-unit>
+			<trans-unit id="editIcon.menu" approved="yes">
+				<source>Edit menu/sitemap</source>
+				<target state="translated">Править меню/карту сайта</target>
+			</trans-unit>
+			<trans-unit id="editIcon.shortcut" approved="yes">
+				<source>Edit record list</source>
+				<target state="translated">Править список записей</target>
+			</trans-unit>
+			<trans-unit id="editIcon.table" approved="yes">
+				<source>Edit table</source>
+				<target state="translated">Править таблицу</target>
+			</trans-unit>
+			<trans-unit id="editIcon.textmedia" approved="yes">
+				<source>Edit text &amp; media</source>
+				<target state="translated">Править текст + медиа</target>
+			</trans-unit>
+			<trans-unit id="editIcon.textpic">
+				<source>Edit text &amp; images</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="editIcon.uploads" approved="yes">
+				<source>Edit file list</source>
+				<target state="translated">Править список файлов</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

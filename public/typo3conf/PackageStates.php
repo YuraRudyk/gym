@@ -116,11 +116,17 @@ return [
         'mask' => [
             'packagePath' => 'typo3conf/ext/mask/',
         ],
+        'bootstrap_package' => [
+            'packagePath' => 'typo3conf/ext/bootstrap_package/',
+        ],
         'extension_builder' => [
             'packagePath' => 'typo3conf/ext/extension_builder/',
         ],
         'ls_template' => [
             'packagePath' => 'typo3conf/ext/ls_template/',
+        ],
+        'slick' => [
+            'packagePath' => 'typo3conf/ext/slick/',
         ],
         'vhs' => [
             'packagePath' => 'typo3conf/ext/vhs/',

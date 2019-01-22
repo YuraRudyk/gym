@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+	<file source-language="en" target-language="ru" datatype="plaintext" original="messages" date="2018-12-16T04:49:53Z" product-name="lang">
+		<header/>
+		<body>
+			<trans-unit id="buttons.confirm.close_without_save.no" approved="yes">
+				<source>No, I will continue editing</source>
+				<target state="translated">Нет, я хочу продолжить редактирование</target>
+			</trans-unit>
+			<trans-unit id="buttons.confirm.close_without_save.yes" approved="yes">
+				<source>Yes, discard my changes</source>
+				<target state="translated">Да, мои изменения не нужны.</target>
+			</trans-unit>
+			<trans-unit id="buttons.confirm.delete_elements.no" approved="yes">
+				<source>Cancel</source>
+				<target state="translated">Отмена</target>
+			</trans-unit>
+			<trans-unit id="buttons.confirm.delete_elements.yes" approved="yes">
+				<source>Yes, delete these elements</source>
+				<target state="translated">Да, удалить эти элементы</target>
+			</trans-unit>
+			<trans-unit id="buttons.confirm.delete_file.no" approved="yes">
+				<source>Cancel</source>
+				<target state="translated">Отмена</target>
+			</trans-unit>
+			<trans-unit id="buttons.confirm.delete_file.yes" approved="yes">
+				<source>Yes, delete this file</source>
+				<target state="translated">Да, удалить этот файл</target>
+			</trans-unit>
+			<trans-unit id="buttons.confirm.delete_folder.yes" approved="yes">
+				<source>Yes, delete this folder</source>
+				<target state="translated">Да, удалить папку</target>
+			</trans-unit>
+			<trans-unit id="buttons.confirm.delete_record.no" approved="yes">
+				<source>Cancel</source>
+				<target state="translated">Отмена</target>
+			</trans-unit>
+			<trans-unit id="buttons.confirm.delete_record.yes" approved="yes">
+				<source>Yes, delete this record</source>
+				<target state="translated">Да, удалить эту запись</target>
+			</trans-unit>
+			<trans-unit id="buttons.reviewFailedValidationFields">
+				<source>Review fields with failed validations</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="deleteItem" approved="yes">
+				<source>Delete</source>
+				<target state="translated">Удалить</target>
+			</trans-unit>
+			<trans-unit id="deleteWarning" approved="yes">
+				<source>Are you sure you want to delete this record?</source>
+				<target state="translated">Действительно удалить эту запись?</target>
+			</trans-unit>
+			<trans-unit id="editWholeRecord" approved="yes">
+				<source>Edit whole record</source>
+				<target state="translated">Редактировать всю запись</target>
+			</trans-unit>
+			<trans-unit id="label.confirm.close_without_save.content" approved="yes">
+				<source>You have currently unsaved changes. Are you sure that you want to discard all changes?</source>
+				<target state="translated">Имеются несохранённые изменения. Подтверждаете их отмену?</target>
+			</trans-unit>
+			<trans-unit id="label.confirm.close_without_save.title" approved="yes">
+				<source>Do you want to quit without saving?</source>
+				<target state="translated">Вы хотите выйти без сохранения?</target>
+			</trans-unit>
+			<trans-unit id="label.confirm.delete_record.content" approved="yes">
+				<source>Are you sure you want to delete this record?</source>
+				<target state="translated">Действительно удалить эту запись?</target>
+			</trans-unit>
+			<trans-unit id="label.confirm.delete_record.title" approved="yes">
+				<source>Delete this record?</source>
+				<target state="translated">Удалить эту запись?</target>
+			</trans-unit>
+			<trans-unit id="noDocuments" approved="yes">
+				<source>No open documents</source>
+				<target state="translated">Открытых документов нет</target>
+			</trans-unit>
+			<trans-unit id="noDocuments_listmodule" approved="yes">
+				<source>the Web&gt;List module</source>
+				<target state="translated">модуль Веб&gt;Список</target>
+			</trans-unit>
+			<trans-unit id="noDocuments_msg" approved="yes">
+				<source>There are no open documents available to edit.</source>
+				<target state="translated">Нет открытых документов, доступных для редактирования.</target>
+			</trans-unit>
+			<trans-unit id="noDocuments_msg2" approved="yes">
+				<source>You can go to %s to find the page or the record you wish to edit.</source>
+				<target state="translated">Идите в %s, чтобы найти страницу или запись, которую вы хотите изменить.</target>
+			</trans-unit>
+			<trans-unit id="noDocuments_msg3" approved="yes">
+				<source>You can select one of your most recently edited records from this list:</source>
+				<target state="translated">Вы можете выбрать из этого списка записи, которые вы правили последними:</target>
+			</trans-unit>
+			<trans-unit id="noDocuments_OR" approved="yes">
+				<source>or</source>
+				<target state="translated">или</target>
+			</trans-unit>
+			<trans-unit id="noDocuments_pagemodule" approved="yes">
+				<source>the Web&gt;Page module</source>
+				<target state="translated">модуль Веб&gt;Страница</target>
+			</trans-unit>
+			<trans-unit id="openDocs" approved="yes">
+				<source>OPEN DOCUMENTS</source>
+				<target state="translated">ОТКРЫТЫЕ ДОКУМЕНТЫ</target>
+			</trans-unit>
+			<trans-unit id="recordHistory" approved="yes">
+				<source>View record change history</source>
+				<target state="translated">Показать историю изменения записи</target>
+			</trans-unit>
+			<trans-unit id="undoLastChange" approved="yes">
+				<source>Undo/Redo last change (%s ago)</source>
+				<target state="translated">Отменить/Восстановить последние изменения (%s шагов)</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

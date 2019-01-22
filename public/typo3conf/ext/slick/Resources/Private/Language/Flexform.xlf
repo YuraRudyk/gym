@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-10-15T19:11:39Z" product-name="slick">
+		<header/>
+		<body>
+
+			<trans-unit id="sheet.all.arrows">
+				<source>prev/next arrows</source>
+				<target>Vorwärts-/Rückwärts-Pfeile</target>
+			</trans-unit>
+			<trans-unit id="sheet.all.breakpoint">
+				<source>Breakpoint</source>
+				<target>Breakpoint</target>
+			</trans-unit>
+			<trans-unit id="sheet.all.disabled">
+				<source>Disabled</source>
+				<target>Ausgechaltet</target>
+			</trans-unit>
+			<trans-unit id="sheet.all.dots">
+				<source>Dots for navigation</source>
+				<target>Navigations-Punkte</target>
+			</trans-unit>
+			<trans-unit id="sheet.all.enabled">
+				<source>Enabled</source>
+				<target>Eingeschaltet</target>
+			</trans-unit>
+			<trans-unit id="sheet.all.rows">
+				<source>Setting this to more than 1 initializes grid mode. Use slidesPerRow to set how many slides should be in each row.</source>
+				<target>Gitter-Modus. Benutze "Reiter pro Zeile", um die Anzahl der Reiter pro Zeile festzulegen.</target>
+			</trans-unit>
+			<trans-unit id="sheet.all.slidesPerRow">
+				<source>Slides per row: With grid mode intialized via the rows option, this sets how many slides are in each grid row.</source>
+				<target>Reiter pro Zeile, wenn der Gitter-Modus eingeschaltet ist.</target>
+			</trans-unit>
+			<trans-unit id="sheet.all.slidesToScroll">
+				<source>Slides to scroll: number of slides to scroll at a time</source>
+				<target>Anzahl der Reiter, die weiterbewegt werden sollen</target>
+			</trans-unit>
+			<trans-unit id="sheet.all.slidesToShow">
+				<source>Slides to show: number of slides to show at a time</source>
+				<target>Anzahl der Reiter, die angezeigt werden sollen </target>
+			</trans-unit>
+			
+			<trans-unit id="sheet.desktop.title">
+				<source>Desktop</source>
+				<target>Desktop</target>
+			</trans-unit>
+
+			<trans-unit id="sheet.help.title">
+				<source>Help!</source>
+				<target>Hilfe!</target>
+			</trans-unit>
+			<trans-unit id="sheet.help.prompt">
+				<source><![CDATA[
+					<h1>
+						Help!
+					</h1>
+					<ul>
+						<li>
+							<a href="https://kenwheeler.github.io/slick/">Demo website</a>
+						</li>
+						<li>
+							<a href="https://typo3-browser-forum.de/foren/slick/" target="_blank">Forum</a>
+						</li>
+						<li>
+							<a href="https://docs.typo3.org/typo3cms/extensions/slick/">Manual</a>
+						</li>
+						<li>
+							<a href="http://die-netzmacher.de" target="_blank">Support</a>
+						</li>
+					</ul>
+]]></source>
+				<target><![CDATA[
+					<h1>
+						Hilfe!
+					</h1>
+					<ul>
+						<li>
+							<a href="https://kenwheeler.github.io/slick/">Demo Website</a>
+						</li>
+						<li>
+							<a href="https://typo3-browser-forum.de/foren/slick/" target="_blank">Forum</a>
+						</li>
+						<li>
+							<a href="https://docs.typo3.org/typo3cms/extensions/slick/">Handbuch</a>
+						</li>
+						<li>
+							<a href="http://die-netzmacher.de" target="_blank">Support</a>
+						</li>
+					</ul>
+]]></target>
+			</trans-unit>
+
+			<trans-unit id="sheet.rare.title">
+				<source>Rare Adjustments</source>
+				<target>Seltene Einstellungen</target>
+			</trans-unit>
+			<trans-unit id="sheet.rare.accessibility">
+				<source>Tabbing and arrow key navigation (accessibility)</source>
+				<target>Tabbing and arrow key navigation (accessibility)</target>
+			</trans-unit>
+			<trans-unit id="sheet.rare.centerMode">
+				<source>Centered view with partial prev/next slides. Use with odd numbered slidesToShow counts.</source>
+				<target>Rand des letzten und nächsten Reiters einblenden. Mit ungerade Anzahl von Reitern.</target>
+			</trans-unit>
+			<trans-unit id="sheet.rare.centerPadding">
+				<source>Side padding when in center mode. (px or %)</source>
+				<target>Breite des letzten und nächsten Reiters (wenn diese angezeigt werden sollen)</target>
+			</trans-unit>
+			<trans-unit id="sheet.rare.cssEase">
+				<source>Kind of transition (css)</source>
+				<target>Art des Übergangs (CSS)</target>
+			</trans-unit>
+			<trans-unit id="sheet.rare.dotsClass">
+				<source>CSS class for the navigation dots</source>
+				<target>CSS-Klasse für Navigations-Punkte</target>
+			</trans-unit>
+			<trans-unit id="sheet.rare.draggable">
+				<source>Dragging sliders with the mouse</source>
+				<target>Reiter mit der Maus ziehen</target>
+			</trans-unit>
+			<trans-unit id="sheet.rare.edgeFriction">
+				<source>Resistance when swiping edges of non-infinite carousels</source>
+				<target>Widerstand beim Wischen der Ecken von nicht-endlosen Karussels</target>
+			</trans-unit>
+			<trans-unit id="sheet.rare.initialSlide">
+				<source>First slide</source>
+				<target>Erster Reiter</target>
+			</trans-unit>
+			<trans-unit id="sheet.rare.lazyLoad">
+				<source>Load images</source>
+				<target>Bilder laden</target>
+			</trans-unit>
+			<trans-unit id="sheet.rare.lazyLoad.ondemand">
+				<source>On demand</source>
+				<target>Wenn sie gebraucht werden</target>
+			</trans-unit>
+			<trans-unit id="sheet.rare.lazyLoad.progressive">
+				<source>Progressive</source>
+				<target>Fortschreitend</target>
+			</trans-unit>
+			<trans-unit id="sheet.rare.mobileFirst">
+				<source>Responsive settings use mobile first calculation</source>
+				<target>Responsive-Einstellungen starten beim Smartphone</target>
+			</trans-unit>
+			<trans-unit id="sheet.rare.pauseOnHover">
+				<source>Pauses autoplay on hover</source>
+				<target>Karussel anhalten, wenn sich die Maus über einem Reiter befindet</target>
+			</trans-unit>
+			<trans-unit id="sheet.rare.pauseOnDotsHover">
+				<source>Pauses autoplay when a dot is hovered</source>
+				<target>Karussel anhalten, wenn sich die Maus über einem Navigations-Punkt befindet</target>
+			</trans-unit>
+			<trans-unit id="sheet.rare.respondTo">
+				<source>Width that responsive object responds to.</source>
+				<target>Width that responsive object responds to.</target>
+			</trans-unit>
+			<trans-unit id="sheet.rare.rtl">
+				<source>Move sliders from right to left</source>
+				<target>Reiter von rechts nach links bewegen</target>
+			</trans-unit>
+			<trans-unit id="sheet.rare.swipe">
+				<source>Swiping</source>
+				<target>Swiping</target>
+			</trans-unit>
+			<trans-unit id="sheet.rare.swipeToSlide">
+				<source>Allow users to drag or swipe directly to a slide irrespective of slidesToScroll</source>
+				<target>Allow users to drag or swipe directly to a slide irrespective of slidesToScroll</target>
+			</trans-unit>
+			<trans-unit id="sheet.rare.touchMove">
+				<source>Enable slide motion with touch</source>
+				<target>Enable slide motion with touch</target>
+			</trans-unit>
+			<trans-unit id="sheet.rare.useCSS">
+				<source>Transitions by CSS</source>
+				<target>Übergänge mit CSS</target>
+			</trans-unit>
+			<trans-unit id="sheet.rare.variableWidth">
+				<source>Variable width slides</source>
+				<target>Variable Breite der Reiter</target>
+			</trans-unit>
+			<trans-unit id="sheet.rare.verticalSwiping">
+				<source>Vertical swipe mode</source>
+				<target>Senkrechter Klebe-Modus</target>
+			</trans-unit>
+			<trans-unit id="sheet.rare.waitForAnimate">
+				<source>Ignores requests to advance the slide while animating</source>
+				<target>Ignores requests to advance the slide while animating</target>
+			</trans-unit>
+			<trans-unit id="sheet.rare.zIndex">
+				<source>Set the zIndex values for slides, useful for IE9 and lower</source>
+				<target>Z-Index der reiter. Nützlich für Internet Explorer 9 und älter</target>
+			</trans-unit>
+			
+			<trans-unit id="sheet.smartphone.title">
+				<source>Smartphone</source>
+				<target>Smartphone</target>
+			</trans-unit>
+
+			<trans-unit id="sheet.tablet.title">
+				<source>Tablet</source>
+				<target>Tablet</target>
+			</trans-unit>
+
+			<trans-unit id="sheet.usual.title">
+				<source>Usual Adjustments</source>
+				<target>Häufige Einstellungen</target>
+			</trans-unit>
+			<trans-unit id="sheet.usual.autoplay">
+				<source>Auto play of slides</source>
+				<target>Automatisch abspielen</target>
+			</trans-unit>
+			<trans-unit id="sheet.usual.autoplayspeed">
+				<source>Change to the next slide (milliseconds)</source>
+				<target>Wechsel zum nächsten Slide (Milli-Sekunden)</target>
+			</trans-unit>
+			<trans-unit id="sheet.usual.fade">
+				<source>Fading</source>
+				<target>Überblenden</target>
+			</trans-unit>
+			<trans-unit id="sheet.usual.infinite">
+				<source>Infinite looping</source>
+				<target>Endlosschleife</target>
+			</trans-unit>
+			<trans-unit id="sheet.usual.speed">
+				<source>Transition speed (milliseconds)</source>
+				<target>Geschwindigkeit der Übergänge (Millisekunden)</target>
+			</trans-unit>
+			<trans-unit id="sheet.usual.vertical">
+				<source>Vertical slide mode</source>
+				<target>Senkrechte Bewegung der Reiter</target>
+			</trans-unit>
+
+			<trans-unit id="sheet.widescreen.title">
+				<source>Widescreen</source>
+				<target>Widescreen</target>
+			</trans-unit>
+			
+		</body>
+	</file>
+
+</xliff>

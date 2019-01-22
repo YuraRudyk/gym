@@ -4,8 +4,82 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "1f8ced9d8728402ca148c42d55ce272c",
+    "content-hash": "37f83e5596ae90b5694e3bc8bc2670b4",
     "packages": [
+        {
+            "name": "bk2k/bootstrap-package",
+            "version": "10.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/benjaminkott/bootstrap_package.git",
+                "reference": "d34a866a7c1051bd78c00343ca36bd637419c319"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/benjaminkott/bootstrap_package/zipball/d34a866a7c1051bd78c00343ca36bd637419c319",
+                "reference": "d34a866a7c1051bd78c00343ca36bd637419c319",
+                "shasum": ""
+            },
+            "require": {
+                "ext-dom": "*",
+                "ext-libxml": "*",
+                "ext-simplexml": "*",
+                "php": ">=7.0.0",
+                "typo3/cms-backend": "^8.7.0 || ^9.0",
+                "typo3/cms-core": "^8.7.0 || ^9.0",
+                "typo3/cms-extbase": "^8.7.0 || ^9.0",
+                "typo3/cms-extensionmanager": "^8.7.0 || ^9.0",
+                "typo3/cms-fluid": "^8.7.0 || ^9.0",
+                "typo3/cms-frontend": "^8.7.0 || ^9.0",
+                "typo3/cms-install": "^8.7.0 || ^9.0",
+                "typo3/cms-rte-ckeditor": "^8.7.0 || ^9.0"
+            },
+            "replace": {
+                "bootstrap_package": "self.version",
+                "typo3-ter/bootstrap-package": "self.version"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.3.1",
+                "typo3/testing-framework": "^1.2 || ^4.9"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "cms-package-dir": "{$vendor-dir}/typo3/cms",
+                    "web-dir": ".build/web"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BK2K\\BootstrapPackage\\": "Classes"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Benjamin Kott",
+                    "email": "info@bk2k.info",
+                    "homepage": "http://www.bk2k.info/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Bootstrap Package delivers a full configured frontend theme for TYPO3, based on the Bootstrap CSS Framework.",
+            "homepage": "https://github.com/benjaminkott/bootstrap_package",
+            "keywords": [
+                "TYPO3 CMS",
+                "bootstrap",
+                "frontend",
+                "introduction",
+                "responsive",
+                "sitepackage",
+                "theme",
+                "web"
+            ],
+            "time": "2018-12-15T15:54:04+00:00"
+        },
         {
             "name": "cogpowered/finediff",
             "version": "0.3.1",
@@ -708,7 +782,7 @@
             "version": "8.2.3",
             "source": {
                 "type": "git",
-                "url": "https://git.typo3.org/TYPO3CMS/Extensions/gridelements.git",
+                "url": "https://gitlab.com/coderscare/gridelements.git",
                 "reference": "fc617c5e2359613afec7a881ca93fcff53a1c545"
             },
             "require": {
@@ -1746,6 +1820,48 @@
             "description": "Create your own content elements and page templates. Easy to use, even without programming skills because of the comfortable drag and drop system. Stored in structured database tables. Style your frontend with Fluid tags. Ideal, if you want to switch from Templavoila.",
             "homepage": "https://extensions.typo3.org/extension/mask/",
             "time": "2018-03-15T16:15:02+00:00"
+        },
+        {
+            "name": "typo3-ter/slick",
+            "version": "4.0.8",
+            "dist": {
+                "type": "zip",
+                "url": "https://extensions.typo3.org/extension/download/slick/4.0.8/zip/",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "typo3/cms-core": ">= 6.0.0, <= 8.9.99"
+            },
+            "replace": {
+                "slick": "self.version"
+            },
+            "suggest": {
+                "typo3-ter/image-crop": "*"
+            },
+            "type": "typo3-cms-extension",
+            "autoload": {
+                "classmap": [
+                    ""
+                ],
+                "exclude-from-classmap": [
+                    "Migrations",
+                    "Tests",
+                    "tests",
+                    "class.ext_update.php"
+                ]
+            },
+            "authors": [
+                {
+                    "name": "Dirk Wildt (Die Netzmacher)",
+                    "email": "http://wildt.at.die-netzmacher.de/",
+                    "company": "",
+                    "username": "dwildt"
+                }
+            ],
+            "description": "Slick carousel slider by Ken Wheeler. Fully responsive. Scales with its container. Separate settings per breakpoint. Swipe, desktop mouse dragging, infinite looping among others. Slick is ready-for-use with the organiser, quick-shop and tt_news.",
+            "homepage": "https://extensions.typo3.org/extension/slick/",
+            "time": "2018-04-30T15:25:12+00:00"
         },
         {
             "name": "typo3/class-alias-loader",

@@ -1,0 +1,1 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:slick/Configuration/TypoScript/Default/Image/tt_content/setup.ts">

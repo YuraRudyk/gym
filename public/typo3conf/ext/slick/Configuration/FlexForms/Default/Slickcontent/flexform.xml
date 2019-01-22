@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+	<meta>
+		<langDisable>1</langDisable>
+	</meta>
+	<sheets>
+		<usual>EXT:slick/Configuration/FlexForms/Default/Slickcontent/flexform_sheet_usual.xml</usual>
+		<smartphone>EXT:slick/Configuration/FlexForms/Default/Slickcontent/flexform_sheet_smartphone.xml</smartphone>
+		<tablet>EXT:slick/Configuration/FlexForms/Default/Slickcontent/flexform_sheet_tablet.xml</tablet>
+		<desktop>EXT:slick/Configuration/FlexForms/Default/Slickcontent/flexform_sheet_desktop.xml</desktop>
+		<widescreen>EXT:slick/Configuration/FlexForms/Default/Slickcontent/flexform_sheet_widescreen.xml</widescreen>
+		<rare>EXT:slick/Configuration/FlexForms/Default/Slickcontent/flexform_sheet_rare.xml</rare>
+		<help>EXT:slick/Configuration/FlexForms/Default/Slickcontent/flexform_sheet_help.xml</help>
+	</sheets>
+</T3DataStructure>

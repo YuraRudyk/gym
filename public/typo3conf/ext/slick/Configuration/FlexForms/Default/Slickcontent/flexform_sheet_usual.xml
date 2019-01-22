@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+	<ROOT>
+		<TCEforms>
+			<sheetTitle>LLL:EXT:slick/Resources/Private/Language/Flexform.xlf:sheet.usual.title</sheetTitle>
+		</TCEforms>
+		<type>array</type>
+		<el>
+			<autoplay type="array">
+				<TCEforms type="array">
+					<label>LLL:EXT:slick/Resources/Private/Language/Flexform.xlf:sheet.usual.autoplay</label>
+					<config type="array">
+						<type>select</type>
+						<items type="array">
+							<numIndex index="0" type="array">
+								<numIndex index="0">LLL:EXT:slick/Resources/Private/Language/Flexform.xlf:sheet.all.disabled</numIndex>
+								<numIndex index="1">false</numIndex>
+							</numIndex>
+							<numIndex index="1" type="array">
+								<numIndex index="0">LLL:EXT:slick/Resources/Private/Language/Flexform.xlf:sheet.all.enabled</numIndex>
+								<numIndex index="1">true</numIndex>
+							</numIndex>
+						</items>
+						<default>true</default>
+					</config>
+				</TCEforms>
+			</autoplay>
+			<autoplaySpeed type="array">
+				<TCEforms type="array">
+					<label>LLL:EXT:slick/Resources/Private/Language/Flexform.xlf:sheet.usual.autoplayspeed</label>
+					<config type="array">
+						<type>input</type>
+						<size>1</size>
+						<default>5000</default>
+					</config>
+				</TCEforms>
+			</autoplaySpeed>
+			<fade type="array">
+				<TCEforms type="array">
+					<label>LLL:EXT:slick/Resources/Private/Language/Flexform.xlf:sheet.usual.fade</label>
+					<config type="array">
+						<type>select</type>
+						<items type="array">
+							<numIndex index="0" type="array">
+								<numIndex index="0">LLL:EXT:slick/Resources/Private/Language/Flexform.xlf:sheet.all.disabled</numIndex>
+								<numIndex index="1">false</numIndex>
+							</numIndex>
+							<numIndex index="1" type="array">
+								<numIndex index="0">LLL:EXT:slick/Resources/Private/Language/Flexform.xlf:sheet.all.enabled</numIndex>
+								<numIndex index="1">true</numIndex>
+							</numIndex>
+						</items>
+						<default>false</default>
+					</config>
+				</TCEforms>
+			</fade>
+			<infinite type="array">
+				<TCEforms type="array">
+					<label>LLL:EXT:slick/Resources/Private/Language/Flexform.xlf:sheet.usual.infinite</label>
+					<config type="array">
+						<type>select</type>
+						<items type="array">
+							<numIndex index="0" type="array">
+								<numIndex index="0">LLL:EXT:slick/Resources/Private/Language/Flexform.xlf:sheet.all.disabled</numIndex>
+								<numIndex index="1">false</numIndex>
+							</numIndex>
+							<numIndex index="1" type="array">
+								<numIndex index="0">LLL:EXT:slick/Resources/Private/Language/Flexform.xlf:sheet.all.enabled</numIndex>
+								<numIndex index="1">true</numIndex>
+							</numIndex>
+						</items>
+						<default>true</default>
+					</config>
+				</TCEforms>
+			</infinite>
+			<speed type="array">
+				<TCEforms type="array">
+					<label>LLL:EXT:slick/Resources/Private/Language/Flexform.xlf:sheet.usual.speed</label>
+					<config type="array">
+						<type>input</type>
+						<size>1</size>
+						<default>600</default>
+					</config>
+				</TCEforms>
+			</speed>
+			<vertical type="array">
+				<TCEforms type="array">
+					<label>LLL:EXT:slick/Resources/Private/Language/Flexform.xlf:sheet.usual.vertical</label>
+					<config type="array">
+						<type>select</type>
+						<items type="array">
+							<numIndex index="0" type="array">
+								<numIndex index="0">LLL:EXT:slick/Resources/Private/Language/Flexform.xlf:sheet.all.disabled</numIndex>
+								<numIndex index="1">false</numIndex>
+							</numIndex>
+							<numIndex index="1" type="array">
+								<numIndex index="0">LLL:EXT:slick/Resources/Private/Language/Flexform.xlf:sheet.all.enabled</numIndex>
+								<numIndex index="1">true</numIndex>
+							</numIndex>
+						</items>
+						<default>false</default>
+					</config>
+				</TCEforms>
+			</vertical>
+		</el>
+	</ROOT>
+</T3DataStructure>

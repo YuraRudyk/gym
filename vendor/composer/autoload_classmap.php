@@ -7,5 +7,8 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Composer\\Autoload\\ClassMapGenerator' => $baseDir . '/public/typo3/sysext/core/Resources/PHP/ClassMapGenerator.php',
+    'Netzmacher\\Slick\\DataProcessing\\FlexFormProcessor' => $baseDir . '/public/typo3conf/ext/slick/Classes/DataProcessing/FlexFormProcessor.php',
+    'Netzmacher\\Slick\\Utility\\UserFunc\\TCAPrompt' => $baseDir . '/public/typo3conf/ext/slick/Classes/Utility/Userfunc/TCAPrompt.php',
+    'Netzmacher\\Slick\\ViewHelpers\\FalViewHelper' => $baseDir . '/public/typo3conf/ext/slick/Classes/ViewHelpers/FalViewHelper.php',
     'RemoveXSS' => $baseDir . '/public/typo3/sysext/core/Resources/PHP/RemoveXSS.php',
 );

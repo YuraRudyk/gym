@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2019-01-22T21:12:15Z" product-name="ls_template">
+		<header/>
+		<body>
+			<trans-unit id="tx_lstemplate_domain_model_subscription">
+				<source>Subscription</source>
+			</trans-unit>
+			<trans-unit id="tx_lstemplate_domain_model_subscription.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_lstemplate_domain_model_subscription.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_lstemplate_domain_model_subscription.price">
+				<source>Price</source>
+			</trans-unit>
+			<trans-unit id="tx_lstemplate_domain_model_simulators">
+				<source>Simulators</source>
+			</trans-unit>
+			<trans-unit id="tx_lstemplate_domain_model_simulators.images">
+				<source>Images</source>
+			</trans-unit>
+			<trans-unit id="tx_lstemplate_domain_model_simulators.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_lstemplate_domain_model_simulators.price">
+				<source>Price</source>
+			</trans-unit>
+			<trans-unit id="tx_lstemplate_domain_model_simulators.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_lstemplate_domain_model_simulators.code">
+				<source>Code</source>
+			</trans-unit>
+			<trans-unit id="tx_lstemplate_domain_model_simulators.categories">
+				<source>Categories</source>
+			</trans-unit>
+			<trans-unit id="tx_lstemplate_domain_model_category">
+				<source>Category</source>
+			</trans-unit>
+			<trans-unit id="sys_category.tx_extbase_type.Tx_LsTemplate_Category">
+				<source>LS Template Category</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

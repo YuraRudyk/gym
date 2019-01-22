@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+	<file source-language="en" target-language="uk" datatype="plaintext" original="messages" date="2018-12-16T04:53:03Z" product-name="lang">
+		<header/>
+		<body>
+			<trans-unit id="LGL.address" approved="yes">
+				<source>Address:</source>
+				<target state="translated">Адреса:</target>
+			</trans-unit>
+			<trans-unit id="LGL.allLanguages" approved="yes">
+				<source>[All]</source>
+				<target state="translated">[Все]</target>
+			</trans-unit>
+			<trans-unit id="LGL.any_login" approved="yes">
+				<source>Show at any login</source>
+				<target state="translated">Показати при логіні</target>
+			</trans-unit>
+			<trans-unit id="LGL.author" approved="yes">
+				<source>Author:</source>
+				<target state="translated">Автор:</target>
+			</trans-unit>
+			<trans-unit id="LGL.baseStorage">
+				<source>Storage:</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.caption" approved="yes">
+				<source>Caption:</source>
+				<target state="translated">Підпис:</target>
+			</trans-unit>
+			<trans-unit id="LGL.category" approved="yes">
+				<source>Category:</source>
+				<target state="translated">Категорія:</target>
+			</trans-unit>
+			<trans-unit id="LGL.city" approved="yes">
+				<source>City:</source>
+				<target state="translated">Місто:</target>
+			</trans-unit>
+			<trans-unit id="LGL.code" approved="yes">
+				<source>CODE:</source>
+				<target state="translated">КОД:</target>
+			</trans-unit>
+			<trans-unit id="LGL.company" approved="yes">
+				<source>Company:</source>
+				<target state="translated">Компанія:</target>
+			</trans-unit>
+			<trans-unit id="LGL.country" approved="yes">
+				<source>Country:</source>
+				<target state="translated">Страна:</target>
+			</trans-unit>
+			<trans-unit id="LGL.creationDate">
+				<source>Created At:</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.creationUserId">
+				<source>Created By:</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.default_value" approved="yes">
+				<source>Default</source>
+				<target state="translated">Типово</target>
+			</trans-unit>
+			<trans-unit id="LGL.description" approved="yes">
+				<source>Description:</source>
+				<target state="translated">Опис:</target>
+			</trans-unit>
+			<trans-unit id="LGL.disable" approved="yes">
+				<source>Disable:</source>
+				<target state="translated">Вимкнути:</target>
+			</trans-unit>
+			<trans-unit id="LGL.disableRTE" approved="yes">
+				<source>Disable Rich Text Editor:</source>
+				<target state="translated">Вимкнути RTE:</target>
+			</trans-unit>
+			<trans-unit id="LGL.email" approved="yes">
+				<source>Email:</source>
+				<target state="translated">E-mail:</target>
+			</trans-unit>
+			<trans-unit id="LGL.endtime" approved="yes">
+				<source>Stop:</source>
+				<target state="translated">Стоп:</target>
+			</trans-unit>
+			<trans-unit id="LGL.error">
+				<source>Error!</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.external" approved="yes">
+				<source>External URL</source>
+				<target state="translated">Зовнішній URL</target>
+			</trans-unit>
+			<trans-unit id="LGL.fax" approved="yes">
+				<source>Fax:</source>
+				<target state="translated">Факс:</target>
+			</trans-unit>
+			<trans-unit id="LGL.fe_group" approved="yes">
+				<source>Access:</source>
+				<target state="translated">Доступ:</target>
+			</trans-unit>
+			<trans-unit id="LGL.first_name">
+				<source>First name:</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.folder">
+				<source>Folder:</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.height">
+				<source>Height</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.hidden" approved="yes">
+				<source>Hide:</source>
+				<target state="translated">Сховати:</target>
+			</trans-unit>
+			<trans-unit id="LGL.hide_at_login" approved="yes">
+				<source>Hide at login</source>
+				<target state="translated">Сховати при логіні</target>
+			</trans-unit>
+			<trans-unit id="LGL.image" approved="yes">
+				<source>Image:</source>
+				<target state="translated">Зображення:</target>
+			</trans-unit>
+			<trans-unit id="LGL.images" approved="yes">
+				<source>Images:</source>
+				<target state="translated">Зображення:</target>
+			</trans-unit>
+			<trans-unit id="LGL.keywords" approved="yes">
+				<source>Keywords (,):</source>
+				<target state="translated">Ключові слова (,):</target>
+			</trans-unit>
+			<trans-unit id="LGL.l18n_parent" approved="yes">
+				<source>Transl.Orig:</source>
+				<target state="translated">ОригПерекл:</target>
+			</trans-unit>
+			<trans-unit id="LGL.language" approved="yes">
+				<source>Language:</source>
+				<target state="translated">Мова:</target>
+			</trans-unit>
+			<trans-unit id="LGL.lastlogin">
+				<source>Last login:</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.last_name">
+				<source>Last name:</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.layout" approved="yes">
+				<source>Layout:</source>
+				<target state="translated">Компонування:</target>
+			</trans-unit>
+			<trans-unit id="LGL.links" approved="yes">
+				<source>Links</source>
+				<target state="translated">Посилання</target>
+			</trans-unit>
+			<trans-unit id="LGL.middle_name">
+				<source>Middle name:</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.name" approved="yes">
+				<source>Name:</source>
+				<target state="translated">Ім'я:</target>
+			</trans-unit>
+			<trans-unit id="LGL.normal" approved="yes">
+				<source>Normal</source>
+				<target state="translated">Нормально</target>
+			</trans-unit>
+			<trans-unit id="LGL.note" approved="yes">
+				<source>Note:</source>
+				<target state="translated">Нотатка:</target>
+			</trans-unit>
+			<trans-unit id="LGL.parameters" approved="yes">
+				<source>Parameters:</source>
+				<target state="translated">Параметри:</target>
+			</trans-unit>
+			<trans-unit id="LGL.phone" approved="yes">
+				<source>Phone:</source>
+				<target state="translated">Телефон:</target>
+			</trans-unit>
+			<trans-unit id="LGL.prependAtCopy" approved="yes">
+				<source>(copy %s)</source>
+				<target state="translated">(копія %s)</target>
+			</trans-unit>
+			<trans-unit id="LGL.recursive" approved="yes">
+				<source>Recursive:</source>
+				<target state="translated">Рекурсивно:</target>
+			</trans-unit>
+			<trans-unit id="LGL.shortcut_page" approved="yes">
+				<source>Shortcut to page:</source>
+				<target state="translated">Посилання на сторінку:</target>
+			</trans-unit>
+			<trans-unit id="LGL.startingpoint" approved="yes">
+				<source>Startingpoint:</source>
+				<target state="translated">Стартова точка:</target>
+			</trans-unit>
+			<trans-unit id="LGL.starttime" approved="yes">
+				<source>Start:</source>
+				<target state="translated">Старт:</target>
+			</trans-unit>
+			<trans-unit id="LGL.subheader" approved="yes">
+				<source>Subheader:</source>
+				<target state="translated">Підзаголовок:</target>
+			</trans-unit>
+			<trans-unit id="LGL.text" approved="yes">
+				<source>Text:</source>
+				<target state="translated">Текст:</target>
+			</trans-unit>
+			<trans-unit id="LGL.timestamp">
+				<source>Last Modified:</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.title" approved="yes">
+				<source>Title:</source>
+				<target state="translated">Назва:</target>
+			</trans-unit>
+			<trans-unit id="LGL.title_person" approved="yes">
+				<source>Title:</source>
+				<target state="translated">Титул:</target>
+			</trans-unit>
+			<trans-unit id="LGL.type" approved="yes">
+				<source>Type:</source>
+				<target state="translated">Тип:</target>
+			</trans-unit>
+			<trans-unit id="LGL.usergroups" approved="yes">
+				<source>__Usergroups:__</source>
+				<target state="translated">__Групи:__</target>
+			</trans-unit>
+			<trans-unit id="LGL.versionLabel" approved="yes">
+				<source>Versioning Label:</source>
+				<target state="translated">Мітка версії:</target>
+			</trans-unit>
+			<trans-unit id="LGL.width">
+				<source>Width</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.www" approved="yes">
+				<source>www:</source>
+				<target state="translated">www:</target>
+			</trans-unit>
+			<trans-unit id="LGL.zip" approved="yes">
+				<source>Zipcode:</source>
+				<target state="translated">Код міста:</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

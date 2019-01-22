@@ -1,0 +1,4 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:slick/Configuration/TypoScript/Default/Base/_setup.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:slick/Configuration/TypoScript/Default/Content/_setup.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:slick/Configuration/TypoScript/Default/Deprecated/_setup.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:slick/Configuration/TypoScript/Default/Image/_setup.ts">
