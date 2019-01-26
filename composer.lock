@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "1f8ced9d8728402ca148c42d55ce272c",
+    "content-hash": "7fa2d1d2d1d5b265d178ba4a0ab990fe",
     "packages": [
         {
             "name": "cogpowered/finediff",
@@ -56,6 +56,50 @@
                 "text"
             ],
             "time": "2014-05-19T10:25:02+00:00"
+        },
+        {
+            "name": "comsolit/owl_slider",
+            "version": "2.5.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/comsolit/owl_slider.git",
+                "reference": "ccddad9adc247706f6454ddb879e580e7948eb22"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/comsolit/owl_slider/zipball/ccddad9adc247706f6454ddb879e580e7948eb22",
+                "reference": "ccddad9adc247706f6454ddb879e580e7948eb22",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6.0",
+                "typo3/cms-core": ">=7.6.00,<8.7.99"
+            },
+            "replace": {
+                "comsolit/owl_slider": "self.version",
+                "owl_slider": "self.version"
+            },
+            "type": "typo3-cms-extension",
+            "autoload": {
+                "psr-4": {
+                    "Comsolit\\OwlSlider\\": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "comsolit AG",
+                    "email": "info@comsolit.com",
+                    "homepage": "https://www.comsolit.com/"
+                }
+            ],
+            "description": "Responsive Slider Extension",
+            "keywords": [
+                "cms",
+                "slider",
+                "typo3"
+            ],
+            "time": "2018-04-25T10:05:00+00:00"
         },
         {
             "name": "doctrine/annotations",
@@ -708,7 +752,7 @@
             "version": "8.2.3",
             "source": {
                 "type": "git",
-                "url": "https://git.typo3.org/TYPO3CMS/Extensions/gridelements.git",
+                "url": "https://gitlab.com/coderscare/gridelements.git",
                 "reference": "fc617c5e2359613afec7a881ca93fcff53a1c545"
             },
             "require": {

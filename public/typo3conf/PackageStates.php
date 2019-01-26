@@ -125,6 +125,9 @@ return [
         'ls_template' => [
             'packagePath' => 'typo3conf/ext/ls_template/',
         ],
+        'owl_slider' => [
+            'packagePath' => 'typo3conf/ext/owl_slider/',
+        ],
         'vhs' => [
             'packagePath' => 'typo3conf/ext/vhs/',
         ],

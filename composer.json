@@ -30,7 +30,8 @@
 		"typo3-ter/mask": "^3.1",
 		"friendsoftypo3/extension-builder": "^8.7",
 		"fluidtypo3/vhs": "^5.0",
-		"gridelementsteam/gridelements": "^8.2"
+		"gridelementsteam/gridelements": "^8.2",
+		"comsolit/owl_slider": "^2.5"
 	},
 	"scripts":{
 		"typo3-cms-scripts": [

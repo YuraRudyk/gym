@@ -1,0 +1,142 @@
+{namespace owl=Comsolit\OwlSlider\ViewHelpers}
+
+<div id="{f:if(condition:'{settings.slider_id}',then:'sync1_{settings.slider_id}',else:'sync1')}" class="owl-carousel">
+  <f:for each="{items}" as="item">
+    <div class="item">
+      <f:if condition="{item.itemimage}">
+        <f:if condition="{item.itemlink}">
+          <f:then>
+            <f:format.raw>
+              <owl:typolink parameter="{item.itemlink}">
+                <f:image class="lazyOwl" src="uploads/tx_owlslider/{item.itemimage}" height="{settings.slideHeight}" alt="{item.itemname}"/>
+              </owl:typolink>
+            </f:format.raw>
+          </f:then>
+          <f:else>
+            <f:image class="lazyOwl" src="uploads/tx_owlslider/{item.itemimage}" height="{settings.slideHeight}" alt="{item.itemname}"/>
+          </f:else>
+        </f:if>
+      </f:if>
+    </div>
+  </f:for>
+</div>
+
+<div id="{f:if(condition:'{settings.slider_id}',then:'sync2_{settings.slider_id}',else:'sync2')}" class="owl-carousel">
+  <f:for each="{items}" as="item">
+    <f:if condition="{item.itemcontent}">
+      <div class="item">
+        <f:format.html>{item.itemcontent}</f:format.html>
+      </div>
+    </f:if>
+  </f:for>
+</div>
+
+<owl:addJsFooterInlineCode name="owlslider_{settings.slider_id}">
+
+  window.onload = function() {
+    var sliderId = '{settings.slider_id}';
+    var anchorElements =
+    document
+      .getElementById(sliderId ? 'sync2_' + sliderId : 'sync2')
+      .getElementsByTagName('a');
+
+    for (var i in anchorElements) {
+      anchorElements[i].onclick = function() {
+        if(this.target === '') {
+          window.open(this.href, '_self', false);
+        } else {
+          window.open(this.href, this.target);
+        }
+      }
+    }
+  }
+
+  jQuery(document).ready(function() {
+    var sliderId = '{settings.slider_id}';
+    var sync1 = sliderId ? jQuery('#sync1_' + sliderId) : jQuery('#sync1');
+    var sync2 = sliderId ? jQuery('#sync2_' + sliderId) : jQuery('#sync2');
+
+    sync1.owlCarousel({
+      items:                  1,
+      itemsDesktop:           false,
+      itemsDesktopSmall:      false,
+      itemsTablet:            false,
+      itemsTabletSmall:       false,
+      itemsMobile:            false,
+      itemsCustom:            false,
+      singleItem:             true,
+      <f:render partial="owlCarouselObjectPart" arguments="{settings}"/>
+      transitionStyle:        <f:format.raw value="{settings.transitionStyle}" />,
+      afterAction:            syncPosition,
+      responsiveRefreshRate:  <f:format.raw value="{settings.responsiveRefreshRate}" />,
+    });
+
+    sync2.owlCarousel({
+      items:                  <f:format.raw value="{items -> f:count()}" />,
+      itemsDesktop:           <f:format.raw value="{settings.itemsDesktop}" />,
+      itemsDesktopSmall:      <f:format.raw value="{settings.itemsDesktopSmall}" />,
+      itemsTablet:            <f:format.raw value="{settings.itemsTablet}" />,
+      itemsTabletSmall:       <f:format.raw value="{settings.itemsTabletSmall}" />,
+      itemsMobile:            <f:format.raw value="{settings.itemsMobile}" />,
+      itemsCustom:            <f:format.raw value="{settings.itemsCustom}" />,
+      singleItem:             <f:format.raw value="{settings.singleItem}" />,
+      <f:render partial="owlCarouselObjectPart" arguments="{settings}"/>
+      beforeInit:             <f:format.raw value="{settings.random}" /> ? random(sync2) : '',
+      transitionStyle:        false,
+      afterInit:              function(el) { el.find('.owl-item').eq(0).addClass('synced'); }
+    });
+
+    //Sort random function
+    function random(owlSelector){
+      owlSelector.children().sort(function(){
+        return Math.round(Math.random()) - 0.5;
+      }).each(function(){
+        $(this).appendTo(owlSelector);
+      });
+    }
+
+    function syncPosition(el) {
+      var current = this.currentItem;
+      sync2
+        .find('.owl-item')
+        .removeClass('synced')
+        .eq(current)
+        .addClass('synced');
+
+      if(sync2.data('owlCarousel') !== undefined) {
+        center(current)
+      }
+    }
+
+    sync2.on('click', '.owl-item', function(e) {
+      e.preventDefault();
+      var number = jQuery(this).data('owlItem');
+      sync1.trigger('owl.goTo',number);
+    });
+
+    function center(number) {
+      var sync2visible = sync2.data('owlCarousel').owl.userItems;
+      var num = number;
+      var found = false;
+      for(var i in sync2visible) {
+        if(num === sync2visible[i]) {
+          var found = true;
+        }
+      }
+      if(found === false) {
+        if(num > sync2visible[sync2visible.length - 1]) {
+          sync2.trigger('owl.goTo', num - sync2visible.length + 2)
+        } else {
+          if(num - 1 === -1) {
+            num = 0;
+          }
+          sync2.trigger('owl.goTo', num);
+        }
+      } else if(num === sync2visible[sync2visible.length - 1]) {
+        sync2.trigger('owl.goTo', sync2visible[1])
+      } else if(num === sync2visible[0]) {
+        sync2.trigger('owl.goTo', num - 1)
+      }
+    }
+  });
+</owl:addJsFooterInlineCode>

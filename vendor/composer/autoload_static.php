@@ -109,6 +109,10 @@ class ComposerStaticInitfc63e3e7a3c032324ed0778fa3b0d0d4
             'Doctrine\\Common\\Annotations\\' => 28,
             'Doctrine\\Common\\' => 16,
         ),
+        'C' => 
+        array (
+            'Comsolit\\OwlSlider\\' => 19,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -364,6 +368,10 @@ class ComposerStaticInitfc63e3e7a3c032324ed0778fa3b0d0d4
         'Doctrine\\Common\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/common/lib/Doctrine/Common',
+        ),
+        'Comsolit\\OwlSlider\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/public/typo3conf/ext/owl_slider/Classes',
         ),
     );
 
