@@ -1,0 +1,15 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:layout name="Mail"/>
+
+<f:section name="main">
+    <f:render partial="Mail/OrderInformation" arguments="{_all}"/>
+
+    <f:render partial="Mail/OrderSummary" arguments="{_all}"/>
+
+    <f:render partial="Mail/Cart" arguments="{cart: cart}"/>
+
+    <f:render partial="Mail/Footer" arguments="{_all}"/>
+</f:section>
+</html>

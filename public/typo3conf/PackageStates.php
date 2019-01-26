@@ -116,6 +116,9 @@ return [
         'mask' => [
             'packagePath' => 'typo3conf/ext/mask/',
         ],
+        'cart' => [
+            'packagePath' => 'typo3conf/ext/cart/',
+        ],
         'extension_builder' => [
             'packagePath' => 'typo3conf/ext/extension_builder/',
         ],

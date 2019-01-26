@@ -4006,5 +4006,68 @@
             "slider",
             "typo3"
         ]
+    },
+    {
+        "name": "extcode/cart",
+        "version": "v5.1.4",
+        "version_normalized": "5.1.4.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/extcode/cart.git",
+            "reference": "d87a884ebb01d342a7151edeeb3a8c9dc1aa5bc4"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/extcode/cart/zipball/d87a884ebb01d342a7151edeeb3a8c9dc1aa5bc4",
+            "reference": "d87a884ebb01d342a7151edeeb3a8c9dc1aa5bc4",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=7.0.0 <7.3",
+            "typo3/cms-core": "^8.7",
+            "typo3/cms-form": "^8.7"
+        },
+        "replace": {
+            "cart": "self.version"
+        },
+        "require-dev": {
+            "friendsofphp/php-cs-fixer": "^2.0",
+            "helmich/typo3-typoscript-lint": "^1.4",
+            "nimut/testing-framework": "^2.0 || ^3.0 || ^4.0"
+        },
+        "time": "2019-01-22T11:12:28+00:00",
+        "type": "typo3-cms-extension",
+        "extra": {
+            "typo3/cms": {
+                "extension-key": "cart",
+                "cms-package-dir": "{$vendor-dir}/typo3/cms",
+                "app-dir": ".Build",
+                "web-dir": ".Build/public"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Extcode\\Cart\\": "Classes/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-2.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "Daniel Lorenz",
+                "email": "ext.cart@extco.de",
+                "role": "Developer"
+            }
+        ],
+        "description": "Shopping Cart(s) for TYPO3",
+        "homepage": "https://cart.extco.de",
+        "keywords": [
+            "TYPO3 CMS",
+            "cart",
+            "shopping cart"
+        ]
     }
 ]
