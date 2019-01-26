@@ -119,6 +119,9 @@ return [
         'extension_builder' => [
             'packagePath' => 'typo3conf/ext/extension_builder/',
         ],
+        'ls_simulators' => [
+            'packagePath' => 'typo3conf/ext/ls_simulators/',
+        ],
         'ls_template' => [
             'packagePath' => 'typo3conf/ext/ls_template/',
         ],

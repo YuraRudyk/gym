@@ -21,6 +21,7 @@ return [
     ],
     'EXT' => [
         'extConf' => [
+            'ls_simulators' => 'a:0:{}',
             'ls_template' => 'a:0:{}',
             'mask' => 'a:9:{s:4:"json";s:19:"typo3conf/mask.json";s:18:"backendlayout_pids";s:3:"0,1";s:7:"content";s:59:"typo3conf/ext/ls_template/Resources/Private/Templates/Mask/";s:7:"layouts";s:52:"typo3conf/ext/ls_template/Resources/Private/Layouts/";s:8:"partials";s:58:"typo3conf/ext/ls_template/Resources/Private/Partials/Mask/";s:7:"backend";s:28:"fileadmin/templates/backend/";s:15:"layouts_backend";s:36:"fileadmin/templates/backend/Layouts/";s:16:"partials_backend";s:37:"fileadmin/templates/backend/Partials/";s:7:"preview";s:28:"fileadmin/templates/preview/";}',
             'rsaauth' => 'a:1:{s:18:"temporaryDirectory";s:0:"";}',
