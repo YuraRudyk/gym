@@ -1,5 +1,5 @@
 # fluid_content configuration
-lib.fluidContent {
+lib.contentElement {
     templateRootPaths {
         20 = EXT:ls_template/Resources/Private/Templates/
     }
