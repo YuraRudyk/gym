@@ -63,6 +63,7 @@ return array(
     'GuzzleHttp\\Promise\\' => array($vendorDir . '/guzzlehttp/promises/src'),
     'GuzzleHttp\\' => array($vendorDir . '/guzzlehttp/guzzle/src'),
     'GridElementsTeam\\Gridelements\\' => array($baseDir . '/public/typo3conf/ext/gridelements/Classes'),
+    'GeorgRinger\\News\\' => array($baseDir . '/public/typo3conf/ext/news/Classes'),
     'FluidTYPO3\\Vhs\\' => array($baseDir . '/public/typo3conf/ext/vhs/Classes'),
     'Extcode\\Cart\\' => array($baseDir . '/public/typo3conf/ext/cart/Classes'),
     'EBT\\ExtensionBuilder\\' => array($baseDir . '/public/typo3conf/ext/extension_builder/Classes'),

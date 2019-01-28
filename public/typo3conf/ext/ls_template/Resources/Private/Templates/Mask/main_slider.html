@@ -1,0 +1,24 @@
+<div class="visual">
+  <div class="slider-01">
+    <f:for each="{data.tx_mask_slide}" as="slide">
+      <div class="bg-img filter-01">
+        <f:image image="{slide.tx_mask_image.0}" alt="{slide.tx_mask_image.0.alternative}" title="{slide.tx_mask_image.0.title}" /><br />
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <h1>{slide.tx_mask_title}</h1>
+              <f:format.html>{slide.tx_mask_description}</f:format.html>
+              <f:for each="{slide.tx_mask_buttons}" as="button">
+                <f:link.typolink parameter="{button.tx_mask_link}" class="btn btn-red">
+                  {button.tx_mask_link_title}
+                </f:link.typolink>
+              </f:for>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- /slide -->
+  </f:for>
+  </div>
+    <!-- /slider-01 -->
+</div>

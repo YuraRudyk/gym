@@ -93,6 +93,7 @@ class ComposerStaticInitfc63e3e7a3c032324ed0778fa3b0d0d4
             'GuzzleHttp\\Promise\\' => 19,
             'GuzzleHttp\\' => 11,
             'GridElementsTeam\\Gridelements\\' => 30,
+            'GeorgRinger\\News\\' => 17,
         ),
         'F' => 
         array (
@@ -346,6 +347,10 @@ class ComposerStaticInitfc63e3e7a3c032324ed0778fa3b0d0d4
         'GridElementsTeam\\Gridelements\\' => 
         array (
             0 => __DIR__ . '/../..' . '/public/typo3conf/ext/gridelements/Classes',
+        ),
+        'GeorgRinger\\News\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/public/typo3conf/ext/news/Classes',
         ),
         'FluidTYPO3\\Vhs\\' => 
         array (
