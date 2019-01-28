@@ -168,15 +168,15 @@
         },
         "extensionKey": "ls_simulators",
         "name": "Simulators",
-        "originalExtensionKey": "",
-        "originalVendorName": "",
+        "originalExtensionKey": "ls_simulators",
+        "originalVendorName": "Simulators",
         "persons": [],
         "plugins": [
             {
                 "actions": {
-                    "controllerActionCombinations": "Simulators => list, show",
-                    "noncacheableActions": "Simulators => list, show",
-                    "switchableActions": "list, show"
+                    "controllerActionCombinations": "Simulators => list, show, slider",
+                    "noncacheableActions": "Simulators => list, show, slider",
+                    "switchableActions": "List\nSimulators->list\nDetail\nSimulators->show\nSlider\nSimulators->slider\n\n"
                 },
                 "key": "simulators",
                 "name": "Simulators"
@@ -195,7 +195,7 @@
     },
     "wires": [],
     "log": {
-        "last_modified": "2019-01-26 07:01",
+        "last_modified": "2019-01-28 11:06",
         "extension_builder_version": "8.7.0",
         "be_user": " (1)"
     }

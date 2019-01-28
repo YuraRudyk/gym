@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2019-01-26T19:01:49Z" product-name="ls_simulators">
+	<file source-language="en" datatype="plaintext" original="messages" date="2019-01-28T23:06:35Z" product-name="ls_simulators">
 		<header/>
 		<body>
 			<trans-unit id="tx_lssimulators_domain_model_simulators">
@@ -30,10 +30,6 @@
 			<trans-unit id="tx_lssimulators_domain_model_subscription.description">
 				<source>Description</source>
 			</trans-unit>
-
-			<trans-unit id="tx_lssimulators_domain_model_simulators.categories">
-                <source>Categories</source>
-            </trans-unit>
 		</body>
 	</file>
 </xliff>

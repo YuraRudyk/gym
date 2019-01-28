@@ -9,11 +9,11 @@ call_user_func(
             'Simulators.LsSimulators',
             'Simulators',
             [
-                'Simulators' => 'list, show'
+                'Simulators' => 'list, show, slider'
             ],
             // non-cacheable actions
             [
-                'Simulators' => 'list, show'
+                'Simulators' => 'list, show, slider'
             ]
         );
 

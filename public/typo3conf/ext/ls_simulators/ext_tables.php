@@ -11,6 +11,10 @@ call_user_func(
             'Simulators'
         );
 
+        $pluginSignature = str_replace('_', '', 'ls_simulators') . '_simulators';
+        $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist'][$pluginSignature] = 'pi_flexform';
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue($pluginSignature, 'FILE:EXT:ls_simulators/Configuration/FlexForms/flexform_simulators.xml');
+
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
             'Simulators.LsSimulators',
             'Subscription',

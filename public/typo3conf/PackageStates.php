@@ -125,14 +125,8 @@ return [
         'ls_simulators' => [
             'packagePath' => 'typo3conf/ext/ls_simulators/',
         ],
-        'ls_sliders' => [
-            'packagePath' => 'typo3conf/ext/ls_sliders/',
-        ],
         'ls_template' => [
             'packagePath' => 'typo3conf/ext/ls_template/',
-        ],
-        'news' => [
-            'packagePath' => 'typo3conf/ext/news/',
         ],
         'owl_slider' => [
             'packagePath' => 'typo3conf/ext/owl_slider/',

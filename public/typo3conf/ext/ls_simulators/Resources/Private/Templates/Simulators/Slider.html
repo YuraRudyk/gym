@@ -1,0 +1,35 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+<f:section name="main">
+  <div class="relative-item bg-img">
+    <f:image src="EXT:ls_template/Resources/Public/markup/images/bg-sales.png" alt="alt text" />
+    <div class="container">
+      <div class="holder">
+        <h2 class="ttl">{settings.header}</h2>
+        <div class="slider-03">
+          <!-- /item -->
+          <f:for each="{simulators}" as="slide">
+            <div>
+              <div class="thumbnail">
+                <div class="main-img">
+                  <f:image image="{slide.images.0}" alt="{slide.images.0.alternative}" title="{slide.images.0.title}" />
+                </div>
+                <div class="text">
+                  <h4>{slide.title}</h4>
+                  <small class="price">{slide.price}</small>
+                </div>
+                <div class="hover-box">
+                  <f:link.page pageUid="{slide.detailPid}" class="btn btn-red">{settings.linkTitle}</f:link.page>
+                </div>
+              </div>
+            </div>
+          </f:for>
+          <!-- /item -->
+        </div>
+        <!-- /slider-03 -->
+      </div>
+    </div>
+  </div>
+</f:section>
+</html>

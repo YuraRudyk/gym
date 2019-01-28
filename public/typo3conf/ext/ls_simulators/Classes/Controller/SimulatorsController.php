@@ -48,4 +48,18 @@ class SimulatorsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContr
         $this->view->assign('simulators', $simulators);
         var_dump('test');
     }
+
+    /**
+     * action slider
+     *
+     * @return void
+     */
+    public function sliderAction()
+    {
+        $simulators = $this->simulatorsRepository->findAll();
+//        \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($this->settings);exit;
+        $this->view->assignMultiple([
+            'simulators' => $simulators
+        ]);
+    }
 }
