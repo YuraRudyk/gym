@@ -33,6 +33,7 @@ class SimulatorsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContr
     public function listAction()
     {
         $simulators = $this->simulatorsRepository->findAll();
+//        \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($simulators);exit;
         $this->view->assign('simulators', $simulators);
     }
 

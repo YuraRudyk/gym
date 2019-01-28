@@ -49,6 +49,7 @@ return array(
     'Symfony\\Component\\Process\\' => array($vendorDir . '/symfony/process'),
     'Symfony\\Component\\Finder\\' => array($vendorDir . '/symfony/finder'),
     'Symfony\\Component\\Console\\' => array($vendorDir . '/symfony/console'),
+    'Simulators\\LsSimulators\\' => array($baseDir . '/public/typo3conf/ext/ls_simulators/Classes'),
     'Psr\\Log\\' => array($vendorDir . '/psr/log/Psr/Log'),
     'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-message/src'),
     'PhpParser\\' => array($baseDir . '/public/typo3conf/ext/extension_builder/Resources/Private/PHP/PHP-Parser/lib/PhpParser'),

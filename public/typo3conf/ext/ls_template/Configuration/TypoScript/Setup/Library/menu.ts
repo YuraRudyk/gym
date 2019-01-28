@@ -1,13 +1,12 @@
 lib.menu = COA
 lib.menu {
-    wrap = <div class="menu_left menu_ul">|</div>
     10 = HMENU
     10 {
         entryLevel = 0
         excludeUidList = 30
         1 = TMENU
         1 {
-            wrap = <div class="menu_1"><ul>|</ul></div>
+            wrap = <ul>|</ul>
             target = _top
             NO {
                 wrapItemAndSub = <li>|</li>
@@ -19,7 +18,7 @@ lib.menu {
             CUR < .NO
             CUR = 1
             CUR {
-                allWrap = <div class="menu_act">|</div>
+                wrapItemAndSub = <li class="active">|</li>
             }
         }
 #        2 = TMENU

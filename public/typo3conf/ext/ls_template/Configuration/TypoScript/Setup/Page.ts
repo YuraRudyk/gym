@@ -23,20 +23,23 @@ page {
     headerData {
         10 = TEXT
         10.value (
-            <script>
-                window._tiConfig = window._tiConfig || {
-                    tiDomain: 'responder.wt-safetag.com',
-                    tiId: '427096606843090',
-                    // customDomain: 'sub.domain.tld',
-                    // customPath: 'js/container_script.js',
-                    option: {}
-                };
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,700" rel="stylesheet">
 
-                /** start TagIntegration loader  */
-                (function(d,c,a,f){d.wts=d.wts||[];var g=function(b){var a="";b.customDomain&&b.customPath?a=b.customDomain+"/"+b.customPath:b.tiDomain&&b.tiId&&(a=b.tiDomain+"/resp/api/get/"+b.tiId+"?url="+encodeURIComponent(d.location.href)+"&v=5");if(b.option)for(var c in b.option)a+="&"+c+"="+encodeURIComponent(b.option[c]);return a};if(-1===c.cookie.indexOf("wt_r=1")){var e=c.getElementsByTagName(a)[0];a=c.createElement(a);a.async=!0;a.onload=function(){if("undefined"!==typeof d.wt_r&&!isNaN(d.wt_r)){var b=
-                new Date,a=b.getTime()+1E3*parseInt(d.wt_r);b.setTime(a);c.cookie="wt_r=1;path=/;expires="+b.toUTCString()}};a.src="//"+g(f);e.parentNode.insertBefore(a,e)}})(window,document,"script",_tiConfig);
-                /** end TagIntegration loader */
-            </script>
+            <link rel="stylesheet" href="css/styles.css">
+            <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script><![endif]-->
+
+
+            <script src="js/jquery-3.3.1.min.js"></script>
+            <script src="js/bootstrap.bundle.min.js"></script>
+            <script src="js/bootstrap.min.js"></script>
+            <script src="js/slick.min.js"></script>
+            <script src="js/uikit.min.js"></script>
+            <script src="js/jquery.matchHeight-min.js"></script>
+            <script src="js/jquery-ui.min.js"></script>
+            <script src="js/scripts.js"></script>
         )
     }
 
@@ -66,19 +69,26 @@ page {
         }
     }
 
-#    includeCSS {
-#        bootstrap = EXT:ex_template/Resources/Public/Styles/bootstrap.css
+    includeCSS {
+        bootstrap = EXT:ls_template/Resources/Public/markup/css/bootstrap/bootstrap.css
 #        font = https://fonts.googleapis.com/icon?family=Material+Icons
-#        style = EXT:ex_template/Resources/Public/Styles/style.css
-#    }
+#        style = EXT:ex_template/Resources/Public/markup/css/styles.css
+        style = EXT:ls_template/Resources/Public/markup/css/styles.css
+    }
 #
-#    includeJSFooter {
+    includeJSFooter {
 #        ajax = https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js
 #        bootstrap = EXT:ex_template/Resources/Public/JavaScript/bootstrap.js
-#        myjs = EXT:ex_template/Resources/Public/JavaScript/script.js
-#        button = EXT:ex_template/Resources/Public/JavaScript/button.js
-#        select_build = EXT:ex_template/Resources/Public/JavaScript/select_build.js
-#
-#    }
+#        myjs = EXT:ls_template/Resources/Public/markup/js/scripts.js
+
+        js1 = EXT:ls_template/Resources/Public/markup/js/jquery-3.3.1.min.js
+        js2 = EXT:ls_template/Resources/Public/markup/js/bootstrap.bundle.min.js
+        js3 = EXT:ls_template/Resources/Public/markup/js/bootstrap.min.js
+        js4 = EXT:ls_template/Resources/Public/markup/js/slick.min.js
+        js5 = EXT:ls_template/Resources/Public/markup/js/uikit.min.js
+        js6 = EXT:ls_template/Resources/Public/markup/js/jquery.matchHeight-min.js
+        js7 = EXT:ls_template/Resources/Public/markup/js/jquery-ui.min.js
+        js8 = EXT:ls_template/Resources/Public/markup/js/scripts.js
+    }
 
 }

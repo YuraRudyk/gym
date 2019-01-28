@@ -12,6 +12,8 @@ lib.language {
             NO {
                 linkWrap = <li>|</li>
                 stdWrap.override = UA ||| EN ||| RU
+#                stdWrap.wrap = <ul>|</ul>
+                stdWrap.wrapItemAndSub = <div>|</div>
                 
             }
 

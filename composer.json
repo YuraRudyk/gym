@@ -34,6 +34,11 @@
 		"comsolit/owl_slider": "^2.5",
 		"extcode/cart": "5.1.4"
 	},
+	"autoload": {
+		"psr-4": {
+			"Simulators\\LsSimulators\\": "public/typo3conf/ext/ls_simulators/Classes/"
+		}
+	},
 	"scripts":{
 		"typo3-cms-scripts": [
 			"typo3cms install:fixfolderstructure",

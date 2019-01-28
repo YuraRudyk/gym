@@ -5,16 +5,36 @@
 <f:layout name="Page" />
 
 <f:section name="Main">
-    <main>
-        <div class="out_block">
-            <f:cObject typoscriptObjectPath="lib.menu" />
+    <div id="wrapper">
+        <div id="main">
+            <header id="header">
+                <div class="container">
+                    <f:cObject typoscriptObjectPath="lib.logo" />
+                    <nav id="main-nav">
+                        <f:cObject typoscriptObjectPath="lib.menu" />
+                    </nav>
+                    <div class="right">
+                        <f:cObject typoscriptObjectPath="lib.cart" />
+                        <div class="language-list">
+                            <a class="drop-link" href="#">УКР</a>
+                            <ul data-uk-dropdown="mode: click">
+                                <li><a href="#">РУС</a></li>
+                                <li><a href="#">ENG</a></li>
+                            </ul>
+                        </div>
+                        <a href="#" class="open-menu"><span></span><span></span><span></span>Open Menu</a>
+                    </div>
+                </div>
+            </header>
+
             <f:cObject typoscriptObjectPath="lib.language" />
 
             <v:content.render pageUid="{data.uid}" column="0"/>
 
             <v:content.render pageUid="2" column="0"/>
         </div>
-    </main>
+    </div>
+
 </f:section>
 
 </html>

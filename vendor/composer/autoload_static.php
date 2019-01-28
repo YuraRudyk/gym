@@ -67,6 +67,7 @@ class ComposerStaticInitfc63e3e7a3c032324ed0778fa3b0d0d4
             'Symfony\\Component\\Process\\' => 26,
             'Symfony\\Component\\Finder\\' => 25,
             'Symfony\\Component\\Console\\' => 26,
+            'Simulators\\LsSimulators\\' => 24,
         ),
         'P' => 
         array (
@@ -288,6 +289,10 @@ class ComposerStaticInitfc63e3e7a3c032324ed0778fa3b0d0d4
         'Symfony\\Component\\Console\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
+        ),
+        'Simulators\\LsSimulators\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/public/typo3conf/ext/ls_simulators/Classes',
         ),
         'Psr\\Log\\' => 
         array (

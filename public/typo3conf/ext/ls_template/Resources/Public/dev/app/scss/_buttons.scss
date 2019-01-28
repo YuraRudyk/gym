@@ -1,0 +1,56 @@
+.btn{
+	border-radius: 0;
+	font-size: 15px;
+	line-height: 1.066666666666667;
+	padding: 10px;
+	text-align: center;
+	&-red{
+		background-color: $red;
+		border-color: $red;
+		color: $white;
+		min-width: 180px;
+		&:hover{
+			background-color: $white;
+			border-color: $white;
+			color: $red;
+		}
+	}
+	&-white{
+		background-color: transparent;
+		border-color: $white;
+		color: $white;
+		min-width: 180px;
+		&:hover{
+			background-color: $red;
+			border-color: $red;
+			color: $white;
+		}
+	}
+	&-black{
+		background-color: transparent;
+		border-color: $black-2;
+		color: $black-2;
+		min-width: 180px;
+		&:hover{
+			background-color: $red;
+			border-color: $red;
+			color: $white;
+		}
+	}
+	&-black2{
+		background-color: $black-2;
+		border-color: $black-2;
+		color: $white;
+		padding: 20px;
+		&:hover{
+			background-color: $red;
+			border-color: $red;
+			color: $white;
+		}
+	}
+	&:hover,
+	&:focus{
+		outline: none;
+		box-shadow: none;
+	}
+}
