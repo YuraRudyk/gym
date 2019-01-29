@@ -47,6 +47,11 @@ class Simulators extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $images = null;
 
     /**
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\Category>
+     */
+    protected $categories;
+
+    /**
      * __construct
      */
     public function __construct()
@@ -172,5 +177,26 @@ class Simulators extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setImages(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $images)
     {
         $this->images = $images;
+    }
+
+    /**
+     * List of allowed categories
+     *
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\Category> $categories
+     * @return void
+     */
+    public function setCategories($categories)
+    {
+        $this->categories = $categories;
+    }
+
+    /**
+     * Get allowed categories
+     *
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\Category>
+     */
+    public function getCategories()
+    {
+        return $this->categories;
     }
 }

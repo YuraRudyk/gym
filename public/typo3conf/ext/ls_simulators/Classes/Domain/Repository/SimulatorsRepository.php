@@ -29,4 +29,25 @@ class SimulatorsRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
         $querySettings->setRespectStoragePage(false);
         $this->setDefaultQuerySettings($querySettings);
     }
+
+    /**
+     * Find simulators by category
+     *
+     * @param int $uid import id
+     * @return \Simulators\LsSimulators\Domain\Model\Simulators
+     */
+    public function findByCategories($uid)
+    {
+        $query = $this->createQuery();
+        $query->getQuerySettings()->setRespectStoragePage(false);
+        $query->getQuerySettings()->setRespectSysLanguage(false);
+        $query->getQuerySettings()->setIgnoreEnableFields(true);
+
+        $result = $query->matching(
+            $query->logicalAnd(
+                $query->contains('categories', $uid)
+            ))->execute();
+
+        return $result;
+    }
 }
