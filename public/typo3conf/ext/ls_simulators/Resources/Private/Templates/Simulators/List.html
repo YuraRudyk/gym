@@ -14,8 +14,8 @@ Otherwise your changes will be overwritten the next time you save the extension 
 
 <f:section name="main">
 	<div class="shop bg-img">
-		<img src="images/bg-shop.png" alt="image description">
-		<h2 class="ttl">Магазин</h2>
+		<f:image src="EXT:ls_template/Resources/Public/markup/images/bg-shop.png" alt="alt text" />
+		<h2 class="ttl">{settings.header}</h2>
 		<div class="container">
 			<div class="sidebar">
 				<div class="filter-holder">
@@ -89,128 +89,23 @@ Otherwise your changes will be overwritten the next time you save the extension 
 			</div>
 			<div class="content">
 				<div class="row">
-					<div class="col-12 col-md-4">
-						<div class="thumbnail small-width">
-							<div class="main-img">
-								<img src="images/img-bike.png" alt="image description">
-							</div>
-							<div class="text">
-								<h4>Xtremepowerus exercese bike</h4>
-								<small class="price">4500 грн</small>
-							</div>
-							<div class="hover-box">
-								<a href="#" class="btn btn-red">Детальніше</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-12 col-md-4">
-						<div class="thumbnail small-width">
-							<div class="main-img">
-								<img src="images/img-shop-03.png" alt="image description">
-							</div>
-							<div class="text">
-								<h4>Xtremepowerus exercese bike</h4>
-								<small class="price">4500 грн</small>
-							</div>
-							<div class="hover-box">
-								<a href="#" class="btn btn-red">Детальніше</a>
+					<f:for each="{simulators}" as="item">
+						<div class="col-12 col-md-4">
+							<div class="thumbnail small-width">
+								<div class="main-img">
+									<f:image image="{item.images.0}" alt="{item.images.0.alternative}" title="{item.images.0.title}" />
+								</div>
+								<div class="text">
+									<h4>{item.title}</h4>
+									<small class="price">{item.price}</small>
+								</div>
+								<div class="hover-box">
+									<f:link.page pageUid="{settings.detailPid}" class="btn btn-red">{settings.linkTitle}</f:link.page>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="col-12 col-md-4">
-						<div class="thumbnail small-width">
-							<div class="main-img">
-								<img src="images/img-bike2.png" alt="image description">
-							</div>
-							<div class="text">
-								<h4>Xtremepowerus exercese bike</h4>
-								<small class="price">4500 грн</small>
-							</div>
-							<div class="hover-box">
-								<a href="#" class="btn btn-red">Детальніше</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-12 col-md-8">
-						<div class="thumbnail small-width">
-							<span class="discount"><img src="images/ico-percentage_discount.svg" alt="image description"></span>
-							<div class="main-img">
-								<img src="images//img-shop-02.png" alt="image description">
-							</div>
-							<div class="text">
-								<h4>Xtremepowerus exercese bike</h4>
-								<small class="price">4500 грн</small>
-							</div>
-							<div class="hover-box">
-								<a href="#" class="btn btn-red">Детальніше</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-12 col-md-4">
-						<div class="thumbnail small-width">
-							<div class="main-img">
-								<img src="images/img-shop-01.png" alt="image description">
-							</div>
-							<div class="text">
-								<h4>Xtremepowerus exercese bike</h4>
-								<small class="price">4500 грн</small>
-							</div>
-							<div class="hover-box">
-								<a href="#" class="btn btn-red">Детальніше</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-12 col-md-4">
-						<div class="thumbnail small-width">
-							<div class="main-img">
-								<img src="images/img-shop-04.png" alt="image description">
-							</div>
-							<div class="text">
-								<h4>Xtremepowerus exercese bike</h4>
-								<small class="price">4500 грн</small>
-							</div>
-							<div class="hover-box">
-								<a href="#" class="btn btn-red">Детальніше</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-12 col-md-4">
-						<div class="thumbnail small-width">
-							<div class="main-img">
-								<img src="images/img-shop-05.png" alt="image description">
-							</div>
-							<div class="text">
-								<h4>Xtremepowerus exercese bike</h4>
-								<small class="price">4500 грн</small>
-							</div>
-							<div class="hover-box">
-								<a href="#" class="btn btn-red">Детальніше</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-12 col-md-4">
-						<div class="thumbnail small-width">
-							<div class="main-img">
-								<img src="images/img-shop-05.png" alt="image description">
-							</div>
-							<div class="text">
-								<h4>Xtremepowerus exercese bike</h4>
-								<small class="price">4500 грн</small>
-							</div>
-							<div class="hover-box">
-								<a href="#" class="btn btn-red">Детальніше</a>
-							</div>
-						</div>
-					</div>
+					</f:for>
 				</div>
-				<ul class="list-pagination">
-					<li><a href="#">1</a></li>
-					<li><a href="#">2</a></li>
-					<li><a href="#">3</a></li>
-					<li><a href="#">4</a></li>
-					<li></li>
-					<li><a href="#">10</a></li>
-				</ul>
 			</div>
 		</div>
 	</div>
