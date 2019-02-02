@@ -33,6 +33,7 @@ class SubscriptionController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
     public function listAction()
     {
         $subscriptions = $this->subscriptionRepository->findAll();
+//        \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($subscriptions);exit;
         $this->view->assign('subscriptions', $subscriptions);
     }
 
