@@ -20,43 +20,19 @@ Otherwise your changes will be overwritten the next time you save the extension 
 			<div class="sidebar">
 				<div class="filter-holder">
 					<form action="#">
-						<div class="check-holder">
-							<h4 class="ttl-check">Категорія товару:</h4>
-							<div class="check-item">
-								<input type="checkbox" id="check-01" class="checkbox">
-								<label for="check-01">Кардіотренажери</label>
+						<f:if condition="{simulatorsCategories -> f:count()} > 0">
+							<div class="check-holder">
+								<h4 class="ttl-check"><f:translate key="tx_lssimulators_domain_model_subscription.simulators_category" /></h4>
+								<f:for each="{simulatorsCategories}" as="category">
+									<div class="check-item">
+										<input type="checkbox" id="cat-{category.uid}" class="checkbox">
+										<label for="cat-{category.uid}">{category.title}</label>
+									</div>
+								</f:for>
 							</div>
-							<div class="check-item">
-								<input type="checkbox" id="check-02" class="checkbox">
-								<label for="check-02">Фітнес</label>
-							</div>
-							<div class="check-item">
-								<input type="checkbox" id="check-03" class="checkbox">
-								<label for="check-03">Степпери</label>
-							</div>
-							<div class="check-item">
-								<input type="checkbox" id="check-04" class="checkbox">
-								<label for="check-04">Гантелі, Грифи, Диски</label>
-							</div>
-							<div class="check-item">
-								<input type="checkbox" id="check-05" class="checkbox">
-								<label for="check-05">Спортивне харчування</label>
-							</div>
-							<div class="check-item">
-								<input type="checkbox" id="check-06" class="checkbox">
-								<label for="check-06">Силове обладнання</label>
-							</div>
-							<div class="check-item">
-								<input type="checkbox" id="check-07" class="checkbox">
-								<label for="check-07">Вібромасажери</label>
-							</div>
-							<div class="check-item">
-								<input type="checkbox" id="check-08" class="checkbox">
-								<label for="check-08">Акції</label>
-							</div>
-						</div>
+						</f:if>
 						<div class="check-holder responsive-width">
-							<h4 class="ttl-check">Ціна</h4>
+							<h4 class="ttl-check"><f:translate key="tx_lssimulators_domain_model_subscription.price" /></h4>
 							<div id="box-range">
 								<div id="slider-range"></div>
 								<div class="amount-holder">
@@ -65,25 +41,17 @@ Otherwise your changes will be overwritten the next time you save the extension 
 								</div>
 							</div>
 						</div>
-						<div class="check-holder">
-							<h4 class="ttl-check">Тип тренування</h4>
-							<div class="check-item">
-								<input type="checkbox" id="check-09" class="checkbox">
-								<label for="check-09">Схуднення</label>
+						<f:if condition="{typesOfTraining -> f:count()} > 0">
+							<div class="check-holder">
+								<h4 class="ttl-check"><f:translate key="tx_lssimulators_domain_model_subscription.type_of_training" /></h4>
+								<f:for each="{typesOfTraining}" as="type">
+									<div class="check-item">
+										<input type="checkbox" id="type-{type.uid}" class="checkbox">
+										<label for="type-{type.uid}">{type.title}</label>
+									</div>
+								</f:for>
 							</div>
-							<div class="check-item">
-								<input type="checkbox" id="check-10" class="checkbox">
-								<label for="check-10">Набирання маси</label>
-							</div>
-							<div class="check-item">
-								<input type="checkbox" id="check-11" class="checkbox">
-								<label for="check-11">Фітнес</label>
-							</div>
-							<div class="check-item">
-								<input type="checkbox" id="check-12" class="checkbox">
-								<label for="check-12">Аеробіка</label>
-							</div>
-						</div>
+						</f:if>
 					</form>
 				</div>
 			</div>

@@ -28,3 +28,6 @@ plugin.tx_lssimulators_subscription {
         storagePid =
     }
 }
+
+# Include TypoScript constants of simulators extension
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:ls_simulators/Configuration/TypoScript/Constants/" extensions="ts">

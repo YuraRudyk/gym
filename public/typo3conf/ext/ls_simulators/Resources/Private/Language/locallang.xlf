@@ -25,7 +25,7 @@
 				<source>Title</source>
 			</trans-unit>
 			<trans-unit id="tx_lssimulators_domain_model_subscription.price">
-				<source>Price</source>
+				<source>Ціна</source>
 			</trans-unit>
 			<trans-unit id="tx_lssimulators_domain_model_subscription.currency">
                 <source>грн</source>
@@ -38,6 +38,12 @@
             </trans-unit>
             <trans-unit id="tx_lssimulators_domain_model_subscription.buy">
                 <source>Купити</source>
+            </trans-unit>
+            <trans-unit id="tx_lssimulators_domain_model_subscription.simulators_category">
+                <source>Категорія товару:</source>
+            </trans-unit>
+            <trans-unit id="tx_lssimulators_domain_model_subscription.type_of_training">
+                <source>Тип тренування</source>
             </trans-unit>
 			<trans-unit id="tx_lssimulators_domain_model_subscription.description">
 				<source>Description</source>

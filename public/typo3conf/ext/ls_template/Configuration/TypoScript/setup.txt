@@ -8,5 +8,8 @@
 ## Include TypoScript setup of review extension
 #<INCLUDE_TYPOSCRIPT: source="DIR:EXT:review/Configuration/TypoScript/setup.ts">
 
+# Include TypoScript setup of ls_simulators extension
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:ls_simulators/Configuration/TypoScript/Setup/" extensions="ts">
+
 # Include TypoScript setup of ex_template extension
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:ls_template/Configuration/TypoScript/Setup/" extensions="ts">

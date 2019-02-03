@@ -1,6 +1,8 @@
 <?php
 namespace Simulators\LsSimulators\Controller;
 
+use TYPO3\CMS\Extbase\Domain\Repository\CategoryRepository;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 /***
  *
  * This file is part of the "Simulators" Extension for TYPO3 CMS.
@@ -26,6 +28,18 @@ class SimulatorsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContr
     protected $simulatorsRepository = null;
 
     /**
+     * @var \TYPO3\CMS\Extbase\Domain\Repository\CategoryRepository
+     */
+    protected $categoryRepository;
+
+    /**
+     * @param \TYPO3\CMS\Extbase\Domain\Repository\CategoryRepository
+     */
+    public function injectSomeRepository(\TYPO3\CMS\Extbase\Domain\Repository\CategoryRepository $categoryRepository) {
+        $this->categoryRepository = $categoryRepository;
+    }
+
+    /**
      * action list
      *
      * @return void
@@ -33,8 +47,13 @@ class SimulatorsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContr
     public function listAction()
     {
         $simulators = $this->simulatorsRepository->findAll();
-//        \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($simulators);exit;
-        $this->view->assign('simulators', $simulators);
+        $simulatorsCategories = $this->categoryRepository->findByParent($this->settings['categories']['simulators']);
+        $typesOfTraining = $this->categoryRepository->findByParent($this->settings['categories']['typeOfTraining']);
+        $this->view->assignMultiple([
+            'simulators' => $simulators,
+            'simulatorsCategories' => $simulatorsCategories,
+            'typesOfTraining' => $typesOfTraining,
+        ]);
     }
 
     /**
