@@ -31,6 +31,22 @@
                     "7": "rte"
                 }
             },
+            "image_slider": {
+                "label": "Image Slider",
+                "key": "image_slider",
+                "shortLabel": "",
+                "description": "",
+                "icon": "",
+                "color": "#000000",
+                "columns": [
+                    "tx_mask_images",
+                    "tx_mask_backgroun"
+                ],
+                "labels": [
+                    "Images",
+                    "Background Image"
+                ]
+            },
             "main_slider": {
                 "label": "Main Slider",
                 "key": "main_slider",
@@ -88,6 +104,16 @@
             "tx_mask_slide": {
                 "tt_content": {
                     "tx_mask_slide": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_images": {
+                "tt_content": {
+                    "tx_mask_images": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_backgroun": {
+                "tt_content": {
+                    "tx_mask_backgroun": "int(11) unsigned DEFAULT '0' NOT NULL"
                 }
             }
         },
@@ -262,6 +288,66 @@
                 "inlineIcon": "",
                 "l10n_mode": "copy",
                 "key": "slide"
+            },
+            "tx_mask_images": {
+                "exclude": "1",
+                "options": "file",
+                "config": {
+                    "appearance": {
+                        "collapseAll": "1",
+                        "expandSingle": "1",
+                        "useSortable": "1",
+                        "fileUploadAllowed": "1",
+                        "showSynchronizationLink": "1",
+                        "showPossibleLocalizationRecords": "1",
+                        "showAllLocalizationLink": "1",
+                        "showRemovedLocalizationRecords": "1"
+                    },
+                    "behaviour": {
+                        "localizeChildrenAtParentLocalization": "1"
+                    },
+                    "minitems": "1",
+                    "maxitems": "100",
+                    "filter": [
+                        {
+                            "parameters": {
+                                "allowedFileExtensions": ""
+                            }
+                        }
+                    ]
+                },
+                "l10n_mode": "copy",
+                "key": "images"
+            },
+            "tx_mask_backgroun": {
+                "exclude": "1",
+                "options": "file",
+                "config": {
+                    "appearance": {
+                        "collapseAll": "1",
+                        "expandSingle": "1",
+                        "useSortable": "1",
+                        "fileUploadAllowed": "1",
+                        "showSynchronizationLink": "1",
+                        "showPossibleLocalizationRecords": "1",
+                        "showAllLocalizationLink": "1",
+                        "showRemovedLocalizationRecords": "1"
+                    },
+                    "behaviour": {
+                        "localizeChildrenAtParentLocalization": "1"
+                    },
+                    "minitems": "0",
+                    "maxitems": "1",
+                    "filter": [
+                        {
+                            "parameters": {
+                                "allowedFileExtensions": ""
+                            }
+                        }
+                    ]
+                },
+                "l10n_mode": "copy",
+                "key": "backgroun"
             }
         }
     },
@@ -285,6 +371,16 @@
             "tx_mask_image": {
                 "sys_file_reference": {
                     "tx_mask_image": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_images": {
+                "sys_file_reference": {
+                    "tx_mask_images": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_backgroun": {
+                "sys_file_reference": {
+                    "tx_mask_backgroun": "int(11) unsigned DEFAULT '0' NOT NULL"
                 }
             }
         }

@@ -29,7 +29,7 @@ lib.language {
             ACT < .NO
             ACT = 1
             ACT.doNotLinkIt = 1
-            ACT.linkWrap = <li class="active-test">|</li>
+            ACT.linkWrap = <li style="display:none;">|</li>
             USERDEF1 < .NO
             USERDEF1 {
                 linkWrap = <li class="text-muted">|</li>

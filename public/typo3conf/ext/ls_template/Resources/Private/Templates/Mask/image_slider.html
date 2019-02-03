@@ -1,0 +1,17 @@
+<f:if condition="{data.tx_mask_images}">
+  <div class="slider-holder bg-img">
+    <f:image image="{data.tx_mask_backgroun.0}" alt="{data.0.alternative}" title="{data.0.title}" />
+    <div class="container">
+      <div class="slider-02">
+        <f:for each="{data.tx_mask_images}" as="file">
+          <div>
+            <div class="bg-img">
+              <f:image image="{file}" alt="{file.alternative}" title="{file.title}" />
+            </div>
+          </div>
+        </f:for>
+      </div>
+    </div>
+  </div>
+  <!-- /slider-holder -->
+</f:if>
