@@ -72,8 +72,6 @@ class SimulatorsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContr
                 }
             }
         }
-
-
         $this->view->assignMultiple([
             'simulators' => $simulators,
             'similar' => $similar

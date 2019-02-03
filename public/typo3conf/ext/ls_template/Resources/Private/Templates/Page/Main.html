@@ -16,18 +16,27 @@
                     <div class="right">
                         <f:cObject typoscriptObjectPath="lib.cart" />
                         <div class="language-list">
-                            <a class="drop-link" href="#">УКР</a>
-                            <ul data-uk-dropdown="mode: click">
-                                <li><a href="#">РУС</a></li>
-                                <li><a href="#">ENG</a></li>
-                            </ul>
+                            <f:if condition="{data.sys_language_uid}">
+                                <f:then>
+                                    <f:if condition="{data.sys_language_uid} == 1">
+                                        <f:then>
+                                            <a class="drop-link" href="#">ENG</a>
+                                        </f:then>
+                                        <f:else>
+                                            <a class="drop-link" href="#">РУС</a>
+                                        </f:else>
+                                    </f:if>
+                                </f:then>
+                                <f:else>
+                                    <a class="drop-link" href="#">УКР</a>
+                                </f:else>
+                            </f:if>
+                            <f:cObject typoscriptObjectPath="lib.language" />
                         </div>
                         <a href="#" class="open-menu"><span></span><span></span><span></span>Open Menu</a>
                     </div>
                 </div>
             </header>
-
-            <f:cObject typoscriptObjectPath="lib.language" />
 
             <v:content.render pageUid="{data.uid}" column="0"/>
 

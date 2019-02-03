@@ -13,7 +13,7 @@ lib.language {
             NO {
                 doNotLinkIt = 1
                 linkWrap = <li>|</li>
-                stdWrap.override = Украінська || English || Руский
+                stdWrap.override = УКР || ENG || РУС
                 stdWrap {
                     typolink {
                         parameter.data = page:uid
@@ -35,8 +35,6 @@ lib.language {
                 linkWrap = <li class="text-muted">|</li>
                 stdWrap.typolink >
             }
-            CUR < .ACT
-            CUR = 1
 
             USERDEF2 < .ACT
             USERDEF2 {
@@ -45,5 +43,5 @@ lib.language {
             }
         }
     }
-    wrap = <ul id="language_menu" class="language-menu">|</ul>
+    wrap = <ul data-uk-dropdown="mode: click" class="uk-dropdown">|</ul>
 }
