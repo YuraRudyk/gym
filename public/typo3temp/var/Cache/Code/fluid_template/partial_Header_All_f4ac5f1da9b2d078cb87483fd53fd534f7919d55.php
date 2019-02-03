@@ -24,9 +24,9 @@ $renderingContext->getViewHelperResolver()->addNamespaces(array (
   array (
     0 => 'TYPO3\\CMS\\Form\\ViewHelpers',
   ),
-  'bk2k' => 
+  'cart' => 
   array (
-    0 => 'BK2K\\BootstrapPackage\\ViewHelpers',
+    0 => 'Extcode\\Cart\\ViewHelpers',
   ),
   'v' => 
   array (

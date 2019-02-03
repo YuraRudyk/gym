@@ -1,6 +1,6 @@
 <?php
 
-class partial_DropIn_Before_All_6e969860f64648c7bb2ff547b2f2a8e40fd182d1 extends \TYPO3Fluid\Fluid\Core\Compiler\AbstractCompiledTemplate {
+class layout_Default_html_87953359ddf80cd563cc1912b1484360a924a4bf extends \TYPO3Fluid\Fluid\Core\Compiler\AbstractCompiledTemplate {
 
 public function getLayoutName(\TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface $renderingContext) {
 $self = $this; 
@@ -43,17 +43,28 @@ $self = $this;
 $output0 = '';
 
 $output0 .= '
-';
-// Rendering ViewHelper TYPO3Fluid\Fluid\ViewHelpers\CommentViewHelper
+<div class="tx-ls-simulators">
+	';
+// Rendering ViewHelper TYPO3Fluid\Fluid\ViewHelpers\RenderViewHelper
 $renderChildrenClosure2 = function() use ($renderingContext, $self) {
-return 'DropIn Placeholder. Will be rendered before any other output inside the wrapping container.';
+return NULL;
 };
 $arguments1 = array();
+$arguments1['section'] = NULL;
+$arguments1['partial'] = NULL;
+$arguments1['delegate'] = NULL;
+$arguments1['renderable'] = NULL;
+$arguments1['arguments'] = array (
+);
+$arguments1['optional'] = false;
+$arguments1['default'] = NULL;
+$arguments1['contentAs'] = NULL;
+$arguments1['section'] = 'main';
 
-$output0 .= NULL;
+$output0 .= TYPO3Fluid\Fluid\ViewHelpers\RenderViewHelper::renderStatic($arguments1, $renderChildrenClosure2, $renderingContext);
 
 $output0 .= '
-';
+</div>';
 
 return $output0;
 }

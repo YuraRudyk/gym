@@ -1239,33 +1239,88 @@ if (!empty($configuration)) {
 }
 
 /**
- * Extension: bootstrap_package
- * File: /var/www/legion-sport/public/typo3conf/ext/bootstrap_package/ext_tables.php
+ * Extension: cart
+ * File: /var/www/legion-sport/public/typo3conf/ext/cart/ext_tables.php
  */
 
-$_EXTKEY = 'bootstrap_package';
+$_EXTKEY = 'cart';
 $_EXTCONF = $GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf'][$_EXTKEY] ?? null;
 
 
 
-/*
- * This file is part of the package bk2k/bootstrap-package.
- *
- * For the full copyright and license information, please read the
- * LICENSE file that was distributed with this source code.
- */
+defined('TYPO3_MODE') or die();
 
-defined('TYPO3_MODE') || die();
+$iconPath = 'EXT:cart/Resources/Public/Icons/';
+$_LLL_db = 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:';
 
-/***************
- * Allow Custom Records on Standard Pages
+/**
+ * Register Backend Modules
  */
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_bootstrappackage_accordion_item');
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_bootstrappackage_card_group_item');
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_bootstrappackage_carousel_item');
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_bootstrappackage_icon_group_item');
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_bootstrappackage_tab_item');
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_bootstrappackage_timeline_item');
+if (TYPO3_MODE === 'BE') {
+    if (!isset($TBE_MODULES['Cart'])) {
+        $temp_TBE_MODULES = [];
+        foreach ($TBE_MODULES as $key => $val) {
+            if ($key == 'file') {
+                $temp_TBE_MODULES[$key] = $val;
+                $temp_TBE_MODULES['Cart'] = '';
+            } else {
+                $temp_TBE_MODULES[$key] = $val;
+            }
+        }
+
+        $TBE_MODULES = $temp_TBE_MODULES;
+    }
+
+    // add Main Module
+    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerModule(
+        'Extcode.cart',
+        'Cart',
+        '',
+        '',
+        [],
+        [
+            'access' => 'user, group',
+            'icon' => $iconPath . 'module.svg',
+            'labels' => $_LLL_db . 'tx_cart.module.main',
+            'navigationComponentId' => 'typo3-pagetree',
+        ]
+    );
+
+    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerModule(
+        'Extcode.cart',
+        'Cart',
+        'Orders',
+        '',
+        [
+            'Backend\Order\Order' => 'list, export, show, generateNumber, generatePdfDocument, downloadPdfDocument',
+            'Backend\Order\Payment' => 'update',
+            'Backend\Order\Shipping' => 'update',
+            'Backend\Order\Document' => 'download, create',
+        ],
+        [
+            'access' => 'user, group',
+            'icon' => $iconPath . 'module_orders.svg',
+            'labels' => $_LLL_db . 'tx_cart.module.orders',
+            'navigationComponentId' => 'typo3-pagetree',
+        ]
+    );
+
+    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerModule(
+        'Extcode.cart',
+        'Cart',
+        'OrderStatistics',
+        '',
+        [
+            'Backend\Statistic' => 'show',
+        ],
+        [
+            'access' => 'user, group',
+            'icon' => $iconPath . 'module_order_statistics.svg',
+            'labels' => $_LLL_db . 'tx_cart.module.order_statistics',
+            'navigationComponentId' => 'typo3-pagetree',
+        ]
+    );
+}
 
 /**
  * Extension: extension_builder
@@ -1299,6 +1354,48 @@ if (TYPO3_MODE === 'BE') {
 }
 
 /**
+ * Extension: ls_simulators
+ * File: /var/www/legion-sport/public/typo3conf/ext/ls_simulators/ext_tables.php
+ */
+
+$_EXTKEY = 'ls_simulators';
+$_EXTCONF = $GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf'][$_EXTKEY] ?? null;
+
+
+defined('TYPO3_MODE') || die('Access denied.');
+
+call_user_func(
+    function()
+    {
+
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+            'Simulators.LsSimulators',
+            'Simulators',
+            'Simulators'
+        );
+
+        $pluginSignature = str_replace('_', '', 'ls_simulators') . '_simulators';
+        $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist'][$pluginSignature] = 'pi_flexform';
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue($pluginSignature, 'FILE:EXT:ls_simulators/Configuration/FlexForms/flexform_simulators.xml');
+
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+            'Simulators.LsSimulators',
+            'Subscription',
+            'Subscription'
+        );
+
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile('ls_simulators', 'Configuration/TypoScript', 'Simulators');
+
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_lssimulators_domain_model_simulators', 'EXT:ls_simulators/Resources/Private/Language/locallang_csh_tx_lssimulators_domain_model_simulators.xlf');
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_lssimulators_domain_model_simulators');
+
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_lssimulators_domain_model_subscription', 'EXT:ls_simulators/Resources/Private/Language/locallang_csh_tx_lssimulators_domain_model_subscription.xlf');
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_lssimulators_domain_model_subscription');
+
+    }
+);
+
+/**
  * Extension: ls_template
  * File: /var/www/legion-sport/public/typo3conf/ext/ls_template/ext_tables.php
  */
@@ -1313,65 +1410,36 @@ call_user_func(
     function()
     {
 
-        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
-            'Rudyk.LsTemplate',
-            'Subscription',
-            'Subscription'
-        );
-
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile('ls_template', 'Configuration/TypoScript', 'LS Template');
-
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_lstemplate_domain_model_subscription', 'EXT:ls_template/Resources/Private/Language/locallang_csh_tx_lstemplate_domain_model_subscription.xlf');
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_lstemplate_domain_model_subscription');
-
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_lstemplate_domain_model_simulators', 'EXT:ls_template/Resources/Private/Language/locallang_csh_tx_lstemplate_domain_model_simulators.xlf');
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_lstemplate_domain_model_simulators');
-
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::makeCategorizable(
-            'ls_template',
-            'sys_category'
-        );
 
     }
 );
 
 /**
- * Extension: slick
- * File: /var/www/legion-sport/public/typo3conf/ext/slick/ext_tables.php
+ * Extension: owl_slider
+ * File: /var/www/legion-sport/public/typo3conf/ext/owl_slider/ext_tables.php
  */
 
-$_EXTKEY = 'slick';
+$_EXTKEY = 'owl_slider';
 $_EXTCONF = $GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf'][$_EXTKEY] ?? null;
 
 
 
-if ( !defined( 'TYPO3_MODE' ) )
-{
-  die( 'Access denied.' );
+if (! defined('TYPO3_MODE')) {
+    die('Access denied.');
 }
 
-/* * ****************************************************************************
- * Set TYPO3 version
- * **************************************************************************** */
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr(
+    'tx_owlslider_domain_model_item',
+    'EXT:owl_slider/Resources/Private/Language/locallang_csh_tx_owlslider_domain_model_item.xlf'
+);
 
-// #t1597, 171007, ~
-list( $main, $sub, $bugfix ) = explode( '.', TYPO3_version );
-$typo3Version = ( ( int ) $main ) * 1000000;
-$typo3Version = $typo3Version + ( ( int ) $sub ) * 1000;
-$typo3Version = $typo3Version + ( ( int ) $bugfix ) * 1;
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages(
+    'tx_owlslider_domain_model_item'
+);
 
-switch( TRUE )
-{
-	case($typo3Version < 7006000):
-		require( PATH_typo3conf . 'ext/slick/Configuration/ExtTables/6.2/index.php' );
-		break;
-	case($typo3Version < 8007000):
-		require( PATH_typo3conf . 'ext/slick/Configuration/ExtTables/7.6/index.php' );
-		break;
-	case($typo3Version >= 8007000):
-	default:
-		require( PATH_typo3conf . 'ext/slick/Configuration/ExtTables/Default/index.php' );
-		break;
-}
+include_once(\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Classes/PHP/tx_owlslider_addFieldsToFlexForm.php');
+
+
 
 #

@@ -1,6 +1,6 @@
 <?php
 
-class partial_DropIn_Before_All_6e969860f64648c7bb2ff547b2f2a8e40fd182d1 extends \TYPO3Fluid\Fluid\Core\Compiler\AbstractCompiledTemplate {
+class partial_DropIn_After_All_e40884b4b3a3a97b8596d8190efb33ab9619b901 extends \TYPO3Fluid\Fluid\Core\Compiler\AbstractCompiledTemplate {
 
 public function getLayoutName(\TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface $renderingContext) {
 $self = $this; 
@@ -46,7 +46,7 @@ $output0 .= '
 ';
 // Rendering ViewHelper TYPO3Fluid\Fluid\ViewHelpers\CommentViewHelper
 $renderChildrenClosure2 = function() use ($renderingContext, $self) {
-return 'DropIn Placeholder. Will be rendered before any other output inside the wrapping container.';
+return 'DropIn Placeholder. Will be rendered after all other output inside the wrapping container.';
 };
 $arguments1 = array();
 

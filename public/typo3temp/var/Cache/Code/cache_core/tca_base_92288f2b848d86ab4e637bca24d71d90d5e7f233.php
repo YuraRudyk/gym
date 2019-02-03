@@ -1352,6 +1352,9 @@ return array (
           'page-contentFromPid-root' => 'apps-pagetree-page-content-from-page-root',
           'page-contentFromPid-hideinmenu' => 'apps-pagetree-page-content-from-page-hideinmenu',
           'default' => 'apps-pagetree-page-default',
+          181 => 'apps-pagetree-page-cart-cart',
+          'contains-coupons' => 'apps-pagetree-folder-cart-coupons',
+          'contains-orders' => 'apps-pagetree-folder-cart-orders',
         ),
         'searchFields' => 'title,alias,nav_title,subtitle,url,keywords,description,abstract,author,author_email',
       ),
@@ -1435,6 +1438,12 @@ return array (
                 0 => 'LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.doktype.I.7',
                 1 => '199',
                 2 => 'apps-pagetree-spacer',
+              ),
+              11 => 
+              array (
+                0 => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:pages.doktype.181',
+                1 => 181,
+                2 => 'apps-pagetree-page-cart-cart',
               ),
             ),
             'default' => '1',
@@ -2211,6 +2220,18 @@ return array (
                 1 => 'fe_users',
                 2 => 'status-user-frontend',
               ),
+              2 => 
+              array (
+                0 => 'LLL:EXT:cart/Resources/Private/Language/locallang_be.xlf:tcarecords-pages-contains.cart_coupons',
+                1 => 'coupons',
+                2 => 'apps-pagetree-folder-cart-coupons',
+              ),
+              3 => 
+              array (
+                0 => 'LLL:EXT:cart/Resources/Private/Language/locallang_be.xlf:tcarecords-pages-contains.cart_orders',
+                1 => 'orders',
+                2 => 'apps-pagetree-folder-cart-orders',
+              ),
             ),
             'default' => '',
           ),
@@ -2347,186 +2368,6 @@ return array (
             'size' => 10,
             'items' => 
             array (
-              0 => 
-              array (
-                0 => 'Bootstrap Package: Backend Layouts (bootstrap_package)',
-                1 => 'EXT:bootstrap_package/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts.tsconfig',
-              ),
-              1 => 
-              array (
-                0 => 'Bootstrap Package: TCEMAIN (bootstrap_package)',
-                1 => 'EXT:bootstrap_package/Configuration/TsConfig/Page/TCEMAIN.tsconfig',
-              ),
-              2 => 
-              array (
-                0 => 'Bootstrap Package: TCEFORM (bootstrap_package)',
-                1 => 'EXT:bootstrap_package/Configuration/TsConfig/Page/TCEFORM.tsconfig',
-              ),
-              3 => 
-              array (
-                0 => 'Bootstrap Package: All Content Elements (bootstrap_package)',
-                1 => 'EXT:bootstrap_package/Configuration/TsConfig/Page/ContentElement/All.tsconfig',
-              ),
-              4 => 
-              array (
-                0 => 'Bootstrap Package: Categories for Content Elements (bootstrap_package)',
-                1 => 'EXT:bootstrap_package/Configuration/TsConfig/Page/ContentElement/Categories.tsconfig',
-              ),
-              5 => 
-              array (
-                0 => 'Bootstrap Package Content Element: Accordion (bootstrap_package)',
-                1 => 'EXT:bootstrap_package/Configuration/TsConfig/Page/ContentElement/Element/Accordion.tsconfig',
-              ),
-              6 => 
-              array (
-                0 => 'Bootstrap Package Content Element: Audio (bootstrap_package)',
-                1 => 'EXT:bootstrap_package/Configuration/TsConfig/Page/ContentElement/Element/Audio.tsconfig',
-              ),
-              7 => 
-              array (
-                0 => 'Bootstrap Package Content Element: Bullet List (bootstrap_package)',
-                1 => 'EXT:bootstrap_package/Configuration/TsConfig/Page/ContentElement/Element/Bullets.tsconfig',
-              ),
-              8 => 
-              array (
-                0 => 'Bootstrap Package Content Element: Card Group (bootstrap_package)',
-                1 => 'EXT:bootstrap_package/Configuration/TsConfig/Page/ContentElement/Element/CardGroup.tsconfig',
-              ),
-              9 => 
-              array (
-                0 => 'Bootstrap Package Content Element: Carousel (bootstrap_package)',
-                1 => 'EXT:bootstrap_package/Configuration/TsConfig/Page/ContentElement/Element/Carousel.tsconfig',
-              ),
-              10 => 
-              array (
-                0 => 'Bootstrap Package Content Element: Carousel Small (bootstrap_package)',
-                1 => 'EXT:bootstrap_package/Configuration/TsConfig/Page/ContentElement/Element/CarouselSmall.tsconfig',
-              ),
-              11 => 
-              array (
-                0 => 'Bootstrap Package Content Element: Carousel Fullscreen (bootstrap_package)',
-                1 => 'EXT:bootstrap_package/Configuration/TsConfig/Page/ContentElement/Element/CarouselFullscreen.tsconfig',
-              ),
-              12 => 
-              array (
-                0 => 'Bootstrap Package Content Element: CSV (bootstrap_package)',
-                1 => 'EXT:bootstrap_package/Configuration/TsConfig/Page/ContentElement/Element/Csv.tsconfig',
-              ),
-              13 => 
-              array (
-                0 => 'Bootstrap Package Content Element: External Media (bootstrap_package)',
-                1 => 'EXT:bootstrap_package/Configuration/TsConfig/Page/ContentElement/Element/ExternalMedia.tsconfig',
-              ),
-              14 => 
-              array (
-                0 => 'Bootstrap Package Content Element: Header (bootstrap_package)',
-                1 => 'EXT:bootstrap_package/Configuration/TsConfig/Page/ContentElement/Element/Header.tsconfig',
-              ),
-              15 => 
-              array (
-                0 => 'Bootstrap Package Content Element: Icon Group (bootstrap_package)',
-                1 => 'EXT:bootstrap_package/Configuration/TsConfig/Page/ContentElement/Element/IconGroup.tsconfig',
-              ),
-              16 => 
-              array (
-                0 => 'Bootstrap Package Content Element: Image (bootstrap_package)',
-                1 => 'EXT:bootstrap_package/Configuration/TsConfig/Page/ContentElement/Element/Image.tsconfig',
-              ),
-              17 => 
-              array (
-                0 => 'Bootstrap Package Content Element: List Group (bootstrap_package)',
-                1 => 'EXT:bootstrap_package/Configuration/TsConfig/Page/ContentElement/Element/ListGroup.tsconfig',
-              ),
-              18 => 
-              array (
-                0 => 'Bootstrap Package Content Element: Media (bootstrap_package)',
-                1 => 'EXT:bootstrap_package/Configuration/TsConfig/Page/ContentElement/Element/Media.tsconfig',
-              ),
-              19 => 
-              array (
-                0 => 'Bootstrap Package Content Element: Menu Cards (bootstrap_package)',
-                1 => 'EXT:bootstrap_package/Configuration/TsConfig/Page/ContentElement/Element/MenuCardList.tsconfig',
-              ),
-              20 => 
-              array (
-                0 => 'Bootstrap Package Content Element: Menu Cards of subpages (bootstrap_package)',
-                1 => 'EXT:bootstrap_package/Configuration/TsConfig/Page/ContentElement/Element/MenuCardDir.tsconfig',
-              ),
-              21 => 
-              array (
-                0 => 'Bootstrap Package Content Element: Menu Thumbnails (bootstrap_package)',
-                1 => 'EXT:bootstrap_package/Configuration/TsConfig/Page/ContentElement/Element/MenuThumbnailList.tsconfig',
-              ),
-              22 => 
-              array (
-                0 => 'Bootstrap Package Content Element: Menu Thumbnails of subpages (bootstrap_package)',
-                1 => 'EXT:bootstrap_package/Configuration/TsConfig/Page/ContentElement/Element/MenuThumbnailDir.tsconfig',
-              ),
-              23 => 
-              array (
-                0 => 'Bootstrap Package Content Element: Panel (bootstrap_package)',
-                1 => 'EXT:bootstrap_package/Configuration/TsConfig/Page/ContentElement/Element/Panel.tsconfig',
-              ),
-              24 => 
-              array (
-                0 => 'Bootstrap Package Content Element: Quote (bootstrap_package)',
-                1 => 'EXT:bootstrap_package/Configuration/TsConfig/Page/ContentElement/Element/Quote.tsconfig',
-              ),
-              25 => 
-              array (
-                0 => 'Bootstrap Package Content Element: Social Links (bootstrap_package)',
-                1 => 'EXT:bootstrap_package/Configuration/TsConfig/Page/ContentElement/Element/SocialLinks.tsconfig',
-              ),
-              26 => 
-              array (
-                0 => 'Bootstrap Package Content Element: Tab (bootstrap_package)',
-                1 => 'EXT:bootstrap_package/Configuration/TsConfig/Page/ContentElement/Element/Tab.tsconfig',
-              ),
-              27 => 
-              array (
-                0 => 'Bootstrap Package Content Element: Table (bootstrap_package)',
-                1 => 'EXT:bootstrap_package/Configuration/TsConfig/Page/ContentElement/Element/Table.tsconfig',
-              ),
-              28 => 
-              array (
-                0 => 'Bootstrap Package Content Element: Text (bootstrap_package)',
-                1 => 'EXT:bootstrap_package/Configuration/TsConfig/Page/ContentElement/Element/Text.tsconfig',
-              ),
-              29 => 
-              array (
-                0 => 'Bootstrap Package Content Element: Text in Columns (bootstrap_package)',
-                1 => 'EXT:bootstrap_package/Configuration/TsConfig/Page/ContentElement/Element/Textcolumn.tsconfig',
-              ),
-              30 => 
-              array (
-                0 => 'Bootstrap Package Content Element: Text and Icon (bootstrap_package)',
-                1 => 'EXT:bootstrap_package/Configuration/TsConfig/Page/ContentElement/Element/Texticon.tsconfig',
-              ),
-              31 => 
-              array (
-                0 => 'Bootstrap Package Content Element: Text and Media (bootstrap_package)',
-                1 => 'EXT:bootstrap_package/Configuration/TsConfig/Page/ContentElement/Element/Textmedia.tsconfig',
-              ),
-              32 => 
-              array (
-                0 => 'Bootstrap Package Content Element: Text and Images (bootstrap_package)',
-                1 => 'EXT:bootstrap_package/Configuration/TsConfig/Page/ContentElement/Element/Textpic.tsconfig',
-              ),
-              33 => 
-              array (
-                0 => 'Bootstrap Package Content Element: Text with Teaser (bootstrap_package)',
-                1 => 'EXT:bootstrap_package/Configuration/TsConfig/Page/ContentElement/Element/Textteaser.tsconfig',
-              ),
-              34 => 
-              array (
-                0 => 'Bootstrap Package Content Element: Timeline (bootstrap_package)',
-                1 => 'EXT:bootstrap_package/Configuration/TsConfig/Page/ContentElement/Element/Timeline.tsconfig',
-              ),
-              35 => 
-              array (
-                0 => 'Bootstrap Package Content Element: File Links (bootstrap_package)',
-                1 => 'EXT:bootstrap_package/Configuration/TsConfig/Page/ContentElement/Element/Uploads.tsconfig',
-              ),
             ),
             'enableMultiSelectFilterTextfield' => true,
             'softref' => 'ext_fileref',
@@ -2570,846 +2411,20 @@ return array (
             'type' => 'passthrough',
           ),
         ),
-        'nav_icon' => 
-        array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:pages.nav_icon',
-          'config' => 
-          array (
-            'type' => 'inline',
-            'foreign_table' => 'sys_file_reference',
-            'foreign_field' => 'uid_foreign',
-            'foreign_sortby' => 'sorting_foreign',
-            'foreign_table_field' => 'tablenames',
-            'foreign_match_fields' => 
-            array (
-              'fieldname' => 'nav_icon',
-            ),
-            'foreign_label' => 'uid_local',
-            'foreign_selector' => 'uid_local',
-            'overrideChildTca' => 
-            array (
-              'columns' => 
-              array (
-                'uid_local' => 
-                array (
-                  'config' => 
-                  array (
-                    'appearance' => 
-                    array (
-                      'elementBrowserType' => 'file',
-                      'elementBrowserAllowed' => 'gif,png,svg',
-                    ),
-                  ),
-                ),
-              ),
-              'types' => 
-              array (
-                0 => 
-                array (
-                  'showitem' => '
-                                    --palette--;;filePalette
-                                ',
-                ),
-                1 => 
-                array (
-                  'showitem' => '
-                                    --palette--;;filePalette
-                                ',
-                ),
-                2 => 
-                array (
-                  'showitem' => '
-                                    --palette--;;filePalette
-                                ',
-                ),
-                3 => 
-                array (
-                  'showitem' => '
-                                    --palette--;;filePalette
-                                ',
-                ),
-                4 => 
-                array (
-                  'showitem' => '
-                                    --palette--;;filePalette
-                                ',
-                ),
-                5 => 
-                array (
-                  'showitem' => '
-                                    --palette--;;filePalette
-                                ',
-                ),
-              ),
-            ),
-            'filter' => 
-            array (
-              0 => 
-              array (
-                'userFunc' => 'TYPO3\\CMS\\Core\\Resource\\Filter\\FileExtensionFilter->filterInlineChildren',
-                'parameters' => 
-                array (
-                  'allowedFileExtensions' => 'gif,png,svg',
-                  'disallowedFileExtensions' => '',
-                ),
-              ),
-            ),
-            'appearance' => 
-            array (
-              'useSortable' => true,
-              'headerThumbnail' => 
-              array (
-                'field' => 'uid_local',
-                'width' => '45',
-                'height' => '45c',
-              ),
-              'enabledControls' => 
-              array (
-                'info' => true,
-                'new' => false,
-                'dragdrop' => true,
-                'sort' => false,
-                'hide' => true,
-                'delete' => true,
-              ),
-              'createNewRelationLinkTitle' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference',
-            ),
-            'behaviour' => 
-            array (
-              'localizeChildrenAtParentLocalization' => true,
-            ),
-            'minitems' => 0,
-            'maxitems' => 1,
-          ),
-        ),
-        'thumbnail' => 
-        array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:pages.thumbnail',
-          'config' => 
-          array (
-            'type' => 'inline',
-            'foreign_table' => 'sys_file_reference',
-            'foreign_field' => 'uid_foreign',
-            'foreign_sortby' => 'sorting_foreign',
-            'foreign_table_field' => 'tablenames',
-            'foreign_match_fields' => 
-            array (
-              'fieldname' => 'thumbnail',
-            ),
-            'foreign_label' => 'uid_local',
-            'foreign_selector' => 'uid_local',
-            'overrideChildTca' => 
-            array (
-              'columns' => 
-              array (
-                'uid_local' => 
-                array (
-                  'config' => 
-                  array (
-                    'appearance' => 
-                    array (
-                      'elementBrowserType' => 'file',
-                      'elementBrowserAllowed' => 'gif,jpg,jpeg,tif,tiff,bmp,pcx,tga,png,pdf,ai,svg',
-                    ),
-                  ),
-                ),
-              ),
-              'types' => 
-              array (
-                0 => 
-                array (
-                  'showitem' => '
-                                    --palette--;;filePalette
-                                ',
-                ),
-                1 => 
-                array (
-                  'showitem' => '
-                                    --palette--;;filePalette
-                                ',
-                ),
-                2 => 
-                array (
-                  'showitem' => '
-                                    title,
-                                    alternative,
-                                    crop,
-                                    --palette--;;filePalette
-                                ',
-                ),
-                3 => 
-                array (
-                  'showitem' => '
-                                    --palette--;;filePalette
-                                ',
-                ),
-                4 => 
-                array (
-                  'showitem' => '
-                                    --palette--;;filePalette
-                                ',
-                ),
-                5 => 
-                array (
-                  'showitem' => '
-                                    --palette--;;filePalette
-                                ',
-                ),
-              ),
-            ),
-            'filter' => 
-            array (
-              0 => 
-              array (
-                'userFunc' => 'TYPO3\\CMS\\Core\\Resource\\Filter\\FileExtensionFilter->filterInlineChildren',
-                'parameters' => 
-                array (
-                  'allowedFileExtensions' => 'gif,jpg,jpeg,tif,tiff,bmp,pcx,tga,png,pdf,ai,svg',
-                  'disallowedFileExtensions' => '',
-                ),
-              ),
-            ),
-            'appearance' => 
-            array (
-              'useSortable' => true,
-              'headerThumbnail' => 
-              array (
-                'field' => 'uid_local',
-                'width' => '45',
-                'height' => '45c',
-              ),
-              'enabledControls' => 
-              array (
-                'info' => true,
-                'new' => false,
-                'dragdrop' => true,
-                'sort' => false,
-                'hide' => true,
-                'delete' => true,
-              ),
-              'createNewRelationLinkTitle' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference',
-            ),
-            'behaviour' => 
-            array (
-              'localizeChildrenAtParentLocalization' => true,
-            ),
-            'minitems' => 0,
-            'maxitems' => 1,
-          ),
-        ),
       ),
       'types' => 
       array (
         1 => 
         array (
-          'showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.standard;standard,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.title;title,nav_icon,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.tabs.metadata,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.abstract;abstract,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.metatags;metatags,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.editorial;editorial,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.tabs.appearance,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.layout;layout,thumbnail,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.replace;replace,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.tabs.behaviour,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.links;links,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.caching;caching,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.miscellaneous;miscellaneous,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.module;module,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.tabs.resources,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.media;media,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.config;config,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.language;language,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.tabs.access,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.visibility;visibility,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.access;access,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,--div--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_category.tabs.category,categories,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended',
-          'columnsOverrides' => 
-          array (
-            'thumbnail' => 
-            array (
-              'config' => 
-              array (
-                'overrideChildTca' => 
-                array (
-                  'columns' => 
-                  array (
-                    'crop' => 
-                    array (
-                      'config' => 
-                      array (
-                        'cropVariants' => 
-                        array (
-                          'default' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.default',
-                            'allowedAspectRatios' => 
-                            array (
-                              '16:9' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                                'value' => 1.7777777777777777,
-                              ),
-                              '4:3' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                                'value' => 1.3333333333333333,
-                              ),
-                              '1:1' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                                'value' => 1.0,
-                              ),
-                              'NaN' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                                'value' => 0.0,
-                              ),
-                            ),
-                            'selectedRatio' => 'NaN',
-                            'cropArea' => 
-                            array (
-                              'x' => 0.0,
-                              'y' => 0.0,
-                              'width' => 1.0,
-                              'height' => 1.0,
-                            ),
-                          ),
-                          'large' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.large',
-                            'allowedAspectRatios' => 
-                            array (
-                              '16:9' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                                'value' => 1.7777777777777777,
-                              ),
-                              '4:3' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                                'value' => 1.3333333333333333,
-                              ),
-                              '1:1' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                                'value' => 1.0,
-                              ),
-                              'NaN' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                                'value' => 0.0,
-                              ),
-                            ),
-                            'selectedRatio' => 'NaN',
-                            'cropArea' => 
-                            array (
-                              'x' => 0.0,
-                              'y' => 0.0,
-                              'width' => 1.0,
-                              'height' => 1.0,
-                            ),
-                          ),
-                          'medium' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.medium',
-                            'allowedAspectRatios' => 
-                            array (
-                              '16:9' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                                'value' => 1.7777777777777777,
-                              ),
-                              '4:3' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                                'value' => 1.3333333333333333,
-                              ),
-                              '1:1' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                                'value' => 1.0,
-                              ),
-                              'NaN' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                                'value' => 0.0,
-                              ),
-                            ),
-                            'selectedRatio' => 'NaN',
-                            'cropArea' => 
-                            array (
-                              'x' => 0.0,
-                              'y' => 0.0,
-                              'width' => 1.0,
-                              'height' => 1.0,
-                            ),
-                          ),
-                          'small' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.small',
-                            'allowedAspectRatios' => 
-                            array (
-                              '16:9' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                                'value' => 1.7777777777777777,
-                              ),
-                              '4:3' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                                'value' => 1.3333333333333333,
-                              ),
-                              '1:1' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                                'value' => 1.0,
-                              ),
-                              'NaN' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                                'value' => 0.0,
-                              ),
-                            ),
-                            'selectedRatio' => 'NaN',
-                            'cropArea' => 
-                            array (
-                              'x' => 0.0,
-                              'y' => 0.0,
-                              'width' => 1.0,
-                              'height' => 1.0,
-                            ),
-                          ),
-                          'extrasmall' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.extrasmall',
-                            'allowedAspectRatios' => 
-                            array (
-                              '16:9' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                                'value' => 1.7777777777777777,
-                              ),
-                              '4:3' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                                'value' => 1.3333333333333333,
-                              ),
-                              '1:1' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                                'value' => 1.0,
-                              ),
-                              'NaN' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                                'value' => 0.0,
-                              ),
-                            ),
-                            'selectedRatio' => 'NaN',
-                            'cropArea' => 
-                            array (
-                              'x' => 0.0,
-                              'y' => 0.0,
-                              'width' => 1.0,
-                              'height' => 1.0,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-          ),
+          'showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.standard;standard,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.title;title,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.tabs.metadata,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.abstract;abstract,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.metatags;metatags,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.editorial;editorial,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.tabs.appearance,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.layout;layout,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.replace;replace,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.tabs.behaviour,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.links;links,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.caching;caching,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.miscellaneous;miscellaneous,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.module;module,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.tabs.resources,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.media;media,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.config;config,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.language;language,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.tabs.access,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.visibility;visibility,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.access;access,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,--div--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_category.tabs.category,categories,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended',
         ),
         3 => 
         array (
-          'showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,doktype,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.title;title,nav_icon,--palette--;;external,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.tabs.metadata,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.abstract;abstract,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.editorial;editorial,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.tabs.appearance,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.layout;layout,thumbnail,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.tabs.behaviour,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.links;links,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.miscellaneous;miscellaneous,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.tabs.resources,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.media;media,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.config;config,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.language;language,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.tabs.access,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.visibility;visibility,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.access;access,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,--div--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_category.tabs.category,categories,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended',
-          'columnsOverrides' => 
-          array (
-            'thumbnail' => 
-            array (
-              'config' => 
-              array (
-                'overrideChildTca' => 
-                array (
-                  'columns' => 
-                  array (
-                    'crop' => 
-                    array (
-                      'config' => 
-                      array (
-                        'cropVariants' => 
-                        array (
-                          'default' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.default',
-                            'allowedAspectRatios' => 
-                            array (
-                              '16:9' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                                'value' => 1.7777777777777777,
-                              ),
-                              '4:3' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                                'value' => 1.3333333333333333,
-                              ),
-                              '1:1' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                                'value' => 1.0,
-                              ),
-                              'NaN' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                                'value' => 0.0,
-                              ),
-                            ),
-                            'selectedRatio' => 'NaN',
-                            'cropArea' => 
-                            array (
-                              'x' => 0.0,
-                              'y' => 0.0,
-                              'width' => 1.0,
-                              'height' => 1.0,
-                            ),
-                          ),
-                          'large' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.large',
-                            'allowedAspectRatios' => 
-                            array (
-                              '16:9' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                                'value' => 1.7777777777777777,
-                              ),
-                              '4:3' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                                'value' => 1.3333333333333333,
-                              ),
-                              '1:1' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                                'value' => 1.0,
-                              ),
-                              'NaN' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                                'value' => 0.0,
-                              ),
-                            ),
-                            'selectedRatio' => 'NaN',
-                            'cropArea' => 
-                            array (
-                              'x' => 0.0,
-                              'y' => 0.0,
-                              'width' => 1.0,
-                              'height' => 1.0,
-                            ),
-                          ),
-                          'medium' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.medium',
-                            'allowedAspectRatios' => 
-                            array (
-                              '16:9' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                                'value' => 1.7777777777777777,
-                              ),
-                              '4:3' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                                'value' => 1.3333333333333333,
-                              ),
-                              '1:1' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                                'value' => 1.0,
-                              ),
-                              'NaN' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                                'value' => 0.0,
-                              ),
-                            ),
-                            'selectedRatio' => 'NaN',
-                            'cropArea' => 
-                            array (
-                              'x' => 0.0,
-                              'y' => 0.0,
-                              'width' => 1.0,
-                              'height' => 1.0,
-                            ),
-                          ),
-                          'small' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.small',
-                            'allowedAspectRatios' => 
-                            array (
-                              '16:9' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                                'value' => 1.7777777777777777,
-                              ),
-                              '4:3' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                                'value' => 1.3333333333333333,
-                              ),
-                              '1:1' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                                'value' => 1.0,
-                              ),
-                              'NaN' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                                'value' => 0.0,
-                              ),
-                            ),
-                            'selectedRatio' => 'NaN',
-                            'cropArea' => 
-                            array (
-                              'x' => 0.0,
-                              'y' => 0.0,
-                              'width' => 1.0,
-                              'height' => 1.0,
-                            ),
-                          ),
-                          'extrasmall' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.extrasmall',
-                            'allowedAspectRatios' => 
-                            array (
-                              '16:9' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                                'value' => 1.7777777777777777,
-                              ),
-                              '4:3' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                                'value' => 1.3333333333333333,
-                              ),
-                              '1:1' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                                'value' => 1.0,
-                              ),
-                              'NaN' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                                'value' => 0.0,
-                              ),
-                            ),
-                            'selectedRatio' => 'NaN',
-                            'cropArea' => 
-                            array (
-                              'x' => 0.0,
-                              'y' => 0.0,
-                              'width' => 1.0,
-                              'height' => 1.0,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-          ),
+          'showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,doktype,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.title;title,--palette--;;external,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.tabs.metadata,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.abstract;abstract,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.editorial;editorial,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.tabs.appearance,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.layout;layout,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.tabs.behaviour,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.links;links,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.miscellaneous;miscellaneous,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.tabs.resources,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.media;media,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.config;config,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.language;language,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.tabs.access,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.visibility;visibility,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.access;access,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,--div--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_category.tabs.category,categories,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended',
         ),
         4 => 
         array (
-          'showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,doktype,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.title;title,nav_icon,--palette--;;shortcut,--palette--;;shortcutpage,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.tabs.metadata,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.abstract;abstract,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.editorial;editorial,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.tabs.appearance,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.layout;layout,thumbnail,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.tabs.behaviour,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.links;links,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.miscellaneous;miscellaneous,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.tabs.resources,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.media;media,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.config;config,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.language;language,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.tabs.access,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.visibility;visibility,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.access;access,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,--div--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_category.tabs.category,categories,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended',
-          'columnsOverrides' => 
-          array (
-            'thumbnail' => 
-            array (
-              'config' => 
-              array (
-                'overrideChildTca' => 
-                array (
-                  'columns' => 
-                  array (
-                    'crop' => 
-                    array (
-                      'config' => 
-                      array (
-                        'cropVariants' => 
-                        array (
-                          'default' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.default',
-                            'allowedAspectRatios' => 
-                            array (
-                              '16:9' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                                'value' => 1.7777777777777777,
-                              ),
-                              '4:3' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                                'value' => 1.3333333333333333,
-                              ),
-                              '1:1' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                                'value' => 1.0,
-                              ),
-                              'NaN' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                                'value' => 0.0,
-                              ),
-                            ),
-                            'selectedRatio' => 'NaN',
-                            'cropArea' => 
-                            array (
-                              'x' => 0.0,
-                              'y' => 0.0,
-                              'width' => 1.0,
-                              'height' => 1.0,
-                            ),
-                          ),
-                          'large' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.large',
-                            'allowedAspectRatios' => 
-                            array (
-                              '16:9' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                                'value' => 1.7777777777777777,
-                              ),
-                              '4:3' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                                'value' => 1.3333333333333333,
-                              ),
-                              '1:1' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                                'value' => 1.0,
-                              ),
-                              'NaN' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                                'value' => 0.0,
-                              ),
-                            ),
-                            'selectedRatio' => 'NaN',
-                            'cropArea' => 
-                            array (
-                              'x' => 0.0,
-                              'y' => 0.0,
-                              'width' => 1.0,
-                              'height' => 1.0,
-                            ),
-                          ),
-                          'medium' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.medium',
-                            'allowedAspectRatios' => 
-                            array (
-                              '16:9' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                                'value' => 1.7777777777777777,
-                              ),
-                              '4:3' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                                'value' => 1.3333333333333333,
-                              ),
-                              '1:1' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                                'value' => 1.0,
-                              ),
-                              'NaN' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                                'value' => 0.0,
-                              ),
-                            ),
-                            'selectedRatio' => 'NaN',
-                            'cropArea' => 
-                            array (
-                              'x' => 0.0,
-                              'y' => 0.0,
-                              'width' => 1.0,
-                              'height' => 1.0,
-                            ),
-                          ),
-                          'small' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.small',
-                            'allowedAspectRatios' => 
-                            array (
-                              '16:9' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                                'value' => 1.7777777777777777,
-                              ),
-                              '4:3' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                                'value' => 1.3333333333333333,
-                              ),
-                              '1:1' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                                'value' => 1.0,
-                              ),
-                              'NaN' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                                'value' => 0.0,
-                              ),
-                            ),
-                            'selectedRatio' => 'NaN',
-                            'cropArea' => 
-                            array (
-                              'x' => 0.0,
-                              'y' => 0.0,
-                              'width' => 1.0,
-                              'height' => 1.0,
-                            ),
-                          ),
-                          'extrasmall' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.extrasmall',
-                            'allowedAspectRatios' => 
-                            array (
-                              '16:9' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                                'value' => 1.7777777777777777,
-                              ),
-                              '4:3' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                                'value' => 1.3333333333333333,
-                              ),
-                              '1:1' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                                'value' => 1.0,
-                              ),
-                              'NaN' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                                'value' => 0.0,
-                              ),
-                            ),
-                            'selectedRatio' => 'NaN',
-                            'cropArea' => 
-                            array (
-                              'x' => 0.0,
-                              'y' => 0.0,
-                              'width' => 1.0,
-                              'height' => 1.0,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-          ),
+          'showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,doktype,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.title;title,--palette--;;shortcut,--palette--;;shortcutpage,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.tabs.metadata,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.abstract;abstract,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.editorial;editorial,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.tabs.appearance,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.layout;layout,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.tabs.behaviour,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.links;links,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.miscellaneous;miscellaneous,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.tabs.resources,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.media;media,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.config;config,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.language;language,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.tabs.access,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.visibility;visibility,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.access;access,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,--div--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_category.tabs.category,categories,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended',
         ),
         7 => 
         array (
@@ -3593,7 +2608,6 @@ return array (
         array (
           'ignoreRootLevelRestriction' => true,
         ),
-        'type' => 'tx_extbase_type',
       ),
       'interface' => 
       array (
@@ -3603,11 +2617,7 @@ return array (
       array (
         1 => 
         array (
-          'showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,title,tx_extbase_type,parent,--div--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_category.tabs.items,items,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,--palette--;;language,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,hidden,--palette--;;timeRestriction,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,description,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended',
-        ),
-        'Tx_LsTemplate_Category' => 
-        array (
-          'showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,title,tx_extbase_type,parent,--div--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_category.tabs.items,items,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,--palette--;;language,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,hidden,--palette--;;timeRestriction,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,description,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended,--div--;LLL:EXT:ls_template/Resources/Private/Language/locallang_db.xlf:tx_lstemplate_domain_model_category',
+          'showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,title,parent,--div--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_category.tabs.items,items,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,--palette--;;language,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,hidden,--palette--;;timeRestriction,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,description,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended',
         ),
       ),
       'palettes' => 
@@ -3807,6 +2817,10 @@ return array (
               array (
                 0 => 'categories',
               ),
+              'tx_lssimulators_domain_model_simulators' => 
+              array (
+                0 => 'categories',
+              ),
             ),
             'size' => 10,
             'fieldWizard' => 
@@ -3816,37 +2830,6 @@ return array (
                 'disabled' => true,
               ),
             ),
-          ),
-        ),
-        'tx_extbase_type' => 
-        array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:ls_template/Resources/Private/Language/locallang_db.xlf:tx_lstemplate.tx_extbase_type',
-          'config' => 
-          array (
-            'type' => 'select',
-            'renderType' => 'selectSingle',
-            'items' => 
-            array (
-              0 => 
-              array (
-                0 => '',
-                1 => '',
-              ),
-              1 => 
-              array (
-                0 => 'Category',
-                1 => 'Tx_LsTemplate_Category',
-              ),
-              2 => 
-              array (
-                0 => 'LLL:EXT:ls_template/Resources/Private/Language/locallang_db.xlf:sys_category.tx_extbase_type.Tx_LsTemplate_Category',
-                1 => 'Tx_LsTemplate_Category',
-              ),
-            ),
-            'default' => 'Tx_LsTemplate_Category',
-            'size' => 1,
-            'maxitems' => 1,
           ),
         ),
       ),
@@ -5685,7 +4668,6 @@ return array (
             'size' => 35,
             'max' => 80,
             'eval' => 'trim,required',
-            'placeholder' => 'English',
           ),
         ),
         'hidden' => 
@@ -7243,86 +6225,12 @@ return array (
             ),
           ),
         ),
-        'nav_title' => 
-        array (
-          'label' => 'Navigation title (e.g. "English", "Deutsch", "Français")',
-          'config' => 
-          array (
-            'type' => 'input',
-            'size' => 10,
-            'placeholder' => 'English',
-            'eval' => 'trim',
-          ),
-        ),
-        'locale' => 
-        array (
-          'label' => 'Language locale',
-          'description' => 'should be something like de_DE or en_US.UTF-8',
-          'config' => 
-          array (
-            'type' => 'input',
-            'placeholder' => 'en_US.UTF-8',
-            'eval' => 'trim,required',
-            'fieldInformation' => 
-            array (
-              'AdditionalFieldInformation' => 
-              array (
-                'renderType' => 'AdditionalFieldInformation',
-              ),
-            ),
-          ),
-        ),
-        'hreflang' => 
-        array (
-          'label' => 'Language tag defined by RFC 1766 / 3066 for "lang" and "hreflang" attributes',
-          'config' => 
-          array (
-            'type' => 'input',
-            'placeholder' => 'en-US',
-            'eval' => 'trim,required',
-          ),
-        ),
-        'direction' => 
-        array (
-          'label' => 'Language direction for "dir" attribute',
-          'config' => 
-          array (
-            'type' => 'select',
-            'renderType' => 'selectSingle',
-            'items' => 
-            array (
-              0 => 
-              array (
-                0 => 'Left to Right',
-                1 => 'ltr',
-              ),
-              1 => 
-              array (
-                0 => 'Right to Left',
-                1 => 'rtl',
-              ),
-            ),
-            'size' => 1,
-          ),
-        ),
       ),
       'types' => 
       array (
         1 => 
         array (
-          'showitem' => '
-                    --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
-                        title,
-                        nav_title,
-                        locale,
-                        hreflang,
-                        direction,
-                        language_isocode,
-                        flag,
-                    --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
-                        hidden,
-                    --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended
-                ',
+          'showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,title,language_isocode,flag,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,hidden,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended',
         ),
       ),
     ),
@@ -9214,33 +8122,13 @@ return array (
               ),
               4 => 
               array (
-                0 => 'Bootstrap Package: Full Package (bootstrap_package)',
-                1 => 'EXT:bootstrap_package/Configuration/TypoScript',
+                0 => 'Shopping Cart - Cart (cart)',
+                1 => 'EXT:cart/Configuration/TypoScript',
               ),
               5 => 
               array (
-                0 => 'Bootstrap Package: Content Elements (bootstrap_package)',
-                1 => 'EXT:bootstrap_package/Configuration/TypoScript/ContentElement',
-              ),
-              6 => 
-              array (
-                0 => 'Bootstrap Package: Bootstrap 3.x (LESS) (bootstrap_package)',
-                1 => 'EXT:bootstrap_package/Configuration/TypoScript/Bootstrap3',
-              ),
-              7 => 
-              array (
-                0 => 'Bootstrap Package: Bootstrap 4.x (SCSS) (bootstrap_package)',
-                1 => 'EXT:bootstrap_package/Configuration/TypoScript/Bootstrap4',
-              ),
-              8 => 
-              array (
-                0 => 'Slick [1] (based on fluid_css_templates) (slick)',
-                1 => 'EXT:slick/Configuration/TypoScript/Default/',
-              ),
-              9 => 
-              array (
-                0 => 'Slick [1] - DEPRECATED (based on css_styled_contents) (slick)',
-                1 => 'EXT:slick/Configuration/TypoScript/7.6/',
+                0 => 'owlSlider (owl_slider)',
+                1 => 'EXT:owl_slider/Configuration/TypoScript',
               ),
             ),
             'enableMultiSelectFilterTextfield' => true,
@@ -9447,31 +8335,6 @@ return array (
           'menu_section_pages' => 'content-menu-section',
           'form_formframework' => 'content-form',
           'gridelements_pi1' => 'gridelements-default',
-          'accordion' => 'content-bootstrappackage-accordion',
-          'audio' => 'content-audio',
-          'card_group' => 'content-bootstrappackage-card-group',
-          'carousel' => 'content-bootstrappackage-carousel',
-          'carousel_small' => 'content-bootstrappackage-carousel',
-          'carousel_fullscreen' => 'content-bootstrappackage-carousel',
-          'csv' => 'content-bootstrappackage-csv',
-          'external_media' => 'content-bootstrappackage-externalmedia',
-          'icon_group' => 'content-bootstrappackage-icon-group',
-          'listgroup' => 'content-bootstrappackage-listgroup',
-          'media' => 'mimetypes-x-content-multimedia',
-          'menu_card_list' => 'content-bootstrappackage-menu-card',
-          'menu_card_dir' => 'content-bootstrappackage-menu-card',
-          'menu_thumbnail_list' => 'content-menu-thumbnail',
-          'menu_thumbnail_dir' => 'content-menu-thumbnail',
-          'panel' => 'content-panel',
-          'quote' => 'content-quote',
-          'social_links' => 'content-bootstrappackage-social-links',
-          'tab' => 'content-bootstrappackage-tab',
-          'textcolumn' => 'content-text-columns',
-          'texticon' => 'content-bootstrappackage-texticon',
-          'textteaser' => 'content-text-teaser',
-          'timeline' => 'content-bootstrappackage-timeline',
-          'slickcontent' => 'app-slick',
-          'slickimage' => 'app-slick',
         ),
         'searchFields' => 'header,header_link,subheader,bodytext,pi_flexform',
       ),
@@ -9493,398 +8356,202 @@ return array (
             array (
               0 => 
               array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:theme_name',
-                1 => '--div--',
-              ),
-              1 => 
-              array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:content_element.accordion',
-                1 => 'accordion',
-                2 => 'content-bootstrappackage-accordion',
-              ),
-              2 => 
-              array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:content_element.audio',
-                1 => 'audio',
-                2 => 'content-audio',
-              ),
-              3 => 
-              array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:content_element.card_group',
-                1 => 'card_group',
-                2 => 'content-bootstrappackage-card-group',
-              ),
-              4 => 
-              array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:content_element.carousel',
-                1 => 'carousel',
-                2 => 'content-bootstrappackage-carousel',
-              ),
-              5 => 
-              array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:content_element.carousel_small',
-                1 => 'carousel_small',
-                2 => 'content-bootstrappackage-carousel',
-              ),
-              6 => 
-              array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:content_element.carousel_fullscreen',
-                1 => 'carousel_fullscreen',
-                2 => 'content-bootstrappackage-carousel',
-              ),
-              7 => 
-              array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:content_element.csv',
-                1 => 'csv',
-                2 => 'content-bootstrappackage-csv',
-              ),
-              8 => 
-              array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:content_element.external_media',
-                1 => 'external_media',
-                2 => 'content-bootstrappackage-externalmedia',
-              ),
-              9 => 
-              array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:content_element.icon_group',
-                1 => 'icon_group',
-                2 => 'content-bootstrappackage-icon-group',
-              ),
-              10 => 
-              array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:content_element.listgroup',
-                1 => 'listgroup',
-                2 => 'content-bootstrappackage-listgroup',
-              ),
-              11 => 
-              array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:content_element.media',
-                1 => 'media',
-                2 => 'mimetypes-x-content-multimedia',
-              ),
-              12 => 
-              array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:menu.card_list',
-                1 => 'menu_card_list',
-                2 => 'content-bootstrappackage-menu-card',
-              ),
-              13 => 
-              array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:menu.card_dir',
-                1 => 'menu_card_dir',
-                2 => 'content-bootstrappackage-menu-card',
-              ),
-              14 => 
-              array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:menu.thumbnail_list',
-                1 => 'menu_thumbnail_list',
-                2 => 'content-menu-thumbnail',
-              ),
-              15 => 
-              array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:menu.thumbnail_dir',
-                1 => 'menu_thumbnail_dir',
-                2 => 'content-menu-thumbnail',
-              ),
-              16 => 
-              array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:content_element.panel',
-                1 => 'panel',
-                2 => 'content-panel',
-              ),
-              17 => 
-              array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:content_element.quote',
-                1 => 'quote',
-                2 => 'content-quote',
-              ),
-              18 => 
-              array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:content_element.social_links',
-                1 => 'social_links',
-                2 => 'content-bootstrappackage-social-links',
-              ),
-              19 => 
-              array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:content_element.tab',
-                1 => 'tab',
-                2 => 'content-bootstrappackage-tab',
-              ),
-              20 => 
-              array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:content_element.textcolumn',
-                1 => 'textcolumn',
-                2 => 'content-text-columns',
-              ),
-              21 => 
-              array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:content_element.texticon',
-                1 => 'texticon',
-                2 => 'content-bootstrappackage-texticon',
-              ),
-              22 => 
-              array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:content_element.textteaser',
-                1 => 'textteaser',
-                2 => 'content-text-teaser',
-              ),
-              23 => 
-              array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:content_element.timeline',
-                1 => 'timeline',
-                2 => 'content-bootstrappackage-timeline',
-              ),
-              24 => 
-              array (
                 0 => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:CType.div.standard',
                 1 => '--div--',
               ),
-              25 => 
+              1 => 
               array (
                 0 => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:CType.I.0',
                 1 => 'header',
                 2 => 'content-header',
               ),
-              26 => 
+              2 => 
               array (
                 0 => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:CType.I.1',
                 1 => 'text',
                 2 => 'content-text',
               ),
-              27 => 
+              3 => 
               array (
                 0 => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:CType.I.2',
                 1 => 'textpic',
                 2 => 'content-textpic',
               ),
-              28 => 
+              4 => 
               array (
                 0 => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:CType.I.3',
                 1 => 'image',
                 2 => 'content-image',
               ),
-              29 => 
+              5 => 
               array (
                 0 => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:CType.textmedia',
                 1 => 'textmedia',
                 2 => 'content-textmedia',
               ),
-              30 => 
+              6 => 
               array (
                 0 => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:CType.div.lists',
                 1 => '--div--',
               ),
-              31 => 
+              7 => 
               array (
                 0 => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:CType.I.4',
                 1 => 'bullets',
                 2 => 'content-bullets',
               ),
-              32 => 
+              8 => 
               array (
                 0 => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:CType.I.5',
                 1 => 'table',
                 2 => 'content-table',
               ),
-              33 => 
+              9 => 
               array (
                 0 => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:CType.I.6',
                 1 => 'uploads',
                 2 => 'content-special-uploads',
               ),
-              34 => 
+              10 => 
               array (
                 0 => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:CType.div.menu',
                 1 => '--div--',
               ),
-              35 => 
+              11 => 
               array (
                 0 => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:CType.menu_abstract',
                 1 => 'menu_abstract',
                 2 => 'content-menu-abstract',
               ),
-              36 => 
+              12 => 
               array (
                 0 => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:CType.menu_categorized_content',
                 1 => 'menu_categorized_content',
                 2 => 'content-menu-categorized',
               ),
-              37 => 
+              13 => 
               array (
                 0 => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:CType.menu_categorized_pages',
                 1 => 'menu_categorized_pages',
                 2 => 'content-menu-categorized',
               ),
-              38 => 
+              14 => 
               array (
                 0 => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:CType.menu_pages',
                 1 => 'menu_pages',
                 2 => 'content-menu-pages',
               ),
-              39 => 
+              15 => 
               array (
                 0 => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:CType.menu_subpages',
                 1 => 'menu_subpages',
                 2 => 'content-menu-pages',
               ),
-              40 => 
+              16 => 
               array (
                 0 => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:CType.menu_recently_updated',
                 1 => 'menu_recently_updated',
                 2 => 'content-menu-recently-updated',
               ),
-              41 => 
+              17 => 
               array (
                 0 => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:CType.menu_related_pages',
                 1 => 'menu_related_pages',
                 2 => 'content-menu-related',
               ),
-              42 => 
+              18 => 
               array (
                 0 => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:CType.menu_section',
                 1 => 'menu_section',
                 2 => 'content-menu-section',
               ),
-              43 => 
+              19 => 
               array (
                 0 => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:CType.menu_section_pages',
                 1 => 'menu_section_pages',
                 2 => 'content-menu-section',
               ),
-              44 => 
+              20 => 
               array (
                 0 => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:CType.menu_sitemap',
                 1 => 'menu_sitemap',
                 2 => 'content-menu-sitemap',
               ),
-              45 => 
+              21 => 
               array (
                 0 => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:CType.menu_sitemap_pages',
                 1 => 'menu_sitemap_pages',
                 2 => 'content-menu-sitemap-pages',
               ),
-              46 => 
+              22 => 
               array (
                 0 => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:CType.div.special',
                 1 => '--div--',
               ),
-              47 => 
+              23 => 
               array (
                 0 => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:CType.I.13',
                 1 => 'shortcut',
                 2 => 'content-special-shortcut',
               ),
-              48 => 
+              24 => 
               array (
                 0 => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:CType.I.14',
                 1 => 'list',
                 2 => 'content-plugin',
               ),
-              49 => 
+              25 => 
               array (
                 0 => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:CType.I.16',
                 1 => 'div',
                 2 => 'content-special-div',
               ),
-              50 => 
+              26 => 
               array (
                 0 => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:CType.I.17',
                 1 => 'html',
                 2 => 'content-special-html',
               ),
-              51 => 
+              27 => 
               array (
                 0 => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:CType.div.forms',
                 1 => '--div--',
               ),
-              52 => 
+              28 => 
               array (
                 0 => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:CType.I.10',
                 1 => 'login',
                 2 => 'content-elements-login',
               ),
-              53 => 
+              29 => 
               array (
                 0 => 'Form',
                 1 => 'form_formframework',
                 2 => 'content-form',
               ),
-              54 => 
+              30 => 
               array (
                 0 => 'LLL:EXT:gridelements/Resources/Private/Language/locallang_db.xml:tt_content.CType_pi1',
                 1 => 'gridelements_pi1',
                 2 => 'gridelements-default',
               ),
-              55 => 
+              31 => 
               array (
                 0 => 'Footer for all site',
                 1 => 'mask_footer',
                 2 => 'EXT:mask/ext_icon.svg',
               ),
-              56 => 
+              32 => 
               array (
-                0 => 'LS-Video',
-                1 => 'mask_lsvideo',
+                0 => 'Image Slider',
+                1 => 'mask_image_slider',
                 2 => 'EXT:mask/ext_icon.svg',
               ),
-              57 => 
+              33 => 
               array (
-                0 => 'Slick Slider',
-                1 => '--div--',
-              ),
-              58 => 
-              array (
-                0 => 'LLL:EXT:slick/Resources/Private/Language/Backend.xlf:wizardItems.carousel.header',
-                1 => 'slickcontent',
-                2 => 'app-slick',
-              ),
-              59 => 
-              array (
-                0 => 'LLL:EXT:slick/Resources/Private/Language/Backend.xlf:wizardItems.gallery.header',
-                1 => 'slickimage',
-                2 => 'app-slick',
-              ),
-              60 => 
-              array (
-                0 => 'LLL:EXT:slick/Resources/Private/Language/Backend.xlf:wizardItems.item.header',
-                1 => 'slickitem',
-                2 => 'app-slick',
-              ),
-              61 => 
-              array (
-                0 => 'LLL:EXT:slick/Resources/Private/Language/Backend.xlf:wizardItems.carousel.1.header',
-                1 => 'slickcarousel',
-                2 => 'app-slick-deprecated',
-              ),
-              62 => 
-              array (
-                0 => 'LLL:EXT:slick/Resources/Private/Language/Backend.xlf:wizardItems.carousel.2.header',
-                1 => 'slickcarousel2',
-                2 => 'app-slick-deprecated',
-              ),
-              63 => 
-              array (
-                0 => 'LLL:EXT:slick/Resources/Private/Language/Backend.xlf:wizardItems.carousel.3.header',
-                1 => 'slickcarousel3',
-                2 => 'app-slick-deprecated',
-              ),
-              64 => 
-              array (
-                0 => 'LLL:EXT:slick/Resources/Private/Language/Backend.xlf:wizardItems.gallery.1.header',
-                1 => 'slickgallery',
-                2 => 'app-slick-deprecated',
-              ),
-              65 => 
-              array (
-                0 => 'LLL:EXT:slick/Resources/Private/Language/Backend.xlf:wizardItems.gallery.2.header',
-                1 => 'slickgallery2',
-                2 => 'app-slick-deprecated',
-              ),
-              66 => 
-              array (
-                0 => 'LLL:EXT:slick/Resources/Private/Language/Backend.xlf:wizardItems.gallery.3.header',
-                1 => 'slickgallery3',
-                2 => 'app-slick-deprecated',
+                0 => 'Main Slider',
+                1 => 'mask_main_slider',
+                2 => 'EXT:mask/ext_icon.svg',
               ),
             ),
             'default' => 'text',
@@ -10125,7 +8792,6 @@ return array (
             ),
             'default' => 'default',
           ),
-          'onChange' => 'reload',
         ),
         'space_before_class' => 
         array (
@@ -10781,18 +9447,6 @@ return array (
                 1 => 26,
                 2 => 'content-beside-text-img-left',
               ),
-              11 => 
-              array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:field.imageorient.125',
-                1 => '125',
-                2 => 'content-bootstrappackage-beside-text-img-centered-right',
-              ),
-              12 => 
-              array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:field.imageorient.126',
-                1 => '126',
-                2 => 'content-bootstrappackage-beside-text-img-centered-left',
-              ),
             ),
             'default' => 0,
             'fieldWizard' => 
@@ -11026,6 +9680,36 @@ return array (
                 0 => '',
                 1 => '',
                 2 => '',
+              ),
+              1 => 
+              array (
+                0 => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart.plugin.mini_cart',
+                1 => 'cart_minicart',
+                2 => 'EXT:cart/Resources/Public/Icons/Extension.svg',
+              ),
+              2 => 
+              array (
+                0 => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart.plugin.cart',
+                1 => 'cart_cart',
+                2 => 'EXT:cart/Resources/Public/Icons/Extension.svg',
+              ),
+              3 => 
+              array (
+                0 => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart.plugin.currency',
+                1 => 'cart_currency',
+                2 => 'EXT:cart/Resources/Public/Icons/Extension.svg',
+              ),
+              4 => 
+              array (
+                0 => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart.plugin.order',
+                1 => 'cart_order',
+                2 => 'EXT:cart/Resources/Public/Icons/Extension.svg',
+              ),
+              5 => 
+              array (
+                0 => 'owlSlider',
+                1 => 'owlslider_owlslider',
+                2 => 'EXT:owl_slider/ext_icon.png',
               ),
             ),
             'itemsProcFunc' => 'GridElementsTeam\\Gridelements\\Backend\\ItemsProcFuncs\\ListTypeList->itemsProcFunc',
@@ -11271,19 +9955,8 @@ return array (
               '*,login' => 'FILE:EXT:felogin/Configuration/FlexForms/Login.xml',
               '*,form_formframework' => 'FILE:EXT:form/Configuration/FlexForms/FormFramework.xml',
               '*,gridelements_pi1' => '',
-              '*,accordion' => 'FILE:EXT:bootstrap_package/Configuration/FlexForms/Accordion.xml',
-              '*,card_group' => 'FILE:EXT:bootstrap_package/Configuration/FlexForms/CardGroup.xml',
-              '*,carousel' => 'FILE:EXT:bootstrap_package/Configuration/FlexForms/Carousel.xml',
-              '*,carousel_small' => 'FILE:EXT:bootstrap_package/Configuration/FlexForms/Carousel.xml',
-              '*,carousel_fullscreen' => 'FILE:EXT:bootstrap_package/Configuration/FlexForms/Carousel.xml',
-              '*,menu_card_list' => 'FILE:EXT:bootstrap_package/Configuration/FlexForms/MenuCard.xml',
-              '*,menu_card_dir' => 'FILE:EXT:bootstrap_package/Configuration/FlexForms/MenuCard.xml',
-              '*,menu_thumbnail_list' => 'FILE:EXT:bootstrap_package/Configuration/FlexForms/MenuThumbnail.xml',
-              '*,menu_thumbnail_dir' => 'FILE:EXT:bootstrap_package/Configuration/FlexForms/MenuThumbnail.xml',
-              '*,tab' => 'FILE:EXT:bootstrap_package/Configuration/FlexForms/Tab.xml',
-              '*,timeline' => 'FILE:EXT:bootstrap_package/Configuration/FlexForms/Timeline.xml',
-              ',slickcontent' => 'FILE:EXT:slick/Configuration/FlexForms/Default/Slickcontent/flexform.xml',
-              ',slickimage' => 'FILE:EXT:slick/Configuration/FlexForms/Default/Slickcontent/flexform.xml',
+              'cart_cart,list' => 'FILE:EXT:cart/Configuration/FlexForms/CartPlugin.xml',
+              'owlslider_owlslider,list' => 'FILE:EXT:ls_template/Configuration/FlexForms/flexform_owlslider.xml',
             ),
             'search' => 
             array (
@@ -12000,354 +10673,39 @@ return array (
           ),
           'exclude' => '1',
         ),
-        'tx_mask_header' => 
-        array (
-          'config' => 
-          array (
-            'type' => 'input',
-          ),
-          'exclude' => '1',
-        ),
-        'tx_mask_description' => 
-        array (
-          'config' => 
-          array (
-            'type' => 'text',
-            'richtextConfiguration' => 'default',
-            'enableRichtext' => '1',
-          ),
-          'exclude' => '1',
-        ),
-        'tx_mask_test1' => 
+        'tx_mask_slide' => 
         array (
           'config' => 
           array (
             'type' => 'inline',
-            'foreign_table' => 'tt_content',
-            'overrideChildTca' => 
-            array (
-              'columns' => 
-              array (
-                'colPos' => 
-                array (
-                  'config' => 
-                  array (
-                    'default' => '999',
-                  ),
-                ),
-                'CType' => 
-                array (
-                  'config' => 
-                  array (
-                    'default' => 'textmedia',
-                  ),
-                ),
-              ),
-            ),
+            'foreign_table' => 'tx_mask_slide',
+            'foreign_field' => 'parentid',
+            'foreign_table_field' => 'parenttable',
             'foreign_sortby' => 'sorting',
             'appearance' => 
             array (
-              'collapseAll' => '1',
-              'levelLinksPosition' => 'top',
-              'showSynchronizationLink' => '1',
-              'showPossibleLocalizationRecords' => '1',
-              'showAllLocalizationLink' => '1',
-              'useSortable' => '1',
               'enabledControls' => 
               array (
                 'dragdrop' => '1',
               ),
-              'expandSingle' => '1',
+              'levelLinksPosition' => 'top',
+              'showSynchronizationLink' => '1',
+              'showPossibleLocalizationRecords' => '1',
+              'showAllLocalizationLink' => '1',
+              'showRemovedLocalizationRecords' => '1',
             ),
+            'minitems' => '1',
+            'maxitems' => '20',
             'behaviour' => 
             array (
               'localizeChildrenAtParentLocalization' => '1',
             ),
-            'foreign_field' => 'tx_mask_test1_parent',
           ),
           'exclude' => '1',
           'l10n_mode' => 'copy',
         ),
-        'tx_bootstrappackage_accordion_item' => 
+        'tx_mask_images' => 
         array (
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:accordion_item',
-          'config' => 
-          array (
-            'type' => 'inline',
-            'foreign_table' => 'tx_bootstrappackage_accordion_item',
-            'foreign_field' => 'tt_content',
-            'appearance' => 
-            array (
-              'useSortable' => true,
-              'showSynchronizationLink' => true,
-              'showAllLocalizationLink' => true,
-              'showPossibleLocalizationRecords' => true,
-              'showRemovedLocalizationRecords' => false,
-              'expandSingle' => true,
-              'enabledControls' => 
-              array (
-                'localize' => true,
-              ),
-            ),
-            'behaviour' => 
-            array (
-              'mode' => 'select',
-              'localizeChildrenAtParentLocalization' => true,
-            ),
-          ),
-        ),
-        'tx_bootstrappackage_card_group_item' => 
-        array (
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:card_group_item',
-          'config' => 
-          array (
-            'type' => 'inline',
-            'foreign_table' => 'tx_bootstrappackage_card_group_item',
-            'foreign_field' => 'tt_content',
-            'appearance' => 
-            array (
-              'useSortable' => true,
-              'showSynchronizationLink' => true,
-              'showAllLocalizationLink' => true,
-              'showPossibleLocalizationRecords' => true,
-              'showRemovedLocalizationRecords' => false,
-              'expandSingle' => true,
-              'enabledControls' => 
-              array (
-                'localize' => true,
-              ),
-            ),
-            'behaviour' => 
-            array (
-              'mode' => 'select',
-              'localizeChildrenAtParentLocalization' => true,
-            ),
-          ),
-        ),
-        'external_media_source' => 
-        array (
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:field.external_media_source',
-          'config' => 
-          array (
-            'type' => 'input',
-            'size' => 50,
-            'eval' => 'trim',
-            'max' => 1024,
-          ),
-        ),
-        'external_media_ratio' => 
-        array (
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:field.external_media_ratio',
-          'config' => 
-          array (
-            'type' => 'select',
-            'renderType' => 'selectSingle',
-            'items' => 
-            array (
-              0 => 
-              array (
-                0 => '16:9',
-                1 => '16by9',
-              ),
-              1 => 
-              array (
-                0 => '4:3',
-                1 => '4by3',
-              ),
-            ),
-          ),
-        ),
-        'tx_bootstrappackage_icon_group_item' => 
-        array (
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:icon_group_item',
-          'config' => 
-          array (
-            'type' => 'inline',
-            'foreign_table' => 'tx_bootstrappackage_icon_group_item',
-            'foreign_field' => 'tt_content',
-            'appearance' => 
-            array (
-              'useSortable' => true,
-              'showSynchronizationLink' => true,
-              'showAllLocalizationLink' => true,
-              'showPossibleLocalizationRecords' => true,
-              'showRemovedLocalizationRecords' => false,
-              'expandSingle' => true,
-              'enabledControls' => 
-              array (
-                'localize' => true,
-              ),
-            ),
-            'behaviour' => 
-            array (
-              'mode' => 'select',
-              'localizeChildrenAtParentLocalization' => true,
-            ),
-          ),
-        ),
-        'panel_class' => 
-        array (
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:field.panel_class',
-          'config' => 
-          array (
-            'type' => 'select',
-            'renderType' => 'selectSingle',
-            'items' => 
-            array (
-              0 => 
-              array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.default',
-                1 => 'default',
-              ),
-              1 => 
-              array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.primary',
-                1 => 'primary',
-              ),
-              2 => 
-              array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.success',
-                1 => 'success',
-              ),
-              3 => 
-              array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.info',
-                1 => 'info',
-              ),
-              4 => 
-              array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.warning',
-                1 => 'warning',
-              ),
-              5 => 
-              array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.danger',
-                1 => 'danger',
-              ),
-            ),
-          ),
-        ),
-        'quote_source' => 
-        array (
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:quote.source',
-          'config' => 
-          array (
-            'type' => 'input',
-            'size' => 50,
-            'max' => 255,
-          ),
-        ),
-        'quote_link' => 
-        array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:quote.link',
-          'config' => 
-          array (
-            'type' => 'input',
-            'renderType' => 'inputLink',
-            'size' => 50,
-            'max' => 1024,
-            'eval' => 'trim',
-            'fieldControl' => 
-            array (
-              'linkPopup' => 
-              array (
-                'options' => 
-                array (
-                  'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:quote.link',
-                ),
-              ),
-            ),
-            'softref' => 'typolink',
-          ),
-        ),
-        'tx_bootstrappackage_tab_item' => 
-        array (
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:tab_item',
-          'config' => 
-          array (
-            'type' => 'inline',
-            'foreign_table' => 'tx_bootstrappackage_tab_item',
-            'foreign_field' => 'tt_content',
-            'appearance' => 
-            array (
-              'useSortable' => true,
-              'showSynchronizationLink' => true,
-              'showAllLocalizationLink' => true,
-              'showPossibleLocalizationRecords' => true,
-              'showRemovedLocalizationRecords' => false,
-              'expandSingle' => true,
-              'enabledControls' => 
-              array (
-                'localize' => true,
-              ),
-            ),
-            'behaviour' => 
-            array (
-              'mode' => 'select',
-              'localizeChildrenAtParentLocalization' => true,
-            ),
-          ),
-        ),
-        'icon_set' => 
-        array (
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:field.icon_set',
-          'onChange' => 'reload',
-          'config' => 
-          array (
-            'type' => 'select',
-            'renderType' => 'selectSingle',
-            'items' => 
-            array (
-              0 => 
-              array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.none',
-                1 => '',
-              ),
-              1 => 
-              array (
-                0 => 'Ionicons',
-                1 => 'EXT:bootstrap_package/Resources/Public/Images/Icons/Ionicons/',
-              ),
-              2 => 
-              array (
-                0 => 'Glyphicons',
-                1 => 'EXT:bootstrap_package/Resources/Public/Images/Icons/Glyphicons/',
-              ),
-            ),
-          ),
-        ),
-        'icon' => 
-        array (
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:field.icon',
-          'displayCond' => 'FIELD:icon_set:REQ:true',
-          'config' => 
-          array (
-            'type' => 'select',
-            'renderType' => 'selectSingle',
-            'items' => 
-            array (
-              0 => 
-              array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.none',
-                1 => 0,
-                2 => 'EXT:bootstrap_package/Resources/Public/Images/Icons/none.jpg',
-              ),
-            ),
-            'itemsProcFunc' => 'BK2K\\BootstrapPackage\\Utility\\TextIconUtility->addIconItems',
-            'fieldWizard' => 
-            array (
-              'selectIcons' => 
-              array (
-                'disabled' => false,
-              ),
-            ),
-          ),
-        ),
-        'icon_file' => 
-        array (
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:field.icon_file',
-          'displayCond' => 'FIELD:icon_set:REQ:false',
           'config' => 
           array (
             'type' => 'inline',
@@ -12357,299 +10715,7 @@ return array (
             'foreign_table_field' => 'tablenames',
             'foreign_match_fields' => 
             array (
-              'fieldname' => 'icon_file',
-            ),
-            'foreign_label' => 'uid_local',
-            'foreign_selector' => 'uid_local',
-            'overrideChildTca' => 
-            array (
-              'columns' => 
-              array (
-                'uid_local' => 
-                array (
-                  'config' => 
-                  array (
-                    'appearance' => 
-                    array (
-                      'elementBrowserType' => 'file',
-                      'elementBrowserAllowed' => 'gif,png,svg',
-                    ),
-                  ),
-                ),
-              ),
-              'types' => 
-              array (
-                0 => 
-                array (
-                  'showitem' => '
-                                    --palette--;;filePalette
-                                ',
-                ),
-                1 => 
-                array (
-                  'showitem' => '
-                                    --palette--;;filePalette
-                                ',
-                ),
-                2 => 
-                array (
-                  'showitem' => '
-                                    --palette--;;filePalette
-                                ',
-                ),
-                3 => 
-                array (
-                  'showitem' => '
-                                    --palette--;;filePalette
-                                ',
-                ),
-                4 => 
-                array (
-                  'showitem' => '
-                                    --palette--;;filePalette
-                                ',
-                ),
-                5 => 
-                array (
-                  'showitem' => '
-                                    --palette--;;filePalette
-                                ',
-                ),
-              ),
-            ),
-            'filter' => 
-            array (
-              0 => 
-              array (
-                'userFunc' => 'TYPO3\\CMS\\Core\\Resource\\Filter\\FileExtensionFilter->filterInlineChildren',
-                'parameters' => 
-                array (
-                  'allowedFileExtensions' => 'gif,png,svg',
-                  'disallowedFileExtensions' => '',
-                ),
-              ),
-            ),
-            'appearance' => 
-            array (
-              'useSortable' => true,
-              'headerThumbnail' => 
-              array (
-                'field' => 'uid_local',
-                'width' => '45',
-                'height' => '45c',
-              ),
-              'enabledControls' => 
-              array (
-                'info' => true,
-                'new' => false,
-                'dragdrop' => true,
-                'sort' => false,
-                'hide' => true,
-                'delete' => true,
-              ),
-              'createNewRelationLinkTitle' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference',
-            ),
-            'behaviour' => 
-            array (
-              'localizeChildrenAtParentLocalization' => true,
-            ),
-            'minitems' => 1,
-            'maxitems' => 1,
-          ),
-        ),
-        'icon_position' => 
-        array (
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:field.icon_position',
-          'config' => 
-          array (
-            'type' => 'select',
-            'renderType' => 'selectSingle',
-            'items' => 
-            array (
-              0 => 
-              array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.left',
-                1 => 'left',
-              ),
-              1 => 
-              array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.right',
-                1 => 'right',
-              ),
-              2 => 
-              array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.top',
-                1 => 'top',
-              ),
-            ),
-          ),
-        ),
-        'icon_type' => 
-        array (
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:field.icon_type',
-          'onChange' => 'reload',
-          'config' => 
-          array (
-            'type' => 'select',
-            'renderType' => 'selectSingle',
-            'default' => 'default',
-            'items' => 
-            array (
-              0 => 
-              array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.default',
-                1 => 'default',
-              ),
-              1 => 
-              array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.square',
-                1 => 'square',
-              ),
-              2 => 
-              array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.circle',
-                1 => 'circle',
-              ),
-            ),
-          ),
-        ),
-        'icon_size' => 
-        array (
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:field.icon_size',
-          'config' => 
-          array (
-            'type' => 'select',
-            'renderType' => 'selectSingle',
-            'items' => 
-            array (
-              0 => 
-              array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.default',
-                1 => 'default',
-              ),
-              1 => 
-              array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.medium',
-                1 => 'medium',
-              ),
-              2 => 
-              array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.large',
-                1 => 'large',
-              ),
-              3 => 
-              array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.awesome',
-                1 => 'awesome',
-              ),
-            ),
-          ),
-        ),
-        'icon_color' => 
-        array (
-          'displayCond' => 'FIELD:icon_type:!=:default',
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:field.icon_color',
-          'config' => 
-          array (
-            'type' => 'input',
-            'renderType' => 'colorpicker',
-            'default' => '#FFFFFF',
-          ),
-        ),
-        'icon_background' => 
-        array (
-          'displayCond' => 'FIELD:icon_type:!=:default',
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:field.icon_background',
-          'config' => 
-          array (
-            'type' => 'input',
-            'renderType' => 'colorpicker',
-            'default' => '#333333',
-          ),
-        ),
-        'tx_bootstrappackage_timeline_item' => 
-        array (
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:timeline_item',
-          'config' => 
-          array (
-            'type' => 'inline',
-            'foreign_table' => 'tx_bootstrappackage_timeline_item',
-            'foreign_field' => 'tt_content',
-            'appearance' => 
-            array (
-              'useSortable' => true,
-              'showSynchronizationLink' => true,
-              'showAllLocalizationLink' => true,
-              'showPossibleLocalizationRecords' => true,
-              'showRemovedLocalizationRecords' => false,
-              'expandSingle' => true,
-              'enabledControls' => 
-              array (
-                'localize' => true,
-              ),
-            ),
-            'behaviour' => 
-            array (
-              'mode' => 'select',
-              'localizeChildrenAtParentLocalization' => true,
-            ),
-          ),
-        ),
-        'background_color_class' => 
-        array (
-          'exclude' => true,
-          'displayCond' => 'FIELD:frame_class:!=:none',
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:field.background_color_class',
-          'config' => 
-          array (
-            'type' => 'select',
-            'renderType' => 'selectSingle',
-            'items' => 
-            array (
-              0 => 
-              array (
-                0 => 'none',
-                1 => 'none',
-              ),
-              1 => 
-              array (
-                0 => 'primary',
-                1 => 'primary',
-              ),
-              2 => 
-              array (
-                0 => 'secondary',
-                1 => 'secondary',
-              ),
-              3 => 
-              array (
-                0 => 'light',
-                1 => 'light',
-              ),
-              4 => 
-              array (
-                0 => 'dark',
-                1 => 'dark',
-              ),
-            ),
-          ),
-          'l10n_mode' => 'exclude',
-        ),
-        'background_image' => 
-        array (
-          'exclude' => true,
-          'displayCond' => 'FIELD:frame_class:!=:none',
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:field.background_image',
-          'config' => 
-          array (
-            'type' => 'inline',
-            'foreign_table' => 'sys_file_reference',
-            'foreign_field' => 'uid_foreign',
-            'foreign_sortby' => 'sorting_foreign',
-            'foreign_table_field' => 'tablenames',
-            'foreign_match_fields' => 
-            array (
-              'fieldname' => 'background_image',
+              'fieldname' => 'tx_mask_images',
             ),
             'foreign_label' => 'uid_local',
             'foreign_selector' => 'uid_local',
@@ -12668,229 +10734,32 @@ return array (
                     ),
                   ),
                 ),
-                'crop' => 
-                array (
-                  'config' => 
-                  array (
-                    'cropVariants' => 
-                    array (
-                      'default' => 
-                      array (
-                        'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.default',
-                        'allowedAspectRatios' => 
-                        array (
-                          '16:9' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                            'value' => 1.7777777777777777,
-                          ),
-                          '4:3' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                            'value' => 1.3333333333333333,
-                          ),
-                          '1:1' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                            'value' => 1.0,
-                          ),
-                          'NaN' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                            'value' => 0.0,
-                          ),
-                        ),
-                        'selectedRatio' => 'NaN',
-                        'cropArea' => 
-                        array (
-                          'x' => 0.0,
-                          'y' => 0.0,
-                          'width' => 1.0,
-                          'height' => 1.0,
-                        ),
-                      ),
-                      'large' => 
-                      array (
-                        'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.large',
-                        'allowedAspectRatios' => 
-                        array (
-                          '16:9' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                            'value' => 1.7777777777777777,
-                          ),
-                          '4:3' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                            'value' => 1.3333333333333333,
-                          ),
-                          '1:1' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                            'value' => 1.0,
-                          ),
-                          'NaN' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                            'value' => 0.0,
-                          ),
-                        ),
-                        'selectedRatio' => 'NaN',
-                        'cropArea' => 
-                        array (
-                          'x' => 0.0,
-                          'y' => 0.0,
-                          'width' => 1.0,
-                          'height' => 1.0,
-                        ),
-                      ),
-                      'medium' => 
-                      array (
-                        'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.medium',
-                        'allowedAspectRatios' => 
-                        array (
-                          '16:9' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                            'value' => 1.7777777777777777,
-                          ),
-                          '4:3' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                            'value' => 1.3333333333333333,
-                          ),
-                          '1:1' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                            'value' => 1.0,
-                          ),
-                          'NaN' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                            'value' => 0.0,
-                          ),
-                        ),
-                        'selectedRatio' => 'NaN',
-                        'cropArea' => 
-                        array (
-                          'x' => 0.0,
-                          'y' => 0.0,
-                          'width' => 1.0,
-                          'height' => 1.0,
-                        ),
-                      ),
-                      'small' => 
-                      array (
-                        'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.small',
-                        'allowedAspectRatios' => 
-                        array (
-                          '16:9' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                            'value' => 1.7777777777777777,
-                          ),
-                          '4:3' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                            'value' => 1.3333333333333333,
-                          ),
-                          '1:1' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                            'value' => 1.0,
-                          ),
-                          'NaN' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                            'value' => 0.0,
-                          ),
-                        ),
-                        'selectedRatio' => 'NaN',
-                        'cropArea' => 
-                        array (
-                          'x' => 0.0,
-                          'y' => 0.0,
-                          'width' => 1.0,
-                          'height' => 1.0,
-                        ),
-                      ),
-                      'extrasmall' => 
-                      array (
-                        'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.extrasmall',
-                        'allowedAspectRatios' => 
-                        array (
-                          '16:9' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                            'value' => 1.7777777777777777,
-                          ),
-                          '4:3' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                            'value' => 1.3333333333333333,
-                          ),
-                          '1:1' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                            'value' => 1.0,
-                          ),
-                          'NaN' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                            'value' => 0.0,
-                          ),
-                        ),
-                        'selectedRatio' => 'NaN',
-                        'cropArea' => 
-                        array (
-                          'x' => 0.0,
-                          'y' => 0.0,
-                          'width' => 1.0,
-                          'height' => 1.0,
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
               ),
               'types' => 
               array (
                 0 => 
                 array (
-                  'showitem' => '
-                            --palette--;;filePalette
-                        ',
+                  'showitem' => '--palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette, --palette--;;filePalette',
                 ),
                 1 => 
                 array (
-                  'showitem' => '
-                            --palette--;;filePalette
-                        ',
+                  'showitem' => '--palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette, --palette--;;filePalette',
                 ),
                 2 => 
                 array (
-                  'showitem' => '
-                            crop,
-                            --palette--;;filePalette
-                        ',
+                  'showitem' => '--palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette, --palette--;;filePalette',
                 ),
                 3 => 
                 array (
-                  'showitem' => '
-                            --palette--;;filePalette
-                        ',
+                  'showitem' => '--palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette, --palette--;;filePalette',
                 ),
                 4 => 
                 array (
-                  'showitem' => '
-                            --palette--;;filePalette
-                        ',
+                  'showitem' => '--palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette, --palette--;;filePalette',
                 ),
                 5 => 
                 array (
-                  'showitem' => '
-                            --palette--;;filePalette
-                        ',
+                  'showitem' => '--palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette, --palette--;;filePalette',
                 ),
               ),
             ),
@@ -12899,16 +10768,11 @@ return array (
               0 => 
               array (
                 'userFunc' => 'TYPO3\\CMS\\Core\\Resource\\Filter\\FileExtensionFilter->filterInlineChildren',
-                'parameters' => 
-                array (
-                  'allowedFileExtensions' => 'gif,jpg,jpeg,tif,tiff,bmp,pcx,tga,png,pdf,ai,svg',
-                  'disallowedFileExtensions' => '',
-                ),
               ),
             ),
             'appearance' => 
             array (
-              'useSortable' => true,
+              'useSortable' => '1',
               'headerThumbnail' => 
               array (
                 'field' => 'uid_local',
@@ -12917,100 +10781,132 @@ return array (
               ),
               'enabledControls' => 
               array (
-                'info' => true,
+                'info' => 'tx_mask_images',
                 'new' => false,
-                'dragdrop' => true,
+                'dragdrop' => 'tx_mask_images',
                 'sort' => false,
-                'hide' => true,
-                'delete' => true,
+                'hide' => 'tx_mask_images',
+                'delete' => 'tx_mask_images',
               ),
-              'createNewRelationLinkTitle' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference',
+              'collapseAll' => '1',
+              'expandSingle' => '1',
+              'fileUploadAllowed' => '1',
+              'showSynchronizationLink' => '1',
+              'showPossibleLocalizationRecords' => '1',
+              'showAllLocalizationLink' => '1',
+              'showRemovedLocalizationRecords' => '1',
             ),
             'behaviour' => 
             array (
-              'localizeChildrenAtParentLocalization' => true,
+              'localizeChildrenAtParentLocalization' => '1',
             ),
-            'minitems' => 0,
-            'maxitems' => 1,
+            'minitems' => '1',
+            'maxitems' => '100',
           ),
-          'l10n_mode' => 'exclude',
+          'exclude' => '1',
+          'l10n_mode' => 'copy',
         ),
-        'background_image_options' => 
+        'tx_mask_backgroun' => 
         array (
-          'exclude' => true,
-          'displayCond' => 'FIELD:frame_class:!=:none',
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:field.background_image_options',
-          'config' => 
-          array (
-            'type' => 'flex',
-            'ds' => 
-            array (
-              'default' => 'FILE:EXT:bootstrap_package/Configuration/FlexForms/BackgroundImage.xml',
-            ),
-          ),
-          'l10n_mode' => 'exclude',
-        ),
-        'readmore_label' => 
-        array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:field.readmore_label',
-          'config' => 
-          array (
-            'type' => 'input',
-            'eval' => 'trim',
-            'size' => 50,
-            'max' => 255,
-          ),
-        ),
-        'teaser' => 
-        array (
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:field.teaser',
-          'exclude' => true,
-          'config' => 
-          array (
-            'type' => 'text',
-            'softref' => 'rtehtmlarea_images,typolink_tag',
-            'cols' => '40',
-            'rows' => '3',
-          ),
-        ),
-        'tx_bootstrappackage_carousel_item' => 
-        array (
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:carousel_item',
           'config' => 
           array (
             'type' => 'inline',
-            'foreign_table' => 'tx_bootstrappackage_carousel_item',
-            'foreign_field' => 'tt_content',
+            'foreign_table' => 'sys_file_reference',
+            'foreign_field' => 'uid_foreign',
+            'foreign_sortby' => 'sorting_foreign',
+            'foreign_table_field' => 'tablenames',
+            'foreign_match_fields' => 
+            array (
+              'fieldname' => 'tx_mask_backgroun',
+            ),
+            'foreign_label' => 'uid_local',
+            'foreign_selector' => 'uid_local',
+            'overrideChildTca' => 
+            array (
+              'columns' => 
+              array (
+                'uid_local' => 
+                array (
+                  'config' => 
+                  array (
+                    'appearance' => 
+                    array (
+                      'elementBrowserType' => 'file',
+                      'elementBrowserAllowed' => 'gif,jpg,jpeg,tif,tiff,bmp,pcx,tga,png,pdf,ai,svg',
+                    ),
+                  ),
+                ),
+              ),
+              'types' => 
+              array (
+                0 => 
+                array (
+                  'showitem' => '--palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette, --palette--;;filePalette',
+                ),
+                1 => 
+                array (
+                  'showitem' => '--palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette, --palette--;;filePalette',
+                ),
+                2 => 
+                array (
+                  'showitem' => '--palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette, --palette--;;filePalette',
+                ),
+                3 => 
+                array (
+                  'showitem' => '--palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette, --palette--;;filePalette',
+                ),
+                4 => 
+                array (
+                  'showitem' => '--palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette, --palette--;;filePalette',
+                ),
+                5 => 
+                array (
+                  'showitem' => '--palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette, --palette--;;filePalette',
+                ),
+              ),
+            ),
+            'filter' => 
+            array (
+              0 => 
+              array (
+                'userFunc' => 'TYPO3\\CMS\\Core\\Resource\\Filter\\FileExtensionFilter->filterInlineChildren',
+              ),
+            ),
             'appearance' => 
             array (
-              'useSortable' => true,
-              'showSynchronizationLink' => true,
-              'showAllLocalizationLink' => true,
-              'showPossibleLocalizationRecords' => true,
-              'showRemovedLocalizationRecords' => false,
-              'expandSingle' => true,
+              'useSortable' => '1',
+              'headerThumbnail' => 
+              array (
+                'field' => 'uid_local',
+                'width' => '45',
+                'height' => '45c',
+              ),
               'enabledControls' => 
               array (
-                'localize' => true,
+                'info' => 'tx_mask_backgroun',
+                'new' => false,
+                'dragdrop' => 'tx_mask_backgroun',
+                'sort' => false,
+                'hide' => 'tx_mask_backgroun',
+                'delete' => 'tx_mask_backgroun',
               ),
+              'collapseAll' => '1',
+              'expandSingle' => '1',
+              'fileUploadAllowed' => '1',
+              'showSynchronizationLink' => '1',
+              'showPossibleLocalizationRecords' => '1',
+              'showAllLocalizationLink' => '1',
+              'showRemovedLocalizationRecords' => '1',
             ),
             'behaviour' => 
             array (
-              'mode' => 'select',
-              'localizeChildrenAtParentLocalization' => true,
+              'localizeChildrenAtParentLocalization' => '1',
             ),
+            'minitems' => '0',
+            'maxitems' => '1',
           ),
-        ),
-        'file_folder' => 
-        array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:field.file_folder',
-          'config' => 
-          array (
-            'type' => 'group',
-            'internal_type' => 'folder',
-          ),
+          'exclude' => '1',
+          'l10n_mode' => 'copy',
         ),
       ),
       'types' => 
@@ -13058,7 +10954,7 @@ return array (
         ),
         'textpic' => 
         array (
-          'showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.headers;headers,bodytext;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:bodytext_formlabel,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.images,image,file_folder,filelink_sorting,--palette--;LLL:EXT:frontend/Resources/Private/Language/Database.xlf:tt_content.palette.mediaAdjustments;mediaAdjustments,--palette--;LLL:EXT:frontend/Resources/Private/Language/Database.xlf:tt_content.palette.gallerySettings;gallerySettings,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.imagelinks;imagelinks,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.appearanceLinks;appearanceLinks,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,--palette--;;language,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,--palette--;;hidden,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,--div--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_category.tabs.category,categories,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,rowDescription,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended, --div--;LLL:EXT:gridelements/Resources/Private/Language/locallang_db.xlf:gridElements, tx_gridelements_container, tx_gridelements_columns',
+          'showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.headers;headers,bodytext;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:bodytext_formlabel,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.images,image,--palette--;LLL:EXT:frontend/Resources/Private/Language/Database.xlf:tt_content.palette.mediaAdjustments;mediaAdjustments,--palette--;LLL:EXT:frontend/Resources/Private/Language/Database.xlf:tt_content.palette.gallerySettings;gallerySettings,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.imagelinks;imagelinks,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.appearanceLinks;appearanceLinks,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,--palette--;;language,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,--palette--;;hidden,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,--div--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_category.tabs.category,categories,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,rowDescription,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended, --div--;LLL:EXT:gridelements/Resources/Private/Language/locallang_db.xlf:gridElements, tx_gridelements_container, tx_gridelements_columns',
           'columnsOverrides' => 
           array (
             'bodytext' => 
@@ -13067,202 +10963,6 @@ return array (
               array (
                 'enableRichtext' => true,
                 'richtextConfiguration' => 'default',
-              ),
-            ),
-            'image' => 
-            array (
-              'config' => 
-              array (
-                'overrideChildTca' => 
-                array (
-                  'columns' => 
-                  array (
-                    'crop' => 
-                    array (
-                      'config' => 
-                      array (
-                        'cropVariants' => 
-                        array (
-                          'default' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.default',
-                            'allowedAspectRatios' => 
-                            array (
-                              '16:9' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                                'value' => 1.7777777777777777,
-                              ),
-                              '4:3' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                                'value' => 1.3333333333333333,
-                              ),
-                              '1:1' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                                'value' => 1.0,
-                              ),
-                              'NaN' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                                'value' => 0.0,
-                              ),
-                            ),
-                            'selectedRatio' => 'NaN',
-                            'cropArea' => 
-                            array (
-                              'x' => 0.0,
-                              'y' => 0.0,
-                              'width' => 1.0,
-                              'height' => 1.0,
-                            ),
-                          ),
-                          'large' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.large',
-                            'allowedAspectRatios' => 
-                            array (
-                              '16:9' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                                'value' => 1.7777777777777777,
-                              ),
-                              '4:3' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                                'value' => 1.3333333333333333,
-                              ),
-                              '1:1' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                                'value' => 1.0,
-                              ),
-                              'NaN' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                                'value' => 0.0,
-                              ),
-                            ),
-                            'selectedRatio' => 'NaN',
-                            'cropArea' => 
-                            array (
-                              'x' => 0.0,
-                              'y' => 0.0,
-                              'width' => 1.0,
-                              'height' => 1.0,
-                            ),
-                          ),
-                          'medium' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.medium',
-                            'allowedAspectRatios' => 
-                            array (
-                              '16:9' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                                'value' => 1.7777777777777777,
-                              ),
-                              '4:3' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                                'value' => 1.3333333333333333,
-                              ),
-                              '1:1' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                                'value' => 1.0,
-                              ),
-                              'NaN' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                                'value' => 0.0,
-                              ),
-                            ),
-                            'selectedRatio' => 'NaN',
-                            'cropArea' => 
-                            array (
-                              'x' => 0.0,
-                              'y' => 0.0,
-                              'width' => 1.0,
-                              'height' => 1.0,
-                            ),
-                          ),
-                          'small' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.small',
-                            'allowedAspectRatios' => 
-                            array (
-                              '16:9' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                                'value' => 1.7777777777777777,
-                              ),
-                              '4:3' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                                'value' => 1.3333333333333333,
-                              ),
-                              '1:1' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                                'value' => 1.0,
-                              ),
-                              'NaN' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                                'value' => 0.0,
-                              ),
-                            ),
-                            'selectedRatio' => 'NaN',
-                            'cropArea' => 
-                            array (
-                              'x' => 0.0,
-                              'y' => 0.0,
-                              'width' => 1.0,
-                              'height' => 1.0,
-                            ),
-                          ),
-                          'extrasmall' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.extrasmall',
-                            'allowedAspectRatios' => 
-                            array (
-                              '16:9' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                                'value' => 1.7777777777777777,
-                              ),
-                              '4:3' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                                'value' => 1.3333333333333333,
-                              ),
-                              '1:1' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                                'value' => 1.0,
-                              ),
-                              'NaN' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                                'value' => 0.0,
-                              ),
-                            ),
-                            'selectedRatio' => 'NaN',
-                            'cropArea' => 
-                            array (
-                              'x' => 0.0,
-                              'y' => 0.0,
-                              'width' => 1.0,
-                              'height' => 1.0,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
               ),
             ),
           ),
@@ -13280,406 +10980,11 @@ return array (
                 'richtextConfiguration' => 'default',
               ),
             ),
-            'assets' => 
-            array (
-              'config' => 
-              array (
-                'overrideChildTca' => 
-                array (
-                  'columns' => 
-                  array (
-                    'crop' => 
-                    array (
-                      'config' => 
-                      array (
-                        'cropVariants' => 
-                        array (
-                          'default' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.default',
-                            'allowedAspectRatios' => 
-                            array (
-                              '16:9' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                                'value' => 1.7777777777777777,
-                              ),
-                              '4:3' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                                'value' => 1.3333333333333333,
-                              ),
-                              '1:1' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                                'value' => 1.0,
-                              ),
-                              'NaN' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                                'value' => 0.0,
-                              ),
-                            ),
-                            'selectedRatio' => 'NaN',
-                            'cropArea' => 
-                            array (
-                              'x' => 0.0,
-                              'y' => 0.0,
-                              'width' => 1.0,
-                              'height' => 1.0,
-                            ),
-                          ),
-                          'large' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.large',
-                            'allowedAspectRatios' => 
-                            array (
-                              '16:9' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                                'value' => 1.7777777777777777,
-                              ),
-                              '4:3' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                                'value' => 1.3333333333333333,
-                              ),
-                              '1:1' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                                'value' => 1.0,
-                              ),
-                              'NaN' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                                'value' => 0.0,
-                              ),
-                            ),
-                            'selectedRatio' => 'NaN',
-                            'cropArea' => 
-                            array (
-                              'x' => 0.0,
-                              'y' => 0.0,
-                              'width' => 1.0,
-                              'height' => 1.0,
-                            ),
-                          ),
-                          'medium' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.medium',
-                            'allowedAspectRatios' => 
-                            array (
-                              '16:9' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                                'value' => 1.7777777777777777,
-                              ),
-                              '4:3' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                                'value' => 1.3333333333333333,
-                              ),
-                              '1:1' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                                'value' => 1.0,
-                              ),
-                              'NaN' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                                'value' => 0.0,
-                              ),
-                            ),
-                            'selectedRatio' => 'NaN',
-                            'cropArea' => 
-                            array (
-                              'x' => 0.0,
-                              'y' => 0.0,
-                              'width' => 1.0,
-                              'height' => 1.0,
-                            ),
-                          ),
-                          'small' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.small',
-                            'allowedAspectRatios' => 
-                            array (
-                              '16:9' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                                'value' => 1.7777777777777777,
-                              ),
-                              '4:3' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                                'value' => 1.3333333333333333,
-                              ),
-                              '1:1' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                                'value' => 1.0,
-                              ),
-                              'NaN' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                                'value' => 0.0,
-                              ),
-                            ),
-                            'selectedRatio' => 'NaN',
-                            'cropArea' => 
-                            array (
-                              'x' => 0.0,
-                              'y' => 0.0,
-                              'width' => 1.0,
-                              'height' => 1.0,
-                            ),
-                          ),
-                          'extrasmall' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.extrasmall',
-                            'allowedAspectRatios' => 
-                            array (
-                              '16:9' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                                'value' => 1.7777777777777777,
-                              ),
-                              '4:3' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                                'value' => 1.3333333333333333,
-                              ),
-                              '1:1' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                                'value' => 1.0,
-                              ),
-                              'NaN' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                                'value' => 0.0,
-                              ),
-                            ),
-                            'selectedRatio' => 'NaN',
-                            'cropArea' => 
-                            array (
-                              'x' => 0.0,
-                              'y' => 0.0,
-                              'width' => 1.0,
-                              'height' => 1.0,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
           ),
         ),
         'image' => 
         array (
-          'showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.headers;headers,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.images,image,file_folder,filelink_sorting,--palette--;LLL:EXT:frontend/Resources/Private/Language/Database.xlf:tt_content.palette.mediaAdjustments;mediaAdjustments,--palette--;LLL:EXT:frontend/Resources/Private/Language/Database.xlf:tt_content.palette.gallerySettings;gallerySettings,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.imagelinks;imagelinks,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.appearanceLinks;appearanceLinks,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,--palette--;;language,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,--palette--;;hidden,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,--div--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_category.tabs.category,categories,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,rowDescription,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended, --div--;LLL:EXT:gridelements/Resources/Private/Language/locallang_db.xlf:gridElements, tx_gridelements_container, tx_gridelements_columns',
-          'columnsOverrides' => 
-          array (
-            'image' => 
-            array (
-              'config' => 
-              array (
-                'overrideChildTca' => 
-                array (
-                  'columns' => 
-                  array (
-                    'crop' => 
-                    array (
-                      'config' => 
-                      array (
-                        'cropVariants' => 
-                        array (
-                          'default' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.default',
-                            'allowedAspectRatios' => 
-                            array (
-                              '16:9' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                                'value' => 1.7777777777777777,
-                              ),
-                              '4:3' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                                'value' => 1.3333333333333333,
-                              ),
-                              '1:1' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                                'value' => 1.0,
-                              ),
-                              'NaN' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                                'value' => 0.0,
-                              ),
-                            ),
-                            'selectedRatio' => 'NaN',
-                            'cropArea' => 
-                            array (
-                              'x' => 0.0,
-                              'y' => 0.0,
-                              'width' => 1.0,
-                              'height' => 1.0,
-                            ),
-                          ),
-                          'large' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.large',
-                            'allowedAspectRatios' => 
-                            array (
-                              '16:9' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                                'value' => 1.7777777777777777,
-                              ),
-                              '4:3' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                                'value' => 1.3333333333333333,
-                              ),
-                              '1:1' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                                'value' => 1.0,
-                              ),
-                              'NaN' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                                'value' => 0.0,
-                              ),
-                            ),
-                            'selectedRatio' => 'NaN',
-                            'cropArea' => 
-                            array (
-                              'x' => 0.0,
-                              'y' => 0.0,
-                              'width' => 1.0,
-                              'height' => 1.0,
-                            ),
-                          ),
-                          'medium' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.medium',
-                            'allowedAspectRatios' => 
-                            array (
-                              '16:9' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                                'value' => 1.7777777777777777,
-                              ),
-                              '4:3' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                                'value' => 1.3333333333333333,
-                              ),
-                              '1:1' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                                'value' => 1.0,
-                              ),
-                              'NaN' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                                'value' => 0.0,
-                              ),
-                            ),
-                            'selectedRatio' => 'NaN',
-                            'cropArea' => 
-                            array (
-                              'x' => 0.0,
-                              'y' => 0.0,
-                              'width' => 1.0,
-                              'height' => 1.0,
-                            ),
-                          ),
-                          'small' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.small',
-                            'allowedAspectRatios' => 
-                            array (
-                              '16:9' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                                'value' => 1.7777777777777777,
-                              ),
-                              '4:3' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                                'value' => 1.3333333333333333,
-                              ),
-                              '1:1' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                                'value' => 1.0,
-                              ),
-                              'NaN' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                                'value' => 0.0,
-                              ),
-                            ),
-                            'selectedRatio' => 'NaN',
-                            'cropArea' => 
-                            array (
-                              'x' => 0.0,
-                              'y' => 0.0,
-                              'width' => 1.0,
-                              'height' => 1.0,
-                            ),
-                          ),
-                          'extrasmall' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.extrasmall',
-                            'allowedAspectRatios' => 
-                            array (
-                              '16:9' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                                'value' => 1.7777777777777777,
-                              ),
-                              '4:3' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                                'value' => 1.3333333333333333,
-                              ),
-                              '1:1' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                                'value' => 1.0,
-                              ),
-                              'NaN' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                                'value' => 0.0,
-                              ),
-                            ),
-                            'selectedRatio' => 'NaN',
-                            'cropArea' => 
-                            array (
-                              'x' => 0.0,
-                              'y' => 0.0,
-                              'width' => 1.0,
-                              'height' => 1.0,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-          ),
+          'showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.headers;headers,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.images,image,--palette--;LLL:EXT:frontend/Resources/Private/Language/Database.xlf:tt_content.palette.mediaAdjustments;mediaAdjustments,--palette--;LLL:EXT:frontend/Resources/Private/Language/Database.xlf:tt_content.palette.gallerySettings;gallerySettings,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.imagelinks;imagelinks,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.appearanceLinks;appearanceLinks,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,--palette--;;language,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,--palette--;;hidden,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,--div--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_category.tabs.category,categories,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,rowDescription,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended, --div--;LLL:EXT:gridelements/Resources/Private/Language/locallang_db.xlf:gridElements, tx_gridelements_container, tx_gridelements_columns',
         ),
         'html' => 
         array (
@@ -13701,6 +11006,19 @@ return array (
         array (
           'showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.headers;headers,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.plugin,list_type;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:list_type_formlabel,pages;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:pages.ALT.list_formlabel,recursive,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.appearanceLinks;appearanceLinks,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,--palette--;;language,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,--palette--;;hidden,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,--div--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_category.tabs.category,categories,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,rowDescription,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended, --div--;LLL:EXT:gridelements/Resources/Private/Language/locallang_db.xlf:gridElements, tx_gridelements_container, tx_gridelements_columns',
           'subtype_value_field' => 'list_type',
+          'subtypes_excludelist' => 
+          array (
+            'cart_minicart' => 'select_key,pages,recursive',
+            'cart_cart' => 'select_key',
+            'cart_currency' => 'select_key,pages,recursive',
+            'cart_order' => 'select_key',
+            'cart_flexproduct' => 'select_key,pages,recursive',
+          ),
+          'subtypes_addlist' => 
+          array (
+            'cart_cart' => 'pi_flexform',
+            'owlslider_owlslider' => 'pi_flexform',
+          ),
         ),
         'menu_categorized_pages' => 
         array (
@@ -13836,7 +11154,7 @@ return array (
           ),
           'showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,tx_mask_footer_background,tx_mask_logo,tx_mask_newtworkstitle,tx_mask_networks,tx_mask_work_time,tx_mask_footer_contacts,tx_mask_copyright,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.appearanceLinks;appearanceLinks,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,--palette--;;language,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,--palette--;;hidden,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,--div--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_category.tabs.category,categories,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,rowDescription,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended,tx_gridelements_container,tx_gridelements_columns, --div--;LLL:EXT:gridelements/Resources/Private/Language/locallang_db.xlf:gridElements',
         ),
-        'mask_lsvideo' => 
+        'mask_image_slider' => 
         array (
           'columnsOverrides' => 
           array (
@@ -13849,508 +11167,22 @@ return array (
               ),
             ),
           ),
-          'showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,tx_mask_header,tx_mask_description,tx_mask_test1,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.appearanceLinks;appearanceLinks,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,--palette--;;language,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,--palette--;;hidden,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,--div--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_category.tabs.category,categories,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,rowDescription,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended,tx_gridelements_container,tx_gridelements_columns, --div--;LLL:EXT:gridelements/Resources/Private/Language/locallang_db.xlf:gridElements',
+          'showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,tx_mask_images,tx_mask_backgroun,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.appearanceLinks;appearanceLinks,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,--palette--;;language,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,--palette--;;hidden,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,--div--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_category.tabs.category,categories,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,rowDescription,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended,tx_gridelements_container,tx_gridelements_columns, --div--;LLL:EXT:gridelements/Resources/Private/Language/locallang_db.xlf:gridElements',
         ),
-        'accordion' => 
+        'mask_main_slider' => 
         array (
-          'showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.headers;headers,tx_bootstrappackage_accordion_item,--div--;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:accordion.options,pi_flexform;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:advanced,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.appearanceLinks;appearanceLinks,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,--palette--;;language,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,--palette--;;hidden,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,categories,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,rowDescription,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended, --div--;LLL:EXT:gridelements/Resources/Private/Language/locallang_db.xlf:gridElements, tx_gridelements_container, tx_gridelements_columns',
-        ),
-        'audio' => 
-        array (
-          'showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.headers;headers,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.media,assets,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.appearanceLinks;appearanceLinks,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,--palette--;;language,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,--palette--;;hidden,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,categories,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,rowDescription,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended, --div--;LLL:EXT:gridelements/Resources/Private/Language/locallang_db.xlf:gridElements, tx_gridelements_container, tx_gridelements_columns',
-          'columnsOverrides' => 
-          array (
-            'assets' => 
-            array (
-              'config' => 
-              array (
-                'filter' => 
-                array (
-                  0 => 
-                  array (
-                    'parameters' => 
-                    array (
-                      'allowedFileExtensions' => 'mp3',
-                    ),
-                  ),
-                ),
-                'overrideChildTca' => 
-                array (
-                  'columns' => 
-                  array (
-                    'uid_local' => 
-                    array (
-                      'config' => 
-                      array (
-                        'appearance' => 
-                        array (
-                          'elementBrowserAllowed' => 'mp3',
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-          ),
-        ),
-        'card_group' => 
-        array (
-          'showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.headers;headers,tx_bootstrappackage_card_group_item,--div--;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:content_element.card_group.options,pi_flexform;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:advanced,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.appearanceLinks;appearanceLinks,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,--palette--;;language,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,--palette--;;hidden,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,categories,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,rowDescription,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended, --div--;LLL:EXT:gridelements/Resources/Private/Language/locallang_db.xlf:gridElements, tx_gridelements_container, tx_gridelements_columns',
-        ),
-        'carousel' => 
-        array (
-          'showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.headers;headers,tx_bootstrappackage_carousel_item,--div--;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:carousel.options,pi_flexform;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:advanced,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.appearanceLinks;appearanceLinks,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,--palette--;;language,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,--palette--;;hidden,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,categories,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,rowDescription,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended, --div--;LLL:EXT:gridelements/Resources/Private/Language/locallang_db.xlf:gridElements, tx_gridelements_container, tx_gridelements_columns',
-        ),
-        'carousel_small' => 
-        array (
-          'showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.headers;headers,tx_bootstrappackage_carousel_item,--div--;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:carousel.options,pi_flexform;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:advanced,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.appearanceLinks;appearanceLinks,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,--palette--;;language,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,--palette--;;hidden,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,categories,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,rowDescription,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended, --div--;LLL:EXT:gridelements/Resources/Private/Language/locallang_db.xlf:gridElements, tx_gridelements_container, tx_gridelements_columns',
-        ),
-        'carousel_fullscreen' => 
-        array (
-          'showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.headers;headers,tx_bootstrappackage_carousel_item,--div--;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:carousel.options,pi_flexform;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:advanced,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.appearanceLinks;appearanceLinks,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,--palette--;;language,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,--palette--;;hidden,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,categories,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,rowDescription,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended, --div--;LLL:EXT:gridelements/Resources/Private/Language/locallang_db.xlf:gridElements, tx_gridelements_container, tx_gridelements_columns',
-        ),
-        'csv' => 
-        array (
-          'showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.headers;headers,media;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:media.ALT.uploads_formlabel,--palette--;;tableconfiguration,--palette--;;tablelayout,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.appearanceLinks;appearanceLinks,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,--palette--;;language,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,--palette--;;hidden,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,categories,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,rowDescription,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended, --div--;LLL:EXT:gridelements/Resources/Private/Language/locallang_db.xlf:gridElements, tx_gridelements_container, tx_gridelements_columns',
-          'columnsOverrides' => 
-          array (
-            'media' => 
-            array (
-              'config' => 
-              array (
-                'filter' => 
-                array (
-                  0 => 
-                  array (
-                    'parameters' => 
-                    array (
-                      'allowedFileExtensions' => 'csv',
-                    ),
-                  ),
-                ),
-                'minitems' => 0,
-                'maxitems' => 1,
-                'overrideChildTca' => 
-                array (
-                  'columns' => 
-                  array (
-                    'uid_local' => 
-                    array (
-                      'config' => 
-                      array (
-                        'appearance' => 
-                        array (
-                          'elementBrowserAllowed' => 'csv',
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-          ),
-        ),
-        'external_media' => 
-        array (
-          'showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.headers;headers,--palette--;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:field.palette.external_media;external_media,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.appearanceLinks;appearanceLinks,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,--palette--;;language,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,--palette--;;hidden,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,categories,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,rowDescription,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended, --div--;LLL:EXT:gridelements/Resources/Private/Language/locallang_db.xlf:gridElements, tx_gridelements_container, tx_gridelements_columns',
-        ),
-        'icon_group' => 
-        array (
-          'showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.headers;headers,tx_bootstrappackage_icon_group_item,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.appearanceLinks;appearanceLinks,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,--palette--;;language,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,--palette--;;hidden,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,categories,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,rowDescription,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended, --div--;LLL:EXT:gridelements/Resources/Private/Language/locallang_db.xlf:gridElements, tx_gridelements_container, tx_gridelements_columns',
-        ),
-        'listgroup' => 
-        array (
-          'showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.headers;headers,bodytext,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.appearanceLinks;appearanceLinks,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,--palette--;;language,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,--palette--;;hidden,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,categories,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,rowDescription,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended, --div--;LLL:EXT:gridelements/Resources/Private/Language/locallang_db.xlf:gridElements, tx_gridelements_container, tx_gridelements_columns',
           'columnsOverrides' => 
           array (
             'bodytext' => 
             array (
-              'label' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:bodytext.ALT.bulletlist_formlabel',
               'config' => 
               array (
-                'wrap' => 'off',
-              ),
-            ),
-          ),
-        ),
-        'media' => 
-        array (
-          'showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.headers;headers,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.media,assets,file_folder,filelink_sorting,--palette--;LLL:EXT:frontend/Resources/Private/Language/Database.xlf:tt_content.palette.mediaAdjustments;mediaAdjustments,--palette--;LLL:EXT:frontend/Resources/Private/Language/Database.xlf:tt_content.palette.gallerySettings;gallerySettings,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.imagelinks;imagelinks,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.appearanceLinks;appearanceLinks,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,--palette--;;language,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,--palette--;;hidden,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,categories,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,rowDescription,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended, --div--;LLL:EXT:gridelements/Resources/Private/Language/locallang_db.xlf:gridElements, tx_gridelements_container, tx_gridelements_columns',
-          'columnsOverrides' => 
-          array (
-            'assets' => 
-            array (
-              'config' => 
-              array (
-                'filter' => 
-                array (
-                  0 => 
-                  array (
-                    'parameters' => 
-                    array (
-                      'allowedFileExtensions' => 'youtube, vimeo',
-                    ),
-                  ),
-                ),
-                'overrideChildTca' => 
-                array (
-                  'columns' => 
-                  array (
-                    'uid_local' => 
-                    array (
-                      'config' => 
-                      array (
-                        'appearance' => 
-                        array (
-                          'elementBrowserAllowed' => 'youtube, vimeo',
-                        ),
-                      ),
-                    ),
-                    'crop' => 
-                    array (
-                      'config' => 
-                      array (
-                        'cropVariants' => 
-                        array (
-                          'default' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.default',
-                            'allowedAspectRatios' => 
-                            array (
-                              '16:9' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                                'value' => 1.7777777777777777,
-                              ),
-                              '4:3' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                                'value' => 1.3333333333333333,
-                              ),
-                              '1:1' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                                'value' => 1.0,
-                              ),
-                              'NaN' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                                'value' => 0.0,
-                              ),
-                            ),
-                            'selectedRatio' => 'NaN',
-                            'cropArea' => 
-                            array (
-                              'x' => 0.0,
-                              'y' => 0.0,
-                              'width' => 1.0,
-                              'height' => 1.0,
-                            ),
-                          ),
-                          'large' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.large',
-                            'allowedAspectRatios' => 
-                            array (
-                              '16:9' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                                'value' => 1.7777777777777777,
-                              ),
-                              '4:3' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                                'value' => 1.3333333333333333,
-                              ),
-                              '1:1' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                                'value' => 1.0,
-                              ),
-                              'NaN' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                                'value' => 0.0,
-                              ),
-                            ),
-                            'selectedRatio' => 'NaN',
-                            'cropArea' => 
-                            array (
-                              'x' => 0.0,
-                              'y' => 0.0,
-                              'width' => 1.0,
-                              'height' => 1.0,
-                            ),
-                          ),
-                          'medium' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.medium',
-                            'allowedAspectRatios' => 
-                            array (
-                              '16:9' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                                'value' => 1.7777777777777777,
-                              ),
-                              '4:3' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                                'value' => 1.3333333333333333,
-                              ),
-                              '1:1' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                                'value' => 1.0,
-                              ),
-                              'NaN' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                                'value' => 0.0,
-                              ),
-                            ),
-                            'selectedRatio' => 'NaN',
-                            'cropArea' => 
-                            array (
-                              'x' => 0.0,
-                              'y' => 0.0,
-                              'width' => 1.0,
-                              'height' => 1.0,
-                            ),
-                          ),
-                          'small' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.small',
-                            'allowedAspectRatios' => 
-                            array (
-                              '16:9' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                                'value' => 1.7777777777777777,
-                              ),
-                              '4:3' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                                'value' => 1.3333333333333333,
-                              ),
-                              '1:1' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                                'value' => 1.0,
-                              ),
-                              'NaN' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                                'value' => 0.0,
-                              ),
-                            ),
-                            'selectedRatio' => 'NaN',
-                            'cropArea' => 
-                            array (
-                              'x' => 0.0,
-                              'y' => 0.0,
-                              'width' => 1.0,
-                              'height' => 1.0,
-                            ),
-                          ),
-                          'extrasmall' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.extrasmall',
-                            'allowedAspectRatios' => 
-                            array (
-                              '16:9' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                                'value' => 1.7777777777777777,
-                              ),
-                              '4:3' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                                'value' => 1.3333333333333333,
-                              ),
-                              '1:1' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                                'value' => 1.0,
-                              ),
-                              'NaN' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                                'value' => 0.0,
-                              ),
-                            ),
-                            'selectedRatio' => 'NaN',
-                            'cropArea' => 
-                            array (
-                              'x' => 0.0,
-                              'y' => 0.0,
-                              'width' => 1.0,
-                              'height' => 1.0,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-          ),
-        ),
-        'menu_card_list' => 
-        array (
-          'showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.headers;headers,pages;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:pages.ALT.menu_formlabel,readmore_label,--div--;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:menu.card.options,pi_flexform;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:advanced,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.appearanceLinks;appearanceLinks,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.accessibility,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.menu_accessibility;menu_accessibility,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,--palette--;;language,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,--palette--;;hidden,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,categories,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,rowDescription,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended, --div--;LLL:EXT:gridelements/Resources/Private/Language/locallang_db.xlf:gridElements, tx_gridelements_container, tx_gridelements_columns',
-        ),
-        'menu_card_dir' => 
-        array (
-          'showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.headers;headers,pages;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:pages.ALT.menu_formlabel,readmore_label,--div--;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:menu.card.options,pi_flexform;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:advanced,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.appearanceLinks;appearanceLinks,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.accessibility,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.menu_accessibility;menu_accessibility,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,--palette--;;language,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,--palette--;;hidden,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,categories,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,rowDescription,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended, --div--;LLL:EXT:gridelements/Resources/Private/Language/locallang_db.xlf:gridElements, tx_gridelements_container, tx_gridelements_columns',
-        ),
-        'menu_thumbnail_list' => 
-        array (
-          'showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.headers;headers,pages;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:pages.ALT.menu_formlabel,--div--;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:menu.thumbnail.options,pi_flexform;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:advanced,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.appearanceLinks;appearanceLinks,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.accessibility,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.menu_accessibility;menu_accessibility,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,--palette--;;language,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,--palette--;;hidden,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,categories,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,rowDescription,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended, --div--;LLL:EXT:gridelements/Resources/Private/Language/locallang_db.xlf:gridElements, tx_gridelements_container, tx_gridelements_columns',
-        ),
-        'menu_thumbnail_dir' => 
-        array (
-          'showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.headers;headers,pages;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:pages.ALT.menu_formlabel,--div--;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:menu.thumbnail.options,pi_flexform;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:advanced,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.appearanceLinks;appearanceLinks,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.accessibility,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.menu_accessibility;menu_accessibility,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,--palette--;;language,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,--palette--;;hidden,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,categories,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,rowDescription,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended, --div--;LLL:EXT:gridelements/Resources/Private/Language/locallang_db.xlf:gridElements, tx_gridelements_container, tx_gridelements_columns',
-        ),
-        'panel' => 
-        array (
-          'showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.header;header_minimal,bodytext,panel_class,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.appearanceLinks;appearanceLinks,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,--palette--;;language,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,--palette--;;hidden,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,categories,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,rowDescription,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended, --div--;LLL:EXT:gridelements/Resources/Private/Language/locallang_db.xlf:gridElements, tx_gridelements_container, tx_gridelements_columns',
-          'columnsOverrides' => 
-          array (
-            'bodytext' => 
-            array (
-              'label' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:bodytext_formlabel',
-              'config' => 
-              array (
-                'enableRichtext' => true,
                 'richtextConfiguration' => 'default',
+                'enableRichtext' => 1,
               ),
             ),
           ),
-        ),
-        'quote' => 
-        array (
-          'showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,header;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header.ALT.div_formlabel,quote_link;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:quote.link,quote_source;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:quote.source,bodytext;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:quote.text,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.appearanceLinks;appearanceLinks,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,--palette--;;language,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,--palette--;;hidden,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,categories,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,rowDescription,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended, --div--;LLL:EXT:gridelements/Resources/Private/Language/locallang_db.xlf:gridElements, tx_gridelements_container, tx_gridelements_columns',
-        ),
-        'social_links' => 
-        array (
-          'showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.headers;headers,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.appearanceLinks;appearanceLinks,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,--palette--;;language,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,--palette--;;hidden,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,categories,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,rowDescription,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended, --div--;LLL:EXT:gridelements/Resources/Private/Language/locallang_db.xlf:gridElements, tx_gridelements_container, tx_gridelements_columns',
-          'columnsOverrides' => 
-          array (
-            'bodytext' => 
-            array (
-              'label' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:bodytext_formlabel',
-              'config' => 
-              array (
-                'enableRichtext' => true,
-                'richtextConfiguration' => 'default',
-              ),
-            ),
-          ),
-        ),
-        'tab' => 
-        array (
-          'showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.headers;headers,tx_bootstrappackage_tab_item,--div--;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:tab.options,pi_flexform;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:advanced,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.appearanceLinks;appearanceLinks,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,--palette--;;language,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,--palette--;;hidden,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,categories,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,rowDescription,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended, --div--;LLL:EXT:gridelements/Resources/Private/Language/locallang_db.xlf:gridElements, tx_gridelements_container, tx_gridelements_columns',
-        ),
-        'textcolumn' => 
-        array (
-          'showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.headers;headers,bodytext,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.appearanceLinks;appearanceLinks,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,--palette--;;language,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,--palette--;;hidden,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,categories,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,rowDescription,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended, --div--;LLL:EXT:gridelements/Resources/Private/Language/locallang_db.xlf:gridElements, tx_gridelements_container, tx_gridelements_columns',
-          'columnsOverrides' => 
-          array (
-            'bodytext' => 
-            array (
-              'label' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:bodytext_formlabel',
-              'config' => 
-              array (
-                'enableRichtext' => true,
-                'richtextConfiguration' => 'default',
-              ),
-            ),
-          ),
-        ),
-        'texticon' => 
-        array (
-          'showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.headers;headers,bodytext,--div--;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:tabs.icon,--palette--;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:field.icon;bootstrap_package_icons,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.appearanceLinks;appearanceLinks,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,--palette--;;language,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,--palette--;;hidden,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,categories,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,rowDescription,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended, --div--;LLL:EXT:gridelements/Resources/Private/Language/locallang_db.xlf:gridElements, tx_gridelements_container, tx_gridelements_columns',
-          'columnsOverrides' => 
-          array (
-            'bodytext' => 
-            array (
-              'label' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:bodytext_formlabel',
-              'config' => 
-              array (
-                'enableRichtext' => true,
-                'richtextConfiguration' => 'default',
-              ),
-            ),
-          ),
-        ),
-        'textteaser' => 
-        array (
-          'showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.headers;headers,teaser,bodytext,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.appearanceLinks;appearanceLinks,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,--palette--;;language,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,--palette--;;hidden,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,categories,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,rowDescription,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended, --div--;LLL:EXT:gridelements/Resources/Private/Language/locallang_db.xlf:gridElements, tx_gridelements_container, tx_gridelements_columns',
-          'columnsOverrides' => 
-          array (
-            'bodytext' => 
-            array (
-              'label' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:bodytext_formlabel',
-              'config' => 
-              array (
-                'enableRichtext' => true,
-                'richtextConfiguration' => 'default',
-              ),
-            ),
-          ),
-        ),
-        'timeline' => 
-        array (
-          'showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.headers;headers,tx_bootstrappackage_timeline_item,--div--;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:timeline.options,pi_flexform;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:advanced,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.appearanceLinks;appearanceLinks,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,--palette--;;language,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,--palette--;;hidden,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,categories,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,rowDescription,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended, --div--;LLL:EXT:gridelements/Resources/Private/Language/locallang_db.xlf:gridElements, tx_gridelements_container, tx_gridelements_columns',
-        ),
-        'slickcontent' => 
-        array (
-          'showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,header;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header.ALT.shortcut_formlabel,--palette--;LLL:EXT:start/Configuration/TCA/Overrides/Default/tt_content.xlf:tx_start_palettecss;tx_start_palettecss,records;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:records_formlabel,--div--;LLL:EXT:slick/Resources/Private/Language/Backend.xlf:tca.tt_content.div.slider,pi_flexform;LLL:EXT:slick/Resources/Private/Language/Backend.xlf:tca.tt_content.pi_flexform,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.appearanceLinks;appearanceLinks,--palette--;LLL:EXT:t3foundation/Resources/Private/Language/locallang_db.xlf:tt_content.tx_t3foundation_visibility;tx_t3foundation_visibility,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,--palette--;;language,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,--palette--;;hidden,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,--div--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_category.tabs.category,categories,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,rowDescription,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended, --div--;LLL:EXT:gridelements/Resources/Private/Language/locallang_db.xlf:gridElements, tx_gridelements_container, tx_gridelements_columns',
-        ),
-        'slickimage' => 
-        array (
-          'showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.headers;headers,--palette--;LLL:EXT:start/Configuration/TCA/Overrides/Default/tt_content.xlf:tx_start_palettecss;tx_start_palettecss,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.images,image,--palette--;LLL:EXT:frontend/Resources/Private/Language/Database.xlf:tt_content.palette.mediaAdjustments;mediaAdjustments,--palette--;LLL:EXT:frontend/Resources/Private/Language/Database.xlf:tt_content.palette.gallerySettings;gallerySettings,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.imagelinks;imagelinks,--div--;LLL:EXT:slick/Resources/Private/Language/Backend.xlf:tca.tt_content.div.slider,pi_flexform;LLL:EXT:slick/Resources/Private/Language/Backend.xlf:tca.tt_content.pi_flexform,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.appearanceLinks;appearanceLinks,--palette--;LLL:EXT:t3foundation/Resources/Private/Language/locallang_db.xlf:tt_content.tx_t3foundation_visibility;tx_t3foundation_visibility,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,--palette--;;language,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,--palette--;;hidden,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,--div--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_category.tabs.category,categories,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,rowDescription,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended, --div--;LLL:EXT:gridelements/Resources/Private/Language/locallang_db.xlf:gridElements, tx_gridelements_container, tx_gridelements_columns',
-        ),
-        'slickitem' => 
-        array (
-          'columnsOverrides' => 
-          array (
-            'bodytext' => 
-            array (
-              'config' => 
-              array (
-                'enableRichtext' => '1',
-                'richtextConfiguration' => 'default',
-              ),
-            ),
-          ),
-          'showitem' => '--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,hidden,header,header_link,bodytext,rte_enabled;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:rte_enabled_formlabel,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.images,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.image_settings;slickgallery,image, --div--;LLL:EXT:gridelements/Resources/Private/Language/locallang_db.xlf:gridElements, tx_gridelements_container, tx_gridelements_columns',
-        ),
-        'slickcarousel' => 
-        array (
-          'showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,header;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header.ALT.shortcut_formlabel,records;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:records_formlabel,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.appearanceLinks;appearanceLinks,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,--palette--;;language,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,--palette--;;hidden,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,--div--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_category.tabs.category,categories,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,rowDescription,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended, --div--;LLL:EXT:gridelements/Resources/Private/Language/locallang_db.xlf:gridElements, tx_gridelements_container, tx_gridelements_columns',
-        ),
-        'slickcarousel2' => 
-        array (
-          'showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,header;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header.ALT.shortcut_formlabel,records;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:records_formlabel,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.appearanceLinks;appearanceLinks,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,--palette--;;language,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,--palette--;;hidden,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,--div--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_category.tabs.category,categories,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,rowDescription,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended, --div--;LLL:EXT:gridelements/Resources/Private/Language/locallang_db.xlf:gridElements, tx_gridelements_container, tx_gridelements_columns',
-        ),
-        'slickcarousel3' => 
-        array (
-          'showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,header;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header.ALT.shortcut_formlabel,records;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:records_formlabel,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.appearanceLinks;appearanceLinks,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,--palette--;;language,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,--palette--;;hidden,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,--div--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_category.tabs.category,categories,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,rowDescription,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended, --div--;LLL:EXT:gridelements/Resources/Private/Language/locallang_db.xlf:gridElements, tx_gridelements_container, tx_gridelements_columns',
-        ),
-        'slickgallery' => 
-        array (
-          'showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.headers;headers,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.images,image,file_folder,filelink_sorting,--palette--;LLL:EXT:frontend/Resources/Private/Language/Database.xlf:tt_content.palette.mediaAdjustments;mediaAdjustments,--palette--;LLL:EXT:frontend/Resources/Private/Language/Database.xlf:tt_content.palette.gallerySettings;gallerySettings,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.imagelinks;imagelinks,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.appearanceLinks;appearanceLinks,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,--palette--;;language,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,--palette--;;hidden,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,--div--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_category.tabs.category,categories,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,rowDescription,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended, --div--;LLL:EXT:gridelements/Resources/Private/Language/locallang_db.xlf:gridElements, tx_gridelements_container, tx_gridelements_columns',
-        ),
-        'slickgallery2' => 
-        array (
-          'showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.headers;headers,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.images,image,file_folder,filelink_sorting,--palette--;LLL:EXT:frontend/Resources/Private/Language/Database.xlf:tt_content.palette.mediaAdjustments;mediaAdjustments,--palette--;LLL:EXT:frontend/Resources/Private/Language/Database.xlf:tt_content.palette.gallerySettings;gallerySettings,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.imagelinks;imagelinks,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.appearanceLinks;appearanceLinks,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,--palette--;;language,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,--palette--;;hidden,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,--div--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_category.tabs.category,categories,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,rowDescription,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended, --div--;LLL:EXT:gridelements/Resources/Private/Language/locallang_db.xlf:gridElements, tx_gridelements_container, tx_gridelements_columns',
-        ),
-        'slickgallery3' => 
-        array (
-          'showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.headers;headers,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.images,image,file_folder,filelink_sorting,--palette--;LLL:EXT:frontend/Resources/Private/Language/Database.xlf:tt_content.palette.mediaAdjustments;mediaAdjustments,--palette--;LLL:EXT:frontend/Resources/Private/Language/Database.xlf:tt_content.palette.gallerySettings;gallerySettings,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.imagelinks;imagelinks,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.appearanceLinks;appearanceLinks,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,--palette--;;language,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,--palette--;;hidden,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,--div--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_category.tabs.category,categories,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,rowDescription,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended, --div--;LLL:EXT:gridelements/Resources/Private/Language/locallang_db.xlf:gridElements, tx_gridelements_container, tx_gridelements_columns',
+          'showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,tx_mask_slide,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.appearanceLinks;appearanceLinks,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,--palette--;;language,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,--palette--;;hidden,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,--div--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_category.tabs.category,categories,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,rowDescription,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended,tx_gridelements_container,tx_gridelements_columns, --div--;LLL:EXT:gridelements/Resources/Private/Language/locallang_db.xlf:gridElements',
         ),
       ),
       'palettes' => 
@@ -14473,13 +11305,7 @@ return array (
                 frame_class;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:frame_class_formlabel,
                 space_before_class;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:space_before_class_formlabel,
                 space_after_class;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:space_after_class_formlabel,
-            
-    --linebreak--,
-    background_color_class,
-    --linebreak--,
-    background_image,
-    background_image_options,
-',
+            ',
         ),
         'tableconfiguration' => 
         array (
@@ -14496,30 +11322,6 @@ return array (
                 table_header_position,
                 table_tfoot
             ',
-        ),
-        'external_media' => 
-        array (
-          'showitem' => '
-        external_media_source, --linebreak--,
-        external_media_ratio
-    ',
-        ),
-        'bootstrap_package_icons' => 
-        array (
-          'showitem' => '
-        icon_position, icon_type, icon_size, --linebreak--,
-        icon_color, icon_background, --linebreak--,
-        icon_set, --linebreak--,
-        icon, icon_file
-    ',
-        ),
-        'header_minimal' => 
-        array (
-          'showitem' => '
-        header;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_formlabel,
-        --linebreak--,
-        header_layout;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_layout_formlabel,
-    ',
         ),
       ),
     ),
@@ -15232,250 +12034,34 @@ return array (
         ),
       ),
     ),
-    'tx_bootstrappackage_accordion_item' => 
+    'tx_cart_domain_model_cart' => 
     array (
       'ctrl' => 
       array (
-        'label' => 'header',
-        'label_alt' => 'bodytext',
-        'sortby' => 'sorting',
+        'title' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_cart',
+        'label' => 'uid',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
         'cruser_id' => 'cruser_id',
-        'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:accordion_item',
-        'delete' => 'deleted',
+        'dividers2tabs' => true,
         'versioningWS' => true,
         'origUid' => 't3_origuid',
         'hideTable' => true,
-        'hideAtCopy' => true,
-        'prependAtCopy' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.prependAtCopy',
-        'transOrigPointerField' => 'l10n_parent',
-        'transOrigDiffSourceField' => 'l10n_diffsource',
-        'languageField' => 'sys_language_uid',
+        'delete' => 'deleted',
         'enablecolumns' => 
         array (
-          'disabled' => 'hidden',
-          'starttime' => 'starttime',
-          'endtime' => 'endtime',
         ),
-        'typeicon_classes' => 
-        array (
-          'default' => 'content-bootstrappackage-accordion-item',
-        ),
+        'searchFields' => '',
       ),
       'interface' => 
       array (
-        'showRecordFieldList' => '
-            hidden,
-            tt_content,
-            header,
-            bodytext
-        ',
+        'showRecordFieldList' => 'pid, f_hash, s_hash, fe_user, was_ordered, order_item, cart',
       ),
       'types' => 
       array (
         1 => 
         array (
-          'showitem' => '--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,header,bodytext,media,--palette--;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:accordion_item.mediaposition;mediaposition,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.visibility;visibility,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,--palette--;;hiddenLanguagePalette',
-          'columnsOverrides' => 
-          array (
-            'media' => 
-            array (
-              'config' => 
-              array (
-                'overrideChildTca' => 
-                array (
-                  'columns' => 
-                  array (
-                    'crop' => 
-                    array (
-                      'config' => 
-                      array (
-                        'cropVariants' => 
-                        array (
-                          'default' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.default',
-                            'allowedAspectRatios' => 
-                            array (
-                              '16:9' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                                'value' => 1.7777777777777777,
-                              ),
-                              '4:3' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                                'value' => 1.3333333333333333,
-                              ),
-                              '1:1' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                                'value' => 1.0,
-                              ),
-                              'NaN' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                                'value' => 0.0,
-                              ),
-                            ),
-                            'selectedRatio' => 'NaN',
-                            'cropArea' => 
-                            array (
-                              'x' => 0.0,
-                              'y' => 0.0,
-                              'width' => 1.0,
-                              'height' => 1.0,
-                            ),
-                          ),
-                          'large' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.large',
-                            'allowedAspectRatios' => 
-                            array (
-                              '16:9' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                                'value' => 1.7777777777777777,
-                              ),
-                              '4:3' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                                'value' => 1.3333333333333333,
-                              ),
-                              '1:1' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                                'value' => 1.0,
-                              ),
-                              'NaN' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                                'value' => 0.0,
-                              ),
-                            ),
-                            'selectedRatio' => 'NaN',
-                            'cropArea' => 
-                            array (
-                              'x' => 0.0,
-                              'y' => 0.0,
-                              'width' => 1.0,
-                              'height' => 1.0,
-                            ),
-                          ),
-                          'medium' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.medium',
-                            'allowedAspectRatios' => 
-                            array (
-                              '16:9' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                                'value' => 1.7777777777777777,
-                              ),
-                              '4:3' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                                'value' => 1.3333333333333333,
-                              ),
-                              '1:1' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                                'value' => 1.0,
-                              ),
-                              'NaN' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                                'value' => 0.0,
-                              ),
-                            ),
-                            'selectedRatio' => 'NaN',
-                            'cropArea' => 
-                            array (
-                              'x' => 0.0,
-                              'y' => 0.0,
-                              'width' => 1.0,
-                              'height' => 1.0,
-                            ),
-                          ),
-                          'small' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.small',
-                            'allowedAspectRatios' => 
-                            array (
-                              '16:9' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                                'value' => 1.7777777777777777,
-                              ),
-                              '4:3' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                                'value' => 1.3333333333333333,
-                              ),
-                              '1:1' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                                'value' => 1.0,
-                              ),
-                              'NaN' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                                'value' => 0.0,
-                              ),
-                            ),
-                            'selectedRatio' => 'NaN',
-                            'cropArea' => 
-                            array (
-                              'x' => 0.0,
-                              'y' => 0.0,
-                              'width' => 1.0,
-                              'height' => 1.0,
-                            ),
-                          ),
-                          'extrasmall' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.extrasmall',
-                            'allowedAspectRatios' => 
-                            array (
-                              '16:9' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                                'value' => 1.7777777777777777,
-                              ),
-                              '4:3' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                                'value' => 1.3333333333333333,
-                              ),
-                              '1:1' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                                'value' => 1.0,
-                              ),
-                              'NaN' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                                'value' => 0.0,
-                              ),
-                            ),
-                            'selectedRatio' => 'NaN',
-                            'cropArea' => 
-                            array (
-                              'x' => 0.0,
-                              'y' => 0.0,
-                              'width' => 1.0,
-                              'height' => 1.0,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-          ),
+          'showitem' => 'pid, f_hash, s_hash, fe_user, was_ordered, order_item, cart',
         ),
       ),
       'palettes' => 
@@ -15484,299 +12070,218 @@ return array (
         array (
           'showitem' => '',
         ),
-        'access' => 
-        array (
-          'showitem' => '
-                starttime;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:starttime_formlabel,
-                endtime;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:endtime_formlabel
-            ',
-        ),
-        'general' => 
-        array (
-          'showitem' => '
-                tt_content
-            ',
-        ),
-        'mediaposition' => 
-        array (
-          'showitem' => '
-                mediaorient,
-                imagecols,
-                image_zoom,
-            ',
-        ),
-        'visibility' => 
-        array (
-          'showitem' => '
-                hidden;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:accordion_item
-            ',
-        ),
-        'hiddenLanguagePalette' => 
-        array (
-          'showitem' => 'sys_language_uid, l10n_parent',
-          'isHiddenPalette' => true,
-        ),
       ),
       'columns' => 
       array (
-        'tt_content' => 
+        'f_hash' => 
         array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:accordion_item.tt_content',
-          'config' => 
-          array (
-            'type' => 'select',
-            'renderType' => 'selectSingle',
-            'foreign_table' => 'tt_content',
-            'foreign_table_where' => 'AND tt_content.pid=###CURRENT_PID### AND tt_content.CType="accordion"',
-            'maxitems' => 1,
-            'default' => 0,
-          ),
-        ),
-        'hidden' => 
-        array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.hidden',
-          'config' => 
-          array (
-            'type' => 'check',
-            'items' => 
-            array (
-              1 => 
-              array (
-                0 => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:hidden.I.0',
-              ),
-            ),
-          ),
-        ),
-        'starttime' => 
-        array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.starttime',
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_cart.f_hash',
           'config' => 
           array (
             'type' => 'input',
-            'renderType' => 'inputDateTime',
-            'eval' => 'datetime',
-            'default' => 0,
+            'readOnly' => 1,
+            'size' => 30,
+            'eval' => 'trim,required',
           ),
-          'l10n_mode' => 'exclude',
-          'l10n_display' => 'defaultAsReadonly',
         ),
-        'endtime' => 
+        's_hash' => 
         array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.endtime',
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_cart.s_hash',
           'config' => 
           array (
             'type' => 'input',
-            'renderType' => 'inputDateTime',
-            'eval' => 'datetime',
-            'default' => 0,
-            'range' => 
-            array (
-              'upper' => 2145909600,
-            ),
+            'readOnly' => 1,
+            'size' => 30,
+            'eval' => 'trim,required',
           ),
-          'l10n_mode' => 'exclude',
-          'l10n_display' => 'defaultAsReadonly',
         ),
-        'sys_language_uid' => 
+        'pid' => 
         array (
           'exclude' => 1,
-          'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.language',
-          'config' => 
-          array (
-            'type' => 'select',
-            'renderType' => 'selectSingle',
-            'foreign_table' => 'sys_language',
-            'foreign_table_where' => 'ORDER BY sys_language.title',
-            'items' => 
-            array (
-              0 => 
-              array (
-                0 => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.allLanguages',
-                1 => -1,
-              ),
-              1 => 
-              array (
-                0 => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.default_value',
-                1 => 0,
-              ),
-            ),
-            'allowNonIdValues' => true,
-          ),
-        ),
-        'l10n_parent' => 
-        array (
-          'displayCond' => 'FIELD:sys_language_uid:>:0',
-          'exclude' => 1,
-          'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.l18n_parent',
-          'config' => 
-          array (
-            'type' => 'select',
-            'renderType' => 'selectSingle',
-            'items' => 
-            array (
-              0 => 
-              array (
-                0 => '',
-                1 => 0,
-              ),
-            ),
-            'foreign_table' => 'tx_bootstrappackage_accordion_item',
-            'foreign_table_where' => 'AND tx_bootstrappackage_accordion_item.pid=###CURRENT_PID### AND tx_bootstrappackage_accordion_item.sys_language_uid IN (-1,0)',
-            'default' => 0,
-          ),
-        ),
-        'l10n_diffsource' => 
-        array (
           'config' => 
           array (
             'type' => 'passthrough',
           ),
         ),
-        'header' => 
+        'fe_user' => 
         array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:accordion_item.header',
+          'exclude' => 1,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_cart.fe_user',
           'config' => 
           array (
-            'type' => 'input',
-            'size' => 50,
-            'eval' => 'trim,required',
+            'type' => 'select',
+            'readOnly' => 1,
+            'foreign_table' => 'fe_users',
+            'size' => 1,
+            'autoMaxSize' => 1,
+            'minitems' => 0,
+            'maxitems' => 1,
+            'multiple' => 0,
+            'renderType' => 'selectSingle',
           ),
         ),
-        'bodytext' => 
+        'was_ordered' => 
         array (
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:accordion_item.bodytext',
-          'l10n_mode' => 'prefixLangTitle',
-          'l10n_cat' => 'text',
+          'exclude' => 1,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_cart.was_ordered',
           'config' => 
           array (
-            'type' => 'text',
-            'cols' => '80',
-            'rows' => '15',
-            'softref' => 'typolink_tag,images,email[subst],url',
-            'enableRichtext' => true,
-            'richtextConfiguration' => 'default',
+            'type' => 'check',
           ),
         ),
-        'media' => 
+        'order_item' => 
         array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:accordion_item.media',
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_cart.order_item',
           'config' => 
           array (
             'type' => 'inline',
-            'foreign_table' => 'sys_file_reference',
-            'foreign_field' => 'uid_foreign',
-            'foreign_sortby' => 'sorting_foreign',
-            'foreign_table_field' => 'tablenames',
-            'foreign_match_fields' => 
+            'readOnly' => 1,
+            'foreign_table' => 'tx_cart_domain_model_order_item',
+            'minitems' => 0,
+            'maxitems' => 1,
+          ),
+        ),
+        'cart' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_cart.cart',
+          'config' => 
+          array (
+            'type' => 'text',
+            'cols' => 48,
+            'rows' => 15,
+            'eval' => 'required',
+          ),
+        ),
+      ),
+    ),
+    'tx_cart_domain_model_coupon' => 
+    array (
+      'ctrl' => 
+      array (
+        'title' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_coupon',
+        'label' => 'code',
+        'label_alt' => 'title',
+        'label_alt_force' => 1,
+        'tstamp' => 'tstamp',
+        'crdate' => 'crdate',
+        'cruser_id' => 'cruser_id',
+        'dividers2tabs' => true,
+        'versioningWS' => true,
+        'origUid' => 't3_origuid',
+        'delete' => 'deleted',
+        'enablecolumns' => 
+        array (
+          'disabled' => 'hidden',
+          'starttime' => 'starttime',
+          'endtime' => 'endtime',
+        ),
+        'searchFields' => 'title',
+        'iconfile' => 'EXT:cart/Resources/Public/Icons/tx_cart_domain_model_coupon.svg',
+      ),
+      'hideTable' => 1,
+      'interface' => 
+      array (
+        'showRecordFieldList' => 'hidden, starttime, endtime, title, code, coupon_type, discount, tax_class_id, cart_min_price, is_combinable, handle_available, number_available, number_used',
+      ),
+      'types' => 
+      array (
+        1 => 
+        array (
+          'showitem' => 'hidden,--palette--;;1,starttime,endtime,title,code,coupon_type,discount,tax_class_id,cart_min_price,is_combinable,handle_available,number_available,number_used',
+        ),
+      ),
+      'palettes' => 
+      array (
+        1 => 
+        array (
+          'showitem' => '',
+        ),
+      ),
+      'columns' => 
+      array (
+        'hidden' => 
+        array (
+          'exclude' => 1,
+          'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.hidden',
+          'config' => 
+          array (
+            'type' => 'check',
+          ),
+        ),
+        'starttime' => 
+        array (
+          'exclude' => 1,
+          'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.starttime',
+          'config' => 
+          array (
+            'type' => 'input',
+            'size' => 13,
+            'eval' => 'datetime',
+            'checkbox' => 0,
+            'default' => 0,
+            'range' => 
             array (
-              'fieldname' => 'media',
-            ),
-            'foreign_label' => 'uid_local',
-            'foreign_selector' => 'uid_local',
-            'overrideChildTca' => 
-            array (
-              'columns' => 
-              array (
-                'uid_local' => 
-                array (
-                  'config' => 
-                  array (
-                    'appearance' => 
-                    array (
-                      'elementBrowserType' => 'file',
-                      'elementBrowserAllowed' => 'gif,jpg,jpeg,bmp,png,pdf,svg,ai,mp3,wav,mp4,ogg,flac,opus,webm,youtube,vimeo',
-                    ),
-                  ),
-                ),
-              ),
-              'types' => 
-              array (
-                0 => 
-                array (
-                  'showitem' => '
-                                    --palette--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
-                                    --palette--;;filePalette',
-                ),
-                1 => 
-                array (
-                  'showitem' => '
-                                    --palette--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
-                                    --palette--;;filePalette',
-                ),
-                2 => 
-                array (
-                  'showitem' => '
-                                    --palette--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
-                                    --palette--;;filePalette',
-                ),
-                3 => 
-                array (
-                  'showitem' => '
-                                    --palette--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_file_reference.audioOverlayPalette;audioOverlayPalette,
-                                    --palette--;;filePalette',
-                ),
-                4 => 
-                array (
-                  'showitem' => '
-                                    --palette--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_file_reference.videoOverlayPalette;videoOverlayPalette,
-                                    --palette--;;filePalette',
-                ),
-                5 => 
-                array (
-                  'showitem' => '
-                                    --palette--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
-                                    --palette--;;filePalette',
-                ),
-              ),
-            ),
-            'filter' => 
-            array (
-              0 => 
-              array (
-                'userFunc' => 'TYPO3\\CMS\\Core\\Resource\\Filter\\FileExtensionFilter->filterInlineChildren',
-                'parameters' => 
-                array (
-                  'allowedFileExtensions' => 'gif,jpg,jpeg,bmp,png,pdf,svg,ai,mp3,wav,mp4,ogg,flac,opus,webm,youtube,vimeo',
-                  'disallowedFileExtensions' => '',
-                ),
-              ),
-            ),
-            'appearance' => 
-            array (
-              'useSortable' => true,
-              'headerThumbnail' => 
-              array (
-                'field' => 'uid_local',
-                'width' => '45',
-                'height' => '45c',
-              ),
-              'enabledControls' => 
-              array (
-                'info' => true,
-                'new' => false,
-                'dragdrop' => true,
-                'sort' => false,
-                'hide' => true,
-                'delete' => true,
-              ),
-              'createNewRelationLinkTitle' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference',
+              'lower' => 1549144800,
             ),
             'behaviour' => 
             array (
-              'localizeChildrenAtParentLocalization' => true,
+              'allowLanguageSynchronization' => true,
             ),
+            'renderType' => 'inputDateTime',
           ),
         ),
-        'mediaorient' => 
+        'endtime' => 
         array (
           'exclude' => 1,
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:accordion_item.mediaorient',
+          'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.endtime',
+          'config' => 
+          array (
+            'type' => 'input',
+            'size' => 13,
+            'eval' => 'datetime',
+            'checkbox' => 0,
+            'default' => 0,
+            'range' => 
+            array (
+              'lower' => 1549144800,
+            ),
+            'behaviour' => 
+            array (
+              'allowLanguageSynchronization' => true,
+            ),
+            'renderType' => 'inputDateTime',
+          ),
+        ),
+        'title' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_coupon.title',
+          'config' => 
+          array (
+            'type' => 'input',
+            'size' => 30,
+            'eval' => 'trim,required',
+          ),
+        ),
+        'code' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_coupon.code',
+          'config' => 
+          array (
+            'type' => 'input',
+            'size' => 30,
+            'eval' => 'trim,required',
+          ),
+        ),
+        'coupon_type' => 
+        array (
+          'exclude' => 1,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_coupon.coupon_type',
           'config' => 
           array (
             'type' => 'select',
@@ -15785,335 +12290,150 @@ return array (
             array (
               0 => 
               array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:accordion_item.mediaorient.left',
-                1 => 'left',
-              ),
-              1 => 
-              array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:accordion_item.mediaorient.top',
-                1 => 'top',
-              ),
-              2 => 
-              array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:accordion_item.mediaorient.right',
-                1 => 'right',
-              ),
-              3 => 
-              array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:accordion_item.mediaorient.bottom',
-                1 => 'bottom',
+                0 => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_coupon.coupon_type.cartdiscount',
+                1 => 'cartdiscount',
               ),
             ),
-            'default' => 'left',
+            'default' => 'simple',
+            'size' => 1,
+            'minitems' => 0,
+            'maxitems' => 1,
           ),
-          'l10n_mode' => 'exclude',
         ),
-        'imagecols' => 
+        'discount' => 
         array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:accordion_item.imagecols',
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_coupon.discount',
+          'config' => 
+          array (
+            'type' => 'input',
+            'size' => 30,
+            'eval' => 'double2',
+          ),
+        ),
+        'tax_class_id' => 
+        array (
+          'exclude' => 1,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_coupon.tax_class_id',
           'config' => 
           array (
             'type' => 'select',
-            'renderType' => 'selectSingle',
             'items' => 
             array (
               0 => 
               array (
-                0 => '1',
+                0 => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_coupon.tax_class_id.1',
                 1 => 1,
               ),
-              1 => 
-              array (
-                0 => '2',
-                1 => 2,
-              ),
-              2 => 
-              array (
-                0 => '3',
-                1 => 3,
-              ),
-              3 => 
-              array (
-                0 => '4',
-                1 => 4,
-              ),
-              4 => 
-              array (
-                0 => '5',
-                1 => 5,
-              ),
-              5 => 
-              array (
-                0 => '6',
-                1 => 6,
-              ),
             ),
-            'default' => 2,
+            'size' => 1,
+            'minitems' => 1,
+            'maxitems' => 1,
+            'renderType' => 'selectSingle',
           ),
-          'l10n_mode' => 'exclude',
         ),
-        'image_zoom' => 
+        'cart_min_price' => 
         array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:accordion_item.image_zoom',
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_coupon.cart_min_price',
+          'config' => 
+          array (
+            'type' => 'input',
+            'size' => 30,
+            'eval' => 'double2',
+          ),
+        ),
+        'is_combinable' => 
+        array (
+          'exclude' => 1,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_coupon.is_combinable',
           'config' => 
           array (
             'type' => 'check',
-            'items' => 
-            array (
-              0 => 
-              array (
-                0 => '',
-                1 => '',
-              ),
-            ),
+          ),
+        ),
+        'is_relative_discount' => 
+        array (
+          'exclude' => 1,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_coupon.is_relative_discount',
+          'config' => 
+          array (
+            'type' => 'check',
+          ),
+        ),
+        'handle_available' => 
+        array (
+          'exclude' => 1,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_coupon.handle_available',
+          'config' => 
+          array (
+            'type' => 'check',
+          ),
+        ),
+        'number_available' => 
+        array (
+          'exclude' => 0,
+          'displayCond' => 'FIELD:handle_available:REQ:TRUE',
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_coupon.number_available',
+          'config' => 
+          array (
+            'type' => 'input',
+            'size' => 30,
+            'eval' => 'int',
+            'default' => '0',
+          ),
+        ),
+        'number_used' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_coupon.number_used',
+          'config' => 
+          array (
+            'type' => 'input',
+            'size' => 30,
+            'eval' => 'int',
+            'default' => '0',
           ),
         ),
       ),
     ),
-    'tx_bootstrappackage_card_group_item' => 
+    'tx_cart_domain_model_order_address' => 
     array (
       'ctrl' => 
       array (
-        'label' => 'header',
-        'sortby' => 'sorting',
+        'title' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_address',
+        'label' => 'uid',
+        'label_alt' => 'first_name, last_name, street, street_number, zip, city',
+        'label_alt_force' => 1,
+        'type' => 'record_type',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
         'cruser_id' => 'cruser_id',
-        'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:card_group_item',
-        'delete' => 'deleted',
+        'dividers2tabs' => true,
         'versioningWS' => true,
         'origUid' => 't3_origuid',
         'hideTable' => true,
-        'hideAtCopy' => true,
-        'prependAtCopy' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.prependAtCopy',
-        'transOrigPointerField' => 'l10n_parent',
-        'transOrigDiffSourceField' => 'l10n_diffsource',
-        'languageField' => 'sys_language_uid',
+        'delete' => 'deleted',
         'enablecolumns' => 
         array (
-          'disabled' => 'hidden',
-          'starttime' => 'starttime',
-          'endtime' => 'endtime',
         ),
-        'typeicon_classes' => 
-        array (
-          'default' => 'content-bootstrappackage-card-group-item',
-        ),
+        'searchFields' => 'first_name, last_name, street, zip, city',
+        'iconfile' => 'EXT:cart/Resources/Public/Icons/Order/Address.svg',
       ),
+      'hideTable' => 1,
       'interface' => 
       array (
-        'showRecordFieldList' => '
-            hidden,
-            tt_content,
-            header
-        ',
+        'showRecordFieldList' => 'title, salutation, first_name, last_name, email, phone, fax, company, street, zip, city, country, phone, fax, additional',
       ),
       'types' => 
       array (
-        1 => 
+        '\\Extcode\\Cart\\Domain\\Model\\Order\\BillingAddress' => 
         array (
-          'showitem' => '--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,--palette--;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:card_group_item.header;header,image,bodytext,--palette--;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:card_group_item.link;link,icon_file,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.visibility;visibility,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,--palette--;;hiddenLanguagePalette',
-          'columnsOverrides' => 
-          array (
-            'image' => 
-            array (
-              'config' => 
-              array (
-                'overrideChildTca' => 
-                array (
-                  'columns' => 
-                  array (
-                    'crop' => 
-                    array (
-                      'config' => 
-                      array (
-                        'cropVariants' => 
-                        array (
-                          'default' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.default',
-                            'allowedAspectRatios' => 
-                            array (
-                              '16:9' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                                'value' => 1.7777777777777777,
-                              ),
-                              '4:3' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                                'value' => 1.3333333333333333,
-                              ),
-                              '1:1' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                                'value' => 1.0,
-                              ),
-                              'NaN' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                                'value' => 0.0,
-                              ),
-                            ),
-                            'selectedRatio' => 'NaN',
-                            'cropArea' => 
-                            array (
-                              'x' => 0.0,
-                              'y' => 0.0,
-                              'width' => 1.0,
-                              'height' => 1.0,
-                            ),
-                          ),
-                          'large' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.large',
-                            'allowedAspectRatios' => 
-                            array (
-                              '16:9' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                                'value' => 1.7777777777777777,
-                              ),
-                              '4:3' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                                'value' => 1.3333333333333333,
-                              ),
-                              '1:1' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                                'value' => 1.0,
-                              ),
-                              'NaN' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                                'value' => 0.0,
-                              ),
-                            ),
-                            'selectedRatio' => 'NaN',
-                            'cropArea' => 
-                            array (
-                              'x' => 0.0,
-                              'y' => 0.0,
-                              'width' => 1.0,
-                              'height' => 1.0,
-                            ),
-                          ),
-                          'medium' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.medium',
-                            'allowedAspectRatios' => 
-                            array (
-                              '16:9' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                                'value' => 1.7777777777777777,
-                              ),
-                              '4:3' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                                'value' => 1.3333333333333333,
-                              ),
-                              '1:1' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                                'value' => 1.0,
-                              ),
-                              'NaN' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                                'value' => 0.0,
-                              ),
-                            ),
-                            'selectedRatio' => 'NaN',
-                            'cropArea' => 
-                            array (
-                              'x' => 0.0,
-                              'y' => 0.0,
-                              'width' => 1.0,
-                              'height' => 1.0,
-                            ),
-                          ),
-                          'small' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.small',
-                            'allowedAspectRatios' => 
-                            array (
-                              '16:9' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                                'value' => 1.7777777777777777,
-                              ),
-                              '4:3' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                                'value' => 1.3333333333333333,
-                              ),
-                              '1:1' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                                'value' => 1.0,
-                              ),
-                              'NaN' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                                'value' => 0.0,
-                              ),
-                            ),
-                            'selectedRatio' => 'NaN',
-                            'cropArea' => 
-                            array (
-                              'x' => 0.0,
-                              'y' => 0.0,
-                              'width' => 1.0,
-                              'height' => 1.0,
-                            ),
-                          ),
-                          'extrasmall' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.extrasmall',
-                            'allowedAspectRatios' => 
-                            array (
-                              '16:9' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                                'value' => 1.7777777777777777,
-                              ),
-                              '4:3' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                                'value' => 1.3333333333333333,
-                              ),
-                              '1:1' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                                'value' => 1.0,
-                              ),
-                              'NaN' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                                'value' => 0.0,
-                              ),
-                            ),
-                            'selectedRatio' => 'NaN',
-                            'cropArea' => 
-                            array (
-                              'x' => 0.0,
-                              'y' => 0.0,
-                              'width' => 1.0,
-                              'height' => 1.0,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-          ),
+          'showitem' => 'title, salutation, first_name, last_name, email, phone, fax, company, street, zip, city, country, phone, fax, additional, tax_identification_number',
+        ),
+        '\\Extcode\\Cart\\Domain\\Model\\Order\\ShippingAddress' => 
+        array (
+          'showitem' => 'title, salutation, first_name, last_name, email, phone, fax, company, street, zip, city, country, phone, fax, additional',
         ),
       ),
       'palettes' => 
@@ -16122,638 +12442,267 @@ return array (
         array (
           'showitem' => '',
         ),
-        'access' => 
-        array (
-          'showitem' => '
-                starttime;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:starttime_formlabel,
-                endtime;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:endtime_formlabel
-            ',
-        ),
-        'header' => 
-        array (
-          'showitem' => '
-                header,
-                --linebreak--,
-                subheader,
-            ',
-        ),
-        'link' => 
-        array (
-          'showitem' => '
-                link,
-                link_title,
-                --linebreak--,
-                link_icon,
-                link_class,
-            ',
-        ),
-        'general' => 
-        array (
-          'showitem' => '
-                tt_content
-            ',
-        ),
-        'visibility' => 
-        array (
-          'showitem' => '
-                hidden;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:card_group_item
-            ',
-        ),
-        'hiddenLanguagePalette' => 
-        array (
-          'showitem' => 'sys_language_uid, l10n_parent',
-          'isHiddenPalette' => true,
-        ),
       ),
       'columns' => 
       array (
-        'tt_content' => 
+        'record_type' => 
         array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:card_group_item.tt_content',
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_address.record_type',
           'config' => 
           array (
             'type' => 'select',
             'renderType' => 'selectSingle',
-            'foreign_table' => 'tt_content',
-            'foreign_table_where' => 'AND tt_content.pid=###CURRENT_PID### AND tt_content.CType="card_group"',
-            'maxitems' => 1,
-            'default' => 0,
-          ),
-        ),
-        'hidden' => 
-        array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.hidden',
-          'config' => 
-          array (
-            'type' => 'check',
-            'items' => 
-            array (
-              1 => 
-              array (
-                0 => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:hidden.I.0',
-              ),
-            ),
-          ),
-        ),
-        'starttime' => 
-        array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.starttime',
-          'config' => 
-          array (
-            'type' => 'input',
-            'renderType' => 'inputDateTime',
-            'eval' => 'datetime',
-            'default' => 0,
-          ),
-          'l10n_mode' => 'exclude',
-          'l10n_display' => 'defaultAsReadonly',
-        ),
-        'endtime' => 
-        array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.endtime',
-          'config' => 
-          array (
-            'type' => 'input',
-            'renderType' => 'inputDateTime',
-            'eval' => 'datetime',
-            'default' => 0,
-            'range' => 
-            array (
-              'upper' => 2145909600,
-            ),
-          ),
-          'l10n_mode' => 'exclude',
-          'l10n_display' => 'defaultAsReadonly',
-        ),
-        'sys_language_uid' => 
-        array (
-          'exclude' => 1,
-          'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.language',
-          'config' => 
-          array (
-            'type' => 'select',
-            'renderType' => 'selectSingle',
-            'foreign_table' => 'sys_language',
-            'foreign_table_where' => 'ORDER BY sys_language.title',
+            'readOnly' => 1,
             'items' => 
             array (
               0 => 
               array (
-                0 => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.allLanguages',
-                1 => -1,
+                0 => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_address.record_type.billing',
+                1 => '\\Extcode\\Cart\\Domain\\Model\\Order\\BillingAddress',
               ),
               1 => 
               array (
-                0 => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.default_value',
-                1 => 0,
+                0 => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_address.record_type.shipping',
+                1 => '\\Extcode\\Cart\\Domain\\Model\\Order\\ShippingAddress',
               ),
             ),
-            'allowNonIdValues' => true,
+            'default' => '\\Extcode\\Cart\\Domain\\Model\\Order\\BillingAddress',
           ),
         ),
-        'l10n_parent' => 
+        'title' => 
         array (
-          'displayCond' => 'FIELD:sys_language_uid:>:0',
-          'exclude' => 1,
-          'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.l18n_parent',
-          'config' => 
-          array (
-            'type' => 'select',
-            'renderType' => 'selectSingle',
-            'items' => 
-            array (
-              0 => 
-              array (
-                0 => '',
-                1 => 0,
-              ),
-            ),
-            'foreign_table' => 'tx_bootstrappackage_card_group_item',
-            'foreign_table_where' => 'AND tx_bootstrappackage_card_group_item.pid=###CURRENT_PID### AND tx_bootstrappackage_card_group_item.sys_language_uid IN (-1,0)',
-            'default' => 0,
-          ),
-        ),
-        'l10n_diffsource' => 
-        array (
-          'config' => 
-          array (
-            'type' => 'passthrough',
-          ),
-        ),
-        'header' => 
-        array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:card_group_item.header',
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_address.title',
           'config' => 
           array (
             'type' => 'input',
-            'size' => 50,
-            'eval' => 'trim,required',
-          ),
-        ),
-        'subheader' => 
-        array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:card_group_item.subheader',
-          'config' => 
-          array (
-            'type' => 'input',
-            'size' => 50,
+            'readOnly' => 1,
+            'size' => 30,
             'eval' => 'trim',
           ),
         ),
-        'image' => 
+        'salutation' => 
         array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:card_group_item.image',
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_address.salutation',
           'config' => 
           array (
-            'type' => 'inline',
-            'foreign_table' => 'sys_file_reference',
-            'foreign_field' => 'uid_foreign',
-            'foreign_sortby' => 'sorting_foreign',
-            'foreign_table_field' => 'tablenames',
-            'foreign_match_fields' => 
-            array (
-              'fieldname' => 'image',
-            ),
-            'foreign_label' => 'uid_local',
-            'foreign_selector' => 'uid_local',
-            'overrideChildTca' => 
-            array (
-              'columns' => 
-              array (
-                'uid_local' => 
-                array (
-                  'config' => 
-                  array (
-                    'appearance' => 
-                    array (
-                      'elementBrowserType' => 'file',
-                      'elementBrowserAllowed' => 'gif,jpg,jpeg,tif,tiff,bmp,pcx,tga,png,pdf,ai,svg',
-                    ),
-                  ),
-                ),
-              ),
-              'types' => 
-              array (
-                0 => 
-                array (
-                  'showitem' => '
-                                    --palette--;;filePalette
-                                ',
-                ),
-                1 => 
-                array (
-                  'showitem' => '
-                                    --palette--;;filePalette
-                                ',
-                ),
-                2 => 
-                array (
-                  'showitem' => '
-                                    title,
-                                    alternative,
-                                    crop,
-                                    --palette--;;filePalette
-                                ',
-                ),
-                3 => 
-                array (
-                  'showitem' => '
-                                    --palette--;;filePalette
-                                ',
-                ),
-                4 => 
-                array (
-                  'showitem' => '
-                                    --palette--;;filePalette
-                                ',
-                ),
-                5 => 
-                array (
-                  'showitem' => '
-                                    --palette--;;filePalette
-                                ',
-                ),
-              ),
-            ),
-            'filter' => 
-            array (
-              0 => 
-              array (
-                'userFunc' => 'TYPO3\\CMS\\Core\\Resource\\Filter\\FileExtensionFilter->filterInlineChildren',
-                'parameters' => 
-                array (
-                  'allowedFileExtensions' => 'gif,jpg,jpeg,tif,tiff,bmp,pcx,tga,png,pdf,ai,svg',
-                  'disallowedFileExtensions' => '',
-                ),
-              ),
-            ),
-            'appearance' => 
-            array (
-              'useSortable' => true,
-              'headerThumbnail' => 
-              array (
-                'field' => 'uid_local',
-                'width' => '45',
-                'height' => '45c',
-              ),
-              'enabledControls' => 
-              array (
-                'info' => true,
-                'new' => false,
-                'dragdrop' => true,
-                'sort' => false,
-                'hide' => true,
-                'delete' => true,
-              ),
-              'createNewRelationLinkTitle' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference',
-            ),
-            'behaviour' => 
-            array (
-              'localizeChildrenAtParentLocalization' => true,
-            ),
-            'minitems' => 0,
-            'maxitems' => 1,
+            'type' => 'input',
+            'readOnly' => 1,
+            'size' => 30,
+            'eval' => 'trim',
           ),
         ),
-        'bodytext' => 
+        'first_name' => 
         array (
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:card_group_item.bodytext',
-          'exclude' => true,
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_address.first_name',
+          'config' => 
+          array (
+            'type' => 'input',
+            'readOnly' => 1,
+            'size' => 30,
+            'eval' => 'trim',
+          ),
+        ),
+        'last_name' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_address.last_name',
+          'config' => 
+          array (
+            'type' => 'input',
+            'readOnly' => 1,
+            'size' => 30,
+            'eval' => 'trim',
+          ),
+        ),
+        'email' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_address.email',
+          'config' => 
+          array (
+            'type' => 'input',
+            'readOnly' => 1,
+            'size' => 30,
+            'eval' => 'trim',
+          ),
+        ),
+        'company' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_address.company',
+          'config' => 
+          array (
+            'type' => 'input',
+            'readOnly' => 1,
+            'size' => 30,
+            'eval' => 'trim',
+          ),
+        ),
+        'tax_identification_number' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_address.tax_identification_number',
+          'config' => 
+          array (
+            'type' => 'input',
+            'readOnly' => 1,
+            'size' => 30,
+            'eval' => 'trim',
+          ),
+        ),
+        'street' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_address.street',
+          'config' => 
+          array (
+            'type' => 'input',
+            'readOnly' => 1,
+            'size' => 30,
+            'eval' => 'trim',
+          ),
+        ),
+        'street_number' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_address.street_number',
+          'config' => 
+          array (
+            'type' => 'input',
+            'readOnly' => 1,
+            'size' => 30,
+            'eval' => 'trim',
+          ),
+        ),
+        'zip' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_address.zip',
+          'config' => 
+          array (
+            'type' => 'input',
+            'readOnly' => 1,
+            'size' => 30,
+            'eval' => 'trim',
+          ),
+        ),
+        'city' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_address.city',
+          'config' => 
+          array (
+            'type' => 'input',
+            'readOnly' => 1,
+            'size' => 30,
+            'eval' => 'trim',
+          ),
+        ),
+        'country' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_address.country',
+          'config' => 
+          array (
+            'type' => 'input',
+            'readOnly' => 1,
+            'size' => 30,
+            'eval' => 'trim',
+          ),
+        ),
+        'phone' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_address.phone',
+          'config' => 
+          array (
+            'type' => 'input',
+            'readOnly' => 1,
+            'size' => 30,
+            'eval' => 'trim',
+          ),
+        ),
+        'fax' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_address.fax',
+          'config' => 
+          array (
+            'type' => 'input',
+            'readOnly' => 1,
+            'size' => 30,
+            'eval' => 'trim',
+          ),
+        ),
+        'additional' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_address.additional',
           'config' => 
           array (
             'type' => 'text',
-            'cols' => '80',
-            'rows' => '15',
-            'softref' => 'typolink_tag,images,email[subst],url',
-            'enableRichtext' => true,
-            'richtextConfiguration' => 'default',
-          ),
-        ),
-        'link' => 
-        array (
-          'exclude' => 1,
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:card_group_item.link',
-          'config' => 
-          array (
-            'type' => 'input',
-            'renderType' => 'inputLink',
-            'size' => 50,
-            'max' => 1024,
-            'eval' => 'trim',
-            'fieldControl' => 
-            array (
-              'linkPopup' => 
-              array (
-                'options' => 
-                array (
-                  'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:card_group_item.link',
-                ),
-              ),
-            ),
-            'softref' => 'typolink',
-          ),
-        ),
-        'link_title' => 
-        array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:card_group_item.link_title',
-          'config' => 
-          array (
-            'type' => 'input',
-            'size' => 50,
-            'eval' => 'trim',
-          ),
-        ),
-        'link_icon' => 
-        array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:card_group_item.link_icon',
-          'config' => 
-          array (
-            'type' => 'inline',
-            'foreign_table' => 'sys_file_reference',
-            'foreign_field' => 'uid_foreign',
-            'foreign_sortby' => 'sorting_foreign',
-            'foreign_table_field' => 'tablenames',
-            'foreign_match_fields' => 
-            array (
-              'fieldname' => 'link_icon',
-            ),
-            'foreign_label' => 'uid_local',
-            'foreign_selector' => 'uid_local',
-            'overrideChildTca' => 
-            array (
-              'columns' => 
-              array (
-                'uid_local' => 
-                array (
-                  'config' => 
-                  array (
-                    'appearance' => 
-                    array (
-                      'elementBrowserType' => 'file',
-                      'elementBrowserAllowed' => 'svg',
-                    ),
-                  ),
-                ),
-              ),
-              'types' => 
-              array (
-                0 => 
-                array (
-                  'showitem' => '
-                                    --palette--;;filePalette
-                                ',
-                ),
-                1 => 
-                array (
-                  'showitem' => '
-                                    --palette--;;filePalette
-                                ',
-                ),
-                2 => 
-                array (
-                  'showitem' => '
-                                    --palette--;;filePalette
-                                ',
-                ),
-                3 => 
-                array (
-                  'showitem' => '
-                                    --palette--;;filePalette
-                                ',
-                ),
-                4 => 
-                array (
-                  'showitem' => '
-                                    --palette--;;filePalette
-                                ',
-                ),
-                5 => 
-                array (
-                  'showitem' => '
-                                    --palette--;;filePalette
-                                ',
-                ),
-              ),
-            ),
-            'filter' => 
-            array (
-              0 => 
-              array (
-                'userFunc' => 'TYPO3\\CMS\\Core\\Resource\\Filter\\FileExtensionFilter->filterInlineChildren',
-                'parameters' => 
-                array (
-                  'allowedFileExtensions' => 'svg',
-                  'disallowedFileExtensions' => '',
-                ),
-              ),
-            ),
+            'readOnly' => 1,
+            'cols' => 48,
+            'rows' => 15,
             'appearance' => 
             array (
-              'useSortable' => true,
-              'headerThumbnail' => 
-              array (
-                'field' => 'uid_local',
-                'width' => '45',
-                'height' => '45c',
-              ),
               'enabledControls' => 
               array (
-                'info' => true,
+                'info' => false,
                 'new' => false,
-                'dragdrop' => true,
+                'dragdrop' => false,
                 'sort' => false,
-                'hide' => true,
-                'delete' => true,
+                'hide' => false,
+                'delete' => false,
+                'localize' => false,
               ),
-              'createNewRelationLinkTitle' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference',
             ),
-            'behaviour' => 
-            array (
-              'localizeChildrenAtParentLocalization' => true,
-            ),
-            'minitems' => 0,
-            'maxitems' => 1,
           ),
         ),
-        'link_class' => 
+        'item' => 
         array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:card_group_item.link_class',
           'config' => 
           array (
-            'type' => 'select',
-            'renderType' => 'selectSingle',
-            'items' => 
-            array (
-              0 => 
-              array (
-                0 => 'default',
-                1 => 'default',
-              ),
-              1 => 
-              array (
-                0 => 'primary',
-                1 => 'primary',
-              ),
-              2 => 
-              array (
-                0 => 'secondary',
-                1 => 'secondary',
-              ),
-              3 => 
-              array (
-                0 => 'success',
-                1 => 'success',
-              ),
-              4 => 
-              array (
-                0 => 'info',
-                1 => 'info',
-              ),
-              5 => 
-              array (
-                0 => 'warning',
-                1 => 'warning',
-              ),
-              6 => 
-              array (
-                0 => 'danger',
-                1 => 'danger',
-              ),
-              7 => 
-              array (
-                0 => 'outline-default',
-                1 => 'outline-default',
-              ),
-              8 => 
-              array (
-                0 => 'outline-primary',
-                1 => 'outline-primary',
-              ),
-              9 => 
-              array (
-                0 => 'outline-secondary',
-                1 => 'outline-secondary',
-              ),
-              10 => 
-              array (
-                0 => 'outline-success',
-                1 => 'outline-success',
-              ),
-              11 => 
-              array (
-                0 => 'outline-info',
-                1 => 'outline-info',
-              ),
-              12 => 
-              array (
-                0 => 'outline-warning',
-                1 => 'outline-warning',
-              ),
-              13 => 
-              array (
-                0 => 'outline-danger',
-                1 => 'outline-danger',
-              ),
-            ),
+            'type' => 'passthrough',
           ),
         ),
       ),
     ),
-    'tx_bootstrappackage_carousel_item' => 
+    'tx_cart_domain_model_order_discount' => 
     array (
       'ctrl' => 
       array (
-        'label' => 'header',
-        'sortby' => 'sorting',
+        'title' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_discount',
+        'label' => 'code',
+        'label_alt' => 'title',
+        'label_alt_force' => 1,
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
         'cruser_id' => 'cruser_id',
-        'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:carousel_item',
-        'type' => 'item_type',
-        'delete' => 'deleted',
+        'dividers2tabs' => true,
         'versioningWS' => true,
         'origUid' => 't3_origuid',
         'hideTable' => true,
-        'hideAtCopy' => true,
-        'prependAtCopy' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.prependAtCopy',
-        'transOrigPointerField' => 'l10n_parent',
-        'transOrigDiffSourceField' => 'l10n_diffsource',
-        'languageField' => 'sys_language_uid',
+        'delete' => 'deleted',
         'enablecolumns' => 
         array (
-          'disabled' => 'hidden',
-          'starttime' => 'starttime',
-          'endtime' => 'endtime',
         ),
-        'typeicon_column' => 'item_type',
-        'typeicon_classes' => 
-        array (
-          'default' => 'content-bootstrappackage-carousel-item',
-          'header' => 'content-bootstrappackage-carousel-item-header',
-          'call_to_action' => 'content-bootstrappackage-carousel-item-calltoaction',
-          'image' => 'content-bootstrappackage-carousel-item-image',
-          'text_and_image' => 'content-bootstrappackage-carousel-item-textandimage',
-          'background_image' => 'content-bootstrappackage-carousel-item-backgroundimage',
-          'html' => 'content-bootstrappackage-carousel-item-html',
-        ),
+        'searchFields' => 'title',
+        'iconfile' => 'EXT:cart/Resources/Public/Icons/Order/Discount.svg',
       ),
+      'hideTable' => 1,
       'interface' => 
       array (
-        'showRecordFieldList' => '
-            hidden,
-            tt_content,
-            header,
-            header_layout,
-            header_class,
-            subheader,
-            subheader_layout,
-            subheader_class
-            bodytext,
-            image,
-            text_color,
-            background_color,
-            background_image
-        ',
+        'showRecordFieldList' => 'title, code, gross, net, tax_class_id, tax',
       ),
       'types' => 
       array (
         1 => 
         array (
-          'showitem' => '--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,header;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header.ALT.html_formlabel,nav_title,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.visibility;visibility,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,--palette--;;hiddenLanguagePalette',
-        ),
-        'header' => 
-        array (
-          'showitem' => '--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,--palette--;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:carousel_item.header;header,nav_title,text_color,link,--div--;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:tabs.background,background_color,background_image,background_image_options,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.visibility;visibility,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,--palette--;;hiddenLanguagePalette',
-        ),
-        'call_to_action' => 
-        array (
-          'showitem' => '--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,--palette--;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:carousel_item.header;header,nav_title,bodytext,button_text,link,--div--;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:tabs.background,background_color,background_image,background_image_options,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.visibility;visibility,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,--palette--;;hiddenLanguagePalette',
-        ),
-        'image' => 
-        array (
-          'showitem' => '--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,header;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header.ALT.html_formlabel,nav_title,image,link,--div--;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:tabs.background,background_color,background_image,background_image_options,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.visibility;visibility,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,--palette--;;hiddenLanguagePalette',
-        ),
-        'text_and_image' => 
-        array (
-          'showitem' => '--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,--palette--;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:carousel_item.header;header,nav_title,bodytext,text_color,image,link,--div--;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:tabs.background,background_color,background_image,background_image_options,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.visibility;visibility,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,--palette--;;hiddenLanguagePalette',
-        ),
-        'background_image' => 
-        array (
-          'showitem' => '--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,header;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header.ALT.html_formlabel,nav_title,background_color,background_image,background_image_options,link,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.visibility;visibility,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,--palette--;;hiddenLanguagePalette',
-        ),
-        'html' => 
-        array (
-          'showitem' => '--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,header;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header.ALT.html_formlabel,nav_title,bodytext;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:bodytext.ALT.html_formlabel,--div--;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:tabs.background,background_color,background_image,background_image_options,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.visibility;visibility,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,--palette--;;hiddenLanguagePalette',
+          'showitem' => 'title, code, gross, net, tax_class_id, tax',
         ),
       ),
       'palettes' => 
@@ -16762,946 +12711,124 @@ return array (
         array (
           'showitem' => '',
         ),
-        'access' => 
-        array (
-          'showitem' => '
-                starttime;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:starttime_formlabel,
-                endtime;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:endtime_formlabel
-            ',
-        ),
-        'header' => 
-        array (
-          'showitem' => '
-                header,
-                header_layout,
-                header_class,
-                --linebreak--,
-                subheader,
-                subheader_layout,
-                subheader_class,
-            ',
-        ),
-        'general' => 
-        array (
-          'showitem' => '
-                tt_content,
-                item_type;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:CType_formlabel,
-            ',
-        ),
-        'visibility' => 
-        array (
-          'showitem' => '
-                hidden;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:carousel_item
-            ',
-        ),
-        'hiddenLanguagePalette' => 
-        array (
-          'showitem' => 'sys_language_uid, l10n_parent',
-          'isHiddenPalette' => true,
-        ),
       ),
       'columns' => 
       array (
-        'tt_content' => 
+        'title' => 
         array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:carousel_item.tt_content',
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_discount.title',
+          'config' => 
+          array (
+            'type' => 'input',
+            'size' => 30,
+            'eval' => 'trim,required',
+          ),
+        ),
+        'code' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_discount.code',
+          'config' => 
+          array (
+            'type' => 'input',
+            'size' => 30,
+            'eval' => 'trim,required',
+          ),
+        ),
+        'gross' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_discount.gross',
+          'config' => 
+          array (
+            'type' => 'input',
+            'size' => 30,
+            'eval' => 'double2',
+          ),
+        ),
+        'net' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_discount.net',
+          'config' => 
+          array (
+            'type' => 'input',
+            'size' => 30,
+            'eval' => 'double2',
+          ),
+        ),
+        'tax_class_id' => 
+        array (
+          'exclude' => 1,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_discount.tax_class_id',
           'config' => 
           array (
             'type' => 'select',
-            'renderType' => 'selectSingle',
-            'foreign_table' => 'tt_content',
-            'foreign_table_where' => 'AND tt_content.pid=###CURRENT_PID### AND tt_content.CType IN ("carousel","carousel_small","carousel_fullscreen")',
+            'items' => 
+            array (
+              0 => 
+              array (
+                0 => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_discount.tax_class_id.1',
+                1 => 1,
+              ),
+            ),
+            'size' => 1,
+            'minitems' => 1,
             'maxitems' => 1,
-            'default' => 0,
-          ),
-        ),
-        'item_type' => 
-        array (
-          'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.type',
-          'config' => 
-          array (
-            'type' => 'select',
             'renderType' => 'selectSingle',
-            'items' => 
-            array (
-              0 => 
-              array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:carousel_item.item_type.header',
-                1 => 'header',
-                2 => 'content-bootstrappackage-carousel-item-header',
-              ),
-              1 => 
-              array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:carousel_item.item_type.calltoaction',
-                1 => 'call_to_action',
-                2 => 'content-bootstrappackage-carousel-item-calltoaction',
-              ),
-              2 => 
-              array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:carousel_item.item_type.image',
-                1 => 'image',
-                2 => 'content-bootstrappackage-carousel-item-image',
-              ),
-              3 => 
-              array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:carousel_item.item_type.textandimage',
-                1 => 'text_and_image',
-                2 => 'content-bootstrappackage-carousel-item-textandimage',
-              ),
-              4 => 
-              array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:carousel_item.item_type.backgroundimage',
-                1 => 'background_image',
-                2 => 'content-bootstrappackage-carousel-item-backgroundimage',
-              ),
-              5 => 
-              array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:carousel_item.item_type.html',
-                1 => 'html',
-                2 => 'content-bootstrappackage-carousel-item-html',
-              ),
-            ),
-            'default' => 'header',
-            'authMode' => 'explicitAllow',
-            'authMode_enforce' => 'strict',
-          ),
-          'l10n_mode' => 'exclude',
-        ),
-        'hidden' => 
-        array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.hidden',
-          'config' => 
-          array (
-            'type' => 'check',
-            'items' => 
-            array (
-              1 => 
-              array (
-                0 => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:hidden.I.0',
-              ),
-            ),
           ),
         ),
-        'starttime' => 
+        'tax' => 
         array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.starttime',
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_discount.tax',
           'config' => 
           array (
             'type' => 'input',
-            'renderType' => 'inputDateTime',
-            'eval' => 'datetime',
-            'default' => 0,
-          ),
-          'l10n_mode' => 'exclude',
-          'l10n_display' => 'defaultAsReadonly',
-        ),
-        'endtime' => 
-        array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.endtime',
-          'config' => 
-          array (
-            'type' => 'input',
-            'renderType' => 'inputDateTime',
-            'eval' => 'datetime',
-            'default' => 0,
-            'range' => 
-            array (
-              'upper' => 2145909600,
-            ),
-          ),
-          'l10n_mode' => 'exclude',
-          'l10n_display' => 'defaultAsReadonly',
-        ),
-        'sys_language_uid' => 
-        array (
-          'exclude' => 1,
-          'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.language',
-          'config' => 
-          array (
-            'type' => 'select',
-            'renderType' => 'selectSingle',
-            'foreign_table' => 'sys_language',
-            'foreign_table_where' => 'ORDER BY sys_language.title',
-            'items' => 
-            array (
-              0 => 
-              array (
-                0 => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.allLanguages',
-                1 => -1,
-              ),
-              1 => 
-              array (
-                0 => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.default_value',
-                1 => 0,
-              ),
-            ),
-            'allowNonIdValues' => true,
+            'size' => 30,
+            'eval' => 'double2',
           ),
         ),
-        'l10n_parent' => 
-        array (
-          'displayCond' => 'FIELD:sys_language_uid:>:0',
-          'exclude' => 1,
-          'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.l18n_parent',
-          'config' => 
-          array (
-            'type' => 'select',
-            'renderType' => 'selectSingle',
-            'items' => 
-            array (
-              0 => 
-              array (
-                0 => '',
-                1 => 0,
-              ),
-            ),
-            'foreign_table' => 'tx_bootstrappackage_carousel_item',
-            'foreign_table_where' => 'AND tx_bootstrappackage_carousel_item.pid=###CURRENT_PID### AND tx_bootstrappackage_carousel_item.sys_language_uid IN (-1,0)',
-            'default' => 0,
-          ),
-        ),
-        'l10n_diffsource' => 
+        'item' => 
         array (
           'config' => 
           array (
             'type' => 'passthrough',
           ),
         ),
-        'link' => 
-        array (
-          'exclude' => 1,
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:carousel_item.link',
-          'config' => 
-          array (
-            'type' => 'input',
-            'renderType' => 'inputLink',
-            'size' => 50,
-            'max' => 1024,
-            'eval' => 'trim',
-            'fieldControl' => 
-            array (
-              'linkPopup' => 
-              array (
-                'options' => 
-                array (
-                  'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:carousel_item.link',
-                ),
-              ),
-            ),
-            'softref' => 'typolink',
-          ),
-        ),
-        'header' => 
-        array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:carousel_item.header',
-          'config' => 
-          array (
-            'type' => 'input',
-            'size' => 50,
-            'eval' => 'trim,required',
-          ),
-        ),
-        'header_layout' => 
-        array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:carousel_item.header_layout',
-          'config' => 
-          array (
-            'type' => 'select',
-            'renderType' => 'selectSingle',
-            'items' => 
-            array (
-              0 => 
-              array (
-                0 => 'H1',
-                1 => '1',
-              ),
-              1 => 
-              array (
-                0 => 'H2',
-                1 => '2',
-              ),
-              2 => 
-              array (
-                0 => 'H3',
-                1 => '3',
-              ),
-              3 => 
-              array (
-                0 => 'H4',
-                1 => '4',
-              ),
-            ),
-            'default' => '1',
-          ),
-          'l10n_mode' => 'exclude',
-        ),
-        'header_class' => 
-        array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:carousel_item.header_class',
-          'config' => 
-          array (
-            'type' => 'select',
-            'renderType' => 'selectSingle',
-            'items' => 
-            array (
-              0 => 
-              array (
-                0 => '',
-                1 => 'none',
-              ),
-              1 => 
-              array (
-                0 => 'h1',
-                1 => 'h1',
-              ),
-              2 => 
-              array (
-                0 => 'h2',
-                1 => 'h2',
-              ),
-              3 => 
-              array (
-                0 => 'h3',
-                1 => 'h3',
-              ),
-              4 => 
-              array (
-                0 => 'h4',
-                1 => 'h4',
-              ),
-              5 => 
-              array (
-                0 => 'h5',
-                1 => 'h5',
-              ),
-            ),
-          ),
-          'l10n_mode' => 'exclude',
-        ),
-        'subheader' => 
-        array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:carousel_item.subheader',
-          'config' => 
-          array (
-            'type' => 'input',
-            'size' => 50,
-            'eval' => 'trim',
-          ),
-        ),
-        'subheader_layout' => 
-        array (
-          'exclude' => 1,
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:carousel_item.subheader_layout',
-          'config' => 
-          array (
-            'type' => 'select',
-            'renderType' => 'selectSingle',
-            'items' => 
-            array (
-              0 => 
-              array (
-                0 => 'H2',
-                1 => '2',
-              ),
-              1 => 
-              array (
-                0 => 'H3',
-                1 => '3',
-              ),
-              2 => 
-              array (
-                0 => 'H4',
-                1 => '4',
-              ),
-            ),
-            'default' => '2',
-          ),
-          'l10n_mode' => 'exclude',
-        ),
-        'subheader_class' => 
-        array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:carousel_item.subheader_class',
-          'config' => 
-          array (
-            'type' => 'select',
-            'renderType' => 'selectSingle',
-            'items' => 
-            array (
-              0 => 
-              array (
-                0 => '',
-                1 => 'none',
-              ),
-              1 => 
-              array (
-                0 => 'h1',
-                1 => 'h1',
-              ),
-              2 => 
-              array (
-                0 => 'h2',
-                1 => 'h2',
-              ),
-              3 => 
-              array (
-                0 => 'h3',
-                1 => 'h3',
-              ),
-              4 => 
-              array (
-                0 => 'h4',
-                1 => 'h4',
-              ),
-              5 => 
-              array (
-                0 => 'h5',
-                1 => 'h5',
-              ),
-            ),
-          ),
-          'l10n_mode' => 'exclude',
-        ),
-        'nav_title' => 
-        array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:carousel_item.nav_title',
-          'config' => 
-          array (
-            'type' => 'input',
-            'size' => 50,
-            'eval' => 'trim',
-          ),
-        ),
-        'bodytext' => 
-        array (
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:carousel_item.bodytext',
-          'l10n_mode' => 'prefixLangTitle',
-          'l10n_cat' => 'text',
-          'config' => 
-          array (
-            'type' => 'text',
-            'cols' => '80',
-            'rows' => '5',
-            'softref' => 'typolink_tag,images,email[subst],url',
-          ),
-        ),
-        'button_text' => 
-        array (
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:carousel_item.button_text',
-          'config' => 
-          array (
-            'type' => 'input',
-            'size' => 20,
-            'max' => 255,
-          ),
-        ),
-        'image' => 
-        array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:carousel_item.image',
-          'config' => 
-          array (
-            'type' => 'inline',
-            'foreign_table' => 'sys_file_reference',
-            'foreign_field' => 'uid_foreign',
-            'foreign_sortby' => 'sorting_foreign',
-            'foreign_table_field' => 'tablenames',
-            'foreign_match_fields' => 
-            array (
-              'fieldname' => 'image',
-            ),
-            'foreign_label' => 'uid_local',
-            'foreign_selector' => 'uid_local',
-            'overrideChildTca' => 
-            array (
-              'columns' => 
-              array (
-                'uid_local' => 
-                array (
-                  'config' => 
-                  array (
-                    'appearance' => 
-                    array (
-                      'elementBrowserType' => 'file',
-                      'elementBrowserAllowed' => 'gif,jpg,jpeg,tif,tiff,bmp,pcx,tga,png,pdf,ai,svg',
-                    ),
-                  ),
-                ),
-              ),
-              'types' => 
-              array (
-                0 => 
-                array (
-                  'showitem' => '
-                                    --palette--;;filePalette
-                                ',
-                ),
-                1 => 
-                array (
-                  'showitem' => '
-                                    --palette--;;filePalette
-                                ',
-                ),
-                2 => 
-                array (
-                  'showitem' => '
-                                    title,
-                                    alternative,
-                                    crop,
-                                    --palette--;;filePalette
-                                ',
-                ),
-                3 => 
-                array (
-                  'showitem' => '
-                                    --palette--;;filePalette
-                                ',
-                ),
-                4 => 
-                array (
-                  'showitem' => '
-                                    --palette--;;filePalette
-                                ',
-                ),
-                5 => 
-                array (
-                  'showitem' => '
-                                    --palette--;;filePalette
-                                ',
-                ),
-              ),
-            ),
-            'filter' => 
-            array (
-              0 => 
-              array (
-                'userFunc' => 'TYPO3\\CMS\\Core\\Resource\\Filter\\FileExtensionFilter->filterInlineChildren',
-                'parameters' => 
-                array (
-                  'allowedFileExtensions' => 'gif,jpg,jpeg,tif,tiff,bmp,pcx,tga,png,pdf,ai,svg',
-                  'disallowedFileExtensions' => '',
-                ),
-              ),
-            ),
-            'appearance' => 
-            array (
-              'useSortable' => true,
-              'headerThumbnail' => 
-              array (
-                'field' => 'uid_local',
-                'width' => '45',
-                'height' => '45c',
-              ),
-              'enabledControls' => 
-              array (
-                'info' => true,
-                'new' => false,
-                'dragdrop' => true,
-                'sort' => false,
-                'hide' => true,
-                'delete' => true,
-              ),
-              'createNewRelationLinkTitle' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference',
-            ),
-            'behaviour' => 
-            array (
-              'localizeChildrenAtParentLocalization' => true,
-            ),
-            'minitems' => 0,
-            'maxitems' => 1,
-          ),
-        ),
-        'text_color' => 
-        array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:carousel_item.text_color',
-          'config' => 
-          array (
-            'type' => 'input',
-            'renderType' => 'colorpicker',
-            'default' => '#FFFFFF',
-          ),
-          'l10n_mode' => 'exclude',
-        ),
-        'background_color' => 
-        array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:carousel_item.background_color',
-          'config' => 
-          array (
-            'type' => 'input',
-            'renderType' => 'colorpicker',
-            'default' => '#333333',
-          ),
-          'l10n_mode' => 'exclude',
-        ),
-        'background_image' => 
-        array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:carousel_item.background_image',
-          'config' => 
-          array (
-            'type' => 'inline',
-            'foreign_table' => 'sys_file_reference',
-            'foreign_field' => 'uid_foreign',
-            'foreign_sortby' => 'sorting_foreign',
-            'foreign_table_field' => 'tablenames',
-            'foreign_match_fields' => 
-            array (
-              'fieldname' => 'background_image',
-            ),
-            'foreign_label' => 'uid_local',
-            'foreign_selector' => 'uid_local',
-            'overrideChildTca' => 
-            array (
-              'columns' => 
-              array (
-                'uid_local' => 
-                array (
-                  'config' => 
-                  array (
-                    'appearance' => 
-                    array (
-                      'elementBrowserType' => 'file',
-                      'elementBrowserAllowed' => 'gif,jpg,jpeg,tif,tiff,bmp,pcx,tga,png,pdf,ai,svg',
-                    ),
-                  ),
-                ),
-                'crop' => 
-                array (
-                  'config' => 
-                  array (
-                    'cropVariants' => 
-                    array (
-                      'default' => 
-                      array (
-                        'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.default',
-                        'allowedAspectRatios' => 
-                        array (
-                          '16:9' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                            'value' => 1.7777777777777777,
-                          ),
-                          '4:3' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                            'value' => 1.3333333333333333,
-                          ),
-                          '1:1' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                            'value' => 1.0,
-                          ),
-                          'NaN' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                            'value' => 0.0,
-                          ),
-                        ),
-                        'selectedRatio' => 'NaN',
-                        'cropArea' => 
-                        array (
-                          'x' => 0.0,
-                          'y' => 0.0,
-                          'width' => 1.0,
-                          'height' => 1.0,
-                        ),
-                      ),
-                      'large' => 
-                      array (
-                        'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.large',
-                        'allowedAspectRatios' => 
-                        array (
-                          '16:9' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                            'value' => 1.7777777777777777,
-                          ),
-                          '4:3' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                            'value' => 1.3333333333333333,
-                          ),
-                          '1:1' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                            'value' => 1.0,
-                          ),
-                          'NaN' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                            'value' => 0.0,
-                          ),
-                        ),
-                        'selectedRatio' => 'NaN',
-                        'cropArea' => 
-                        array (
-                          'x' => 0.0,
-                          'y' => 0.0,
-                          'width' => 1.0,
-                          'height' => 1.0,
-                        ),
-                      ),
-                      'medium' => 
-                      array (
-                        'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.medium',
-                        'allowedAspectRatios' => 
-                        array (
-                          '16:9' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                            'value' => 1.7777777777777777,
-                          ),
-                          '4:3' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                            'value' => 1.3333333333333333,
-                          ),
-                          '1:1' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                            'value' => 1.0,
-                          ),
-                          'NaN' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                            'value' => 0.0,
-                          ),
-                        ),
-                        'selectedRatio' => 'NaN',
-                        'cropArea' => 
-                        array (
-                          'x' => 0.0,
-                          'y' => 0.0,
-                          'width' => 1.0,
-                          'height' => 1.0,
-                        ),
-                      ),
-                      'small' => 
-                      array (
-                        'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.small',
-                        'allowedAspectRatios' => 
-                        array (
-                          '16:9' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                            'value' => 1.7777777777777777,
-                          ),
-                          '4:3' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                            'value' => 1.3333333333333333,
-                          ),
-                          '1:1' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                            'value' => 1.0,
-                          ),
-                          'NaN' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                            'value' => 0.0,
-                          ),
-                        ),
-                        'selectedRatio' => 'NaN',
-                        'cropArea' => 
-                        array (
-                          'x' => 0.0,
-                          'y' => 0.0,
-                          'width' => 1.0,
-                          'height' => 1.0,
-                        ),
-                      ),
-                      'extrasmall' => 
-                      array (
-                        'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.extrasmall',
-                        'allowedAspectRatios' => 
-                        array (
-                          '16:9' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                            'value' => 1.7777777777777777,
-                          ),
-                          '4:3' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                            'value' => 1.3333333333333333,
-                          ),
-                          '1:1' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                            'value' => 1.0,
-                          ),
-                          'NaN' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                            'value' => 0.0,
-                          ),
-                        ),
-                        'selectedRatio' => 'NaN',
-                        'cropArea' => 
-                        array (
-                          'x' => 0.0,
-                          'y' => 0.0,
-                          'width' => 1.0,
-                          'height' => 1.0,
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-              'types' => 
-              array (
-                0 => 
-                array (
-                  'showitem' => '
-                                    --palette--;;filePalette
-                                ',
-                ),
-                1 => 
-                array (
-                  'showitem' => '
-                                    --palette--;;filePalette
-                                ',
-                ),
-                2 => 
-                array (
-                  'showitem' => '
-                                    crop,
-                                    --palette--;;filePalette
-                                ',
-                ),
-                3 => 
-                array (
-                  'showitem' => '
-                                    --palette--;;filePalette
-                                ',
-                ),
-                4 => 
-                array (
-                  'showitem' => '
-                                    --palette--;;filePalette
-                                ',
-                ),
-                5 => 
-                array (
-                  'showitem' => '
-                                    --palette--;;filePalette
-                                ',
-                ),
-              ),
-            ),
-            'filter' => 
-            array (
-              0 => 
-              array (
-                'userFunc' => 'TYPO3\\CMS\\Core\\Resource\\Filter\\FileExtensionFilter->filterInlineChildren',
-                'parameters' => 
-                array (
-                  'allowedFileExtensions' => 'gif,jpg,jpeg,tif,tiff,bmp,pcx,tga,png,pdf,ai,svg',
-                  'disallowedFileExtensions' => '',
-                ),
-              ),
-            ),
-            'appearance' => 
-            array (
-              'useSortable' => true,
-              'headerThumbnail' => 
-              array (
-                'field' => 'uid_local',
-                'width' => '45',
-                'height' => '45c',
-              ),
-              'enabledControls' => 
-              array (
-                'info' => true,
-                'new' => false,
-                'dragdrop' => true,
-                'sort' => false,
-                'hide' => true,
-                'delete' => true,
-              ),
-              'createNewRelationLinkTitle' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference',
-            ),
-            'behaviour' => 
-            array (
-              'localizeChildrenAtParentLocalization' => true,
-            ),
-            'minitems' => 0,
-            'maxitems' => 1,
-          ),
-          'l10n_mode' => 'exclude',
-        ),
-        'background_image_options' => 
-        array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:field.background_image_options',
-          'config' => 
-          array (
-            'type' => 'flex',
-            'ds' => 
-            array (
-              'default' => 'FILE:EXT:bootstrap_package/Configuration/FlexForms/BackgroundImage.xml',
-            ),
-          ),
-          'l10n_mode' => 'exclude',
-        ),
       ),
     ),
-    'tx_bootstrappackage_icon_group_item' => 
+    'tx_cart_domain_model_order_item' => 
     array (
       'ctrl' => 
       array (
-        'label' => 'header',
-        'sortby' => 'sorting',
+        'title' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_item',
+        'label' => 'order_number',
+        'label_alt' => 'invoice_number',
+        'label_alt_force' => 1,
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
         'cruser_id' => 'cruser_id',
-        'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:icon_group_item',
-        'delete' => 'deleted',
+        'dividers2tabs' => true,
         'versioningWS' => true,
         'origUid' => 't3_origuid',
-        'hideTable' => true,
-        'hideAtCopy' => true,
-        'prependAtCopy' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.prependAtCopy',
-        'transOrigPointerField' => 'l10n_parent',
-        'transOrigDiffSourceField' => 'l10n_diffsource',
-        'languageField' => 'sys_language_uid',
+        'delete' => 'deleted',
         'enablecolumns' => 
         array (
-          'disabled' => 'hidden',
-          'starttime' => 'starttime',
-          'endtime' => 'endtime',
         ),
-        'typeicon_classes' => 
-        array (
-          'default' => 'content-bootstrappackage-icon-group-item',
-        ),
+        'searchFields' => 'order_number, invoice_number',
+        'iconfile' => 'EXT:cart/Resources/Public/Icons/Order/Item.svg',
       ),
       'interface' => 
       array (
-        'showRecordFieldList' => '
-            hidden,
-            tt_content,
-            header
-        ',
+        'showRecordFieldList' => 'pid, cart_pid, fe_user, order_number, invoice_number, delivery_number, billing_address, shipping_address, gross, net, total_gross, total_net, additional, additional_data, tax_class, products, discounts, tax, total_tax, payment, shipping, comment',
       ),
       'types' => 
       array (
         1 => 
         array (
-          'showitem' => '--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,header,subheader,icon_file,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.visibility;visibility,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,--palette--;;hiddenLanguagePalette',
+          'showitem' => 'pid,fe_user,--palette--;LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_item.palettes.numbers;numbers,--palette--;LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_item.palettes.addresses;addresses,--palette--;LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_item.palettes.price;price,--palette--;LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_item.palettes.total_price;total_price,comment,additional,additional_data,tax_class,products,discounts,payment,shipping,--palette--;LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_item.palettes.documents;pdfs',
         ),
       ),
       'palettes' => 
@@ -17710,722 +12837,590 @@ return array (
         array (
           'showitem' => '',
         ),
-        'access' => 
+        'addresses' => 
         array (
-          'showitem' => '
-                starttime;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:starttime_formlabel,
-                endtime;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:endtime_formlabel
-            ',
+          'showitem' => 'billing_address, shipping_address',
+          'canNotCollapse' => 0,
         ),
-        'general' => 
+        'numbers' => 
         array (
-          'showitem' => '
-                tt_content
-            ',
+          'showitem' => 'order_number, order_date, --linebreak--, invoice_number, invoice_date, --linebreak--, delivery_number, delivery_date',
+          'canNotCollapse' => 1,
         ),
-        'visibility' => 
+        'price' => 
         array (
-          'showitem' => '
-                hidden;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:icon_group_item
-            ',
+          'showitem' => 'currency, --linebreak--, currency_code, currency_sign, currency_translation, --linebreak--, gross, net, --linebreak--, order_tax',
+          'canNotCollapse' => 1,
         ),
-        'hiddenLanguagePalette' => 
+        'total_price' => 
         array (
-          'showitem' => 'sys_language_uid, l10n_parent',
-          'isHiddenPalette' => true,
+          'showitem' => 'total_gross, total_net, --linebreak--, order_total_tax',
+          'canNotCollapse' => 1,
+        ),
+        'pdfs' => 
+        array (
+          'showitem' => 'order_pdfs, --linebreak--, invoice_pdfs, --linebreak--, delivery_pdfs',
+          'canNotCollapse' => 1,
         ),
       ),
       'columns' => 
       array (
-        'tt_content' => 
-        array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:icon_group_item.tt_content',
-          'config' => 
-          array (
-            'type' => 'select',
-            'renderType' => 'selectSingle',
-            'foreign_table' => 'tt_content',
-            'foreign_table_where' => 'AND tt_content.pid=###CURRENT_PID### AND tt_content.CType="icon_group"',
-            'maxitems' => 1,
-            'default' => 0,
-          ),
-        ),
-        'hidden' => 
-        array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.hidden',
-          'config' => 
-          array (
-            'type' => 'check',
-            'items' => 
-            array (
-              1 => 
-              array (
-                0 => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:hidden.I.0',
-              ),
-            ),
-          ),
-        ),
-        'starttime' => 
-        array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.starttime',
-          'config' => 
-          array (
-            'type' => 'input',
-            'renderType' => 'inputDateTime',
-            'eval' => 'datetime',
-            'default' => 0,
-          ),
-          'l10n_mode' => 'exclude',
-          'l10n_display' => 'defaultAsReadonly',
-        ),
-        'endtime' => 
-        array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.endtime',
-          'config' => 
-          array (
-            'type' => 'input',
-            'renderType' => 'inputDateTime',
-            'eval' => 'datetime',
-            'default' => 0,
-            'range' => 
-            array (
-              'upper' => 2145909600,
-            ),
-          ),
-          'l10n_mode' => 'exclude',
-          'l10n_display' => 'defaultAsReadonly',
-        ),
-        'sys_language_uid' => 
+        'pid' => 
         array (
           'exclude' => 1,
-          'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.language',
-          'config' => 
-          array (
-            'type' => 'select',
-            'renderType' => 'selectSingle',
-            'foreign_table' => 'sys_language',
-            'foreign_table_where' => 'ORDER BY sys_language.title',
-            'items' => 
-            array (
-              0 => 
-              array (
-                0 => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.allLanguages',
-                1 => -1,
-              ),
-              1 => 
-              array (
-                0 => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.default_value',
-                1 => 0,
-              ),
-            ),
-            'allowNonIdValues' => true,
-          ),
-        ),
-        'l10n_parent' => 
-        array (
-          'displayCond' => 'FIELD:sys_language_uid:>:0',
-          'exclude' => 1,
-          'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.l18n_parent',
-          'config' => 
-          array (
-            'type' => 'select',
-            'renderType' => 'selectSingle',
-            'items' => 
-            array (
-              0 => 
-              array (
-                0 => '',
-                1 => 0,
-              ),
-            ),
-            'foreign_table' => 'tx_bootstrappackage_icon_group_item',
-            'foreign_table_where' => 'AND tx_bootstrappackage_icon_group_item.pid=###CURRENT_PID### AND tx_bootstrappackage_icon_group_item.sys_language_uid IN (-1,0)',
-            'default' => 0,
-          ),
-        ),
-        'l10n_diffsource' => 
-        array (
           'config' => 
           array (
             'type' => 'passthrough',
           ),
         ),
-        'header' => 
+        'cart_pid' => 
         array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:icon_group_item.header',
+          'exclude' => 1,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_category.cart_pid',
           'config' => 
           array (
-            'type' => 'input',
-            'size' => 50,
-            'eval' => 'trim,required',
-          ),
-        ),
-        'subheader' => 
-        array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:icon_group_item.subheader',
-          'config' => 
-          array (
-            'type' => 'input',
-            'size' => 50,
-            'eval' => 'trim',
-          ),
-        ),
-        'icon_file' => 
-        array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:icon_group_item.icon_file',
-          'config' => 
-          array (
-            'type' => 'inline',
-            'foreign_table' => 'sys_file_reference',
-            'foreign_field' => 'uid_foreign',
-            'foreign_sortby' => 'sorting_foreign',
-            'foreign_table_field' => 'tablenames',
-            'foreign_match_fields' => 
+            'type' => 'group',
+            'internal_type' => 'db',
+            'allowed' => 'pages',
+            'size' => 1,
+            'maxitems' => 1,
+            'minitems' => 0,
+            'default' => 0,
+            'behaviour' => 
             array (
-              'fieldname' => 'icon_file',
+              'allowLanguageSynchronization' => true,
             ),
-            'foreign_label' => 'uid_local',
-            'foreign_selector' => 'uid_local',
-            'overrideChildTca' => 
+            'suggestOptions' => 
             array (
-              'columns' => 
+              'default' => 
               array (
-                'uid_local' => 
-                array (
-                  'config' => 
-                  array (
-                    'appearance' => 
-                    array (
-                      'elementBrowserType' => 'file',
-                      'elementBrowserAllowed' => 'svg',
-                    ),
-                  ),
-                ),
-              ),
-              'types' => 
-              array (
-                0 => 
-                array (
-                  'showitem' => '
-                                    --palette--;;filePalette
-                                ',
-                ),
-                1 => 
-                array (
-                  'showitem' => '
-                                    --palette--;;filePalette
-                                ',
-                ),
-                2 => 
-                array (
-                  'showitem' => '
-                                    --palette--;;filePalette
-                                ',
-                ),
-                3 => 
-                array (
-                  'showitem' => '
-                                    --palette--;;filePalette
-                                ',
-                ),
-                4 => 
-                array (
-                  'showitem' => '
-                                    --palette--;;filePalette
-                                ',
-                ),
-                5 => 
-                array (
-                  'showitem' => '
-                                    --palette--;;filePalette
-                                ',
-                ),
+                'searchWholePhrase' => true,
               ),
             ),
-            'filter' => 
+          ),
+        ),
+        'fe_user' => 
+        array (
+          'exclude' => 1,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_item.fe_user',
+          'config' => 
+          array (
+            'type' => 'select',
+            'readOnly' => 1,
+            'foreign_table' => 'fe_users',
+            'size' => 1,
+            'items' => 
             array (
               0 => 
               array (
-                'userFunc' => 'TYPO3\\CMS\\Core\\Resource\\Filter\\FileExtensionFilter->filterInlineChildren',
-                'parameters' => 
-                array (
-                  'allowedFileExtensions' => 'svg',
-                  'disallowedFileExtensions' => '',
-                ),
+                0 => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_item.fe_user.not_available',
+                1 => 0,
               ),
             ),
-            'appearance' => 
+            'minitems' => 0,
+            'maxitems' => 1,
+            'renderType' => 'selectSingle',
+          ),
+        ),
+        'order_number' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_item.order_number',
+          'config' => 
+          array (
+            'type' => 'input',
+            'readOnly' => 1,
+            'size' => 30,
+            'eval' => 'trim',
+          ),
+        ),
+        'order_date' => 
+        array (
+          'exclude' => 1,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_item.order_date',
+          'config' => 
+          array (
+            'type' => 'input',
+            'readOnly' => 1,
+            'size' => '8',
+            'eval' => 'date',
+            'checkbox' => '0',
+            'default' => '0',
+            'renderType' => 'inputDateTime',
+          ),
+        ),
+        'invoice_number' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_item.invoice_number',
+          'config' => 
+          array (
+            'type' => 'input',
+            'readOnly' => 1,
+            'size' => 30,
+            'eval' => 'trim',
+          ),
+        ),
+        'invoice_date' => 
+        array (
+          'exclude' => 1,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_item.invoice_date',
+          'config' => 
+          array (
+            'type' => 'input',
+            'readOnly' => 1,
+            'size' => '8',
+            'eval' => 'date',
+            'checkbox' => '0',
+            'default' => '0',
+            'renderType' => 'inputDateTime',
+          ),
+        ),
+        'delivery_number' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_item.delivery_number',
+          'config' => 
+          array (
+            'type' => 'input',
+            'readOnly' => 1,
+            'size' => 30,
+            'eval' => 'trim',
+          ),
+        ),
+        'delivery_date' => 
+        array (
+          'exclude' => 1,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_item.delivery_date',
+          'config' => 
+          array (
+            'type' => 'input',
+            'readOnly' => 1,
+            'size' => '8',
+            'eval' => 'date',
+            'checkbox' => '0',
+            'default' => '0',
+            'renderType' => 'inputDateTime',
+          ),
+        ),
+        'billing_address' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_item.billing_address',
+          'config' => 
+          array (
+            'type' => 'inline',
+            'readOnly' => 1,
+            'foreign_table' => 'tx_cart_domain_model_order_address',
+            'foreign_field' => 'item',
+            'foreign_match_fields' => 
             array (
-              'useSortable' => true,
-              'headerThumbnail' => 
-              array (
-                'field' => 'uid_local',
-                'width' => '45',
-                'height' => '45c',
-              ),
-              'enabledControls' => 
-              array (
-                'info' => true,
-                'new' => false,
-                'dragdrop' => true,
-                'sort' => false,
-                'hide' => true,
-                'delete' => true,
-              ),
-              'createNewRelationLinkTitle' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference',
-            ),
-            'behaviour' => 
-            array (
-              'localizeChildrenAtParentLocalization' => true,
+              'record_type' => '\\Extcode\\Cart\\Domain\\Model\\Order\\BillingAddress',
             ),
             'minitems' => 1,
             'maxitems' => 1,
-          ),
-          'l10n_mode' => 'exclude',
-        ),
-      ),
-    ),
-    'tx_bootstrappackage_tab_item' => 
-    array (
-      'ctrl' => 
-      array (
-        'label' => 'header',
-        'label_alt' => 'bodytext',
-        'sortby' => 'sorting',
-        'tstamp' => 'tstamp',
-        'crdate' => 'crdate',
-        'cruser_id' => 'cruser_id',
-        'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:tab_item',
-        'delete' => 'deleted',
-        'versioningWS' => true,
-        'origUid' => 't3_origuid',
-        'hideTable' => true,
-        'hideAtCopy' => true,
-        'prependAtCopy' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.prependAtCopy',
-        'transOrigPointerField' => 'l10n_parent',
-        'transOrigDiffSourceField' => 'l10n_diffsource',
-        'languageField' => 'sys_language_uid',
-        'enablecolumns' => 
-        array (
-          'disabled' => 'hidden',
-          'starttime' => 'starttime',
-          'endtime' => 'endtime',
-        ),
-        'typeicon_classes' => 
-        array (
-          'default' => 'content-bootstrappackage-tab-item',
-        ),
-      ),
-      'interface' => 
-      array (
-        'showRecordFieldList' => '
-            hidden,
-            tt_content,
-            header,
-            bodytext
-        ',
-      ),
-      'types' => 
-      array (
-        1 => 
-        array (
-          'showitem' => '--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,header,bodytext,media,--palette--;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:tab_item.mediaposition;mediaposition,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.visibility;visibility,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,--palette--;;hiddenLanguagePalette',
-          'columnsOverrides' => 
-          array (
-            'media' => 
+            'appearance' => 
             array (
-              'config' => 
+              'enabledControls' => 
               array (
-                'overrideChildTca' => 
-                array (
-                  'columns' => 
-                  array (
-                    'crop' => 
-                    array (
-                      'config' => 
-                      array (
-                        'cropVariants' => 
-                        array (
-                          'default' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.default',
-                            'allowedAspectRatios' => 
-                            array (
-                              '16:9' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                                'value' => 1.7777777777777777,
-                              ),
-                              '4:3' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                                'value' => 1.3333333333333333,
-                              ),
-                              '1:1' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                                'value' => 1.0,
-                              ),
-                              'NaN' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                                'value' => 0.0,
-                              ),
-                            ),
-                            'selectedRatio' => 'NaN',
-                            'cropArea' => 
-                            array (
-                              'x' => 0.0,
-                              'y' => 0.0,
-                              'width' => 1.0,
-                              'height' => 1.0,
-                            ),
-                          ),
-                          'large' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.large',
-                            'allowedAspectRatios' => 
-                            array (
-                              '16:9' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                                'value' => 1.7777777777777777,
-                              ),
-                              '4:3' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                                'value' => 1.3333333333333333,
-                              ),
-                              '1:1' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                                'value' => 1.0,
-                              ),
-                              'NaN' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                                'value' => 0.0,
-                              ),
-                            ),
-                            'selectedRatio' => 'NaN',
-                            'cropArea' => 
-                            array (
-                              'x' => 0.0,
-                              'y' => 0.0,
-                              'width' => 1.0,
-                              'height' => 1.0,
-                            ),
-                          ),
-                          'medium' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.medium',
-                            'allowedAspectRatios' => 
-                            array (
-                              '16:9' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                                'value' => 1.7777777777777777,
-                              ),
-                              '4:3' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                                'value' => 1.3333333333333333,
-                              ),
-                              '1:1' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                                'value' => 1.0,
-                              ),
-                              'NaN' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                                'value' => 0.0,
-                              ),
-                            ),
-                            'selectedRatio' => 'NaN',
-                            'cropArea' => 
-                            array (
-                              'x' => 0.0,
-                              'y' => 0.0,
-                              'width' => 1.0,
-                              'height' => 1.0,
-                            ),
-                          ),
-                          'small' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.small',
-                            'allowedAspectRatios' => 
-                            array (
-                              '16:9' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                                'value' => 1.7777777777777777,
-                              ),
-                              '4:3' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                                'value' => 1.3333333333333333,
-                              ),
-                              '1:1' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                                'value' => 1.0,
-                              ),
-                              'NaN' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                                'value' => 0.0,
-                              ),
-                            ),
-                            'selectedRatio' => 'NaN',
-                            'cropArea' => 
-                            array (
-                              'x' => 0.0,
-                              'y' => 0.0,
-                              'width' => 1.0,
-                              'height' => 1.0,
-                            ),
-                          ),
-                          'extrasmall' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.extrasmall',
-                            'allowedAspectRatios' => 
-                            array (
-                              '16:9' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                                'value' => 1.7777777777777777,
-                              ),
-                              '4:3' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                                'value' => 1.3333333333333333,
-                              ),
-                              '1:1' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                                'value' => 1.0,
-                              ),
-                              'NaN' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                                'value' => 0.0,
-                              ),
-                            ),
-                            'selectedRatio' => 'NaN',
-                            'cropArea' => 
-                            array (
-                              'x' => 0.0,
-                              'y' => 0.0,
-                              'width' => 1.0,
-                              'height' => 1.0,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
+                'info' => false,
+                'new' => false,
+                'dragdrop' => false,
+                'sort' => false,
+                'hide' => false,
+                'delete' => false,
+                'localize' => false,
               ),
             ),
           ),
         ),
-      ),
-      'palettes' => 
-      array (
-        1 => 
+        'shipping_address' => 
         array (
-          'showitem' => '',
-        ),
-        'access' => 
-        array (
-          'showitem' => '
-                starttime;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:starttime_formlabel,
-                endtime;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:endtime_formlabel
-            ',
-        ),
-        'general' => 
-        array (
-          'showitem' => '
-                tt_content
-            ',
-        ),
-        'mediaposition' => 
-        array (
-          'showitem' => '
-                mediaorient,
-                imagecols,
-                image_zoom,
-            ',
-        ),
-        'visibility' => 
-        array (
-          'showitem' => '
-                hidden;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:tab_item
-            ',
-        ),
-        'hiddenLanguagePalette' => 
-        array (
-          'showitem' => 'sys_language_uid, l10n_parent',
-          'isHiddenPalette' => true,
-        ),
-      ),
-      'columns' => 
-      array (
-        'tt_content' => 
-        array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:tab_item.tt_content',
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_item.shipping_address',
           'config' => 
           array (
-            'type' => 'select',
-            'renderType' => 'selectSingle',
-            'foreign_table' => 'tt_content',
-            'foreign_table_where' => 'AND tt_content.pid=###CURRENT_PID### AND tt_content.CType="tab"',
+            'type' => 'inline',
+            'readOnly' => 1,
+            'foreign_table' => 'tx_cart_domain_model_order_address',
+            'foreign_field' => 'item',
+            'foreign_match_fields' => 
+            array (
+              'record_type' => '\\Extcode\\Cart\\Domain\\Model\\Order\\ShippingAddress',
+            ),
+            'minitems' => 0,
             'maxitems' => 1,
-            'default' => 0,
-          ),
-        ),
-        'hidden' => 
-        array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.hidden',
-          'config' => 
-          array (
-            'type' => 'check',
-            'items' => 
+            'appearance' => 
             array (
-              1 => 
+              'enabledControls' => 
               array (
-                0 => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:hidden.I.0',
+                'info' => false,
+                'new' => false,
+                'dragdrop' => false,
+                'sort' => false,
+                'hide' => false,
+                'delete' => false,
+                'localize' => false,
               ),
             ),
           ),
         ),
-        'starttime' => 
+        'comment' => 
         array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.starttime',
-          'config' => 
-          array (
-            'type' => 'input',
-            'renderType' => 'inputDateTime',
-            'eval' => 'datetime',
-            'default' => 0,
-          ),
-          'l10n_mode' => 'exclude',
-          'l10n_display' => 'defaultAsReadonly',
-        ),
-        'endtime' => 
-        array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.endtime',
-          'config' => 
-          array (
-            'type' => 'input',
-            'renderType' => 'inputDateTime',
-            'eval' => 'datetime',
-            'default' => 0,
-            'range' => 
-            array (
-              'upper' => 2145909600,
-            ),
-          ),
-          'l10n_mode' => 'exclude',
-          'l10n_display' => 'defaultAsReadonly',
-        ),
-        'sys_language_uid' => 
-        array (
-          'exclude' => 1,
-          'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.language',
-          'config' => 
-          array (
-            'type' => 'select',
-            'renderType' => 'selectSingle',
-            'foreign_table' => 'sys_language',
-            'foreign_table_where' => 'ORDER BY sys_language.title',
-            'items' => 
-            array (
-              0 => 
-              array (
-                0 => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.allLanguages',
-                1 => -1,
-              ),
-              1 => 
-              array (
-                0 => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.default_value',
-                1 => 0,
-              ),
-            ),
-            'allowNonIdValues' => true,
-          ),
-        ),
-        'l10n_parent' => 
-        array (
-          'displayCond' => 'FIELD:sys_language_uid:>:0',
-          'exclude' => 1,
-          'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.l18n_parent',
-          'config' => 
-          array (
-            'type' => 'select',
-            'renderType' => 'selectSingle',
-            'items' => 
-            array (
-              0 => 
-              array (
-                0 => '',
-                1 => 0,
-              ),
-            ),
-            'foreign_table' => 'tx_bootstrappackage_tab_item',
-            'foreign_table_where' => 'AND tx_bootstrappackage_tab_item.pid=###CURRENT_PID### AND tx_bootstrappackage_tab_item.sys_language_uid IN (-1,0)',
-            'default' => 0,
-          ),
-        ),
-        'l10n_diffsource' => 
-        array (
-          'config' => 
-          array (
-            'type' => 'passthrough',
-          ),
-        ),
-        'header' => 
-        array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:tab_item.header',
-          'config' => 
-          array (
-            'type' => 'input',
-            'size' => 50,
-            'eval' => 'trim,required',
-          ),
-        ),
-        'bodytext' => 
-        array (
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:tab_item.bodytext',
-          'l10n_mode' => 'prefixLangTitle',
-          'l10n_cat' => 'text',
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_item.comment',
           'config' => 
           array (
             'type' => 'text',
-            'cols' => '80',
-            'rows' => '15',
-            'softref' => 'typolink_tag,images,email[subst],url',
-            'enableRichtext' => true,
-            'richtextConfiguration' => 'default',
+            'readOnly' => 1,
+            'cols' => 48,
+            'rows' => 15,
+            'appearance' => 
+            array (
+              'enabledControls' => 
+              array (
+                'info' => false,
+                'new' => false,
+                'dragdrop' => false,
+                'sort' => false,
+                'hide' => false,
+                'delete' => false,
+                'localize' => false,
+              ),
+            ),
           ),
         ),
-        'media' => 
+        'additional' => 
         array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:tab_item.media',
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_item.additional',
+          'config' => 
+          array (
+            'type' => 'text',
+            'readOnly' => 1,
+            'cols' => 48,
+            'rows' => 15,
+            'appearance' => 
+            array (
+              'enabledControls' => 
+              array (
+                'info' => false,
+                'new' => false,
+                'dragdrop' => false,
+                'sort' => false,
+                'hide' => false,
+                'delete' => false,
+                'localize' => false,
+              ),
+            ),
+          ),
+        ),
+        'additional_data' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_item.additional_data',
+          'config' => 
+          array (
+            'type' => 'text',
+            'readOnly' => 1,
+            'cols' => 48,
+            'rows' => 15,
+            'appearance' => 
+            array (
+              'enabledControls' => 
+              array (
+                'info' => false,
+                'new' => false,
+                'dragdrop' => false,
+                'sort' => false,
+                'hide' => false,
+                'delete' => false,
+                'localize' => false,
+              ),
+            ),
+          ),
+        ),
+        'tax_class' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_item.tax_class',
+          'config' => 
+          array (
+            'type' => 'inline',
+            'readOnly' => 1,
+            'foreign_table' => 'tx_cart_domain_model_order_taxclass',
+            'foreign_field' => 'item',
+            'maxitems' => 9999,
+            'appearance' => 
+            array (
+              'collapseAll' => 1,
+              'levelLinksPosition' => 'top',
+              'showSynchronizationLink' => 1,
+              'showPossibleLocalizationRecords' => 1,
+              'showAllLocalizationLink' => 1,
+              'enabledControls' => 
+              array (
+                'info' => false,
+                'new' => false,
+                'dragdrop' => false,
+                'sort' => false,
+                'hide' => false,
+                'delete' => false,
+                'localize' => false,
+              ),
+            ),
+          ),
+        ),
+        'currency' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_item.currency',
+          'config' => 
+          array (
+            'type' => 'input',
+            'readOnly' => 1,
+            'size' => 30,
+            'eval' => 'required',
+          ),
+        ),
+        'currency_code' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_item.currency_code',
+          'config' => 
+          array (
+            'type' => 'input',
+            'readOnly' => 1,
+            'size' => 30,
+            'eval' => 'required',
+          ),
+        ),
+        'currency_sign' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_item.currency_sign',
+          'config' => 
+          array (
+            'type' => 'input',
+            'readOnly' => 1,
+            'size' => 30,
+            'eval' => 'required',
+          ),
+        ),
+        'currency_translation' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_item.currency_translation',
+          'config' => 
+          array (
+            'type' => 'input',
+            'readOnly' => 1,
+            'size' => 30,
+            'eval' => 'double2,required',
+          ),
+        ),
+        'gross' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_item.gross',
+          'config' => 
+          array (
+            'type' => 'input',
+            'readOnly' => 1,
+            'size' => 30,
+            'eval' => 'double2,required',
+          ),
+        ),
+        'total_gross' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_item.total_gross',
+          'config' => 
+          array (
+            'type' => 'input',
+            'readOnly' => 1,
+            'size' => 30,
+            'eval' => 'double2,required',
+          ),
+        ),
+        'net' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_item.net',
+          'config' => 
+          array (
+            'type' => 'input',
+            'readOnly' => 1,
+            'size' => 30,
+            'eval' => 'double2,required',
+          ),
+        ),
+        'total_net' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_item.total_net',
+          'config' => 
+          array (
+            'type' => 'input',
+            'readOnly' => 1,
+            'size' => 30,
+            'eval' => 'double2,required',
+          ),
+        ),
+        'tax' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_item.tax',
+          'config' => 
+          array (
+            'type' => 'inline',
+            'readOnly' => 1,
+            'foreign_table' => 'tx_cart_domain_model_order_tax',
+            'maxitems' => 9999,
+          ),
+        ),
+        'total_tax' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_item.total_tax',
+          'config' => 
+          array (
+            'type' => 'inline',
+            'readOnly' => 1,
+            'foreign_table' => 'tx_cart_domain_model_order_tax',
+            'maxitems' => 9999,
+          ),
+        ),
+        'products' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_item.products',
+          'config' => 
+          array (
+            'type' => 'inline',
+            'readOnly' => 1,
+            'foreign_table' => 'tx_cart_domain_model_order_product',
+            'foreign_field' => 'item',
+            'maxitems' => 9999,
+            'appearance' => 
+            array (
+              'collapseAll' => 1,
+              'levelLinksPosition' => 'top',
+              'showSynchronizationLink' => 1,
+              'showPossibleLocalizationRecords' => 1,
+              'showAllLocalizationLink' => 1,
+              'enabledControls' => 
+              array (
+                'info' => false,
+                'new' => false,
+                'dragdrop' => false,
+                'sort' => false,
+                'hide' => false,
+                'delete' => false,
+                'localize' => false,
+              ),
+            ),
+          ),
+        ),
+        'discounts' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_item.discounts',
+          'config' => 
+          array (
+            'type' => 'inline',
+            'readOnly' => 1,
+            'foreign_table' => 'tx_cart_domain_model_order_discount',
+            'foreign_field' => 'item',
+            'maxitems' => 9999,
+            'appearance' => 
+            array (
+              'collapseAll' => 1,
+              'levelLinksPosition' => 'top',
+              'showSynchronizationLink' => 1,
+              'showPossibleLocalizationRecords' => 1,
+              'showAllLocalizationLink' => 1,
+              'enabledControls' => 
+              array (
+                'info' => false,
+                'new' => false,
+                'dragdrop' => false,
+                'sort' => false,
+                'hide' => false,
+                'delete' => false,
+                'localize' => false,
+              ),
+            ),
+          ),
+        ),
+        'payment' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_item.payment',
+          'config' => 
+          array (
+            'type' => 'inline',
+            'readOnly' => 1,
+            'foreign_table' => 'tx_cart_domain_model_order_payment',
+            'foreign_field' => 'item',
+            'minitems' => 0,
+            'maxitems' => 1,
+            'appearance' => 
+            array (
+              'collapseAll' => 1,
+              'levelLinksPosition' => 'top',
+              'showSynchronizationLink' => 1,
+              'showPossibleLocalizationRecords' => 1,
+              'showAllLocalizationLink' => 1,
+              'enabledControls' => 
+              array (
+                'info' => false,
+                'new' => false,
+                'dragdrop' => false,
+                'sort' => false,
+                'hide' => false,
+                'delete' => false,
+                'localize' => false,
+              ),
+            ),
+          ),
+        ),
+        'shipping' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_item.shipping',
+          'config' => 
+          array (
+            'type' => 'inline',
+            'readOnly' => 1,
+            'foreign_table' => 'tx_cart_domain_model_order_shipping',
+            'foreign_field' => 'item',
+            'minitems' => 0,
+            'maxitems' => 1,
+            'appearance' => 
+            array (
+              'collapseAll' => 1,
+              'levelLinksPosition' => 'top',
+              'showSynchronizationLink' => 1,
+              'showPossibleLocalizationRecords' => 1,
+              'showAllLocalizationLink' => 1,
+              'enabledControls' => 
+              array (
+                'info' => false,
+                'new' => false,
+                'dragdrop' => false,
+                'sort' => false,
+                'hide' => false,
+                'delete' => false,
+                'localize' => false,
+              ),
+            ),
+          ),
+        ),
+        'order_pdfs' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_item.order_pdfs',
           'config' => 
           array (
             'type' => 'inline',
@@ -18435,7 +13430,9 @@ return array (
             'foreign_table_field' => 'tablenames',
             'foreign_match_fields' => 
             array (
-              'fieldname' => 'media',
+              'fieldname' => 'order_pdfs',
+              'tablenames' => 'tx_cart_domain_model_order_item',
+              'table_local' => 'sys_file',
             ),
             'foreign_label' => 'uid_local',
             'foreign_selector' => 'uid_local',
@@ -18450,48 +13447,9 @@ return array (
                     'appearance' => 
                     array (
                       'elementBrowserType' => 'file',
-                      'elementBrowserAllowed' => 'gif,jpg,jpeg,bmp,png,pdf,svg,ai,mp3,wav,mp4,ogg,flac,opus,webm,youtube,vimeo',
+                      'elementBrowserAllowed' => 'pdf',
                     ),
                   ),
-                ),
-              ),
-              'types' => 
-              array (
-                0 => 
-                array (
-                  'showitem' => '
-                                    --palette--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
-                                    --palette--;;filePalette',
-                ),
-                1 => 
-                array (
-                  'showitem' => '
-                                    --palette--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
-                                    --palette--;;filePalette',
-                ),
-                2 => 
-                array (
-                  'showitem' => '
-                                    --palette--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
-                                    --palette--;;filePalette',
-                ),
-                3 => 
-                array (
-                  'showitem' => '
-                                    --palette--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_file_reference.audioOverlayPalette;audioOverlayPalette,
-                                    --palette--;;filePalette',
-                ),
-                4 => 
-                array (
-                  'showitem' => '
-                                    --palette--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_file_reference.videoOverlayPalette;videoOverlayPalette,
-                                    --palette--;;filePalette',
-                ),
-                5 => 
-                array (
-                  'showitem' => '
-                                    --palette--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
-                                    --palette--;;filePalette',
                 ),
               ),
             ),
@@ -18502,7 +13460,7 @@ return array (
                 'userFunc' => 'TYPO3\\CMS\\Core\\Resource\\Filter\\FileExtensionFilter->filterInlineChildren',
                 'parameters' => 
                 array (
-                  'allowedFileExtensions' => 'gif,jpg,jpeg,bmp,png,pdf,svg,ai,mp3,wav,mp4,ogg,flac,opus,webm,youtube,vimeo',
+                  'allowedFileExtensions' => 'pdf',
                   'disallowedFileExtensions' => '',
                 ),
               ),
@@ -18520,23 +13478,292 @@ return array (
               array (
                 'info' => true,
                 'new' => false,
-                'dragdrop' => true,
+                'dragdrop' => false,
                 'sort' => false,
-                'hide' => true,
+                'hide' => false,
                 'delete' => true,
+                'localize' => false,
               ),
-              'createNewRelationLinkTitle' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference',
             ),
             'behaviour' => 
             array (
               'localizeChildrenAtParentLocalization' => true,
             ),
+            'maxitems' => 99,
           ),
         ),
-        'mediaorient' => 
+        'invoice_pdfs' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_item.invoice_pdfs',
+          'config' => 
+          array (
+            'type' => 'inline',
+            'foreign_table' => 'sys_file_reference',
+            'foreign_field' => 'uid_foreign',
+            'foreign_sortby' => 'sorting_foreign',
+            'foreign_table_field' => 'tablenames',
+            'foreign_match_fields' => 
+            array (
+              'fieldname' => 'invoice_pdfs',
+              'tablenames' => 'tx_cart_domain_model_order_item',
+              'table_local' => 'sys_file',
+            ),
+            'foreign_label' => 'uid_local',
+            'foreign_selector' => 'uid_local',
+            'overrideChildTca' => 
+            array (
+              'columns' => 
+              array (
+                'uid_local' => 
+                array (
+                  'config' => 
+                  array (
+                    'appearance' => 
+                    array (
+                      'elementBrowserType' => 'file',
+                      'elementBrowserAllowed' => 'pdf',
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            'filter' => 
+            array (
+              0 => 
+              array (
+                'userFunc' => 'TYPO3\\CMS\\Core\\Resource\\Filter\\FileExtensionFilter->filterInlineChildren',
+                'parameters' => 
+                array (
+                  'allowedFileExtensions' => 'pdf',
+                  'disallowedFileExtensions' => '',
+                ),
+              ),
+            ),
+            'appearance' => 
+            array (
+              'useSortable' => true,
+              'headerThumbnail' => 
+              array (
+                'field' => 'uid_local',
+                'width' => '45',
+                'height' => '45c',
+              ),
+              'enabledControls' => 
+              array (
+                'info' => true,
+                'new' => false,
+                'dragdrop' => false,
+                'sort' => false,
+                'hide' => false,
+                'delete' => true,
+                'localize' => false,
+              ),
+            ),
+            'behaviour' => 
+            array (
+              'localizeChildrenAtParentLocalization' => true,
+            ),
+            'maxitems' => 99,
+          ),
+        ),
+        'delivery_pdfs' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_item.delivery_pdfs',
+          'config' => 
+          array (
+            'type' => 'inline',
+            'foreign_table' => 'sys_file_reference',
+            'foreign_field' => 'uid_foreign',
+            'foreign_sortby' => 'sorting_foreign',
+            'foreign_table_field' => 'tablenames',
+            'foreign_match_fields' => 
+            array (
+              'fieldname' => 'delivery_pdfs',
+              'tablenames' => 'tx_cart_domain_model_order_item',
+              'table_local' => 'sys_file',
+            ),
+            'foreign_label' => 'uid_local',
+            'foreign_selector' => 'uid_local',
+            'overrideChildTca' => 
+            array (
+              'columns' => 
+              array (
+                'uid_local' => 
+                array (
+                  'config' => 
+                  array (
+                    'appearance' => 
+                    array (
+                      'elementBrowserType' => 'file',
+                      'elementBrowserAllowed' => 'pdf',
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            'filter' => 
+            array (
+              0 => 
+              array (
+                'userFunc' => 'TYPO3\\CMS\\Core\\Resource\\Filter\\FileExtensionFilter->filterInlineChildren',
+                'parameters' => 
+                array (
+                  'allowedFileExtensions' => 'pdf',
+                  'disallowedFileExtensions' => '',
+                ),
+              ),
+            ),
+            'appearance' => 
+            array (
+              'useSortable' => true,
+              'headerThumbnail' => 
+              array (
+                'field' => 'uid_local',
+                'width' => '45',
+                'height' => '45c',
+              ),
+              'enabledControls' => 
+              array (
+                'info' => true,
+                'new' => false,
+                'dragdrop' => false,
+                'sort' => false,
+                'hide' => false,
+                'delete' => true,
+                'localize' => false,
+              ),
+            ),
+            'behaviour' => 
+            array (
+              'localizeChildrenAtParentLocalization' => true,
+            ),
+            'maxitems' => 99,
+          ),
+        ),
+        'crdate' => 
         array (
           'exclude' => 1,
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:tab_item.mediaorient',
+          'config' => 
+          array (
+            'type' => 'input',
+            'size' => '8',
+            'eval' => 'date',
+            'checkbox' => '0',
+            'default' => '0',
+            'behaviour' => 
+            array (
+              'allowLanguageSynchronization' => true,
+            ),
+            'renderType' => 'inputDateTime',
+          ),
+        ),
+      ),
+    ),
+    'tx_cart_domain_model_order_payment' => 
+    array (
+      'ctrl' => 
+      array (
+        'title' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_payment',
+        'label' => 'name',
+        'tstamp' => 'tstamp',
+        'crdate' => 'crdate',
+        'cruser_id' => 'cruser_id',
+        'dividers2tabs' => true,
+        'versioningWS' => true,
+        'origUid' => 't3_origuid',
+        'hideTable' => true,
+        'delete' => 'deleted',
+        'enablecolumns' => 
+        array (
+        ),
+        'searchFields' => 'name,value,calc,sum,',
+        'iconfile' => 'EXT:cart/Resources/Public/Icons/Order/Payment.svg',
+      ),
+      'hideTable' => 1,
+      'interface' => 
+      array (
+        'showRecordFieldList' => 'service_country, service_id, name, provider, status, gross, net, tax, tax_class, note, transactions',
+      ),
+      'types' => 
+      array (
+        1 => 
+        array (
+          'showitem' => '--palette--;LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_payment.palettes.service;service,name,provider,status,gross,net,tax,tax_class,note,transactions',
+        ),
+      ),
+      'palettes' => 
+      array (
+        1 => 
+        array (
+          'showitem' => '',
+          'service' => 
+          array (
+            'showitem' => 'service_country, service_id',
+            'canNotCollapse' => 0,
+          ),
+        ),
+        'service' => 
+        array (
+          'showitem' => 'service_country, service_id',
+          'canNotCollapse' => 0,
+        ),
+      ),
+      'columns' => 
+      array (
+        'service_country' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_payment.service_country',
+          'config' => 
+          array (
+            'type' => 'input',
+            'readOnly' => 1,
+            'size' => 30,
+            'eval' => '',
+          ),
+        ),
+        'service_id' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_payment.service_id',
+          'config' => 
+          array (
+            'type' => 'input',
+            'readOnly' => 1,
+            'size' => 30,
+            'eval' => 'int,required',
+          ),
+        ),
+        'name' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_payment.name',
+          'config' => 
+          array (
+            'type' => 'input',
+            'readOnly' => 1,
+            'size' => 30,
+            'eval' => 'trim,required',
+          ),
+        ),
+        'provider' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_payment.provider',
+          'config' => 
+          array (
+            'type' => 'input',
+            'readOnly' => 1,
+            'size' => 30,
+            'eval' => 'trim',
+          ),
+        ),
+        'status' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_payment.status',
           'config' => 
           array (
             'type' => 'select',
@@ -18545,81 +13772,187 @@ return array (
             array (
               0 => 
               array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:tab_item.mediaorient.left',
-                1 => 'left',
+                0 => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_payment.status.open',
+                1 => 'open',
               ),
               1 => 
               array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:tab_item.mediaorient.top',
-                1 => 'top',
+                0 => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_payment.status.pending',
+                1 => 'pending',
               ),
               2 => 
               array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:tab_item.mediaorient.right',
-                1 => 'right',
+                0 => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_payment.status.paid',
+                1 => 'paid',
               ),
               3 => 
               array (
-                0 => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:tab_item.mediaorient.bottom',
-                1 => 'bottom',
+                0 => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_payment.status.canceled',
+                1 => 'canceled',
               ),
             ),
-            'default' => 'left',
+            'size' => 1,
+            'maxitems' => 1,
+            'eval' => 'required',
           ),
-          'l10n_mode' => 'exclude',
         ),
-        'imagecols' => 
+        'gross' => 
         array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:tab_item.imagecols',
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_payment.gross',
+          'config' => 
+          array (
+            'type' => 'input',
+            'readOnly' => 1,
+            'size' => 30,
+            'eval' => 'double2',
+          ),
+        ),
+        'net' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_payment.net',
+          'config' => 
+          array (
+            'type' => 'input',
+            'readOnly' => 1,
+            'size' => 30,
+            'eval' => 'double2',
+          ),
+        ),
+        'tax' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_payment.tax',
+          'config' => 
+          array (
+            'type' => 'input',
+            'readOnly' => 1,
+            'size' => 30,
+            'eval' => 'double2',
+          ),
+        ),
+        'tax_class' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_payment.tax_class',
           'config' => 
           array (
             'type' => 'select',
             'renderType' => 'selectSingle',
-            'items' => 
-            array (
-              0 => 
-              array (
-                0 => '1',
-                1 => 1,
-              ),
-              1 => 
-              array (
-                0 => '2',
-                1 => 2,
-              ),
-              2 => 
-              array (
-                0 => '3',
-                1 => 3,
-              ),
-              3 => 
-              array (
-                0 => '4',
-                1 => 4,
-              ),
-              4 => 
-              array (
-                0 => '5',
-                1 => 5,
-              ),
-              5 => 
-              array (
-                0 => '6',
-                1 => 6,
-              ),
-            ),
-            'default' => 2,
+            'readOnly' => 1,
+            'foreign_table' => 'tx_cart_domain_model_order_taxclass',
+            'minitems' => 1,
+            'maxitems' => 1,
           ),
-          'l10n_mode' => 'exclude',
         ),
-        'image_zoom' => 
+        'note' => 
         array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:tab_item.image_zoom',
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_payment.note',
           'config' => 
           array (
-            'type' => 'check',
+            'type' => 'text',
+            'readOnly' => 1,
+            'cols' => '40',
+            'rows' => '15',
+          ),
+        ),
+        'transactions' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_item.transactions',
+          'config' => 
+          array (
+            'type' => 'inline',
+            'readOnly' => 1,
+            'foreign_table' => 'tx_cart_domain_model_order_transaction',
+            'foreign_field' => 'payment',
+            'maxitems' => 9999,
+            'appearance' => 
+            array (
+              'collapseAll' => 1,
+              'levelLinksPosition' => 'top',
+              'showSynchronizationLink' => 1,
+              'showPossibleLocalizationRecords' => 1,
+              'showAllLocalizationLink' => 1,
+              'enabledControls' => 
+              array (
+                'info' => false,
+                'new' => false,
+                'dragdrop' => false,
+                'sort' => false,
+                'hide' => false,
+                'delete' => false,
+                'localize' => false,
+              ),
+            ),
+          ),
+        ),
+        'item' => 
+        array (
+          'config' => 
+          array (
+            'type' => 'passthrough',
+          ),
+        ),
+      ),
+    ),
+    'tx_cart_domain_model_order_product' => 
+    array (
+      'ctrl' => 
+      array (
+        'title' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_product',
+        'label' => 'title',
+        'label_alt' => 'sku',
+        'label_alt_force' => 1,
+        'tstamp' => 'tstamp',
+        'crdate' => 'crdate',
+        'cruser_id' => 'cruser_id',
+        'dividers2tabs' => true,
+        'versioningWS' => true,
+        'origUid' => 't3_origuid',
+        'hideTable' => true,
+        'delete' => 'deleted',
+        'enablecolumns' => 
+        array (
+        ),
+        'searchFields' => 'sku,title',
+        'iconfile' => 'EXT:cart/Resources/Public/Icons/Order/Product.svg',
+      ),
+      'hideTable' => 1,
+      'interface' => 
+      array (
+        'showRecordFieldList' => 'product_type, sku, title, count, additional, additional_data, product_additional, price, discount, gross, net, tax, tax_class',
+      ),
+      'types' => 
+      array (
+        1 => 
+        array (
+          'showitem' => 'product_type,sku,title,count,--palette--;LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_product.price.group;price,product_additional,additional,additional_data',
+        ),
+      ),
+      'palettes' => 
+      array (
+        1 => 
+        array (
+          'showitem' => '',
+        ),
+        'price' => 
+        array (
+          'showitem' => 'price, discount, --linebreak--, gross, net, --linebreak--, tax, tax_class',
+          'canNotCollapse' => 1,
+        ),
+      ),
+      'columns' => 
+      array (
+        'product_type' => 
+        array (
+          'exclude' => 1,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_product.product_type',
+          'config' => 
+          array (
+            'type' => 'select',
+            'renderType' => 'selectSingle',
             'items' => 
             array (
               0 => 
@@ -18627,255 +13960,278 @@ return array (
                 0 => '',
                 1 => '',
               ),
+              1 => 
+              array (
+                0 => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_product.product_type.simple',
+                1 => 'simple',
+              ),
+              2 => 
+              array (
+                0 => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_product.product_type.configurable',
+                1 => 'configurable',
+              ),
+              3 => 
+              array (
+                0 => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_product.product_type.virtual',
+                1 => 'virtual',
+              ),
+              4 => 
+              array (
+                0 => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_product.product_type.downloadable',
+                1 => 'downloadable',
+              ),
             ),
+            'readOnly' => 1,
+            'size' => 1,
+            'minitems' => 0,
+            'maxitems' => 1,
+          ),
+        ),
+        'sku' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_product.sku',
+          'config' => 
+          array (
+            'type' => 'input',
+            'readOnly' => 1,
+            'size' => 30,
+            'eval' => 'trim,required',
+          ),
+        ),
+        'title' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_product.title',
+          'config' => 
+          array (
+            'type' => 'input',
+            'readOnly' => 1,
+            'size' => 30,
+            'eval' => 'trim,required',
+          ),
+        ),
+        'count' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_product.count',
+          'config' => 
+          array (
+            'type' => 'input',
+            'readOnly' => 1,
+            'size' => 30,
+            'eval' => 'int',
+          ),
+        ),
+        'price' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_product.price',
+          'config' => 
+          array (
+            'type' => 'input',
+            'readOnly' => 1,
+            'size' => 30,
+            'eval' => 'double2',
+          ),
+        ),
+        'discount' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_product.discount',
+          'config' => 
+          array (
+            'type' => 'input',
+            'readOnly' => 1,
+            'size' => 30,
+            'eval' => 'double2',
+          ),
+        ),
+        'gross' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_product.gross',
+          'config' => 
+          array (
+            'type' => 'input',
+            'readOnly' => 1,
+            'size' => 30,
+            'eval' => 'double2',
+          ),
+        ),
+        'net' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_product.net',
+          'config' => 
+          array (
+            'type' => 'input',
+            'readOnly' => 1,
+            'size' => 30,
+            'eval' => 'double2',
+          ),
+        ),
+        'tax' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_product.tax',
+          'config' => 
+          array (
+            'type' => 'input',
+            'readOnly' => 1,
+            'size' => 30,
+            'eval' => 'double2',
+          ),
+        ),
+        'tax_class' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_product.tax_class',
+          'config' => 
+          array (
+            'type' => 'select',
+            'renderType' => 'selectSingle',
+            'readOnly' => 1,
+            'foreign_table' => 'tx_cart_domain_model_order_taxclass',
+            'minitems' => 1,
+            'maxitems' => 1,
+            'appearance' => 
+            array (
+              'enabledControls' => 
+              array (
+                'info' => false,
+                'new' => false,
+                'dragdrop' => false,
+                'sort' => false,
+                'hide' => false,
+                'delete' => false,
+                'localize' => false,
+              ),
+            ),
+          ),
+        ),
+        'additional' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_product.additional',
+          'config' => 
+          array (
+            'type' => 'text',
+            'readOnly' => 1,
+            'cols' => 48,
+            'rows' => 15,
+            'appearance' => 
+            array (
+              'enabledControls' => 
+              array (
+                'info' => false,
+                'new' => false,
+                'dragdrop' => false,
+                'sort' => false,
+                'hide' => false,
+                'delete' => false,
+                'localize' => false,
+              ),
+            ),
+          ),
+        ),
+        'additional_data' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_product.additional_data',
+          'config' => 
+          array (
+            'type' => 'text',
+            'readOnly' => 1,
+            'cols' => 48,
+            'rows' => 15,
+            'appearance' => 
+            array (
+              'enabledControls' => 
+              array (
+                'info' => false,
+                'new' => false,
+                'dragdrop' => false,
+                'sort' => false,
+                'hide' => false,
+                'delete' => false,
+                'localize' => false,
+              ),
+            ),
+          ),
+        ),
+        'product_additional' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_product.product_additional',
+          'config' => 
+          array (
+            'type' => 'inline',
+            'readOnly' => 1,
+            'foreign_table' => 'tx_cart_domain_model_order_productadditional',
+            'foreign_field' => 'product',
+            'maxitems' => 9999,
+            'appearance' => 
+            array (
+              'collapseAll' => 1,
+              'levelLinksPosition' => 'top',
+              'showSynchronizationLink' => 1,
+              'showPossibleLocalizationRecords' => 1,
+              'showAllLocalizationLink' => 1,
+              'enabledControls' => 
+              array (
+                'info' => false,
+                'new' => false,
+                'dragdrop' => false,
+                'sort' => false,
+                'hide' => false,
+                'delete' => false,
+                'localize' => false,
+              ),
+            ),
+          ),
+        ),
+        'item' => 
+        array (
+          'config' => 
+          array (
+            'type' => 'passthrough',
           ),
         ),
       ),
     ),
-    'tx_bootstrappackage_timeline_item' => 
+    'tx_cart_domain_model_order_productadditional' => 
     array (
       'ctrl' => 
       array (
-        'label' => 'date',
-        'label_alt' => 'header',
-        'label_alt_force' => true,
+        'title' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_productadditional',
+        'label' => 'additional_type',
+        'label_alt' => 'additional_key, additional_value',
+        'label_alt_force' => 1,
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
         'cruser_id' => 'cruser_id',
-        'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:timeline_item',
-        'delete' => 'deleted',
+        'dividers2tabs' => true,
         'versioningWS' => true,
         'origUid' => 't3_origuid',
         'hideTable' => true,
-        'hideAtCopy' => true,
-        'prependAtCopy' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.prependAtCopy',
-        'transOrigPointerField' => 'l10n_parent',
-        'transOrigDiffSourceField' => 'l10n_diffsource',
-        'languageField' => 'sys_language_uid',
-        'default_sortby' => 'date',
+        'delete' => 'deleted',
         'enablecolumns' => 
         array (
-          'disabled' => 'hidden',
-          'starttime' => 'starttime',
-          'endtime' => 'endtime',
         ),
-        'typeicon_classes' => 
-        array (
-          'default' => 'content-bootstrappackage-timeline-item',
-        ),
+        'searchFields' => 'additional_type,additional_key,additional_value',
+        'iconfile' => 'EXT:cart/Resources/Public/Icons/Order/ProductAdditional.svg',
       ),
+      'hideTable' => 1,
       'interface' => 
       array (
-        'showRecordFieldList' => '
-            hidden,
-            tt_content,
-            header
-        ',
+        'showRecordFieldList' => 'additional_type, additional_key, additional_value, additional, additional_data',
       ),
       'types' => 
       array (
         1 => 
         array (
-          'showitem' => '--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,date,header,bodytext,icon_file,image,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.visibility;visibility,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,--palette--;;hiddenLanguagePalette',
-          'columnsOverrides' => 
-          array (
-            'image' => 
-            array (
-              'config' => 
-              array (
-                'overrideChildTca' => 
-                array (
-                  'columns' => 
-                  array (
-                    'crop' => 
-                    array (
-                      'config' => 
-                      array (
-                        'cropVariants' => 
-                        array (
-                          'default' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.default',
-                            'allowedAspectRatios' => 
-                            array (
-                              '16:9' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                                'value' => 1.7777777777777777,
-                              ),
-                              '4:3' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                                'value' => 1.3333333333333333,
-                              ),
-                              '1:1' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                                'value' => 1.0,
-                              ),
-                              'NaN' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                                'value' => 0.0,
-                              ),
-                            ),
-                            'selectedRatio' => 'NaN',
-                            'cropArea' => 
-                            array (
-                              'x' => 0.0,
-                              'y' => 0.0,
-                              'width' => 1.0,
-                              'height' => 1.0,
-                            ),
-                          ),
-                          'large' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.large',
-                            'allowedAspectRatios' => 
-                            array (
-                              '16:9' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                                'value' => 1.7777777777777777,
-                              ),
-                              '4:3' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                                'value' => 1.3333333333333333,
-                              ),
-                              '1:1' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                                'value' => 1.0,
-                              ),
-                              'NaN' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                                'value' => 0.0,
-                              ),
-                            ),
-                            'selectedRatio' => 'NaN',
-                            'cropArea' => 
-                            array (
-                              'x' => 0.0,
-                              'y' => 0.0,
-                              'width' => 1.0,
-                              'height' => 1.0,
-                            ),
-                          ),
-                          'medium' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.medium',
-                            'allowedAspectRatios' => 
-                            array (
-                              '16:9' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                                'value' => 1.7777777777777777,
-                              ),
-                              '4:3' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                                'value' => 1.3333333333333333,
-                              ),
-                              '1:1' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                                'value' => 1.0,
-                              ),
-                              'NaN' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                                'value' => 0.0,
-                              ),
-                            ),
-                            'selectedRatio' => 'NaN',
-                            'cropArea' => 
-                            array (
-                              'x' => 0.0,
-                              'y' => 0.0,
-                              'width' => 1.0,
-                              'height' => 1.0,
-                            ),
-                          ),
-                          'small' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.small',
-                            'allowedAspectRatios' => 
-                            array (
-                              '16:9' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                                'value' => 1.7777777777777777,
-                              ),
-                              '4:3' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                                'value' => 1.3333333333333333,
-                              ),
-                              '1:1' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                                'value' => 1.0,
-                              ),
-                              'NaN' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                                'value' => 0.0,
-                              ),
-                            ),
-                            'selectedRatio' => 'NaN',
-                            'cropArea' => 
-                            array (
-                              'x' => 0.0,
-                              'y' => 0.0,
-                              'width' => 1.0,
-                              'height' => 1.0,
-                            ),
-                          ),
-                          'extrasmall' => 
-                          array (
-                            'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.extrasmall',
-                            'allowedAspectRatios' => 
-                            array (
-                              '16:9' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.16_9',
-                                'value' => 1.7777777777777777,
-                              ),
-                              '4:3' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.4_3',
-                                'value' => 1.3333333333333333,
-                              ),
-                              '1:1' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.1_1',
-                                'value' => 1.0,
-                              ),
-                              'NaN' => 
-                              array (
-                                'title' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:ratio.free',
-                                'value' => 0.0,
-                              ),
-                            ),
-                            'selectedRatio' => 'NaN',
-                            'cropArea' => 
-                            array (
-                              'x' => 0.0,
-                              'y' => 0.0,
-                              'width' => 1.0,
-                              'height' => 1.0,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-          ),
+          'showitem' => 'additional_type, additional_key, additional_value, additional, additional_data',
         ),
       ),
       'palettes' => 
@@ -18884,99 +14240,643 @@ return array (
         array (
           'showitem' => '',
         ),
-        'access' => 
-        array (
-          'showitem' => '
-                starttime;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:starttime_formlabel,
-                endtime;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:endtime_formlabel
-            ',
-        ),
-        'general' => 
-        array (
-          'showitem' => '
-                tt_content
-            ',
-        ),
-        'visibility' => 
-        array (
-          'showitem' => '
-                hidden;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:timeline_item
-            ',
-        ),
-        'hiddenLanguagePalette' => 
-        array (
-          'showitem' => 'sys_language_uid, l10n_parent',
-          'isHiddenPalette' => true,
-        ),
       ),
       'columns' => 
       array (
-        'tt_content' => 
+        'additional_type' => 
         array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:timeline_item.tt_content',
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_productadditional.additional_type',
           'config' => 
           array (
-            'type' => 'select',
-            'renderType' => 'selectSingle',
-            'foreign_table' => 'tt_content',
-            'foreign_table_where' => 'AND tt_content.pid=###CURRENT_PID### AND tt_content.CType="timeline"',
-            'maxitems' => 1,
-            'default' => 0,
+            'type' => 'input',
+            'readOnly' => 1,
+            'size' => 30,
+            'eval' => 'trim,required',
           ),
         ),
-        'hidden' => 
+        'additional_key' => 
         array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.hidden',
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_productadditional.additional_key',
           'config' => 
           array (
-            'type' => 'check',
-            'items' => 
+            'type' => 'input',
+            'readOnly' => 1,
+            'size' => 30,
+            'eval' => 'trim,required',
+          ),
+        ),
+        'additional_value' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_productadditional.additional_value',
+          'config' => 
+          array (
+            'type' => 'input',
+            'readOnly' => 1,
+            'size' => 30,
+            'eval' => 'trim,required',
+          ),
+        ),
+        'additional' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_productadditional.additional',
+          'config' => 
+          array (
+            'type' => 'text',
+            'readOnly' => 1,
+            'cols' => 48,
+            'rows' => 15,
+            'appearance' => 
             array (
-              1 => 
+              'enabledControls' => 
               array (
-                0 => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:hidden.I.0',
+                'info' => false,
+                'new' => false,
+                'dragdrop' => false,
+                'sort' => false,
+                'hide' => false,
+                'delete' => false,
+                'localize' => false,
               ),
             ),
           ),
         ),
-        'starttime' => 
+        'additional_data' => 
         array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.starttime',
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_productadditional.additional_data',
           'config' => 
           array (
-            'type' => 'input',
-            'renderType' => 'inputDateTime',
-            'eval' => 'datetime',
-            'default' => 0,
-          ),
-          'l10n_mode' => 'exclude',
-          'l10n_display' => 'defaultAsReadonly',
-        ),
-        'endtime' => 
-        array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.endtime',
-          'config' => 
-          array (
-            'type' => 'input',
-            'renderType' => 'inputDateTime',
-            'eval' => 'datetime',
-            'default' => 0,
-            'range' => 
+            'type' => 'text',
+            'readOnly' => 1,
+            'cols' => 48,
+            'rows' => 15,
+            'appearance' => 
             array (
-              'upper' => 2145909600,
+              'enabledControls' => 
+              array (
+                'info' => false,
+                'new' => false,
+                'dragdrop' => false,
+                'sort' => false,
+                'hide' => false,
+                'delete' => false,
+                'localize' => false,
+              ),
             ),
           ),
-          'l10n_mode' => 'exclude',
-          'l10n_display' => 'defaultAsReadonly',
         ),
+        'product' => 
+        array (
+          'config' => 
+          array (
+            'type' => 'passthrough',
+          ),
+        ),
+      ),
+    ),
+    'tx_cart_domain_model_order_shipping' => 
+    array (
+      'ctrl' => 
+      array (
+        'title' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_shipping',
+        'label' => 'name',
+        'tstamp' => 'tstamp',
+        'crdate' => 'crdate',
+        'cruser_id' => 'cruser_id',
+        'dividers2tabs' => true,
+        'versioningWS' => true,
+        'origUid' => 't3_origuid',
+        'hideTable' => true,
+        'delete' => 'deleted',
+        'enablecolumns' => 
+        array (
+        ),
+        'searchFields' => 'name,value,calc,sum,',
+        'iconfile' => 'EXT:cart/Resources/Public/Icons/Order/Shipping.svg',
+      ),
+      'hideTable' => 1,
+      'interface' => 
+      array (
+        'showRecordFieldList' => 'service_country, service_id, name, status, gross, net, tax, tax_class, note',
+      ),
+      'types' => 
+      array (
+        1 => 
+        array (
+          'showitem' => '--palette--;LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_shipping.palettes.service;service,name,status,gross,net,tax,tax_class,note',
+        ),
+      ),
+      'palettes' => 
+      array (
+        1 => 
+        array (
+          'showitem' => '',
+          'service' => 
+          array (
+            'showitem' => 'service_country, service_id',
+            'canNotCollapse' => 0,
+          ),
+        ),
+        'service' => 
+        array (
+          'showitem' => 'service_country, service_id',
+          'canNotCollapse' => 0,
+        ),
+      ),
+      'columns' => 
+      array (
+        'service_country' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_shipping.service_country',
+          'config' => 
+          array (
+            'type' => 'input',
+            'readOnly' => 1,
+            'size' => 30,
+            'eval' => '',
+          ),
+        ),
+        'service_id' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_shipping.service_id',
+          'config' => 
+          array (
+            'type' => 'input',
+            'readOnly' => 1,
+            'size' => 30,
+            'eval' => 'int,required',
+          ),
+        ),
+        'name' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_shipping.name',
+          'config' => 
+          array (
+            'type' => 'input',
+            'readOnly' => 1,
+            'size' => 30,
+            'eval' => 'trim,required',
+          ),
+        ),
+        'status' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_shipping.status',
+          'config' => 
+          array (
+            'type' => 'select',
+            'renderType' => 'selectSingle',
+            'items' => 
+            array (
+              0 => 
+              array (
+                0 => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_shipping.status.open',
+                1 => 'open',
+              ),
+              1 => 
+              array (
+                0 => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_shipping.status.on_hold',
+                1 => 'on_hold',
+              ),
+              2 => 
+              array (
+                0 => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_shipping.status.in_process',
+                1 => 'in_process',
+              ),
+              3 => 
+              array (
+                0 => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_shipping.status.shipped',
+                1 => 'shipped',
+              ),
+            ),
+            'size' => 1,
+            'maxitems' => 1,
+            'eval' => 'required',
+          ),
+        ),
+        'gross' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_shipping.gross',
+          'config' => 
+          array (
+            'type' => 'input',
+            'readOnly' => 1,
+            'size' => 30,
+            'eval' => 'double2',
+          ),
+        ),
+        'net' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_shipping.net',
+          'config' => 
+          array (
+            'type' => 'input',
+            'readOnly' => 1,
+            'size' => 30,
+            'eval' => 'double2',
+          ),
+        ),
+        'tax' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_shipping.tax',
+          'config' => 
+          array (
+            'type' => 'input',
+            'readOnly' => 1,
+            'size' => 30,
+            'eval' => 'double2',
+          ),
+        ),
+        'tax_class' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_shipping.tax_class',
+          'config' => 
+          array (
+            'type' => 'select',
+            'renderType' => 'selectSingle',
+            'readOnly' => 1,
+            'foreign_table' => 'tx_cart_domain_model_order_taxclass',
+            'minitems' => 1,
+            'maxitems' => 1,
+          ),
+        ),
+        'note' => 
+        array (
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_shipping.note',
+          'config' => 
+          array (
+            'type' => 'text',
+            'readOnly' => 1,
+            'cols' => '40',
+            'rows' => '15',
+          ),
+        ),
+        'item' => 
+        array (
+          'config' => 
+          array (
+            'type' => 'passthrough',
+          ),
+        ),
+      ),
+    ),
+    'tx_cart_domain_model_order_tax' => 
+    array (
+      'ctrl' => 
+      array (
+        'title' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_tax',
+        'label' => 'name',
+        'tstamp' => 'tstamp',
+        'crdate' => 'crdate',
+        'cruser_id' => 'cruser_id',
+        'dividers2tabs' => true,
+        'versioningWS' => true,
+        'origUid' => 't3_origuid',
+        'hideTable' => true,
+        'delete' => 'deleted',
+        'enablecolumns' => 
+        array (
+        ),
+        'searchFields' => '',
+        'iconfile' => 'EXT:cart/Resources/Public/Icons/Order/Tax.svg',
+      ),
+      'hideTable' => 1,
+      'interface' => 
+      array (
+        'showRecordFieldList' => 'tax, tax_class',
+      ),
+      'types' => 
+      array (
+        1 => 
+        array (
+          'showitem' => 'tax, tax_class',
+        ),
+      ),
+      'palettes' => 
+      array (
+        1 => 
+        array (
+          'showitem' => '',
+        ),
+      ),
+      'columns' => 
+      array (
+        'tax' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_tax.tax',
+          'config' => 
+          array (
+            'type' => 'input',
+            'readOnly' => 1,
+            'size' => 30,
+            'eval' => 'double2',
+          ),
+        ),
+        'tax_class' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_tax.tax_class',
+          'config' => 
+          array (
+            'type' => 'select',
+            'renderType' => 'selectSingle',
+            'readOnly' => 1,
+            'foreign_table' => 'tx_cart_domain_model_order_taxclass',
+            'minitems' => 1,
+            'maxitems' => 1,
+          ),
+        ),
+      ),
+    ),
+    'tx_cart_domain_model_order_taxclass' => 
+    array (
+      'ctrl' => 
+      array (
+        'title' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_taxclass',
+        'label' => 'title',
+        'tstamp' => 'tstamp',
+        'crdate' => 'crdate',
+        'cruser_id' => 'cruser_id',
+        'dividers2tabs' => true,
+        'versioningWS' => true,
+        'origUid' => 't3_origuid',
+        'hideTable' => true,
+        'delete' => 'deleted',
+        'enablecolumns' => 
+        array (
+        ),
+        'searchFields' => 'title,value,calc',
+        'iconfile' => 'EXT:cart/Resources/Public/Icons/Order/TaxClass.svg',
+      ),
+      'hideTable' => 1,
+      'interface' => 
+      array (
+        'showRecordFieldList' => 'title, value, calc',
+      ),
+      'types' => 
+      array (
+        1 => 
+        array (
+          'showitem' => 'title, value, calc',
+        ),
+      ),
+      'palettes' => 
+      array (
+        1 => 
+        array (
+          'showitem' => '',
+        ),
+      ),
+      'columns' => 
+      array (
+        'title' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_taxclass.title',
+          'config' => 
+          array (
+            'type' => 'input',
+            'readOnly' => 1,
+            'size' => 30,
+            'eval' => 'trim,required',
+          ),
+        ),
+        'value' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_taxclass.value',
+          'config' => 
+          array (
+            'type' => 'input',
+            'readOnly' => 1,
+            'size' => 30,
+            'eval' => 'trim,required',
+          ),
+        ),
+        'calc' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_taxclass.calc',
+          'config' => 
+          array (
+            'type' => 'input',
+            'readOnly' => 1,
+            'size' => 30,
+            'eval' => 'double2',
+          ),
+        ),
+        'item' => 
+        array (
+          'config' => 
+          array (
+            'type' => 'passthrough',
+          ),
+        ),
+      ),
+    ),
+    'tx_cart_domain_model_order_transaction' => 
+    array (
+      'ctrl' => 
+      array (
+        'title' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_transaction',
+        'label' => 'txn_id',
+        'tstamp' => 'tstamp',
+        'crdate' => 'crdate',
+        'cruser_id' => 'cruser_id',
+        'dividers2tabs' => true,
+        'versioningWS' => true,
+        'origUid' => 't3_origuid',
+        'hideTable' => true,
+        'delete' => 'deleted',
+        'enablecolumns' => 
+        array (
+        ),
+        'searchFields' => 'txn_id',
+        'iconfile' => 'EXT:cart/Resources/Public/Icons/Order/Transaction.svg',
+      ),
+      'hideTable' => 1,
+      'interface' => 
+      array (
+        'showRecordFieldList' => 'txn_id, status, external_status_code, note',
+      ),
+      'types' => 
+      array (
+        1 => 
+        array (
+          'showitem' => 'txn_id, status, external_status_code, note',
+        ),
+      ),
+      'palettes' => 
+      array (
+        1 => 
+        array (
+          'showitem' => '',
+        ),
+      ),
+      'columns' => 
+      array (
+        'txn_id' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_transaction.txn_id',
+          'config' => 
+          array (
+            'type' => 'input',
+            'readOnly' => 1,
+            'size' => 30,
+            'eval' => 'trim',
+          ),
+        ),
+        'txn_txt' => 
+        array (
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_transaction.txn_txt',
+          'config' => 
+          array (
+            'type' => 'text',
+            'readOnly' => 1,
+            'cols' => '40',
+            'rows' => '15',
+          ),
+        ),
+        'status' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_transaction.status',
+          'config' => 
+          array (
+            'type' => 'select',
+            'readOnly' => 1,
+            'renderType' => 'selectSingle',
+            'items' => 
+            array (
+              0 => 
+              array (
+                0 => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_transaction.status.unknown',
+                1 => 'unknown',
+              ),
+              1 => 
+              array (
+                0 => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_transaction.status.invalid',
+                1 => 'invalid',
+              ),
+              2 => 
+              array (
+                0 => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_transaction.status.open',
+                1 => 'open',
+              ),
+              3 => 
+              array (
+                0 => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_transaction.status.pending',
+                1 => 'pending',
+              ),
+              4 => 
+              array (
+                0 => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_transaction.status.paid',
+                1 => 'paid',
+              ),
+              5 => 
+              array (
+                0 => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_transaction.status.canceled',
+                1 => 'canceled',
+              ),
+            ),
+            'size' => 1,
+            'maxitems' => 1,
+            'eval' => 'required',
+          ),
+        ),
+        'external_status_code' => 
+        array (
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_transaction.external_status_code',
+          'config' => 
+          array (
+            'type' => 'input',
+            'readOnly' => 1,
+            'size' => 30,
+            'eval' => 'trim',
+          ),
+        ),
+        'note' => 
+        array (
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_order_transaction.note',
+          'config' => 
+          array (
+            'type' => 'text',
+            'readOnly' => 1,
+            'cols' => '40',
+            'rows' => '15',
+          ),
+        ),
+        'payment' => 
+        array (
+          'config' => 
+          array (
+            'type' => 'passthrough',
+          ),
+        ),
+      ),
+    ),
+    'tx_cart_domain_model_tag' => 
+    array (
+      'ctrl' => 
+      array (
+        'title' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_tag',
+        'label' => 'title',
+        'tstamp' => 'tstamp',
+        'crdate' => 'crdate',
+        'cruser_id' => 'cruser_id',
+        'dividers2tabs' => true,
+        'versioningWS' => true,
+        'languageField' => 'sys_language_uid',
+        'transOrigPointerField' => 'l10n_parent',
+        'transOrigDiffSourceField' => 'l10n_diffsource',
+        'delete' => 'deleted',
+        'enablecolumns' => 
+        array (
+          'disabled' => 'hidden',
+          'starttime' => 'starttime',
+          'endtime' => 'endtime',
+        ),
+        'searchFields' => 'title',
+        'iconfile' => 'EXT:cart/Resources/Public/Icons/tx_cart_domain_model_tag.svg',
+      ),
+      'hideTable' => 1,
+      'interface' => 
+      array (
+        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title',
+      ),
+      'types' => 
+      array (
+        1 => 
+        array (
+          'showitem' => 'sys_language_uid,l10n_parent,l10n_diffsource,hidden,--palette--;;1,title',
+        ),
+      ),
+      'palettes' => 
+      array (
+        1 => 
+        array (
+          'showitem' => '',
+        ),
+      ),
+      'columns' => 
+      array (
         'sys_language_uid' => 
         array (
           'exclude' => 1,
-          'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.language',
+          'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.language',
           'config' => 
           array (
             'type' => 'select',
@@ -18987,23 +14887,22 @@ return array (
             array (
               0 => 
               array (
-                0 => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.allLanguages',
+                0 => 'LLL:EXT:lang/locallang_general.xlf:LGL.allLanguages',
                 1 => -1,
               ),
               1 => 
               array (
-                0 => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.default_value',
+                0 => 'LLL:EXT:lang/locallang_general.xlf:LGL.default_value',
                 1 => 0,
               ),
             ),
-            'allowNonIdValues' => true,
           ),
         ),
         'l10n_parent' => 
         array (
           'displayCond' => 'FIELD:sys_language_uid:>:0',
           'exclude' => 1,
-          'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.l18n_parent',
+          'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.l18n_parent',
           'config' => 
           array (
             'type' => 'select',
@@ -19016,9 +14915,8 @@ return array (
                 1 => 0,
               ),
             ),
-            'foreign_table' => 'tx_bootstrappackage_timeline_item',
-            'foreign_table_where' => 'AND tx_bootstrappackage_timeline_item.pid=###CURRENT_PID### AND tx_bootstrappackage_timeline_item.sys_language_uid IN (-1,0)',
-            'default' => 0,
+            'foreign_table' => 'tx_cart_domain_model_tag',
+            'foreign_table_where' => 'AND tx_cart_domain_model_tag.pid=###CURRENT_PID### AND tx_cart_domain_model_tag.sys_language_uid IN (-1,0)',
           ),
         ),
         'l10n_diffsource' => 
@@ -19028,284 +14926,44 @@ return array (
             'type' => 'passthrough',
           ),
         ),
-        'date' => 
+        't3ver_label' => 
         array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:timeline_item.date',
+          'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.versionLabel',
           'config' => 
           array (
             'type' => 'input',
-            'renderType' => 'inputDateTime',
-            'dbType' => 'date',
-            'eval' => 'date,required',
-            'default' => '0000-00-00',
+            'size' => 30,
+            'max' => 255,
           ),
-          'l10n_mode' => 'exclude',
         ),
-        'header' => 
+        'hidden' => 
         array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:timeline_item.header',
+          'exclude' => 1,
+          'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.hidden',
+          'config' => 
+          array (
+            'type' => 'check',
+          ),
+        ),
+        'title' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:cart/Resources/Private/Language/locallang_db.xlf:tx_cart_domain_model_tag.title',
           'config' => 
           array (
             'type' => 'input',
-            'size' => 50,
+            'size' => 30,
             'eval' => 'trim,required',
-          ),
-        ),
-        'bodytext' => 
-        array (
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:timeline_item.bodytext',
-          'l10n_mode' => 'prefixLangTitle',
-          'l10n_cat' => 'text',
-          'config' => 
-          array (
-            'type' => 'text',
-            'cols' => '80',
-            'rows' => '15',
-            'softref' => 'typolink_tag,images,email[subst],url',
-            'enableRichtext' => true,
-            'richtextConfiguration' => 'default',
-          ),
-        ),
-        'icon_file' => 
-        array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:timeline_item.icon_file',
-          'config' => 
-          array (
-            'type' => 'inline',
-            'foreign_table' => 'sys_file_reference',
-            'foreign_field' => 'uid_foreign',
-            'foreign_sortby' => 'sorting_foreign',
-            'foreign_table_field' => 'tablenames',
-            'foreign_match_fields' => 
-            array (
-              'fieldname' => 'icon_file',
-            ),
-            'foreign_label' => 'uid_local',
-            'foreign_selector' => 'uid_local',
-            'overrideChildTca' => 
-            array (
-              'columns' => 
-              array (
-                'uid_local' => 
-                array (
-                  'config' => 
-                  array (
-                    'appearance' => 
-                    array (
-                      'elementBrowserType' => 'file',
-                      'elementBrowserAllowed' => 'svg',
-                    ),
-                  ),
-                ),
-              ),
-              'types' => 
-              array (
-                0 => 
-                array (
-                  'showitem' => '
-                                    --palette--;;filePalette
-                                ',
-                ),
-                1 => 
-                array (
-                  'showitem' => '
-                                    --palette--;;filePalette
-                                ',
-                ),
-                2 => 
-                array (
-                  'showitem' => '
-                                    --palette--;;filePalette
-                                ',
-                ),
-                3 => 
-                array (
-                  'showitem' => '
-                                    --palette--;;filePalette
-                                ',
-                ),
-                4 => 
-                array (
-                  'showitem' => '
-                                    --palette--;;filePalette
-                                ',
-                ),
-                5 => 
-                array (
-                  'showitem' => '
-                                    --palette--;;filePalette
-                                ',
-                ),
-              ),
-            ),
-            'filter' => 
-            array (
-              0 => 
-              array (
-                'userFunc' => 'TYPO3\\CMS\\Core\\Resource\\Filter\\FileExtensionFilter->filterInlineChildren',
-                'parameters' => 
-                array (
-                  'allowedFileExtensions' => 'svg',
-                  'disallowedFileExtensions' => '',
-                ),
-              ),
-            ),
-            'appearance' => 
-            array (
-              'useSortable' => true,
-              'headerThumbnail' => 
-              array (
-                'field' => 'uid_local',
-                'width' => '45',
-                'height' => '45c',
-              ),
-              'enabledControls' => 
-              array (
-                'info' => true,
-                'new' => false,
-                'dragdrop' => true,
-                'sort' => false,
-                'hide' => true,
-                'delete' => true,
-              ),
-              'createNewRelationLinkTitle' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference',
-            ),
-            'behaviour' => 
-            array (
-              'localizeChildrenAtParentLocalization' => true,
-            ),
-            'minitems' => 0,
-            'maxitems' => 1,
-          ),
-          'l10n_mode' => 'exclude',
-        ),
-        'image' => 
-        array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:timeline_item.image',
-          'config' => 
-          array (
-            'type' => 'inline',
-            'foreign_table' => 'sys_file_reference',
-            'foreign_field' => 'uid_foreign',
-            'foreign_sortby' => 'sorting_foreign',
-            'foreign_table_field' => 'tablenames',
-            'foreign_match_fields' => 
-            array (
-              'fieldname' => 'image',
-            ),
-            'foreign_label' => 'uid_local',
-            'foreign_selector' => 'uid_local',
-            'overrideChildTca' => 
-            array (
-              'columns' => 
-              array (
-                'uid_local' => 
-                array (
-                  'config' => 
-                  array (
-                    'appearance' => 
-                    array (
-                      'elementBrowserType' => 'file',
-                      'elementBrowserAllowed' => 'gif,jpg,jpeg,tif,tiff,bmp,pcx,tga,png,pdf,ai,svg',
-                    ),
-                  ),
-                ),
-              ),
-              'types' => 
-              array (
-                0 => 
-                array (
-                  'showitem' => '
-                                    --palette--;;filePalette
-                                ',
-                ),
-                1 => 
-                array (
-                  'showitem' => '
-                                    --palette--;;filePalette
-                                ',
-                ),
-                2 => 
-                array (
-                  'showitem' => '
-                                    title,
-                                    alternative,
-                                    crop,
-                                    --palette--;;filePalette
-                                ',
-                ),
-                3 => 
-                array (
-                  'showitem' => '
-                                    --palette--;;filePalette
-                                ',
-                ),
-                4 => 
-                array (
-                  'showitem' => '
-                                    --palette--;;filePalette
-                                ',
-                ),
-                5 => 
-                array (
-                  'showitem' => '
-                                    --palette--;;filePalette
-                                ',
-                ),
-              ),
-            ),
-            'filter' => 
-            array (
-              0 => 
-              array (
-                'userFunc' => 'TYPO3\\CMS\\Core\\Resource\\Filter\\FileExtensionFilter->filterInlineChildren',
-                'parameters' => 
-                array (
-                  'allowedFileExtensions' => 'gif,jpg,jpeg,tif,tiff,bmp,pcx,tga,png,pdf,ai,svg',
-                  'disallowedFileExtensions' => '',
-                ),
-              ),
-            ),
-            'appearance' => 
-            array (
-              'useSortable' => true,
-              'headerThumbnail' => 
-              array (
-                'field' => 'uid_local',
-                'width' => '45',
-                'height' => '45c',
-              ),
-              'enabledControls' => 
-              array (
-                'info' => true,
-                'new' => false,
-                'dragdrop' => true,
-                'sort' => false,
-                'hide' => true,
-                'delete' => true,
-              ),
-              'createNewRelationLinkTitle' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference',
-            ),
-            'behaviour' => 
-            array (
-              'localizeChildrenAtParentLocalization' => true,
-            ),
-            'minitems' => 0,
-            'maxitems' => 1,
           ),
         ),
       ),
     ),
-    'tx_lstemplate_domain_model_simulators' => 
+    'tx_lssimulators_domain_model_simulators' => 
     array (
       'ctrl' => 
       array (
-        'title' => 'LLL:EXT:ls_template/Resources/Private/Language/locallang_db.xlf:tx_lstemplate_domain_model_simulators',
-        'label' => 'images',
+        'title' => 'LLL:EXT:ls_simulators/Resources/Private/Language/locallang_db.xlf:tx_lssimulators_domain_model_simulators',
+        'label' => 'title',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
         'cruser_id' => 'cruser_id',
@@ -19320,18 +14978,18 @@ return array (
           'starttime' => 'starttime',
           'endtime' => 'endtime',
         ),
-        'searchFields' => 'images,title,price,description,code,categories',
-        'iconfile' => 'EXT:ls_template/Resources/Public/Icons/tx_lstemplate_domain_model_simulators.gif',
+        'searchFields' => 'title,price,description,images',
+        'iconfile' => 'EXT:ls_simulators/Resources/Public/Icons/tx_lssimulators_domain_model_simulators.gif',
       ),
       'interface' => 
       array (
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, images, title, price, description, code, categories',
+        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, price, description, images,categories',
       ),
       'types' => 
       array (
         1 => 
         array (
-          'showitem' => 'sys_language_uid,l10n_parent,l10n_diffsource,hidden,images,title,price,description,code,categories,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,starttime,endtime',
+          'showitem' => 'sys_language_uid,l10n_parent,l10n_diffsource,hidden,title,price,description,images,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,starttime,endtime,--div--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_category.tabs.category,categories',
         ),
       ),
       'columns' => 
@@ -19374,8 +15032,8 @@ return array (
                 1 => 0,
               ),
             ),
-            'foreign_table' => 'tx_lstemplate_domain_model_simulators',
-            'foreign_table_where' => 'AND tx_lstemplate_domain_model_simulators.pid=###CURRENT_PID### AND tx_lstemplate_domain_model_simulators.sys_language_uid IN (-1,0)',
+            'foreign_table' => 'tx_lssimulators_domain_model_simulators',
+            'foreign_table_where' => 'AND tx_lssimulators_domain_model_simulators.pid=###CURRENT_PID### AND tx_lssimulators_domain_model_simulators.sys_language_uid IN (-1,0)',
           ),
         ),
         'l10n_diffsource' => 
@@ -19449,10 +15107,46 @@ return array (
             'renderType' => 'inputDateTime',
           ),
         ),
+        'title' => 
+        array (
+          'exclude' => true,
+          'label' => 'LLL:EXT:ls_simulators/Resources/Private/Language/locallang_db.xlf:tx_lssimulators_domain_model_simulators.title',
+          'config' => 
+          array (
+            'type' => 'input',
+            'size' => 30,
+            'eval' => 'trim',
+          ),
+        ),
+        'price' => 
+        array (
+          'exclude' => true,
+          'label' => 'LLL:EXT:ls_simulators/Resources/Private/Language/locallang_db.xlf:tx_lssimulators_domain_model_simulators.price',
+          'config' => 
+          array (
+            'type' => 'input',
+            'size' => 30,
+            'eval' => 'trim',
+          ),
+        ),
+        'description' => 
+        array (
+          'exclude' => true,
+          'label' => 'LLL:EXT:ls_simulators/Resources/Private/Language/locallang_db.xlf:tx_lssimulators_domain_model_simulators.description',
+          'config' => 
+          array (
+            'type' => 'text',
+            'cols' => 40,
+            'rows' => 15,
+            'eval' => 'trim',
+            'enableRichtext' => true,
+            'richtextConfiguration' => 'default',
+          ),
+        ),
         'images' => 
         array (
           'exclude' => true,
-          'label' => 'LLL:EXT:ls_template/Resources/Private/Language/locallang_db.xlf:tx_lstemplate_domain_model_simulators.images',
+          'label' => 'LLL:EXT:ls_simulators/Resources/Private/Language/locallang_db.xlf:tx_lssimulators_domain_model_simulators.images',
           'config' => 
           array (
             'type' => 'inline',
@@ -19558,107 +15252,49 @@ return array (
             array (
               'localizeChildrenAtParentLocalization' => true,
             ),
-            'maxitems' => 1,
-          ),
-        ),
-        'title' => 
-        array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:ls_template/Resources/Private/Language/locallang_db.xlf:tx_lstemplate_domain_model_simulators.title',
-          'config' => 
-          array (
-            'type' => 'input',
-            'size' => 30,
-            'eval' => 'trim',
-          ),
-        ),
-        'price' => 
-        array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:ls_template/Resources/Private/Language/locallang_db.xlf:tx_lstemplate_domain_model_simulators.price',
-          'config' => 
-          array (
-            'type' => 'input',
-            'size' => 30,
-            'eval' => 'trim',
-          ),
-        ),
-        'description' => 
-        array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:ls_template/Resources/Private/Language/locallang_db.xlf:tx_lstemplate_domain_model_simulators.description',
-          'config' => 
-          array (
-            'type' => 'text',
-            'cols' => 40,
-            'rows' => 15,
-            'eval' => 'trim',
-            'enableRichtext' => true,
-            'richtextConfiguration' => 'default',
-          ),
-        ),
-        'code' => 
-        array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:ls_template/Resources/Private/Language/locallang_db.xlf:tx_lstemplate_domain_model_simulators.code',
-          'config' => 
-          array (
-            'type' => 'input',
-            'size' => 30,
-            'eval' => 'trim',
+            'maxitems' => 20,
           ),
         ),
         'categories' => 
         array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:ls_template/Resources/Private/Language/locallang_db.xlf:tx_lstemplate_domain_model_simulators.categories',
+          'exclude' => false,
+          'label' => 'LLL:EXT:examples/Resources/Private/Language/locallang.xlf:additional_categories',
           'config' => 
           array (
             'type' => 'select',
-            'renderType' => 'selectMultipleSideBySide',
+            'renderType' => 'selectTree',
             'foreign_table' => 'sys_category',
-            'MM' => 'tx_lstemplate_simulators_category_mm',
-            'size' => 10,
-            'autoSizeMax' => 30,
-            'maxitems' => 9999,
-            'multiple' => 0,
-            'wizards' => 
+            'foreign_table_where' => ' AND sys_category.sys_language_uid IN (-1, 0) ORDER BY sys_category.title ASC',
+            'MM' => 'sys_category_record_mm',
+            'MM_opposite_field' => 'items',
+            'MM_match_fields' => 
             array (
-              '_PADDING' => 1,
-              '_VERTICAL' => 1,
+              'tablenames' => 'tx_lssimulators_domain_model_simulators',
+              'fieldname' => 'categories',
             ),
-            'fieldControl' => 
+            'size' => 20,
+            'maxitems' => 9999,
+            'treeConfig' => 
             array (
-              'editPopup' => 
+              'parentField' => 'parent',
+              'appearance' => 
               array (
-                'disabled' => false,
-                'options' => 
-                array (
-                  'title' => 'Edit',
-                  'windowOpenParameters' => 'height=350,width=580,status=0,menubar=0,scrollbars=1',
-                ),
-              ),
-              'addRecord' => 
-              array (
-                'disabled' => false,
-                'options' => 
-                array (
-                  'title' => 'Create new',
-                  'table' => 'sys_category',
-                  'pid' => '###CURRENT_PID###',
-                  'setValue' => 'prepend',
-                ),
+                'expandAll' => true,
+                'showHeader' => true,
+                'maxLevels' => 99,
               ),
             ),
           ),
+          'l10n_mode' => 'exclude',
+          'l10n_display' => 'hideDiff',
         ),
       ),
     ),
-    'tx_lstemplate_domain_model_subscription' => 
+    'tx_lssimulators_domain_model_subscription' => 
     array (
       'ctrl' => 
       array (
-        'title' => 'LLL:EXT:ls_template/Resources/Private/Language/locallang_db.xlf:tx_lstemplate_domain_model_subscription',
+        'title' => 'LLL:EXT:ls_simulators/Resources/Private/Language/locallang_db.xlf:tx_lssimulators_domain_model_subscription',
         'label' => 'title',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
@@ -19674,18 +15310,18 @@ return array (
           'starttime' => 'starttime',
           'endtime' => 'endtime',
         ),
-        'searchFields' => 'title,description,price',
-        'iconfile' => 'EXT:ls_template/Resources/Public/Icons/tx_lstemplate_domain_model_subscription.gif',
+        'searchFields' => 'title,price,description',
+        'iconfile' => 'EXT:ls_simulators/Resources/Public/Icons/tx_lssimulators_domain_model_subscription.gif',
       ),
       'interface' => 
       array (
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, description, price',
+        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, price, description',
       ),
       'types' => 
       array (
         1 => 
         array (
-          'showitem' => 'sys_language_uid,l10n_parent,l10n_diffsource,hidden,title,description,price,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,starttime,endtime',
+          'showitem' => 'sys_language_uid,l10n_parent,l10n_diffsource,hidden,title,price,description,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,starttime,endtime',
         ),
       ),
       'columns' => 
@@ -19728,8 +15364,8 @@ return array (
                 1 => 0,
               ),
             ),
-            'foreign_table' => 'tx_lstemplate_domain_model_subscription',
-            'foreign_table_where' => 'AND tx_lstemplate_domain_model_subscription.pid=###CURRENT_PID### AND tx_lstemplate_domain_model_subscription.sys_language_uid IN (-1,0)',
+            'foreign_table' => 'tx_lssimulators_domain_model_subscription',
+            'foreign_table_where' => 'AND tx_lssimulators_domain_model_subscription.pid=###CURRENT_PID### AND tx_lssimulators_domain_model_subscription.sys_language_uid IN (-1,0)',
           ),
         ),
         'l10n_diffsource' => 
@@ -19806,7 +15442,18 @@ return array (
         'title' => 
         array (
           'exclude' => true,
-          'label' => 'LLL:EXT:ls_template/Resources/Private/Language/locallang_db.xlf:tx_lstemplate_domain_model_subscription.title',
+          'label' => 'LLL:EXT:ls_simulators/Resources/Private/Language/locallang_db.xlf:tx_lssimulators_domain_model_subscription.title',
+          'config' => 
+          array (
+            'type' => 'input',
+            'size' => 30,
+            'eval' => 'trim',
+          ),
+        ),
+        'price' => 
+        array (
+          'exclude' => true,
+          'label' => 'LLL:EXT:ls_simulators/Resources/Private/Language/locallang_db.xlf:tx_lssimulators_domain_model_subscription.price',
           'config' => 
           array (
             'type' => 'input',
@@ -19817,7 +15464,7 @@ return array (
         'description' => 
         array (
           'exclude' => true,
-          'label' => 'LLL:EXT:ls_template/Resources/Private/Language/locallang_db.xlf:tx_lstemplate_domain_model_subscription.description',
+          'label' => 'LLL:EXT:ls_simulators/Resources/Private/Language/locallang_db.xlf:tx_lssimulators_domain_model_subscription.description',
           'config' => 
           array (
             'type' => 'text',
@@ -19828,15 +15475,253 @@ return array (
             'richtextConfiguration' => 'default',
           ),
         ),
-        'price' => 
+      ),
+    ),
+    'tx_owlslider_domain_model_item' => 
+    array (
+      'ctrl' => 
+      array (
+        'title' => 'LLL:EXT:owl_slider/Resources/Private/Language/locallang_db.xlf:tx_owlslider_domain_model_item',
+        'label' => 'itemname',
+        'tstamp' => 'tstamp',
+        'crdate' => 'crdate',
+        'cruser_id' => 'cruser_id',
+        'dividers2tabs' => true,
+        'sortby' => 'sorting',
+        'versioningWS' => true,
+        'origUid' => 't3_origuid',
+        'languageField' => 'sys_language_uid',
+        'transOrigPointerField' => 'l10n_parent',
+        'transOrigDiffSourceField' => 'l10n_diffsource',
+        'delete' => 'deleted',
+        'enablecolumns' => 
         array (
-          'exclude' => true,
-          'label' => 'LLL:EXT:ls_template/Resources/Private/Language/locallang_db.xlf:tx_lstemplate_domain_model_subscription.price',
+          'disabled' => 'hidden',
+          'starttime' => 'starttime',
+          'endtime' => 'endtime',
+        ),
+        'searchFields' => 'itemname,itemimage,itemlink,',
+        'iconfile' => 'EXT:owl_slider/Resources/Public/Icons/tx_owlslider_domain_model_item.png',
+      ),
+      'interface' => 
+      array (
+        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, itemname, itemimage, itemlink, itemcontent',
+      ),
+      'types' => 
+      array (
+        1 => 
+        array (
+          'showitem' => 'sys_language_uid,l10n_parent,l10n_diffsource,hidden,itemname,itemimage,itemlink,itemcontent,column_offset,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,starttime,endtime',
+          'columnsOverrides' => 
+          array (
+            'itemcontent' => 
+            array (
+              'config' => 
+              array (
+                'enableRichtext' => true,
+                'richtextConfiguration' => 'default',
+                'fieldControl' => 
+                array (
+                  'fullScreenRichtext' => 
+                  array (
+                    'disabled' => false,
+                    'options' => 
+                    array (
+                      'title' => 'LLL:EXT:cms/locallang_ttc.xlf:bodytext.W.RTE',
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
+      'palettes' => 
+      array (
+        1 => 
+        array (
+          'showitem' => '',
+        ),
+      ),
+      'columns' => 
+      array (
+        'sys_language_uid' => 
+        array (
+          'exclude' => 1,
+          'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.language',
+          'config' => 
+          array (
+            'type' => 'select',
+            'default' => -1,
+            'renderType' => 'selectSingleBox',
+            'foreign_table' => 'sys_language',
+            'foreign_table_where' => 'ORDER BY sys_language.title',
+            'items' => 
+            array (
+              0 => 
+              array (
+                0 => 'LLL:EXT:lang/locallang_general.xlf:LGL.allLanguages',
+                1 => -1,
+              ),
+            ),
+          ),
+        ),
+        'l10n_parent' => 
+        array (
+          'displayCond' => 'FIELD:sys_language_uid:>:0',
+          'exclude' => 1,
+          'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.l18n_parent',
+          'config' => 
+          array (
+            'type' => 'select',
+            'renderType' => 'selectSingleBox',
+            'items' => 
+            array (
+              0 => 
+              array (
+                0 => '',
+                1 => 0,
+              ),
+            ),
+            'foreign_table' => 'tx_owlslider_domain_model_item',
+            'foreign_table_where' => 'AND tx_owlslider_domain_model_item.pid=###CURRENT_PID### AND tx_owlslider_domain_model_item.sys_language_uid IN (-1,0)',
+          ),
+        ),
+        'l10n_diffsource' => 
+        array (
+          'config' => 
+          array (
+            'type' => 'passthrough',
+          ),
+        ),
+        't3ver_label' => 
+        array (
+          'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.versionLabel',
           'config' => 
           array (
             'type' => 'input',
             'size' => 30,
+            'max' => 255,
+          ),
+        ),
+        'hidden' => 
+        array (
+          'exclude' => 1,
+          'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.hidden',
+          'config' => 
+          array (
+            'type' => 'check',
+          ),
+        ),
+        'starttime' => 
+        array (
+          'exclude' => 1,
+          'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.starttime',
+          'config' => 
+          array (
+            'type' => 'input',
+            'renderType' => 'inputDateTime',
+            'size' => 13,
+            'eval' => 'datetime',
+            'checkbox' => 0,
+            'default' => 0,
+            'range' => 
+            array (
+              'lower' => 1549144800,
+            ),
+            'behaviour' => 
+            array (
+              'allowLanguageSynchronization' => true,
+            ),
+          ),
+        ),
+        'endtime' => 
+        array (
+          'exclude' => 1,
+          'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.endtime',
+          'config' => 
+          array (
+            'type' => 'input',
+            'renderType' => 'inputDateTime',
+            'size' => 13,
+            'eval' => 'datetime',
+            'checkbox' => 0,
+            'default' => 0,
+            'range' => 
+            array (
+              'lower' => 1549144800,
+            ),
+            'behaviour' => 
+            array (
+              'allowLanguageSynchronization' => true,
+            ),
+          ),
+        ),
+        'itemname' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:owl_slider/Resources/Private/Language/locallang_db.xlf:tx_owlslider_domain_model_item.itemname',
+          'config' => 
+          array (
+            'type' => 'input',
+            'size' => 30,
+            'eval' => 'trim,required',
+          ),
+        ),
+        'itemimage' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:owl_slider/Resources/Private/Language/locallang_db.xlf:tx_owlslider_domain_model_item.itemimage',
+          'config' => 
+          array (
+            'type' => 'group',
+            'internal_type' => 'file',
+            'uploadfolder' => 'uploads/tx_owlslider',
+            'minitems' => 1,
+            'size' => 1,
+            'maxitems' => 1,
+            'allowed' => 'gif,jpg,jpeg,tif,tiff,bmp,pcx,tga,png,pdf,ai,svg',
+            'disallowed' => '',
+          ),
+        ),
+        'itemlink' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:owl_slider/Resources/Private/Language/locallang_db.xlf:tx_owlslider_domain_model_item.itemlink',
+          'config' => 
+          array (
+            'type' => 'input',
+            'size' => '15',
+            'max' => '255',
             'eval' => 'trim',
+            'wizards' => 
+            array (
+              '_PADDING' => 2,
+            ),
+            'softref' => 'typolink',
+            'renderType' => 'inputLink',
+            'fieldControl' => 
+            array (
+              'linkPopup' => 
+              array (
+                'options' => 
+                array (
+                  'title' => 'Link',
+                  'windowOpenParameters' => 'height=300,width=500,status=0,menubar=0,scrollbars=1',
+                ),
+              ),
+            ),
+          ),
+        ),
+        'itemcontent' => 
+        array (
+          'exclude' => 0,
+          'label' => 'LLL:EXT:owl_slider/Resources/Private/Language/locallang_db.xlf:tx_owlslider_domain_model_item.itemcontent',
+          'config' => 
+          array (
+            'type' => 'text',
+            'cols' => '30',
+            'rows' => '5',
           ),
         ),
       ),
@@ -20157,8 +16042,567 @@ return array (
         ),
       ),
     ),
+    'tx_mask_slide' => 
+    array (
+      'ctrl' => 
+      array (
+        'title' => 'tx_mask_slide',
+        'label' => 'tx_mask_title',
+        'tstamp' => 'tstamp',
+        'crdate' => 'crdate',
+        'cruser_id' => 'cruser_id',
+        'dividers2tabs' => true,
+        'versioningWS' => true,
+        'languageField' => 'sys_language_uid',
+        'transOrigPointerField' => 'l10n_parent',
+        'transOrigDiffSourceField' => 'l10n_diffsource',
+        'delete' => 'deleted',
+        'enablecolumns' => 
+        array (
+          'disabled' => 'hidden',
+          'starttime' => 'starttime',
+          'endtime' => 'endtime',
+        ),
+        'searchFields' => 'tx_mask_title,tx_mask_description,tx_mask_image,tx_mask_buttons',
+        'dynamicConfigFile' => '',
+        'iconfile' => 'EXT:mask/ext_icon.svg',
+        'hideTable' => true,
+      ),
+      'interface' => 
+      array (
+        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, tx_mask_title, tx_mask_description, tx_mask_image, tx_mask_buttons',
+      ),
+      'types' => 
+      array (
+        1 => 
+        array (
+          'showitem' => 'sys_language_uid,l10n_parent,l10n_diffsource,hidden,tx_mask_title,tx_mask_description,tx_mask_image,tx_mask_buttons,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,starttime,endtime',
+        ),
+      ),
+      'palettes' => 
+      array (
+        1 => 
+        array (
+          'showitem' => '',
+        ),
+      ),
+      'columns' => 
+      array (
+        'sys_language_uid' => 
+        array (
+          'exclude' => 1,
+          'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.language',
+          'config' => 
+          array (
+            'type' => 'select',
+            'renderType' => 'selectSingle',
+            'items' => 
+            array (
+              0 => 
+              array (
+                0 => 'LLL:EXT:lang/locallang_general.xlf:LGL.allLanguages',
+                1 => -1,
+                2 => 'flags-multiple',
+              ),
+            ),
+            'special' => 'languages',
+            'default' => 0,
+          ),
+        ),
+        'l10n_parent' => 
+        array (
+          'displayCond' => 'FIELD:sys_language_uid:>:0',
+          'exclude' => 1,
+          'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.l18n_parent',
+          'config' => 
+          array (
+            'type' => 'select',
+            'renderType' => 'selectSingle',
+            'items' => 
+            array (
+              0 => 
+              array (
+                0 => '',
+                1 => 0,
+              ),
+            ),
+            'foreign_table' => 'tx_mask_slide',
+            'foreign_table_where' => 'AND tx_mask_slide.pid=###CURRENT_PID### AND tx_mask_slide.sys_language_uid IN (-1,0)',
+            'default' => 0,
+          ),
+        ),
+        'l10n_diffsource' => 
+        array (
+          'config' => 
+          array (
+            'type' => 'passthrough',
+          ),
+        ),
+        't3ver_label' => 
+        array (
+          'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.versionLabel',
+          'config' => 
+          array (
+            'type' => 'input',
+            'size' => 30,
+            'max' => 255,
+          ),
+        ),
+        'hidden' => 
+        array (
+          'exclude' => 1,
+          'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.hidden',
+          'config' => 
+          array (
+            'type' => 'check',
+          ),
+        ),
+        'starttime' => 
+        array (
+          'exclude' => 1,
+          'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.starttime',
+          'config' => 
+          array (
+            'behaviour' => 
+            array (
+              'allowLanguageSynchronization' => true,
+            ),
+            'renderType' => 'inputDateTime',
+            'type' => 'input',
+            'size' => 13,
+            'eval' => 'datetime',
+            'checkbox' => 0,
+            'default' => 0,
+          ),
+        ),
+        'endtime' => 
+        array (
+          'exclude' => 1,
+          'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.endtime',
+          'config' => 
+          array (
+            'behaviour' => 
+            array (
+              'allowLanguageSynchronization' => true,
+            ),
+            'renderType' => 'inputDateTime',
+            'type' => 'input',
+            'size' => 13,
+            'eval' => 'datetime',
+            'checkbox' => 0,
+            'default' => 0,
+          ),
+        ),
+        'parentid' => 
+        array (
+          'config' => 
+          array (
+            'type' => 'select',
+            'renderType' => 'selectSingle',
+            'items' => 
+            array (
+              0 => 
+              array (
+                0 => '',
+                1 => 0,
+              ),
+            ),
+            'foreign_table' => 'tt_content',
+            'foreign_table_where' => 'AND tt_content.pid=###CURRENT_PID### AND tt_content.sys_language_uid IN (-1,###REC_FIELD_sys_language_uid###)',
+          ),
+        ),
+        'parenttable' => 
+        array (
+          'config' => 
+          array (
+            'type' => 'passthrough',
+          ),
+        ),
+        'sorting' => 
+        array (
+          'config' => 
+          array (
+            'type' => 'passthrough',
+          ),
+        ),
+        'tx_mask_title' => 
+        array (
+          'config' => 
+          array (
+            'type' => 'input',
+          ),
+          'exclude' => '1',
+          'label' => 'Title',
+        ),
+        'tx_mask_description' => 
+        array (
+          'config' => 
+          array (
+            'type' => 'text',
+            'richtextConfiguration' => 'default',
+            'enableRichtext' => '1',
+          ),
+          'exclude' => '1',
+          'label' => 'Description',
+        ),
+        'tx_mask_image' => 
+        array (
+          'config' => 
+          array (
+            'type' => 'inline',
+            'foreign_table' => 'sys_file_reference',
+            'foreign_field' => 'uid_foreign',
+            'foreign_sortby' => 'sorting_foreign',
+            'foreign_table_field' => 'tablenames',
+            'foreign_match_fields' => 
+            array (
+              'fieldname' => 'tx_mask_image',
+            ),
+            'foreign_label' => 'uid_local',
+            'foreign_selector' => 'uid_local',
+            'overrideChildTca' => 
+            array (
+              'columns' => 
+              array (
+                'uid_local' => 
+                array (
+                  'config' => 
+                  array (
+                    'appearance' => 
+                    array (
+                      'elementBrowserType' => 'file',
+                      'elementBrowserAllowed' => 'gif,jpg,jpeg,tif,tiff,bmp,pcx,tga,png,pdf,ai,svg',
+                    ),
+                  ),
+                ),
+              ),
+              'types' => 
+              array (
+                0 => 
+                array (
+                  'showitem' => '--palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette, --palette--;;filePalette',
+                ),
+                1 => 
+                array (
+                  'showitem' => '--palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette, --palette--;;filePalette',
+                ),
+                2 => 
+                array (
+                  'showitem' => '--palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette, --palette--;;filePalette',
+                ),
+                3 => 
+                array (
+                  'showitem' => '--palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette, --palette--;;filePalette',
+                ),
+                4 => 
+                array (
+                  'showitem' => '--palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette, --palette--;;filePalette',
+                ),
+                5 => 
+                array (
+                  'showitem' => '--palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette, --palette--;;filePalette',
+                ),
+              ),
+            ),
+            'filter' => 
+            array (
+              0 => 
+              array (
+                'userFunc' => 'TYPO3\\CMS\\Core\\Resource\\Filter\\FileExtensionFilter->filterInlineChildren',
+              ),
+            ),
+            'appearance' => 
+            array (
+              'useSortable' => 'tx_mask_image',
+              'headerThumbnail' => 
+              array (
+                'field' => 'uid_local',
+                'width' => '45',
+                'height' => '45c',
+              ),
+              'enabledControls' => 
+              array (
+                'info' => 'tx_mask_image',
+                'new' => false,
+                'dragdrop' => 'tx_mask_image',
+                'sort' => false,
+                'hide' => 'tx_mask_image',
+                'delete' => 'tx_mask_image',
+              ),
+              'showSynchronizationLink' => '1',
+              'showPossibleLocalizationRecords' => '1',
+              'showAllLocalizationLink' => '1',
+              'fileUploadAllowed' => false,
+            ),
+            'behaviour' => 
+            array (
+              'localizeChildrenAtParentLocalization' => '1',
+            ),
+            'minitems' => '1',
+            'maxitems' => '1',
+          ),
+          'exclude' => '1',
+          'l10n_mode' => 'copy',
+          'label' => 'Image',
+        ),
+        'tx_mask_buttons' => 
+        array (
+          'config' => 
+          array (
+            'type' => 'inline',
+            'foreign_table' => 'tx_mask_buttons',
+            'foreign_field' => 'parentid',
+            'foreign_table_field' => 'parenttable',
+            'foreign_sortby' => 'sorting',
+            'appearance' => 
+            array (
+              'enabledControls' => 
+              array (
+                'dragdrop' => '1',
+              ),
+              'levelLinksPosition' => 'top',
+              'showSynchronizationLink' => '1',
+              'showPossibleLocalizationRecords' => '1',
+              'showAllLocalizationLink' => '1',
+              'showRemovedLocalizationRecords' => '1',
+            ),
+            'maxitems' => '3',
+            'behaviour' => 
+            array (
+              'localizeChildrenAtParentLocalization' => '1',
+            ),
+          ),
+          'exclude' => '1',
+          'l10n_mode' => 'copy',
+          'label' => 'Buttons',
+        ),
+      ),
+    ),
+    'tx_mask_buttons' => 
+    array (
+      'ctrl' => 
+      array (
+        'title' => 'tx_mask_buttons',
+        'label' => 'tx_mask_link_title',
+        'tstamp' => 'tstamp',
+        'crdate' => 'crdate',
+        'cruser_id' => 'cruser_id',
+        'dividers2tabs' => true,
+        'versioningWS' => true,
+        'languageField' => 'sys_language_uid',
+        'transOrigPointerField' => 'l10n_parent',
+        'transOrigDiffSourceField' => 'l10n_diffsource',
+        'delete' => 'deleted',
+        'enablecolumns' => 
+        array (
+          'disabled' => 'hidden',
+          'starttime' => 'starttime',
+          'endtime' => 'endtime',
+        ),
+        'searchFields' => 'tx_mask_link_title,tx_mask_link',
+        'dynamicConfigFile' => '',
+        'iconfile' => 'EXT:mask/ext_icon.svg',
+        'hideTable' => true,
+      ),
+      'interface' => 
+      array (
+        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, tx_mask_link_title, tx_mask_link',
+      ),
+      'types' => 
+      array (
+        1 => 
+        array (
+          'showitem' => 'sys_language_uid,l10n_parent,l10n_diffsource,hidden,tx_mask_link_title,tx_mask_link,--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,starttime,endtime',
+        ),
+      ),
+      'palettes' => 
+      array (
+        1 => 
+        array (
+          'showitem' => '',
+        ),
+      ),
+      'columns' => 
+      array (
+        'sys_language_uid' => 
+        array (
+          'exclude' => 1,
+          'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.language',
+          'config' => 
+          array (
+            'type' => 'select',
+            'renderType' => 'selectSingle',
+            'items' => 
+            array (
+              0 => 
+              array (
+                0 => 'LLL:EXT:lang/locallang_general.xlf:LGL.allLanguages',
+                1 => -1,
+                2 => 'flags-multiple',
+              ),
+            ),
+            'special' => 'languages',
+            'default' => 0,
+          ),
+        ),
+        'l10n_parent' => 
+        array (
+          'displayCond' => 'FIELD:sys_language_uid:>:0',
+          'exclude' => 1,
+          'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.l18n_parent',
+          'config' => 
+          array (
+            'type' => 'select',
+            'renderType' => 'selectSingle',
+            'items' => 
+            array (
+              0 => 
+              array (
+                0 => '',
+                1 => 0,
+              ),
+            ),
+            'foreign_table' => 'tx_mask_buttons',
+            'foreign_table_where' => 'AND tx_mask_buttons.pid=###CURRENT_PID### AND tx_mask_buttons.sys_language_uid IN (-1,0)',
+            'default' => 0,
+          ),
+        ),
+        'l10n_diffsource' => 
+        array (
+          'config' => 
+          array (
+            'type' => 'passthrough',
+          ),
+        ),
+        't3ver_label' => 
+        array (
+          'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.versionLabel',
+          'config' => 
+          array (
+            'type' => 'input',
+            'size' => 30,
+            'max' => 255,
+          ),
+        ),
+        'hidden' => 
+        array (
+          'exclude' => 1,
+          'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.hidden',
+          'config' => 
+          array (
+            'type' => 'check',
+          ),
+        ),
+        'starttime' => 
+        array (
+          'exclude' => 1,
+          'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.starttime',
+          'config' => 
+          array (
+            'behaviour' => 
+            array (
+              'allowLanguageSynchronization' => true,
+            ),
+            'renderType' => 'inputDateTime',
+            'type' => 'input',
+            'size' => 13,
+            'eval' => 'datetime',
+            'checkbox' => 0,
+            'default' => 0,
+          ),
+        ),
+        'endtime' => 
+        array (
+          'exclude' => 1,
+          'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.endtime',
+          'config' => 
+          array (
+            'behaviour' => 
+            array (
+              'allowLanguageSynchronization' => true,
+            ),
+            'renderType' => 'inputDateTime',
+            'type' => 'input',
+            'size' => 13,
+            'eval' => 'datetime',
+            'checkbox' => 0,
+            'default' => 0,
+          ),
+        ),
+        'parentid' => 
+        array (
+          'config' => 
+          array (
+            'type' => 'select',
+            'renderType' => 'selectSingle',
+            'items' => 
+            array (
+              0 => 
+              array (
+                0 => '',
+                1 => 0,
+              ),
+            ),
+            'foreign_table' => 'tx_mask_slide',
+            'foreign_table_where' => 'AND tx_mask_slide.pid=###CURRENT_PID### AND tx_mask_slide.sys_language_uid IN (-1,###REC_FIELD_sys_language_uid###)',
+          ),
+        ),
+        'parenttable' => 
+        array (
+          'config' => 
+          array (
+            'type' => 'passthrough',
+          ),
+        ),
+        'sorting' => 
+        array (
+          'config' => 
+          array (
+            'type' => 'passthrough',
+          ),
+        ),
+        'tx_mask_link_title' => 
+        array (
+          'config' => 
+          array (
+            'type' => 'input',
+          ),
+          'exclude' => '1',
+          'label' => 'Link Title',
+        ),
+        'tx_mask_link' => 
+        array (
+          'config' => 
+          array (
+            'type' => 'input',
+            'renderType' => 'inputLink',
+            'softref' => 'typolink',
+            'fieldControl' => 
+            array (
+              'linkPopup' => 
+              array (
+                'options' => 
+                array (
+                  'title' => 'Link',
+                  'windowOpenParameters' => 'height=300,width=500,status=0,menubar=0,scrollbars=1',
+                ),
+              ),
+            ),
+            'wizards' => 
+            array (
+              'link' => 
+              array (
+                'icon' => 'actions-wizard-link',
+              ),
+            ),
+          ),
+          'exclude' => '1',
+          'label' => 'Link',
+        ),
+      ),
+    ),
   ),
-  'categoryRegistry' => 'O:40:"TYPO3\\CMS\\Core\\Category\\CategoryRegistry":4:{s:11:"' . "\0" . '*' . "\0" . 'registry";a:3:{s:5:"pages";a:1:{s:10:"categories";a:1:{s:8:"position";s:18:"replace:categories";}}s:17:"sys_file_metadata";a:1:{s:10:"categories";a:1:{s:8:"position";s:18:"replace:categories";}}s:10:"tt_content";a:1:{s:10:"categories";a:1:{s:8:"position";s:18:"replace:categories";}}}s:13:"' . "\0" . '*' . "\0" . 'extensions";a:1:{s:4:"core";a:3:{s:5:"pages";a:1:{s:10:"categories";s:10:"categories";}s:17:"sys_file_metadata";a:1:{s:10:"categories";s:10:"categories";}s:10:"tt_content";a:1:{s:10:"categories";s:10:"categories";}}}s:20:"' . "\0" . '*' . "\0" . 'addedCategoryTabs";a:3:{s:5:"pages";s:5:"pages";s:17:"sys_file_metadata";s:17:"sys_file_metadata";s:10:"tt_content";s:10:"tt_content";}s:11:"' . "\0" . '*' . "\0" . 'template";s:60:"
+  'categoryRegistry' => 'O:40:"TYPO3\\CMS\\Core\\Category\\CategoryRegistry":4:{s:11:"' . "\0" . '*' . "\0" . 'registry";a:4:{s:5:"pages";a:1:{s:10:"categories";a:1:{s:8:"position";s:18:"replace:categories";}}s:17:"sys_file_metadata";a:1:{s:10:"categories";a:1:{s:8:"position";s:18:"replace:categories";}}s:10:"tt_content";a:1:{s:10:"categories";a:1:{s:8:"position";s:18:"replace:categories";}}s:39:"tx_lssimulators_domain_model_simulators";a:1:{s:10:"categories";a:5:{s:5:"label";s:79:"LLL:EXT:examples/Resources/Private/Language/locallang.xlf:additional_categories";s:7:"exclude";b:0;s:18:"fieldConfiguration";a:1:{s:19:"foreign_table_where";s:77:" AND sys_category.sys_language_uid IN (-1, 0) ORDER BY sys_category.title ASC";}s:9:"l10n_mode";s:7:"exclude";s:12:"l10n_display";s:8:"hideDiff";}}}s:13:"' . "\0" . '*' . "\0" . 'extensions";a:2:{s:4:"core";a:3:{s:5:"pages";a:1:{s:10:"categories";s:10:"categories";}s:17:"sys_file_metadata";a:1:{s:10:"categories";s:10:"categories";}s:10:"tt_content";a:1:{s:10:"categories";s:10:"categories";}}s:13:"ls_simulators";a:1:{s:39:"tx_lssimulators_domain_model_simulators";a:1:{s:10:"categories";s:10:"categories";}}}s:20:"' . "\0" . '*' . "\0" . 'addedCategoryTabs";a:4:{s:5:"pages";s:5:"pages";s:17:"sys_file_metadata";s:17:"sys_file_metadata";s:10:"tt_content";s:10:"tt_content";s:39:"tx_lssimulators_domain_model_simulators";s:39:"tx_lssimulators_domain_model_simulators";}s:11:"' . "\0" . '*' . "\0" . 'template";s:60:"
 
 
 CREATE TABLE %s (
