@@ -1,14 +1,11 @@
 RTE {
-    classes >
-    classesAnchor >
+#    classes >
+#    classesAnchor >
 
     # Add your classes here
     classes {
-        text-left.name    = LLL:EXT:rtehtmlarea/Resources/Private/Language/locallang_tooltips.xlf:justifyleft
-        text-center.name  = LLL:EXT:rtehtmlarea/Resources/Private/Language/locallang_tooltips.xlf:justifycenter
-        text-right.name   = LLL:EXT:rtehtmlarea/Resources/Private/Language/locallang_tooltips.xlf:justifyright
-        text-justify.name = LLL:EXT:sem_content/Resources/Private/Language/locallang_be.xlf:justify
-    }
+        text-left.name    = test
+        text-center.name  = test1
 
     default {
         # Convert all DIV to P tags

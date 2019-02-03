@@ -97,10 +97,10 @@ Otherwise your changes will be overwritten the next time you save the extension 
 								</div>
 								<div class="text">
 									<h4>{item.title}</h4>
-									<small class="price">{item.price}</small>
+									<small class="price">{item.price} <f:translate key="tx_lssimulators_domain_model_subscription.currency" /></small>
 								</div>
 								<div class="hover-box">
-									<f:link.page pageUid="{settings.detailPid}" class="btn btn-red">{settings.linkTitle}</f:link.page>
+									<f:link.action action="show" pageUid="{settings.detailPid}" class="btn btn-red" arguments="{simulators:item}">{settings.linkTitle}</f:link.action>
 								</div>
 							</div>
 						</div>

@@ -27,12 +27,17 @@ lib.language {
                 }
             }
             ACT < .NO
-            ACT.linkWrap = <li class="active">|</li>
+            ACT = 1
+            ACT.doNotLinkIt = 1
+            ACT.linkWrap = <li class="active-test">|</li>
             USERDEF1 < .NO
             USERDEF1 {
                 linkWrap = <li class="text-muted">|</li>
                 stdWrap.typolink >
             }
+            CUR < .ACT
+            CUR = 1
+
             USERDEF2 < .ACT
             USERDEF2 {
                 linkWrap = <li class="text-muted">|</li>

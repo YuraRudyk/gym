@@ -34,10 +34,14 @@ class SimulatorsRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
      * Find simulators by category
      *
      * @param int $uid import id
+     * @param int $limit
      * @return \Simulators\LsSimulators\Domain\Model\Simulators
      */
-    public function findByCategories($uid)
+    public function findByCategories($uid, $limit = null)
     {
+        if (!$limit) {
+            $limit = 10000;
+        }
         $query = $this->createQuery();
         $query->getQuerySettings()->setRespectStoragePage(false);
         $query->getQuerySettings()->setRespectSysLanguage(false);
@@ -46,7 +50,7 @@ class SimulatorsRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
         $result = $query->matching(
             $query->logicalAnd(
                 $query->contains('categories', $uid)
-            ))->execute();
+            ))->setLimit($limit)->execute();
 
         return $result;
     }

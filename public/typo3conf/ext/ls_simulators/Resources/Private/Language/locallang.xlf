@@ -27,6 +27,18 @@
 			<trans-unit id="tx_lssimulators_domain_model_subscription.price">
 				<source>Price</source>
 			</trans-unit>
+			<trans-unit id="tx_lssimulators_domain_model_subscription.currency">
+                <source>грн</source>
+            </trans-unit>
+            <trans-unit id="tx_lssimulators_domain_model_subscription.characteristic">
+                <source>Технічні характеристики і опис:</source>
+            </trans-unit>
+            <trans-unit id="tx_lssimulators_domain_model_subscription.similar_products">
+                <source>Схожі товари</source>
+            </trans-unit>
+            <trans-unit id="tx_lssimulators_domain_model_subscription.buy">
+                <source>Купити</source>
+            </trans-unit>
 			<trans-unit id="tx_lssimulators_domain_model_subscription.description">
 				<source>Description</source>
 			</trans-unit>

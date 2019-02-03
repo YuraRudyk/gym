@@ -45,8 +45,20 @@ class SimulatorsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContr
      */
     public function showAction(\Simulators\LsSimulators\Domain\Model\Simulators $simulators)
     {
-        $this->view->assign('simulators', $simulators);
-        var_dump('test');
+        $similar = null;
+        if ($simulators->getCategories()->count()) {
+            foreach ($simulators->getCategories() as $category) {
+                if ($category->getParent()->getUid() == 4) {
+                    $similar = $this->simulatorsRepository->findByCategories($category->getUid(), 15);
+                }
+            }
+        }
+
+
+        $this->view->assignMultiple([
+            'simulators' => $simulators,
+            'similar' => $similar
+        ]);
     }
 
     /**
