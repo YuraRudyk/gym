@@ -1,0 +1,37 @@
+// vars
+$images: '../images/';
+$fonts: '../fonts/';
+
+// fonts
+$montserrat: 'Montserrat', sans-serif;
+$oswald: 'Oswald', sans-serif;
+
+
+// sizes
+$breakpoints: (
+	 phone: 375px,
+	 tablet: 768px,
+	 desktop: 992px, 
+	 mddesktop: 1200px
+) !default;
+
+$grid-gutter-width: 30px;
+$container-large-desktop: (1140px + $grid-gutter-width);
+
+// colors
+$white: #fff;
+$black: #000;
+
+$black-2: #333132;
+$red: #fe312c;
+$nero: #1f1f1f;
+
+$input-placeholder-color: #9ea28b;
+
+$text-color: $black-2;
+$font-family-base: $montserrat; 
+$font-size-base: 15px;
+$line-height-main: 1.466666666666667;
+$headings-font-weight: 400;
+$link-color: inherit;
+$link-hover-color: inherit;

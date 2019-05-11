@@ -13,6 +13,7 @@ $(document).ready(function() {
 	objectsSlider();
 	svgReplace();
 	rangeSlider();
+	videoPlay();
 }); // ready
 
 // bg-image
@@ -111,8 +112,36 @@ function objectsSlider() {
 			},
 		]
 	});
+	$('.slider-06').slick({
+		arrows: true,
+		dots: false,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		autoplay: true,
+		autoplaySpeed: 2000,
+		responsive: [
+			{
+			breakpoint: 991,
+				settings: {
+					arrows: true,
+					dots: false,
+					slidesToShow: 2,
+					slidesToScroll: 1,
+				}
+			},
+			{
+			breakpoint: 768,
+				settings: {
+					arrows: false,
+					dots: true,
+					slidesToShow: 1,
+					slidesToScroll: 1,
+				}
+			},
+		]
+	});
 }
-
+// initMatchHeight
 function initMatchHeight() {
 	var headerHeight = $('#header').outerHeight();
 	$('.visual').css('margin-top', - (40 + headerHeight));
@@ -161,3 +190,22 @@ function rangeSlider() {
 	$( "#amount-1" ).text( $( "#slider-range" ).slider( "values", 0 ) );
 	$( "#amount-2" ).text( $( "#slider-range" ).slider( "values", 1 ) );
 };
+//video-play
+function videoPlay() {
+	$('.btn-play, .embed-responsive').on('click', function() {
+		var $movie = $(this).closest('.control').find('video');
+		var movie = $movie.get(0);
+		if ($(this).closest('.control').is('.video-play')) {
+			movie.pause();
+			// movie.removeAttribute("controls");
+			$(this).closest('.control').removeClass('video-play');
+			$('body').removeClass('video-play');
+		}else{
+			movie.play();
+			// movie.setAttribute("controls","controls");
+			$(this).closest('.control').addClass('video-play');
+			$('body').addClass('video-play');
+		}
+		return false;
+	});
+}

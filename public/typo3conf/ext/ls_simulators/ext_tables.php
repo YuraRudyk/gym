@@ -29,5 +29,8 @@ call_user_func(
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_lssimulators_domain_model_subscription', 'EXT:ls_simulators/Resources/Private/Language/locallang_csh_tx_lssimulators_domain_model_subscription.xlf');
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_lssimulators_domain_model_subscription');
 
+
+        $GLOBALS['TYPO3_CONF_VARS']['BE']['maxFileSize'] = 100000;
+        $TCA['tt_content']['columns']['sys_file_reference']['config']['max_size'] = 3000000;
     }
 );

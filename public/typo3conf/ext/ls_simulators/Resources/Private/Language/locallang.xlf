@@ -39,6 +39,9 @@
             <trans-unit id="tx_lssimulators_domain_model_subscription.buy">
                 <source>Купити</source>
             </trans-unit>
+            <trans-unit id="tx_lssimulators_domain_model_subscription.subscription">
+                <source>Абонементи</source>
+            </trans-unit>
             <trans-unit id="tx_lssimulators_domain_model_subscription.simulators_category">
                 <source>Категорія товару:</source>
             </trans-unit>

@@ -1,0 +1,168 @@
+// mixins
+@mixin display-flex {
+	display:-ms-flexbox;
+	display:-webkit-flex;
+	display:flex;
+}
+@mixin display-inline-flex {
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+}
+@mixin flex-wrap($wrap: nowrap) {
+	-webkit-flex-wrap:$wrap;
+	-ms-flex-wrap:$wrap;
+	flex-wrap:$wrap;
+}
+@mixin align-items($align: stretch) {
+	@if $align == flex-start {
+		-webkit-box-align: start;
+		-ms-flex-align: start;
+	} @else if $align == flex-end {
+		-webkit-box-align: end;
+		-ms-flex-align: end;
+	} @else {
+		-webkit-box-align: $align;
+		-ms-flex-align: $align;
+	}
+	-webkit-align-items: $align;
+	-moz-align-items: $align;
+	align-items: $align;
+}
+@mixin justify-content($justify-content: flex-start) {
+	@if $justify-content == flex-start {
+		-webkit-box-pack: start;
+		-ms-flex-pack: start;
+	} @else if $justify-content == flex-end {
+		-webkit-box-pack: end;
+		-ms-flex-pack: end;
+	} @else if $justify-content == space-between {
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+	} @else if $justify-content == space-around {
+		-ms-flex-pack: distribute;		
+	} @else {
+		-webkit-box-pack: $justify-content;
+		-ms-flex-pack: $justify-content;
+	}
+	-webkit-justify-content: $justify-content;
+	-moz-justify-content: $justify-content;
+	justify-content: $justify-content;
+}
+@mixin flex($flex: 0 1 auto) {
+	-webkit-flex:$flex;
+	-ms-flex:$flex;
+	flex:$flex;
+}
+@mixin flex-direction($direction) {
+	-webkit-flex-direction: $direction;
+	-moz-flex-direction: $direction;
+	-ms-flex-direction: $direction;
+	flex-direction: $direction;
+}
+@mixin transform($transform) {
+	-webkit-transform:$transform;
+	transform:$transform;
+}
+@mixin optional-at-root($sel) {
+	@at-root #{if(not &, $sel, selector-append(&, $sel))} {
+	@content;
+	}
+}
+@mixin placeholder {
+	@include optional-at-root('::-webkit-input-placeholder') {
+		@content;
+	}
+	@include optional-at-root(':-moz-placeholder') {
+		@content;
+	}
+	@include optional-at-root('::-moz-placeholder') {
+		@content;
+	}
+	@include optional-at-root(':-ms-input-placeholder') {
+		@content;
+	}
+}
+@mixin clearfix {
+	:after {
+		content: "";
+		clear: both;
+		display: block;
+	}
+}
+@mixin super-linear-gradient($angle, $color-stops...) {
+	$_angle-with-vendor-prefix: "";
+	$_angle: "";
+	@if $angle == "to top" or $angle == "bottom" {
+	$_angle-with-vendor-prefix: bottom;
+	$_angle: to top;
+	} @else if $angle == "to right" or $angle == "left" {
+	$_angle-with-vendor-prefix: left;
+	$_angle: to right;
+	} @else if $angle == "to bottom" or $angle == "top" {
+	$_angle-with-vendor-prefix: top;
+	$_angle: to bottom;
+	} @else if $angle == "to left" or $angle == "right" {
+	$_angle-with-vendor-prefix: right;
+	$_angle: to left;
+	} @else if $angle == "to top right" or $angle == "bottom left" {
+	$_angle-with-vendor-prefix: bottom left;
+	$_angle: to top right;
+	} @else if $angle == "to bottom right" or $angle == "top left" {
+	$_angle-with-vendor-prefix: top left;
+	$_angle: to bottom right;
+	} @else if $angle == "to bottom left" or $angle == "top right" {
+	$_angle-with-vendor-prefix: top right;
+	$_angle: to bottom left;
+	} @else if $angle == "to top left" or $angle == "bottom right" {
+	$_angle-with-vendor-prefix: bottom right;
+	$_angle: to top left;
+	} @else {
+	$_angle-with-vendor-prefix: $angle % 360;
+	$_angle: (90 - $angle) % 360;
+	}
+	background: -webkit-linear-gradient($_angle-with-vendor-prefix, $color-stops);
+	background: -moz-linear-gradient($_angle-with-vendor-prefix, $color-stops);
+	background: -o-linear-gradient($_angle-with-vendor-prefix, $color-stops);
+	background: linear-gradient($_angle, $color-stops);
+}
+@mixin gradient-horizontal($start-color: #555, $end-color: #333, $start-percent: 0%, $end-percent: 100%) {
+	background-image: -webkit-linear-gradient(left, $start-color $start-percent, $end-color $end-percent);
+	background-image: -o-linear-gradient(left, $start-color $start-percent, $end-color $end-percent);
+	background-image: linear-gradient(to right, $start-color $start-percent, $end-color $end-percent);
+	background-repeat: repeat-x;
+}
+@mixin gradient-vertical($start-color: #555, $end-color: #333, $start-percent: 0%, $end-percent: 100%) {
+	background-image: -webkit-linear-gradient(top, $start-color $start-percent, $end-color $end-percent);
+	background-image: -o-linear-gradient(top, $start-color $start-percent, $end-color $end-percent);
+	background-image: linear-gradient(to bottom, $start-color $start-percent, $end-color $end-percent);
+	background-repeat: repeat-x;
+}
+@mixin gradient-directional($start-color: #555, $end-color: #333, $deg: 45deg) {
+	background-repeat: repeat-x;
+	background-image: -webkit-linear-gradient($deg, $start-color, $end-color);
+	background-image: -o-linear-gradient($deg, $start-color, $end-color);
+	background-image: linear-gradient($deg, $start-color, $end-color);
+}
+@mixin gradient-horizontal-three-colors($start-color: #00b3ee, $mid-color: #7a43b6, $color-stop: 50%, $end-color: #c3325f) {
+	background-image: -webkit-linear-gradient(left, $start-color, $mid-color $color-stop, $end-color);
+	background-image: -o-linear-gradient(left, $start-color, $mid-color $color-stop, $end-color);
+	background-image: linear-gradient(to right, $start-color, $mid-color $color-stop, $end-color);
+	background-repeat: no-repeat;
+}
+@mixin gradient-vertical-three-colors($start-color: #00b3ee, $mid-color: #7a43b6, $color-stop: 50%, $end-color: #c3325f) {
+	background-image: -webkit-linear-gradient($start-color, $mid-color $color-stop, $end-color);
+	background-image: -o-linear-gradient($start-color, $mid-color $color-stop, $end-color);
+	background-image: linear-gradient($start-color, $mid-color $color-stop, $end-color);
+	background-repeat: no-repeat;
+}
+@mixin gradient-radial($inner-color: #555, $outer-color: #333) {
+	background-image: -webkit-radial-gradient(circle, $inner-color, $outer-color);
+	background-image: radial-gradient(circle, $inner-color, $outer-color);
+	background-repeat: no-repeat;
+}
+@mixin gradient-striped($color: rgba(255,255,255,.15), $angle: 45deg) {
+	background-image: -webkit-linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
+	background-image: -o-linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
+	background-image: linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
+}

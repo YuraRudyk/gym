@@ -18,8 +18,27 @@
 <f:section name="Main">
 	<f:if condition="{data.header_layout} == 6">
 		<f:then>
-			<f:format.html>{data.bodytext}</f:format.html>
-			<f:render partial="Media/Gallery" arguments="{_all}" />
+			<div class="about control bg-img">
+				<f:image src="EXT:ls_template/Resources/Public/images/bg-gym_slider.png" alt="image description" />
+				<div class="container">
+					<h2 class="ttl">{data.subheader}</h2>
+					<div class="row">
+						<div class="col-12 col-md-2">
+							<div class="text">
+								<f:format.html>{data.bodytext}</f:format.html>
+							</div>
+						</div>
+						<div class="col-12 col-md-10">
+							<div class="video-holder">
+								<div class="bg-img control embed-responsive embed-responsive-16by9">
+										<f:render partial="Media/Gallery" arguments="{_all}" />
+									<a href="#" class="btn-play"><f:image src="EXT:ls_template/Resources/Public/images/ico-play.svg" alt="play" /></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</f:then>
 		<f:else>
 			<div class="ce-textpic ce-{gallery.position.horizontal} ce-{gallery.position.vertical}{f:if(condition: gallery.position.noWrap, then: ' ce-nowrap')}">

@@ -1,94 +1,30 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<f:layout name="Default" />
 
-<f:section name="main">
+<f:if condition="{subscriptions -> f:count()} > 0">
 	<div class="plans-column bg-img">
 		<div class="container">
-			<h2 class="ttl">Абонементи</h2>
+			<h2 class="ttl"><f:translate key="tx_lssimulators_domain_model_subscription.subscription" /></h2>
 		</div>
 		<div class="plans-holder bg-img">
 			<img src="images/bg-plans.png" alt="image description">
 			<div class="container">
-				<div class="row">
-					<div class="col-6 col-md-3">
-						<div class="thumbnail-plans white">
-							<div class="head">
-								<span class="price">80грн</span>
-								<small>Разовий</small>
+				<div class="row slider-06">
+					<f:for each="{subscriptions}" as="item" >
+						<div class="col-6 col-md-3">
+							<div class="thumbnail-plans {f:if(condition: item.white, then: 'white', else: 'black')}">
+								<div class="head">
+									<span class="price">{item.item.price} <f:translate key="tx_lssimulators_domain_model_subscription.price" /></span>
+									<small>{item.item.title}</small>
+								</div>
+								<f:format.html parseFuncTSPath="lib.parseFunc_RTE_subscription">{item.item.description}</f:format.html>
+								<a href="#" class="btn btn-{f:if(condition: item.white, then: 'black', else: 'white')}"><f:translate key="tx_lssimulators_domain_model_subscription.buy" /></a>
 							</div>
-							<ul class="list">
-								<li>Одне заняття</li>
-								<li>Консультація у тренера</li>
-								<li>Фітнес/Бокс</li>
-								<li>Басейн</li>
-							</ul>
-							<a href="#" class="btn btn-black">Замовити</a>
 						</div>
-					</div>
-					<!-- /col -->
-					<div class="col-6 col-md-3">
-						<div class="thumbnail-plans black">
-							<div class="head">
-								<span class="price">320грн</span>
-								<small>Місячний</small>
-							</div>
-							<ul class="list">
-								<li>8 занятть</li>
-								<li>Заняття з тренером</li>
-								<li>Фітнес/Бокс</li>
-								<li>Басейн</li>
-							</ul>
-							<a href="#" class="btn btn-white">Замовити</a>
-						</div>
-					</div>
-					<!-- /col -->
-					<div class="col-6 col-md-3">
-						<div class="thumbnail-plans white">
-							<div class="head">
-								<span class="price">2000грн</span>
-								<small>Річний</small>
-							</div>
-							<ul class="list">
-								<li>Безліміт занять</li>
-								<li>Заняття з тренером</li>
-								<li>Фітнес/Бокс</li>
-								<li>Басейн</li>
-							</ul>
-							<a href="#" class="btn btn-black">Замовити</a>
-						</div>
-					</div>
-					<!-- /col -->
+					</f:for>
 				</div>
 			</div>
 		</div>
 	</div>
+</f:if>
 
-	<div class="message">
-		<div class="container">
-			<h2>Маєш питання? Замов Консультацію</h2>
-			<a href="#modal-01" class="btn btn-white" data-toggle="modal">Замовити</a>
-		</div>
-	</div>
-
-	<div class="modal fade" id="modal-01" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered">
-			<div class="modal-content thumbnail-plans black">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalCenterTitle">Введіть ваш номер телефону</h5>
-					<a href="#" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
-				</div>
-				<div class="modal-body">
-					<form action="#">
-						<div class="row">
-							<div class="col-6"><input type="tel" placeholder="+380 95 00 00 000" class="form-control"></div>
-						</div>
-					</form>
-				</div>
-				<div class="modal-footer">
-					<input type="submit" value="Замовити" class="btn btn-white" data-dismiss="modal">
-				</div>
-			</div>
-		</div>
-	</div>
-</f:section>
 </html>

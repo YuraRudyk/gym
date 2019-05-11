@@ -28,18 +28,7 @@ page {
             <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800" rel="stylesheet">
             <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,700" rel="stylesheet">
 
-            <link rel="stylesheet" href="css/styles.css">
             <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script><![endif]-->
-
-
-            <script src="js/jquery-3.3.1.min.js"></script>
-            <script src="js/bootstrap.bundle.min.js"></script>
-            <script src="js/bootstrap.min.js"></script>
-            <script src="js/slick.min.js"></script>
-            <script src="js/uikit.min.js"></script>
-            <script src="js/jquery.matchHeight-min.js"></script>
-            <script src="js/jquery-ui.min.js"></script>
-            <script src="js/scripts.js"></script>
         )
     }
 

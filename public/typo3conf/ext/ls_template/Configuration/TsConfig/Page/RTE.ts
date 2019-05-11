@@ -1,11 +1,7 @@
 RTE {
-#    classes >
-#    classesAnchor >
 
-    # Add your classes here
-    classes {
-        text-left.name    = test
-        text-center.name  = test1
+    classes >
+    classesAnchor >
 
     default {
         # Convert all DIV to P tags
@@ -82,7 +78,7 @@ RTE {
                 showTagFreeClasses = 0
 
                 tags {
-                    span.allowedClasses = 
+                    span.allowedClasses =
                 }
             }
 

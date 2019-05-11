@@ -33,8 +33,21 @@ class SubscriptionController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
     public function listAction()
     {
         $subscriptions = $this->subscriptionRepository->findAll();
-//        \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($subscriptions);exit;
-        $this->view->assign('subscriptions', $subscriptions);
+        $items = [];
+        foreach ($subscriptions->toArray() as $key => $value) {
+            if ($key % 2 == 0) {
+                $items[$key] = [
+                    'white' => true,
+                    'item' => $value
+                ];
+            } else {
+                $items[$key] = [
+                    'white' => false,
+                    'item' => $value
+                ];
+            }
+        }
+        $this->view->assign('subscriptions', $items);
     }
 
     /**
