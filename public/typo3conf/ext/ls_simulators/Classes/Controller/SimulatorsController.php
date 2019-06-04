@@ -3,6 +3,8 @@ namespace Simulators\LsSimulators\Controller;
 
 use TYPO3\CMS\Extbase\Domain\Repository\CategoryRepository;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
+
 /***
  *
  * This file is part of the "Simulators" Extension for TYPO3 CMS.
@@ -67,8 +69,10 @@ class SimulatorsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContr
         $similar = null;
         if ($simulators->getCategories()->count()) {
             foreach ($simulators->getCategories() as $category) {
-                if ($category->getParent()->getUid() == 4) {
-                    $similar = $this->simulatorsRepository->findByCategories($category->getUid(), 15);
+                if ($category->getParent()) {
+                    if ($category->getParent()->getUid() == 4) {
+                        $similar = $this->simulatorsRepository->findByCategories($category->getUid(), 15);
+                    }
                 }
             }
         }

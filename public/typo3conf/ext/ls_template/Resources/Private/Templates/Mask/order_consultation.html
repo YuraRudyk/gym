@@ -1,0 +1,27 @@
+<div class="message">
+    <div class="container">
+        <h2>{data.tx_mask_order_consultation_description}</h2>
+        <a href="#modal-01" class="btn btn-white" data-toggle="modal">{data.tx_mask_order_consultation_button}</a>
+    </div>
+</div>
+
+<div class="modal fade" id="modal-01" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content thumbnail-plans black">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle">{data.tx_mask_order_consultation_form_description}</h5>
+                <a href="#" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+            </div>
+            <div class="modal-body">
+                <form action="#">
+                    <div class="row">
+                        <div class="col-6"><input type="tel" placeholder="+380 95 00 00 000" class="form-control"></div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <input type="submit" value="{data.tx_mask_order_consultation_form_button_label}" class="btn btn-white" data-dismiss="modal">
+            </div>
+        </div>
+    </div>
+</div>

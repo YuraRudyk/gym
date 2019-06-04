@@ -41,35 +41,58 @@
 			</div>
 		</f:then>
 		<f:else>
-			<div class="ce-textpic ce-{gallery.position.horizontal} ce-{gallery.position.vertical}{f:if(condition: gallery.position.noWrap, then: ' ce-nowrap')}">
-				<f:if condition="{gallery.position.vertical} != 'below'">
-					<f:render partial="Media/Gallery" arguments="{_all}" />
-				</f:if>
-
-				<f:if condition="{data.bodytext}">
-					<f:then>
-						<div class="ce-bodytext">
-							<f:if condition="{gallery.position.noWrap}">
-								<f:render partial="Header/All" arguments="{_all}" />
-							</f:if>
-							<f:format.html>{data.bodytext}</f:format.html>
-						</div>
-					</f:then>
-					<f:else>
-						<f:if condition="{gallery.position.noWrap}">
-							<f:if condition="{data.header}">
-								<div class="ce-bodytext">
-									<f:render partial="Header/All" arguments="{_all}" />
+			<f:if condition="{data.header_layout} == 7">
+				<f:then>
+					<div class="info-gym">
+						<div class="container">
+							<h2 class="ttl">Тренажерний зал</h2>
+							<div class="row">
+								<div class="col-12 col-lg-6">
+									<div class="bg-img embed-responsive embed-responsive-16by9">
+										<f:render partial="Media/Gallery" arguments="{_all}" />
+									</div>
 								</div>
-							</f:if>
+								<div class="col-12 col-lg-6">
+									<f:format.raw>
+										{data.bodytext}
+									</f:format.raw>
+								</div>
+							</div>
+						</div>
+					</div>
+				</f:then>
+				<f:else>
+					<div class="ce-textpic ce-{gallery.position.horizontal} ce-{gallery.position.vertical}{f:if(condition: gallery.position.noWrap, then: ' ce-nowrap')}">
+						<f:if condition="{gallery.position.vertical} != 'below'">
+							<f:render partial="Media/Gallery" arguments="{_all}" />
 						</f:if>
-					</f:else>
-				</f:if>
 
-				<f:if condition="{gallery.position.vertical} == 'below'">
-					<f:render partial="Media/Gallery" arguments="{_all}" />
-				</f:if>
-			</div>
+						<f:if condition="{data.bodytext}">
+							<f:then>
+								<div class="ce-bodytext">
+									<f:if condition="{gallery.position.noWrap}">
+										<f:render partial="Header/All" arguments="{_all}" />
+									</f:if>
+									<f:format.html>{data.bodytext}</f:format.html>
+								</div>
+							</f:then>
+							<f:else>
+								<f:if condition="{gallery.position.noWrap}">
+									<f:if condition="{data.header}">
+										<div class="ce-bodytext">
+											<f:render partial="Header/All" arguments="{_all}" />
+										</div>
+									</f:if>
+								</f:if>
+							</f:else>
+						</f:if>
+
+						<f:if condition="{gallery.position.vertical} == 'below'">
+							<f:render partial="Media/Gallery" arguments="{_all}" />
+						</f:if>
+					</div>
+				</f:else>
+			</f:if>
 		</f:else>
 	</f:if>
 </f:section>

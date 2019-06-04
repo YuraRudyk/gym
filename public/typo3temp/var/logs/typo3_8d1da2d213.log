@@ -34,3 +34,5 @@ Sun, 10 Feb 2019 12:52:34 +0200 [WARNING] request="98266d903d01f" component="TYP
 Sun, 10 Feb 2019 12:52:34 +0200 [WARNING] request="98266d903d01f" component="TYPO3.CMS.Core.Type.File.ImageInfo": I could not retrieve the image size for file /var/www/legion-sport/public/typo3conf/ext/ls_template 
 Sun, 10 Feb 2019 12:53:00 +0200 [WARNING] request="6de2ed0e607ed" component="TYPO3.CMS.Core.Type.File.ImageInfo": I could not retrieve the image size for file /var/www/legion-sport/public/typo3conf/ext/ls_simulators 
 Sun, 10 Feb 2019 12:53:00 +0200 [WARNING] request="6de2ed0e607ed" component="TYPO3.CMS.Core.Type.File.ImageInfo": I could not retrieve the image size for file /var/www/legion-sport/public/typo3conf/ext/ls_template 
+Sat, 11 May 2019 12:38:05 +0300 [WARNING] request="6bb6696a7a897" component="TYPO3.CMS.Core.Type.File.ImageInfo": I could not retrieve the image size for file /var/www/legion-sport/public/typo3conf/ext/ls_simulators 
+Sat, 11 May 2019 12:38:05 +0300 [WARNING] request="6bb6696a7a897" component="TYPO3.CMS.Core.Type.File.ImageInfo": I could not retrieve the image size for file /var/www/legion-sport/public/typo3conf/ext/ls_template 

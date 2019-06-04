@@ -63,6 +63,26 @@
                 "options": {
                     "2": "rte"
                 }
+            },
+            "order_consultation": {
+                "label": "Order a Consultation",
+                "key": "order_consultation",
+                "shortLabel": "",
+                "description": "",
+                "icon": "",
+                "color": "#000000",
+                "columns": [
+                    "tx_mask_order_consultation_description",
+                    "tx_mask_order_consultation_button",
+                    "tx_mask_order_consultation_form_description",
+                    "tx_mask_order_consultation_form_button_label"
+                ],
+                "labels": [
+                    "Description",
+                    "Button Label",
+                    "Description in Form",
+                    "Button Label in Form"
+                ]
             }
         },
         "sql": {
@@ -114,6 +134,26 @@
             "tx_mask_backgroun": {
                 "tt_content": {
                     "tx_mask_backgroun": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_order_consultation_description": {
+                "tt_content": {
+                    "tx_mask_order_consultation_description": "tinytext"
+                }
+            },
+            "tx_mask_order_consultation_button": {
+                "tt_content": {
+                    "tx_mask_order_consultation_button": "tinytext"
+                }
+            },
+            "tx_mask_order_consultation_form_description": {
+                "tt_content": {
+                    "tx_mask_order_consultation_form_description": "tinytext"
+                }
+            },
+            "tx_mask_order_consultation_form_button_label": {
+                "tt_content": {
+                    "tx_mask_order_consultation_form_button_label": "tinytext"
                 }
             }
         },
@@ -348,6 +388,58 @@
                 },
                 "l10n_mode": "copy",
                 "key": "backgroun"
+            },
+            "tx_mask_order_consultation_description": {
+                "config": {
+                    "type": "input",
+                    "eval": "",
+                    "default": "",
+                    "placeholder": "",
+                    "size": "",
+                    "max": "",
+                    "is_in": ""
+                },
+                "exclude": "1",
+                "key": "order_consultation_description"
+            },
+            "tx_mask_order_consultation_button": {
+                "config": {
+                    "type": "input",
+                    "eval": "",
+                    "default": "",
+                    "placeholder": "",
+                    "size": "",
+                    "max": "",
+                    "is_in": ""
+                },
+                "exclude": "1",
+                "key": "order_consultation_button"
+            },
+            "tx_mask_order_consultation_form_description": {
+                "config": {
+                    "type": "input",
+                    "eval": "",
+                    "default": "",
+                    "placeholder": "",
+                    "size": "",
+                    "max": "",
+                    "is_in": ""
+                },
+                "exclude": "1",
+                "key": "order_consultation_form_description"
+            },
+            "tx_mask_order_consultation_form_button_label": {
+                "config": {
+                    "type": "input",
+                    "eval": "",
+                    "default": "",
+                    "placeholder": "",
+                    "size": "",
+                    "max": "",
+                    "is_in": ""
+                },
+                "exclude": "1",
+                "key": "order_consultation_form_button_label"
             }
         }
     },
