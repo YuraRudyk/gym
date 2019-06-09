@@ -66,6 +66,7 @@ return array(
     'GeorgRinger\\News\\' => array($baseDir . '/public/typo3conf/ext/news/Classes'),
     'FluidTYPO3\\Vhs\\' => array($baseDir . '/public/typo3conf/ext/vhs/Classes'),
     'Extcode\\Cart\\' => array($baseDir . '/public/typo3conf/ext/cart/Classes'),
+    'Extcode\\CartProducts\\' => array($baseDir . '/public/typo3conf/ext/cart_products/Classes'),
     'EBT\\ExtensionBuilder\\' => array($baseDir . '/public/typo3conf/ext/extension_builder/Classes'),
     'Doctrine\\Instantiator\\' => array($vendorDir . '/doctrine/instantiator/src/Doctrine/Instantiator'),
     'Doctrine\\Common\\Inflector\\' => array($vendorDir . '/doctrine/inflector/lib/Doctrine/Common/Inflector'),

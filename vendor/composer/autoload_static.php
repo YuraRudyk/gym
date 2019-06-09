@@ -102,6 +102,7 @@ class ComposerStaticInitfc63e3e7a3c032324ed0778fa3b0d0d4
         'E' => 
         array (
             'Extcode\\Cart\\' => 13,
+            'Extcode\\CartProducts\\' => 21,
             'EBT\\ExtensionBuilder\\' => 21,
         ),
         'D' => 
@@ -359,6 +360,10 @@ class ComposerStaticInitfc63e3e7a3c032324ed0778fa3b0d0d4
         'Extcode\\Cart\\' => 
         array (
             0 => __DIR__ . '/../..' . '/public/typo3conf/ext/cart/Classes',
+        ),
+        'Extcode\\CartProducts\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/public/typo3conf/ext/cart_products/Classes',
         ),
         'EBT\\ExtensionBuilder\\' => 
         array (

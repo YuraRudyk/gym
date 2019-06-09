@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "5cbea3857c2ceefaf2bad4a61b7f2de9",
+    "content-hash": "082a2c3cd3499d4f23061b03cc45971c",
     "packages": [
         {
             "name": "cogpowered/finediff",
@@ -691,6 +691,68 @@
             "time": "2019-01-22T11:12:28+00:00"
         },
         {
+            "name": "extcode/cart-products",
+            "version": "v1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/extcode/cart_products.git",
+                "reference": "ae6f11ad2e7ccbeaf79a85fbfed976770679193a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/extcode/cart_products/zipball/ae6f11ad2e7ccbeaf79a85fbfed976770679193a",
+                "reference": "ae6f11ad2e7ccbeaf79a85fbfed976770679193a",
+                "shasum": ""
+            },
+            "require": {
+                "extcode/cart": "^5.0",
+                "php": ">=7.0.0 <7.3",
+                "typo3/cms-core": "^8.7"
+            },
+            "replace": {
+                "cart_products": "self.version"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.0",
+                "helmich/typo3-typoscript-lint": "^1.4",
+                "nimut/testing-framework": "^2.0 || ^3.0 || ^4.0"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "extension-key": "cart_products",
+                    "cms-package-dir": "{$vendor-dir}/typo3/cms",
+                    "app-dir": ".Build",
+                    "web-dir": ".Build/public"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Extcode\\CartProducts\\": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Daniel Lorenz",
+                    "email": "ext.cart@extco.de",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Shopping Cart(s) for TYPO3 - Products",
+            "homepage": "https://cart.extco.de",
+            "keywords": [
+                "TYPO3 CMS",
+                "cart",
+                "products",
+                "shopping cart"
+            ],
+            "time": "2019-01-24T10:15:13+00:00"
+        },
+        {
             "name": "fluidtypo3/vhs",
             "version": "5.0.1",
             "source": {
@@ -1351,12 +1413,12 @@
             "version": "v1.1.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/phlylabs/idna-convert.git",
+                "url": "https://github.com/algo26-matthias/idna-convert.git",
                 "reference": "a6dfb6f87611e3a89d2eec4924a0f51db755c573"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phlylabs/idna-convert/zipball/a6dfb6f87611e3a89d2eec4924a0f51db755c573",
+                "url": "https://api.github.com/repos/algo26-matthias/idna-convert/zipball/a6dfb6f87611e3a89d2eec4924a0f51db755c573",
                 "reference": "a6dfb6f87611e3a89d2eec4924a0f51db755c573",
                 "shasum": ""
             },
@@ -1393,6 +1455,7 @@
                 "idna",
                 "php"
             ],
+            "abandoned": "algo26-matthias/idna-convert",
             "time": "2016-06-19T18:08:43+00:00"
         },
         {

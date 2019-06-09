@@ -110,14 +110,17 @@ return [
         'viewpage' => [
             'packagePath' => 'typo3/sysext/viewpage/',
         ],
+        'cart' => [
+            'packagePath' => 'typo3conf/ext/cart/',
+        ],
+        'cart_products' => [
+            'packagePath' => 'typo3conf/ext/cart_products/',
+        ],
         'gridelements' => [
             'packagePath' => 'typo3conf/ext/gridelements/',
         ],
         'mask' => [
             'packagePath' => 'typo3conf/ext/mask/',
-        ],
-        'cart' => [
-            'packagePath' => 'typo3conf/ext/cart/',
         ],
         'extension_builder' => [
             'packagePath' => 'typo3conf/ext/extension_builder/',

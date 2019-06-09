@@ -33,7 +33,8 @@
 		"gridelementsteam/gridelements": "^8.2",
 		"comsolit/owl_slider": "^2.5",
 		"extcode/cart": "5.1.4",
-		"georgringer/news": "^7.0"
+		"georgringer/news": "^7.0",
+		"extcode/cart-products": "^1.0"
 	},
 	"autoload": {
 		"psr-4": {
