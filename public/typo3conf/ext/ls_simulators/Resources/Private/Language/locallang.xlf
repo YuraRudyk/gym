@@ -30,6 +30,19 @@
 			<trans-unit id="tx_lssimulators_domain_model_subscription.currency">
                 <source>грн</source>
             </trans-unit>
+            <trans-unit id="tx_lssimulators_domain_model_subscription.show.detail">
+                <source>Детальніше</source>
+            </trans-unit>
+            <trans-unit id="tx_lssimulators_domain_model_subscription.list_page.header">
+                <source>Магазин</source>
+            </trans-unit>
+            <trans-unit id="tx_lssimulators_domain_model_subscription.slider.header">
+                <source>Слайдер</source>
+            </trans-unit>
+            <trans-unit id="tx_lssimulators_domain_model_subscription.slider.link_to_detail.title">
+                <source>Детально</source>
+            </trans-unit>
+
             <trans-unit id="tx_lssimulators_domain_model_subscription.characteristic">
                 <source>Технічні характеристики і опис:</source>
             </trans-unit>

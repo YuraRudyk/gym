@@ -1,77 +1,89 @@
-<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-      xmlns:cart="http://typo3.org/ns/Extcode/Cart/ViewHelpers"
-      xmlns:cartproducts="http://typo3.org/ns/Extcode/CartProducts/ViewHelpers"
-      data-namespace-typo3-fluid="true">
-
-<f:layout name="Default"/>
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
 
 <f:section name="main">
-    <cartproducts:canonicalTag product="{product}" />
-
-    <cart:format.nothing>
-        <cart:titleTag>
-            <f:format.htmlentitiesDecode>{product.title}</f:format.htmlentitiesDecode>
-        </cart:titleTag>
-    </cart:format.nothing>
-
-    <h1>{product.title}</h1>
-
-    <f:if condition="{product.images}">
-        <f:image src="{product.firstImage.originalResource.originalFile.uid}"
-                 title="{product.firstImage.originalResource.title}"
-                 alt="{product.firstImage.originalResource.title}"
-                 width="{settings.showAction.media.image.size.medium.maxWidth}"
-                 height="{settings.showAction.media.image.size.medium.maxHeight}" />
-
-        <f:if condition="{product.images -> f:count()} > 1">
-            <f:for each="{product.images}" as="image">
-                <f:image src="{image.originalResource.originalFile.uid}"
-                         title="{image.originalResource.title}"
-                         alt="{image.originalResource.title}"
-                         width="{settings.showAction.media.image.size.small.maxWidth}"
-                         height="{settings.showAction.media.image.size.small.maxHeight}"  />
-            </f:for>
-        </f:if>
-    </f:if>
-
-    <div>
-        <f:format.raw>
-            {product.teaser -> f:format.html()}
-        </f:format.raw>
-    </div>
-    <f:if condition="{product.tags}">
-        <div>
-            <f:for each="{product.tags}" as="tag">
-                <span>{tag.title}</span>
-            </f:for>
-        </div>
-    </f:if>
-    <div>
-        <f:format.raw>
-            {product.description -> f:format.html()}
-        </f:format.raw>
-    </div>
-
-    <f:if condition="{product.productContent}">
-        <f:for each="{product.productContent}" as="content" iteration="iterator">
-            <div id="content-{iterator.cycle}" class="content-element">
-                <f:cObject typoscriptObjectPath="lib.renderContent" data="{content.uid}" />
+    <div class="shop single-page bg-img">
+        <div class="container">
+            <h2 class="ttl">{product.title}</h2>
+            <div class="row">
+                <div class="col-12 col-md-5 col-lg-3">
+                    <div class="slider-04">
+                        <f:for each="{product.images}" as="image">
+                            <div>
+                                <div class="thumbnail">
+                                    <div class="main-img">
+                                        <f:image image="{image}" alt="{image.alternative}" title="{image.title}" />
+                                    </div>
+                                </div>
+                            </div>
+                        </f:for>
+                    </div>
+                    <div class="slider-nav">
+                        <f:for each="{product.images}" as="image">
+                            <div>
+                                <div class="thumbnail">
+                                    <div class="main-img">
+                                        <f:image image="{image}" alt="{image.alternative}" title="{image.title}" />
+                                    </div>
+                                </div>
+                            </div>
+                        </f:for>
+                    </div>
+                </div>
+                <div class="col-12 col-md-7 col-lg-9">
+                    <div class="detail-information">
+                        <div class="row">
+                            <div class="col-12 col-lg-9">
+                                <dl>
+                                    <dd>
+                                        <f:translate key="tx_lssimulators_domain_model_subscription.price" extensionName="LsSimulators" />: <b>{product.price} <f:translate key="tx_lssimulators_domain_model_subscription.currency" extensionName="LsSimulators" /></b>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="col-12 col-lg-3">
+                                <f:render partial="Product/CartForm" arguments="{product: product, pid: 12}"/>
+                                <f:comment>
+                                    <f:link.action action="cart" class="btn btn-black2" arguments="{simulators:product}"><f:translate key="tx_lssimulators_domain_model_subscription.buy" extensionName="LsSimulators" /></f:link.action>
+                                </f:comment>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /detail-information -->
+                    <h4><f:translate key="tx_lssimulators_domain_model_subscription.characteristic" extensionName="LsSimulators" /></h4>
+                    <f:format.html parseFuncTSPath="lib.parseFunc_RTE_simulator">{product.description}</f:format.html>
+                </div>
             </div>
-        </f:for>
-    </f:if>
 
-    <f:cObject typoscriptObjectPath="lib.cartProduct.showForm" />
-
-    <f:if condition="{product.relatedProducts}">
-        <ul>
-        <f:for each="{product.relatedProducts}" as="relatedProduct">
-            <li>
-                <f:render partial="Product/RelatedProduct" arguments="{product: relatedProduct}"/>
-            </li>
-        </f:for>
-        </ul>
-    </f:if>
-
-    <f:link.external class="btn btn-default" uri="javascript:history.back();">{f:translate(key: 'tx_cartproducts.history_back')}</f:link.external>
+            <f:if condition="{product.relatedProducts}">
+                <div class="similar-products">
+                    <h2 class="ttl"><f:translate key="tx_lssimulators_domain_model_subscription.similar_products" extensionName="LsSimulators" /></h2>
+                    <div class="row slider-05">
+                        <f:for each="{product.relatedProducts}" as="item">
+                            <div class="col-3">
+                                <div class="thumbnail small-width">
+                                    <div class="main-img">
+                                        <f:if condition="{item.images.0}">
+                                            <f:image image="{item.images.0}" alt="{item.images.0.alternative}" title="{item.images.0.title}" />
+                                        </f:if>
+                                    </div>
+                                    <div class="text">
+                                        <h4>{item.title}</h4>
+                                        <small class="price">{item.price} <f:translate key="tx_lssimulators_domain_model_subscription.currency" extensionName="LsSimulators" /></small>
+                                    </div>
+                                    <div class="hover-box">
+                                        <f:link.action action="show" class="btn btn-red" arguments="{simulators:item}">
+                                            <f:translate key="tx_lssimulators_domain_model_subscription.show.detail" extensionName="LsSimulators" />
+                                        </f:link.action>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /item -->
+                        </f:for>
+                    </div>
+                </div>
+            </f:if>
+            <!-- /similar-products -->
+        </div>
+    </div>
 </f:section>
 </html>

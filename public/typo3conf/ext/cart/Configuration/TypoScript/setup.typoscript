@@ -131,21 +131,21 @@ plugin.tx_cart {
 
         showCartAction {
             showPartials {
-                couponForm = true
+                couponForm = false
 
                 # if setting shippingAddressForm to false please disable all validations too
-                shippingAddressForm = true
+                shippingAddressForm = false
 
-                shippingMethodForm = true
-                paymentMethodForm = true
+                shippingMethodForm = false
+                paymentMethodForm = false
             }
 
             summary {
                 fields {
-                    cart.net = true
-                    cart.taxes = true
-                    discount.gross = true
-                    service.gross = true
+                    cart.net = false
+                    cart.taxes = false
+                    discount.gross = false
+                    service.gross = false
                     total.gross = true
                 }
             }
@@ -199,6 +199,17 @@ plugin.tx_cart {
                     }
                     city {
                         validator = {$plugin.tx_cart.settings.validation.billingAddress.fields.city.validator}
+                    }
+                    country {
+                        validator = {$plugin.tx_cart.settings.validation.billingAddress.fields.country.validator}
+                    }
+
+                    taxIdentificationNumber {
+                        validator = {$plugin.tx_cart.settings.validation.billingAddress.fields.taxIdentificationNumber.validator}
+                    }
+
+                    title {
+                        validator = {$plugin.tx_cart.settings.validation.billingAddress.fields.title.validator}
                     }
                 }
             }

@@ -47,36 +47,36 @@
                         </div>
                     </f:if>
 
-                    <f:if condition="{0: settings.validation.billingAddress.fields.title.validator} != {0: 'Empty'}">
-                        <div class="field title">
-                            <f:if condition="{0: settings.validation.billingAddress.fields.title.validator} == {0: 'NotEmpty'}">
+                    <f:if condition="{0: settings.validation.billingAddress.fields.lastName.validator} != {0: 'Empty'}">
+                        <div class="field last-name">
+                            <f:if condition="{0: settings.validation.billingAddress.fields.lastName.validator} == {0: 'NotEmpty'}">
                                 <f:then>
-                                    <label for="billingAddress-title" class="required">
-                                        <f:translate key="tx_cart_domain_model_order_address.title"/>
+                                    <label for="billingAddress-lastName" class="required">
+                                        <f:translate key="tx_cart_domain_model_order_address.last_name"/>
                                         <em>*</em>
                                     </label>
                                     <div class="input-box">
-                                        <f:form.textfield id="billingAddress-title"
+                                        <f:form.textfield id="billingAddress-lastName"
                                                           class="form-control"
-                                                          name="billingAddress[title]"
-                                                          value="{billingAddress.title}"
+                                                          name="billingAddress[lastName]"
+                                                          value="{billingAddress.lastName}"
                                                           required="true"/>
                                         <f:form.validationResults for="billingAddress">
-                                            <f:if condition="{validationResults.flattenedErrors.title}">
-                                                <div class="validation-error alert alert-danger">{validationResults.flattenedErrors.title.0.message}</div>
+                                            <f:if condition="{validationResults.flattenedErrors.lastName}">
+                                                <div class="validation-error alert alert-danger">{validationResults.flattenedErrors.lastName.0.message}</div>
                                             </f:if>
                                         </f:form.validationResults>
                                     </div>
                                 </f:then>
                                 <f:else>
-                                    <label for="billingAddress-title">
-                                        <f:translate key="tx_cart_domain_model_order_address.title"/>
+                                    <label for="billingAddress-lastName">
+                                        <f:translate key="tx_cart_domain_model_order_address.last_name"/>
                                     </label>
                                     <div class="input-box">
-                                        <f:form.textfield id="billingAddress-title"
+                                        <f:form.textfield id="billingAddress-lastName"
                                                           class="form-control"
-                                                          name="billingAddress[title]"
-                                                          value="{billingAddress.title}"/>
+                                                          name="billingAddress[lastName]"
+                                                          value="{billingAddress.lastName}"/>
                                     </div>
                                 </f:else>
                             </f:if>
@@ -119,36 +119,36 @@
                         </div>
                     </f:if>
 
-                    <f:if condition="{0: settings.validation.billingAddress.fields.lastName.validator} != {0: 'Empty'}">
-                        <div class="field last-name">
-                            <f:if condition="{0: settings.validation.billingAddress.fields.lastName.validator} == {0: 'NotEmpty'}">
+                    <f:if condition="{0: settings.validation.billingAddress.fields.title.validator} != {0: 'Empty'}">
+                        <div class="field title">
+                            <f:if condition="{0: settings.validation.billingAddress.fields.title.validator} == {0: 'NotEmpty'}">
                                 <f:then>
-                                    <label for="billingAddress-lastName" class="required">
-                                        <f:translate key="tx_cart_domain_model_order_address.last_name"/>
+                                    <label for="billingAddress-title" class="required">
+                                        <f:translate key="tx_cart_domain_model_order_address.title"/>
                                         <em>*</em>
                                     </label>
                                     <div class="input-box">
-                                        <f:form.textfield id="billingAddress-lastName"
+                                        <f:form.textfield id="billingAddress-title"
                                                           class="form-control"
-                                                          name="billingAddress[lastName]"
-                                                          value="{billingAddress.lastName}"
+                                                          name="billingAddress[title]"
+                                                          value="{billingAddress.title}"
                                                           required="true"/>
                                         <f:form.validationResults for="billingAddress">
-                                            <f:if condition="{validationResults.flattenedErrors.lastName}">
-                                                <div class="validation-error alert alert-danger">{validationResults.flattenedErrors.lastName.0.message}</div>
+                                            <f:if condition="{validationResults.flattenedErrors.title}">
+                                                <div class="validation-error alert alert-danger">{validationResults.flattenedErrors.title.0.message}</div>
                                             </f:if>
                                         </f:form.validationResults>
                                     </div>
                                 </f:then>
                                 <f:else>
-                                    <label for="billingAddress-lastName">
-                                        <f:translate key="tx_cart_domain_model_order_address.last_name"/>
+                                    <label for="billingAddress-title">
+                                        <f:translate key="tx_cart_domain_model_order_address.title"/>
                                     </label>
                                     <div class="input-box">
-                                        <f:form.textfield id="billingAddress-lastName"
+                                        <f:form.textfield id="billingAddress-title"
                                                           class="form-control"
-                                                          name="billingAddress[lastName]"
-                                                          value="{billingAddress.lastName}"/>
+                                                          name="billingAddress[title]"
+                                                          value="{billingAddress.title}"/>
                                     </div>
                                 </f:else>
                             </f:if>

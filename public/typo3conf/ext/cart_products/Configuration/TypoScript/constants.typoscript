@@ -9,4 +9,17 @@ plugin.tx_cartproducts {
         storagePid =
         recursive =
     }
+
+    settings {
+        categories {
+            simulators {
+                # cat=plugin.ls_template/categories; type=string; label= Uid of Simulators category
+                value = 4
+            }
+            typeOfTraining {
+                # cat=plugin.ls_template/categories; type=string; label= Uid of "Type of training" category
+                value = 5
+            }
+        }
+    }
 }

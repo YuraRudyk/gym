@@ -2,18 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b0eca77-44f8-4f72-9012-99becd2eb86c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/typo3conf/ext/cart_products/Resources/Private/Partials/Product/List/List.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/typo3conf/ext/cart_products/Resources/Private/Templates/Product/Show.html" afterPath="$PROJECT_DIR$/public/typo3conf/ext/cart_products/Resources/Private/Templates/Product/Show_old.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/access.log" afterPath="$PROJECT_DIR$/access.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/typo3conf/PackageStates.php" afterPath="$PROJECT_DIR$/public/typo3conf/PackageStates.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/typo3conf/deprecation_e693ae6e9f.log" afterPath="$PROJECT_DIR$/public/typo3conf/deprecation_e693ae6e9f.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/error.log" afterPath="$PROJECT_DIR$/error.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/typo3conf/LocalConfiguration.php" afterPath="$PROJECT_DIR$/public/typo3conf/LocalConfiguration.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/typo3conf/ext/cart/Classes/Controller/Cart/ProductController.php" afterPath="$PROJECT_DIR$/public/typo3conf/ext/cart/Classes/Controller/Cart/ProductController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/typo3conf/ext/cart/Classes/Utility/OrderUtility.php" afterPath="$PROJECT_DIR$/public/typo3conf/ext/cart/Classes/Utility/OrderUtility.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/typo3conf/ext/cart/Configuration/TypoScript/constants.typoscript" afterPath="$PROJECT_DIR$/public/typo3conf/ext/cart/Configuration/TypoScript/constants.typoscript" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/typo3conf/ext/cart/Configuration/TypoScript/setup.typoscript" afterPath="$PROJECT_DIR$/public/typo3conf/ext/cart/Configuration/TypoScript/setup.typoscript" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/typo3conf/ext/cart/Resources/Private/Partials/Cart/OrderForm/Address/Billing.html" afterPath="$PROJECT_DIR$/public/typo3conf/ext/cart/Resources/Private/Partials/Cart/OrderForm/Address/Billing.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/typo3conf/ext/cart/Resources/Private/Partials/Cart/OrderForm/Cart.html" afterPath="$PROJECT_DIR$/public/typo3conf/ext/cart/Resources/Private/Partials/Cart/OrderForm/Cart.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/typo3conf/ext/cart/Resources/Private/Partials/Cart/OrderForm/Summary.html" afterPath="$PROJECT_DIR$/public/typo3conf/ext/cart/Resources/Private/Partials/Cart/OrderForm/Summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/typo3conf/ext/cart/Resources/Private/Partials/Cart/ProductForm.html" afterPath="$PROJECT_DIR$/public/typo3conf/ext/cart/Resources/Private/Partials/Cart/ProductForm.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/typo3conf/ext/cart/Resources/Private/Templates/Cart/Cart/Show.html" afterPath="$PROJECT_DIR$/public/typo3conf/ext/cart/Resources/Private/Templates/Cart/Cart/Show.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/typo3conf/ext/cart/Resources/Public/Stylesheets/cart.css" afterPath="$PROJECT_DIR$/public/typo3conf/ext/cart/Resources/Public/Stylesheets/cart.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/typo3conf/ext/cart_products/Classes/Controller/ProductController.php" afterPath="$PROJECT_DIR$/public/typo3conf/ext/cart_products/Classes/Controller/ProductController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/typo3conf/ext/cart_products/Configuration/FlexForms/ProductsPlugin.xml" afterPath="$PROJECT_DIR$/public/typo3conf/ext/cart_products/Configuration/FlexForms/ProductsPlugin.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/typo3conf/ext/cart_products/Configuration/TypoScript/constants.typoscript" afterPath="$PROJECT_DIR$/public/typo3conf/ext/cart_products/Configuration/TypoScript/constants.typoscript" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/typo3conf/ext/cart_products/Configuration/TypoScript/setup.typoscript" afterPath="$PROJECT_DIR$/public/typo3conf/ext/cart_products/Configuration/TypoScript/setup.typoscript" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/typo3conf/ext/cart_products/Resources/Private/Language/locallang_be.xlf" afterPath="$PROJECT_DIR$/public/typo3conf/ext/cart_products/Resources/Private/Language/locallang_be.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/typo3conf/ext/cart_products/Resources/Private/Partials/Product/CartForm.html" afterPath="$PROJECT_DIR$/public/typo3conf/ext/cart_products/Resources/Private/Partials/Product/CartForm.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/typo3conf/ext/cart_products/Resources/Private/Partials/Product/List/List.html" afterPath="$PROJECT_DIR$/public/typo3conf/ext/cart_products/Resources/Private/Partials/Product/List/List.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/typo3conf/ext/cart_products/Resources/Private/Templates/Product/List.html" afterPath="$PROJECT_DIR$/public/typo3conf/ext/cart_products/Resources/Private/Templates/Product/List.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/typo3conf/ext/cart_products/ext_localconf.php" afterPath="$PROJECT_DIR$/public/typo3conf/ext/cart_products/ext_localconf.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/typo3conf/ext/ls_simulators/Resources/Private/Language/locallang.xlf" afterPath="$PROJECT_DIR$/public/typo3conf/ext/ls_simulators/Resources/Private/Language/locallang.xlf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/typo3conf/ext/ls_simulators/Resources/Private/Templates/Simulators/List.html" afterPath="$PROJECT_DIR$/public/typo3conf/ext/ls_simulators/Resources/Private/Templates/Simulators/List.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/typo3temp/var/logs/typo3_8d1da2d213.log" afterPath="$PROJECT_DIR$/public/typo3temp/var/logs/typo3_8d1da2d213.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/installed.json" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/typo3conf/ext/ls_template/Resources/Public/markup/js/scripts.js" afterPath="$PROJECT_DIR$/public/typo3conf/ext/ls_template/Resources/Public/markup/js/scripts.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,31 +40,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Table.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart_products/Resources/Private/Partials/Product/List/Table.html">
+      <file leaf-file-name="ProductController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart_products/Classes/Controller/ProductController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="67">
-              <caret line="22" column="48" lean-forward="false" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
+            <state relative-caret-position="163">
+              <caret line="179" column="66" lean-forward="false" selection-start-line="179" selection-start-column="66" selection-end-line="179" selection-end-column="66" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TeaserProductsPlugin.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart_products/Configuration/FlexForms/TeaserProductsPlugin.xml">
+      <file leaf-file-name="Subscription.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart_products/Resources/Private/Partials/Product/List/Subscription.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="20" column="46" lean-forward="true" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="List.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/ls_simulators/Resources/Private/Templates/Simulators/List.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="16" column="22" lean-forward="false" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+            <state relative-caret-position="126">
+              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -58,58 +63,18 @@
       <file leaf-file-name="Show.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart_products/Resources/Private/Templates/Product/Show.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="62" column="52" lean-forward="false" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="52" />
+            <state relative-caret-position="288">
+              <caret line="43" column="110" lean-forward="false" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="110" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ShowForm.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart_products/Resources/Private/Templates/Product/ShowForm.html">
+      <file leaf-file-name="CartFormSubscription.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart_products/Resources/Private/Partials/Product/CartFormSubscription.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="43" lean-forward="false" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProductController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart_products/Classes/Controller/ProductController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="936">
-              <caret line="218" column="5" lean-forward="false" selection-start-line="218" selection-start-column="5" selection-end-line="218" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="List.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart_products/Resources/Private/Templates/Product/List.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="40" lean-forward="false" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="List.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart_products/Resources/Private/Partials/Product/List/List.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="98" lean-forward="false" selection-start-line="0" selection-start-column="98" selection-end-line="0" selection-end-column="98" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Grid.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart_products/Resources/Private/Partials/Product/List/Grid.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="648">
+              <caret line="36" column="102" lean-forward="false" selection-start-line="36" selection-start-column="102" selection-end-line="36" selection-end-column="102" />
               <folding />
             </state>
           </provider>
@@ -119,36 +84,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>addTo</find>
-      <find>addT</find>
-      <find>addC</find>
-      <find>addA</find>
-      <find>add</find>
-      <find>t</find>
-      <find>to</find>
-      <find>toC</find>
-      <find>toCa</find>
-      <find>toCar</find>
-      <find>toCart</find>
-      <find>addToCartByAjax</find>
-      <find>C</find>
-      <find>Car</find>
-      <find>Cart</find>
-      <find>CartFo</find>
-      <find>CartFor</find>
-      <find>CartForm</find>
-      <find>showFormAction</find>
-      <find>showFormActio</find>
-      <find>showFormActi</find>
-      <find>showFormAct</find>
-      <find>showFormAc</find>
-      <find>showFormA</find>
-      <find>showForm</find>
-      <find>lib.cartProduct</find>
-      <find>cartSettings</find>
-      <find>cart.pid</find>
-      <find>2278001</find>
+      <find>f:tra</find>
+      <find>tx_lssimulators_domain_model_subscription.simulators_category</find>
+      <find>btn btn-red</find>
+      <find>tax</find>
+      <find>setDBinit</find>
+      <find>taxClass</find>
+      <find>f:tran</find>
+      <find>tx_lssimulators_domain_model_subscription.currency</find>
+      <find>shippingAddressForm</find>
+      <find>billingAddress</find>
+      <find>for=&quot;billingAddress-country&quot;</find>
+      <find>acceptTermsAndConditions</find>
+      <find>for=&quot;billingAddress-taxIdentificationNumber&quot;</find>
+      <find>country.validator</find>
+      <find>#EFEFEF</find>
+      <find>checkout-step-fields</find>
+      <find>checkout-step-summary</find>
+      <find>#C82333</find>
+      <find>btn-danger</find>
       <find>templateLayout</find>
+      <find>user_templateLayout</find>
+      <find>L</find>
+      <find>Li</find>
+      <find>Lis</find>
+      <find>List</find>
+      <find>flexforms_template.templateLayout.products.list</find>
+      <find>list</find>
+      <find>tx_lssimulators_domain_model_subscription.list_page.header</find>
+      <find>simulatorsCategories</find>
+      <find>flexforms_template.templateLayout.products.slider</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -158,13 +123,14 @@
       <dir>$PROJECT_DIR$/public</dir>
       <dir>$PROJECT_DIR$/public/typo3/sysext</dir>
       <dir>$PROJECT_DIR$/public/typo3conf/ext/ls_simulators</dir>
-      <dir>$PROJECT_DIR$/public/typo3conf/ext</dir>
       <dir>$PROJECT_DIR$/public/typo3conf/ext/ls_template/Resources/Public</dir>
       <dir>$PROJECT_DIR$/public/typo3conf/ext/ls_template</dir>
       <dir>$PROJECT_DIR$</dir>
       <dir>$PROJECT_DIR$/public/typo3conf/ext/cart_products/Resources</dir>
       <dir>$PROJECT_DIR$/public/typo3conf/ext/cart</dir>
+      <dir>$PROJECT_DIR$/public/typo3conf/ext/cart/Resources/Public</dir>
       <dir>$PROJECT_DIR$/public/typo3conf/ext/cart_products</dir>
+      <dir>$PROJECT_DIR$/public/typo3conf/ext</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -173,37 +139,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/public/typo3conf/ext/ls_template/Resources/Private/Templates/Mask/main_slider.html" />
-        <option value="$PROJECT_DIR$/public/typo3conf/ext/ls_simulators/Configuration/FlexForms/flexform_simulators.xml" />
-        <option value="$PROJECT_DIR$/public/typo3conf/ext/ls_simulators/Classes/Domain/Model/Simulators.php" />
-        <option value="$PROJECT_DIR$/public/typo3conf/ext/ls_simulators/Configuration/ExtensionBuilder/settings.yaml" />
-        <option value="$PROJECT_DIR$/public/typo3conf/ext/ls_simulators/Classes/Domain/Repository/SubscriptionRepository.php" />
-        <option value="$PROJECT_DIR$/public/typo3conf/ext/ls_simulators/Resources/Private/Templates/Simulators/Slider.html" />
-        <option value="$PROJECT_DIR$/public/typo3conf/ext/ls_template/Configuration/TypoScript/Setup/Library/rte.ts" />
-        <option value="$PROJECT_DIR$/public/typo3conf/ext/ls_template/ext_tables.php" />
-        <option value="$PROJECT_DIR$/public/typo3conf/ext/ls_simulators/Classes/Domain/Repository/SimulatorsRepository.php" />
-        <option value="$PROJECT_DIR$/public/typo3conf/ext/ls_template/Configuration/TypoScript/Setup/Library/language.ts" />
-        <option value="$PROJECT_DIR$/public/typo3conf/ext/ls_template/Configuration/TypoScript/setup.txt" />
-        <option value="$PROJECT_DIR$/public/typo3conf/ext/ls_simulators/Configuration/TypoScript/setup.ts" />
-        <option value="$PROJECT_DIR$/public/typo3conf/ext/ls_template/Configuration/TypoScript/constants.ts" />
-        <option value="$PROJECT_DIR$/public/typo3conf/ext/ls_simulators/Configuration/TypoScript/constants.ts" />
-        <option value="$PROJECT_DIR$/public/typo3conf/ext/ls_template/Configuration/TypoScript/Constants/Plugin/LsTemplate.ts" />
-        <option value="$PROJECT_DIR$/public/typo3conf/ext/ls_simulators/Configuration/TypoScript/Constants/Settings.ts" />
-        <option value="$PROJECT_DIR$/public/typo3conf/ext/ls_simulators/Configuration/TypoScript/Setup/Settings.ts" />
-        <option value="$PROJECT_DIR$/public/typo3conf/ext/ls_template/Resources/Private/Templates/Page/Main.html" />
-        <option value="$PROJECT_DIR$/public/typo3conf/ext/ls_template/Configuration/TypoScript/Setup/Library/language_from_old.ts" />
-        <option value="$PROJECT_DIR$/public/typo3conf/ext/ls_template/Resources/Private/Templates/Mask/image_slider.html" />
-        <option value="$PROJECT_DIR$/public/typo3conf/ext/ls_template/Configuration/TsConfig/Page/CType/Lenguage.ts" />
-        <option value="$PROJECT_DIR$/public/typo3conf/ext/ls_template/Configuration/TsConfig/Page/Textmedia.ts" />
-        <option value="$PROJECT_DIR$/public/typo3conf/ext/ls_template/Configuration/TypoScript/Setup/Page.ts" />
-        <option value="$PROJECT_DIR$/public/typo3conf/ext/ls_template/Resources/Public/dev/app/js/scripts.js" />
-        <option value="$PROJECT_DIR$/public/typo3conf/ext/ls_simulators/Resources/Private/Layouts/Default.html" />
-        <option value="$PROJECT_DIR$/public/typo3conf/ext/ls_simulators/Classes/Controller/SubscriptionController.php" />
-        <option value="$PROJECT_DIR$/public/typo3conf/ext/ls_simulators/Resources/Private/Language/locallang.xlf" />
-        <option value="$PROJECT_DIR$/public/typo3conf/ext/ls_template/Configuration/TsConfig/Page/textmedia.ts" />
-        <option value="$PROJECT_DIR$/public/typo3conf/ext/ls_template/Resources/Public/dev/app/homepage-inner.html" />
         <option value="$PROJECT_DIR$/public/typo3/sysext/fluid_styled_content/Resources/Private/Partials/Media/Gallery.html" />
-        <option value="$PROJECT_DIR$/public/typo3conf/LocalConfiguration.php" />
         <option value="$PROJECT_DIR$/public/typo3conf/ext/ls_template/ext_localconf.php" />
         <option value="$PROJECT_DIR$/public/typo3conf/ext/ls_template/Configuration/TypoScript/Setup/Library/menu.ts" />
         <option value="$PROJECT_DIR$/public/typo3conf/ext/ls_simulators/Resources/Private/Templates/Simulators/Show.html" />
@@ -211,19 +147,49 @@
         <option value="$PROJECT_DIR$/public/typo3conf/ext/ls_template/Configuration/TypoScript/Setup/Library/Ul_rte.ts" />
         <option value="$PROJECT_DIR$/public/typo3conf/ext/ls_simulators/ext_tables.php" />
         <option value="$PROJECT_DIR$/public/typo3conf/ext/ls_template/ext_emconf.php" />
-        <option value="$PROJECT_DIR$/public/typo3conf/ext/ls_template/Resources/Public/markup/js/scripts.js" />
         <option value="$PROJECT_DIR$/public/typo3conf/ext/mask/Classes/Helper/FieldHelper.php" />
         <option value="$PROJECT_DIR$/public/typo3conf/ext/ls_template/Resources/Private/Templates/Mask/order_consultation.html" />
         <option value="$PROJECT_DIR$/public/typo3conf/ext/ls_template/Configuration/TsConfig/Page/RTE.ts" />
         <option value="$PROJECT_DIR$/public/typo3conf/ext/ls_template/Resources/Private/Templates/Textmedia.html" />
         <option value="$PROJECT_DIR$/public/typo3conf/ext/ls_simulators/Classes/Controller/SimulatorsController.php" />
+        <option value="$PROJECT_DIR$/public/typo3conf/ext/cart_products/Configuration/FlexForms/TeaserProductsPlugin.xml" />
+        <option value="$PROJECT_DIR$/public/typo3conf/ext/cart_products/Resources/Private/Partials/Product/List/Grid.html" />
         <option value="$PROJECT_DIR$/public/typo3conf/ext/cart_products/Configuration/TypoScript/setup.typoscript" />
+        <option value="$PROJECT_DIR$/public/typo3conf/ext/cart_products/Configuration/TypoScript/constants.typoscript" />
+        <option value="$PROJECT_DIR$/public/typo3conf/ext/cart_products/Configuration/FlexForms/ProductsPlugin.xml" />
         <option value="$PROJECT_DIR$/public/typo3conf/ext/cart_products/Classes/Controller/ProductController.php" />
         <option value="$PROJECT_DIR$/public/typo3conf/ext/cart_products/Resources/Private/Templates/Product/ShowForm.html" />
-        <option value="$PROJECT_DIR$/public/typo3conf/ext/cart_products/Configuration/FlexForms/TeaserProductsPlugin.xml" />
+        <option value="$PROJECT_DIR$/public/typo3conf/ext/cart_products/Resources/Private/Templates/Product/Show_new.html" />
+        <option value="$PROJECT_DIR$/public/typo3conf/ext/cart_products/Resources/Private/Partials/Product/CartForm.html" />
+        <option value="$PROJECT_DIR$/public/typo3conf/ext/ls_template/Resources/Public/dev/app/js/scripts.js" />
+        <option value="$PROJECT_DIR$/public/typo3conf/ext/cart_products/Classes/ViewHelpers/Product/BestSpecialPriceDiscountViewHelper.php" />
+        <option value="$PROJECT_DIR$/public/typo3conf/ext/cart_products/Classes/ViewHelpers/Product/CategoriesListViewHelper.php" />
+        <option value="$PROJECT_DIR$/public/typo3conf/ext/ls_template/Resources/Public/markup/js/scripts.js" />
+        <option value="$PROJECT_DIR$/public/typo3conf/ext/cart_products/Resources/Private/Partials/Product/List/List.html" />
+        <option value="$PROJECT_DIR$/public/typo3conf/ext/cart_products/Resources/Private/Templates/Product/Show.html" />
+        <option value="$PROJECT_DIR$/public/typo3conf/ext/cart/Classes/Controller/Cart/ProductController.php" />
+        <option value="$PROJECT_DIR$/public/typo3conf/ext/cart/Classes/Domain/Model/Order/Item.php" />
+        <option value="$PROJECT_DIR$/public/typo3conf/ext/cart/ext_tables.sql" />
+        <option value="$PROJECT_DIR$/public/typo3conf/LocalConfiguration.php" />
+        <option value="$PROJECT_DIR$/public/typo3conf/ext/cart/Classes/Utility/OrderUtility.php" />
+        <option value="$PROJECT_DIR$/public/typo3conf/ext/cart/Classes/Domain/Finisher/Order/OrderFinisher.php" />
+        <option value="$PROJECT_DIR$/public/typo3conf/ext/cart/Resources/Private/Partials/Cart/OrderForm/Cart.html" />
+        <option value="$PROJECT_DIR$/public/typo3conf/ext/cart/Resources/Private/Templates/Cart/Cart/Show.html" />
+        <option value="$PROJECT_DIR$/public/typo3conf/ext/cart/Resources/Private/Partials/Cart/OrderForm.html" />
+        <option value="$PROJECT_DIR$/public/typo3conf/ext/cart/Resources/Private/Partials/Cart/OrderForm/Address/Billing.html" />
+        <option value="$PROJECT_DIR$/public/typo3conf/ext/cart/Configuration/TypoScript/constants.typoscript" />
+        <option value="$PROJECT_DIR$/public/typo3conf/ext/cart/Configuration/TypoScript/setup.typoscript" />
+        <option value="$PROJECT_DIR$/public/typo3conf/ext/cart/Resources/Private/Partials/Cart/ProductForm.html" />
+        <option value="$PROJECT_DIR$/public/typo3conf/ext/cart/Resources/Private/Partials/Cart/OrderForm/Summary.html" />
+        <option value="$PROJECT_DIR$/public/typo3conf/ext/cart/Resources/Public/Stylesheets/cart.css" />
         <option value="$PROJECT_DIR$/public/typo3conf/ext/ls_simulators/Resources/Private/Templates/Simulators/List.html" />
         <option value="$PROJECT_DIR$/public/typo3conf/ext/cart_products/Resources/Private/Templates/Product/List.html" />
-        <option value="$PROJECT_DIR$/public/typo3conf/ext/cart_products/Resources/Private/Partials/Product/List/List.html" />
+        <option value="$PROJECT_DIR$/public/typo3conf/ext/ls_simulators/Resources/Private/Language/locallang.xlf" />
+        <option value="$PROJECT_DIR$/public/typo3conf/ext/cart_products/Resources/Private/Partials/Product/List/Slider.html" />
+        <option value="$PROJECT_DIR$/public/typo3conf/ext/cart_products/ext_localconf.php" />
+        <option value="$PROJECT_DIR$/public/typo3conf/ext/cart_products/Resources/Private/Language/locallang_be.xlf" />
+        <option value="$PROJECT_DIR$/public/typo3conf/ext/cart_products/Resources/Private/Partials/Product/CartFormSubscription.html" />
+        <option value="$PROJECT_DIR$/public/typo3conf/ext/cart_products/Resources/Private/Partials/Product/List/Subscription.html" />
       </list>
     </option>
   </component>
@@ -256,8 +222,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -497,55 +461,11 @@
               <option name="myItemId" value="Private" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Partials" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Product" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="List" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="legion-sport" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="legion-sport" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="typo3conf" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ext" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cart_products" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Private" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -554,15 +474,15 @@
     <property name="nodejs_interpreter_path" value="/usr/bin/node" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/typo3conf/ext/cart_products/Resources/Private/Partials/Product/List" />
-      <recent name="$PROJECT_DIR$/public/typo3conf/ext/ls_template/Resources/Public" />
-      <recent name="$PROJECT_DIR$/public/fileadmin/user_upload" />
-      <recent name="$PROJECT_DIR$/public/typo3conf/ext/ls_template" />
-      <recent name="$PROJECT_DIR$/public/typo3conf/ext/ls_simulators/Configuration/FlexForms" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/typo3conf/ext/ls_template/Configuration/TypoScript/Setup/Library" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/typo3conf/ext/cart_products/Resources/Private/Partials/Product" />
+      <recent name="$PROJECT_DIR$/public/typo3conf/ext/cart_products/Resources/Private/Partials/Product/List" />
+      <recent name="$PROJECT_DIR$/public/typo3conf/ext/cart_products/Classes/ViewHelpers/Product" />
+      <recent name="$PROJECT_DIR$/public/typo3conf/ext/cart_products/Resources/Private/Templates/Product" />
+      <recent name="$PROJECT_DIR$/public/typo3conf/ext/ls_template/Resources/Public" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -687,29 +607,36 @@
       <workItem from="1557682088843" duration="618000" />
       <workItem from="1557785005166" duration="49000" />
       <workItem from="1559678552957" duration="7047000" />
-      <workItem from="1560097049495" duration="3658000" />
+      <workItem from="1560097049495" duration="17406000" />
+      <workItem from="1560156758260" duration="16476000" />
+      <workItem from="1560278407432" duration="30000" />
+      <workItem from="1560283479386" duration="3858000" />
+      <workItem from="1560368724225" duration="612000" />
+      <workItem from="1560699104758" duration="85000" />
+      <workItem from="1561311391480" duration="14056000" />
+      <workItem from="1561393336963" duration="5694000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="146008000" />
+    <option name="totallyTimeSpent" value="200567000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="25" width="1368" height="744" extended-state="0" />
+    <frame x="-1" y="25" width="1368" height="744" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2931818" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3280303" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -725,353 +652,282 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="4" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/ls_simulators/Resources/Private/Templates/Simulators/Show.html">
+    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/ls_simulators/Configuration/TypoScript/setup.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="49" column="20" lean-forward="false" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="121" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/ls_simulators/Classes/Controller/SubscriptionController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="55" column="17" lean-forward="false" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/ls_template/ext_emconf.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="26" column="31" lean-forward="false" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/mask/Resources/Private/Backend/Partials/Forms/Eval/UniqueInPid.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="38" lean-forward="false" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/news/Classes/ViewHelpers/MetaTagViewHelper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-648">
+        <state relative-caret-position="-1049">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/news/Classes/ViewHelpers/LinkViewHelper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1242">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/news/Classes/ViewHelpers/TargetLinkViewHelper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-361">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/news/Classes/ViewHelpers/PaginateBodytextViewHelper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-972">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/news/Classes/ViewHelpers/ExtensionLoadedViewHelper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/news/Classes/ViewHelpers/Tag/CountViewHelper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-901">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/news/Classes/ViewHelpers/Format/NothingViewHelper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="26" column="83" lean-forward="false" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/news/Classes/ViewHelpers/Social/Facebook/CommentViewHelper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="46" column="7" lean-forward="false" selection-start-line="46" selection-start-column="7" selection-end-line="46" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/2.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/ls_simulators/Classes/Domain/Model/Subscription.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="46" column="5" lean-forward="true" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/ls_template/Configuration/TypoScript/Setup/Page.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
-          <caret line="66" column="1" lean-forward="false" selection-start-line="66" selection-start-column="1" selection-end-line="66" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
-          <caret line="41" column="6" lean-forward="false" selection-start-line="37" selection-start-column="4" selection-end-line="41" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/ls_simulators/ext_tables.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="33" column="92" lean-forward="false" selection-start-line="33" selection-start-column="92" selection-end-line="33" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/ls_template/Resources/Public/markup/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/ls_template/Resources/Public/dev/app/homepage-inner.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="229" column="48" lean-forward="false" selection-start-line="229" selection-start-column="36" selection-end-line="229" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/ls_template/Resources/Private/Templates/Mask/order_consultation.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/ls_template/Resources/Private/Templates/Mask/main_slider.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/ls_template/Resources/Public/markup/homepage-inner.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="293" column="14" lean-forward="false" selection-start-line="288" selection-start-column="8" selection-end-line="293" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/ls_template/Resources/Public/dev/app/gym-inner.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/ls_template/Resources/Public/markup/js/scripts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3528">
-          <caret line="196" column="34" lean-forward="false" selection-start-line="196" selection-start-column="34" selection-end-line="196" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/mask/Classes/Helper/FieldHelper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1710">
-          <caret line="95" column="67" lean-forward="false" selection-start-line="95" selection-start-column="67" selection-end-line="95" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/mask/ext_emconf.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="19" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/ls_template/Resources/Public/dev/app/gym.html">
+    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart/Classes/Hooks/RealUrlHook.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="3" selection-end-column="19" />
+          <caret line="2" column="10" lean-forward="false" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/ls_template/Configuration/TsConfig/Page/textmedia.ts">
+    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart/Classes/Utility/TemplateLayout.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="43" lean-forward="false" selection-start-line="0" selection-start-column="43" selection-end-line="0" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/ls_template/Configuration/TsConfig/Page/RTE.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="20" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="115" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/ls_template/Configuration/TsConfig/User/Options.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/ls_template/Resources/Private/Templates/Textmedia.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="55" column="49" lean-forward="false" selection-start-line="55" selection-start-column="49" selection-end-line="55" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/ls_simulators/Classes/Controller/SimulatorsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="74" column="21" lean-forward="false" selection-start-line="74" selection-start-column="21" selection-end-line="74" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart_products/Resources/Private/Partials/Product/Price.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart_products/Resources/Private/Templates/Product/Flexform.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart/Classes/Controller/Cart/ActionController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2160">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="199">
+          <caret line="28" column="20" lean-forward="false" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart_products/Configuration/TypoScript/constants.typoscript">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="288">
+          <caret line="16" column="25" lean-forward="false" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart/Configuration/TypoScript/constants.typoscript">
+    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart/Classes/Hooks/ItemsProcFunc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1098">
-          <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="198">
+          <caret line="45" column="79" lean-forward="true" selection-start-line="45" selection-start-column="79" selection-end-line="45" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart_products/Resources/Private/Partials/Product/List/Grid.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="20" column="12" lean-forward="false" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/ls_simulators/Classes/Domain/Repository/SimulatorsRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="39" column="20" lean-forward="false" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart_products/Classes/Domain/Repository/Product/ProductRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1548324913000" expanded="true" signature="2402:3345" ph="SELECT tx_ca... tx_cartproducts_domain_model_product_product" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart_products/Configuration/TypoScript/setup.typoscript">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="121">
+          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart/Classes/Controller/Cart/ProductController.php">
+    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/ls_template/Resources/Public/dev/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-162">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart_products/Resources/Private/Partials/Product/CartForm.html">
+    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/ls_template/Resources/Public/dev/app/js/scripts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="25" lean-forward="false" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-          <folding />
+        <state relative-caret-position="198">
+          <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart_products/ext_emconf.php">
+    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart_products/Classes/ViewHelpers/Product/BestSpecialPriceDiscountViewHelper.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-54">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="414">
+          <caret line="23" column="30" lean-forward="false" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart_products/Resources/Private/Templates/Product/Show_old.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart_products/Resources/Private/Templates/Product/ShowForm.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
-          <caret line="6" column="43" lean-forward="false" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="43" />
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart_products/Classes/ViewHelpers/Product/CategoriesListViewHelper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="47" column="84" lean-forward="false" selection-start-line="47" selection-start-column="84" selection-end-line="47" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/ls_template/Resources/Public/markup/js/scripts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/ls_simulators/ext_localconf.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="36" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart_products/Resources/Private/Templates/Product/Show.html">
+    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/ls_simulators/Classes/Controller/SimulatorsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="62" column="52" lean-forward="false" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="52" />
+        <state relative-caret-position="535">
+          <caret line="73" column="73" lean-forward="false" selection-start-line="73" selection-start-column="73" selection-end-line="73" selection-end-column="73" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart_products/Configuration/FlexForms/TeaserProductsPlugin.xml">
+    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart/Classes/Domain/Model/Order/Item.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="46" lean-forward="true" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
-          <folding />
+        <state relative-caret-position="145">
+          <caret line="295" column="6" lean-forward="false" selection-start-line="295" selection-start-column="6" selection-end-line="295" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/ls_simulators/Resources/Private/Partials/Simulators/Properties.html">
+    <entry file="file://$PROJECT_DIR$/public/typo3conf/LocalConfiguration.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-95">
+        <state relative-caret-position="1476">
+          <caret line="82" column="30" lean-forward="true" selection-start-line="82" selection-start-column="30" selection-end-line="82" selection-end-column="30" />
+          <folding>
+            <marker date="1561323248288" expanded="true" signature="14:3705" ph="..." />
+            <marker date="1561323248288" expanded="true" signature="285:515" ph="..." />
+            <marker date="1561323248288" expanded="true" signature="312:515" ph="..." />
+            <marker date="1561323248288" expanded="true" signature="339:515" ph="..." />
+            <marker date="1561323248288" expanded="true" signature="3697:3702" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart/ext_tables.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart/Classes/Utility/OrderUtility.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="284" column="0" lean-forward="false" selection-start-line="284" selection-start-column="0" selection-end-line="284" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart/Classes/Domain/Finisher/Order/OrderFinisher.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart/Classes/Controller/Order/PaymentController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-162">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart_products/Resources/Private/Partials/Product/List/Table.html">
+    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart/Classes/Controller/Order/OrderController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="22" column="48" lean-forward="false" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart/Resources/Private/Partials/Cart/OrderForm/Address/Billing.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-32">
+          <caret line="83" column="27" lean-forward="false" selection-start-line="83" selection-start-column="27" selection-end-line="83" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart/Configuration/TypoScript/constants.typoscript">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="104" column="46" lean-forward="false" selection-start-line="104" selection-start-column="46" selection-end-line="104" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart/Configuration/TypoScript/setup.typoscript">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="211" column="100" lean-forward="false" selection-start-line="211" selection-start-column="100" selection-end-line="211" selection-end-column="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart/Resources/Private/Partials/Cart/OrderForm/Summary.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="86" lean-forward="false" selection-start-line="4" selection-start-column="60" selection-end-line="4" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart/Resources/Public/Stylesheets/cart.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="89" column="1" lean-forward="false" selection-start-line="89" selection-start-column="1" selection-end-line="89" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart/Resources/Private/Partials/Cart/ProductForm.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart/Resources/Private/Templates/Cart/Cart/Show.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="30" column="75" lean-forward="false" selection-start-line="30" selection-start-column="75" selection-end-line="30" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart/Resources/Private/Partials/Cart/OrderForm/Cart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1120">
+          <caret line="96" column="30" lean-forward="false" selection-start-line="96" selection-start-column="30" selection-end-line="96" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart/Resources/Private/Partials/Cart/OrderForm.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="12" column="58" lean-forward="false" selection-start-line="12" selection-start-column="58" selection-end-line="12" selection-end-column="65" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/ls_simulators/Resources/Private/Templates/Simulators/List.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="22" lean-forward="false" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+        <state relative-caret-position="-144">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart_products/Classes/Controller/ProductController.php">
+    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart/Classes/Controller/Cart/ProductController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="936">
-          <caret line="218" column="5" lean-forward="false" selection-start-line="218" selection-start-column="5" selection-end-line="218" selection-end-column="5" />
+        <state relative-caret-position="-305">
+          <caret line="131" column="33" lean-forward="false" selection-start-line="131" selection-start-column="33" selection-end-line="131" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart_products/Configuration/FlexForms/ProductsPlugin.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" column="47" lean-forward="false" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
           <folding />
         </state>
       </provider>
@@ -1079,12 +935,44 @@
     <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart_products/Resources/Private/Templates/Product/List.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
-          <caret line="6" column="40" lean-forward="false" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart_products/Resources/Private/Partials/Product/List/Grid.html">
+    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/ls_simulators/Resources/Private/Templates/Simulators/Slider.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="32" column="8" lean-forward="false" selection-start-line="4" selection-start-column="2" selection-end-line="32" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart_products/Resources/Private/Partials/Product/List/List.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="63" column="52" lean-forward="false" selection-start-line="61" selection-start-column="36" selection-end-line="63" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart_products/Resources/Private/Partials/Product/List/Slider.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/ls_simulators/Resources/Private/Language/locallang.xlf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="451">
+          <caret line="43" column="25" lean-forward="false" selection-start-line="42" selection-start-column="16" selection-end-line="43" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/ls_simulators/Resources/Private/Templates/Subscription/Show.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1092,10 +980,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart_products/Resources/Private/Partials/Product/List/List.html">
+    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart_products/Resources/Private/Language/locallang_be.xlf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="98" lean-forward="false" selection-start-line="0" selection-start-column="98" selection-end-line="0" selection-end-column="98" />
+        <state relative-caret-position="361">
+          <caret line="45" column="83" lean-forward="false" selection-start-line="45" selection-start-column="83" selection-end-line="45" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart_products/ext_localconf.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="133" column="100" lean-forward="false" selection-start-line="133" selection-start-column="100" selection-end-line="133" selection-end-column="155" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/ls_simulators/Resources/Private/Templates/Subscription/List.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="27" column="7" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="27" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart_products/Classes/Controller/ProductController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="179" column="66" lean-forward="false" selection-start-line="179" selection-start-column="66" selection-end-line="179" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart_products/Resources/Private/Partials/Product/CartForm.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-18">
+          <caret line="11" column="23" lean-forward="false" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart_products/Resources/Private/Partials/Product/CartFormSubscription.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="36" column="102" lean-forward="false" selection-start-line="36" selection-start-column="102" selection-end-line="36" selection-end-column="102" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart_products/Resources/Private/Templates/Product/Show.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="43" column="110" lean-forward="false" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="110" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/typo3conf/ext/cart_products/Resources/Private/Partials/Product/List/Subscription.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
         </state>
       </provider>

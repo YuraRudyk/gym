@@ -37,6 +37,15 @@
 			<trans-unit id="flexforms_template.templateLayout.products.grid">
 				<source>Grid</source>
 			</trans-unit>
+			<trans-unit id="flexforms_template.templateLayout.products.list">
+                <source>List</source>
+            </trans-unit>
+            <trans-unit id="flexforms_template.templateLayout.products.slider">
+                <source>Slider</source>
+            </trans-unit>
+            <trans-unit id="flexforms_template.templateLayout.products.subscription">
+                <source>Subscription Slider</source>
+            </trans-unit>
 
 			<trans-unit id="tx_cartproducts.module.main">
 				<source>Shopping Cart</source>

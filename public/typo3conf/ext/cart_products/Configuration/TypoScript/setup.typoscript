@@ -26,6 +26,11 @@ plugin.tx_cartproducts {
     }
 
     settings {
+        categories {
+            simulators = {$plugin.tx_cartproducts.settings.categories.simulators.value}
+            typeOfTraining = {$plugin.tx_cartproducts.settings.categories.typeOfTraining.value}
+        }
+
         format.currency < plugin.tx_cart.settings.format.currency
 
         addToCartByAjax = {$plugin.tx_cart.settings.addToCartByAjax}

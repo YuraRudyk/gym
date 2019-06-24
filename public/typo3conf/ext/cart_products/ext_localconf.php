@@ -129,5 +129,9 @@ $GLOBALS['TYPO3_CONF_VARS']['SYS']['fluid']['namespaces']['cartproducts'][]
 // register listTemplateLayouts
 $GLOBALS['TYPO3_CONF_VARS']['EXT']['cart_products']['templateLayouts']['products'][] = [$_LLL_be . 'flexforms_template.templateLayout.products.table', 'table'];
 $GLOBALS['TYPO3_CONF_VARS']['EXT']['cart_products']['templateLayouts']['products'][] = [$_LLL_be . 'flexforms_template.templateLayout.products.grid', 'grid'];
+$GLOBALS['TYPO3_CONF_VARS']['EXT']['cart_products']['templateLayouts']['products'][] = [$_LLL_be . 'flexforms_template.templateLayout.products.list', 'list'];
+$GLOBALS['TYPO3_CONF_VARS']['EXT']['cart_products']['templateLayouts']['products'][] = [$_LLL_be . 'flexforms_template.templateLayout.products.slider', 'slider'];
+$GLOBALS['TYPO3_CONF_VARS']['EXT']['cart_products']['templateLayouts']['products'][] = [$_LLL_be . 'flexforms_template.templateLayout.products.subscription', 'Subscription'];
+
 $GLOBALS['TYPO3_CONF_VARS']['EXT']['cart_products']['templateLayouts']['teaser_products'][] = [$_LLL_be . 'flexforms_template.templateLayout.products.table', 'table'];
 $GLOBALS['TYPO3_CONF_VARS']['EXT']['cart_products']['templateLayouts']['teaser_products'][] = [$_LLL_be . 'flexforms_template.templateLayout.products.grid', 'grid'];

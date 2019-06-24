@@ -1,0 +1,109 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:cartproducts="http://typo3.org/ns/Extcode/CartProducts/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+
+<div class="relative-item bg-img">
+	<f:image src="EXT:ls_template/Resources/Public/markup/images/bg-sales.png" alt="alt text" />
+	<div class="container">
+		<div class="holder">
+			<h2 class="ttl"><f:translate key="tx_lssimulators_domain_model_subscription.slider.header" extensionName="LsSimulators" /></h2>
+			<div class="slider-03">
+				<!-- /item -->
+				<f:for each="{simulators}" as="slide">
+					<div>
+						<div class="thumbnail">
+							<div class="main-img">
+								<f:if condition="{slide.images.0}">
+									<f:image image="{slide.images.0}" alt="{slide.images.0.alternative}" title="{slide.images.0.title}" />
+								</f:if>
+							</div>
+							<div class="text">
+								<h4>{slide.title}</h4>
+								<small class="price">{slide.price} <f:translate key="tx_lssimulators_domain_model_subscription.currency" extensionName="LsSimulators" /></small>
+							</div>
+							<div class="hover-box">
+								<f:link.action action="show" pageUid="{settings.detailPid}" class="btn btn-red" arguments="{product: slide}">
+									<f:translate key="tx_lssimulators_domain_model_subscription.show.detail" extensionName="LsSimulators" />
+								</f:link.action>
+							</div>
+						</div>
+					</div>
+				</f:for>
+				<!-- /item -->
+			</div>
+			<!-- /slider-03 -->
+		</div>
+	</div>
+</div>
+<f:comment>
+	<div class="shop bg-img">
+		<f:image src="EXT:ls_template/Resources/Public/markup/images/bg-shop.png" alt="alt text" />
+		<h2 class="ttl"><f:translate key="tx_lssimulators_domain_model_subscription.list_page.header" extensionName="LsSimulators" /></h2>
+		<div class="container">
+			<div class="sidebar">
+				<div class="filter-holder">
+					<form action="#">
+						<f:if condition="{simulatorsCategories -> f:count()} > 0">
+							<div class="check-holder">
+								<h4 class="ttl-check"><f:translate key="tx_lssimulators_domain_model_subscription.simulators_category" extensionName="LsSimulators" /></h4>
+								<f:for each="{simulatorsCategories}" as="category">
+									<div class="check-item">
+										<input type="checkbox" id="cat-{category.uid}" data-category="{category.uid}" class="checkbox category-checkbox">
+										<label for="cat-{category.uid}">{category.title}</label>
+									</div>
+								</f:for>
+							</div>
+						</f:if>
+						<div class="check-holder responsive-width">
+							<h4 class="ttl-check"><f:translate key="tx_lssimulators_domain_model_subscription.price" extensionName="LsSimulators" /></h4>
+							<div id="box-range">
+								<div id="slider-range"></div>
+								<div class="amount-holder">
+									<span id="amount-1" class="amount"></span>
+									<span id="amount-2" class="amount"></span>
+								</div>
+							</div>
+						</div>
+						<f:if condition="{typesOfTraining -> f:count()} > 0">
+							<div class="check-holder">
+								<h4 class="ttl-check"><f:translate key="tx_lssimulators_domain_model_subscription.type_of_training" extensionName="LsSimulators" /></h4>
+								<f:for each="{typesOfTraining}" as="type">
+									<div class="check-item">
+										<input type="checkbox" id="type-{type.uid}" data-category="{type.uid}" class="checkbox category-checkbox">
+										<label for="type-{type.uid}">{type.title}</label>
+									</div>
+								</f:for>
+							</div>
+						</f:if>
+					</form>
+				</div>
+			</div>
+			<div class="content">
+				<div class="row">
+					<f:for each="{simulators}" as="item">
+						<div class="col-12 col-md-4 product-item" data-category="{cartproducts:product.categoriesList(product:item)}" data-price="{item.price}">
+							<div class="thumbnail small-width">
+								<div class="main-img">
+									<f:if condition="{item.images.0}">
+										<f:image image="{item.images.0}" alt="{item.images.0.alternative}" title="{item.images.0.title}" />
+									</f:if>
+								</div>
+								<div class="text">
+									<h4>{item.title}</h4>
+									<small class="price">{item.price} <f:translate key="tx_lssimulators_domain_model_subscription.currency" extensionName="LsSimulators" /></small>
+								</div>
+								<div class="hover-box">
+									<f:link.action action="show" pageUid="{settings.detailPid}" class="btn btn-red" arguments="{product: item}">
+										<f:translate key="tx_lssimulators_domain_model_subscription.show.detail" extensionName="LsSimulators" />
+									</f:link.action>
+								</div>
+							</div>
+						</div>
+					</f:for>
+				</div>
+			</div>
+		</div>
+	</div>
+</f:comment>
+
+</html>

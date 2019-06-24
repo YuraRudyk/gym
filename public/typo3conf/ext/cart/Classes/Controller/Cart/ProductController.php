@@ -166,7 +166,7 @@ class ProductController extends ActionController
                 'severity' => $severity
             ];
 
-            return json_encode($response);
+//            return json_encode($response);
         }
 
         $this->addFlashMessage(

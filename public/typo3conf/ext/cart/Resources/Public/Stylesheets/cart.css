@@ -4,7 +4,7 @@
 
 .tx-cart label, .tx-cart label em { display: inline; }
 
-.tx-cart .bg-light-grey { background-color: #efefef; }
+.tx-cart .bg-light-grey { background-color: #474546; }
 
 .tx-cart .border-left-grey { border-left: 1px solid #ddd; }
 
@@ -84,3 +84,7 @@
 .show-properties.table { margin-bottom: 1em; }
 
 .order-history-detail .column { padding-bottom: 2em; }
+
+.checkout-step-fields-color {
+    color: white;
+}

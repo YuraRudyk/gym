@@ -2,6 +2,8 @@
 
 namespace Extcode\CartProducts\Controller;
 
+use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
+
 /**
  * This file is part of the "cart_products" Extension for TYPO3 CMS.
  *
@@ -177,8 +179,18 @@ class ProductController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
 
         $products = $this->productRepository->findDemanded($demand);
 
-        $this->view->assign('searchArguments', $this->searchArguments);
-        $this->view->assign('products', $products);
+//        $this->view->assign('searchArguments', $this->searchArguments);
+//        $this->view->assign('products', $products);
+//        $simulators = $this->simulatorsRepository->findAll();
+
+        $simulatorsCategories = $this->categoryRepository->findByParent($this->settings['categories']['simulators']);
+        $typesOfTraining = $this->categoryRepository->findByParent($this->settings['categories']['typeOfTraining']);
+
+        $this->view->assignMultiple([
+            'simulators' => $products,
+            'simulatorsCategories' => $simulatorsCategories,
+            'typesOfTraining' => $typesOfTraining,
+        ]);
 
         $this->assignCurrencyTranslationData();
 

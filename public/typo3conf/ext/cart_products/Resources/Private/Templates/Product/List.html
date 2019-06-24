@@ -4,6 +4,6 @@
 <f:layout name="Default"/>
 
 <f:section name="main">
-    <f:render partial="Product/List/Grid" arguments="{_all}" />
+    <f:render partial="Product/List/{f:format.case(value: settings.templateLayout, mode: 'capital')}" arguments="{_all}" />
 </f:section>
 </html>

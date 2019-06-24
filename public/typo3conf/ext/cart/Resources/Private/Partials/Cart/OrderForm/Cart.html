@@ -11,6 +11,7 @@
             <div class="col-sm-12 column">
                 <div class="checkout-step-content-list">
                     <fieldset>
+                        <f:comment>
                         <div class="checkout-step-fields">
                             <div class="field accept-terms">
                                 <label for="orderItem-acceptTermsAndConditions">
@@ -108,6 +109,7 @@
                                     name="orderItem[comment]"
                                     value="{orderItem.comment}"/>
                         </div>
+                        </f:comment>
                     </fieldset>
 
                     <f:render partial="Cart/OrderForm/Summary" arguments="{cart:cart}"/>

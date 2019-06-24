@@ -1,6 +1,10 @@
 $(window).on("load", function() {
 	initMatchHeight();
 });
+
+var minPrice = 0;
+var maxPrice = 100000;
+
 $(document).ready(function() {
 	"use strict";
 	//modile-menu
@@ -14,6 +18,7 @@ $(document).ready(function() {
 	svgReplace();
 	rangeSlider();
 	videoPlay();
+    filterProducts();
 }); // ready
 
 // bg-image
@@ -180,11 +185,16 @@ function rangeSlider() {
 	$( "#slider-range" ).slider({
 		range: true,
 		min: 0,
-		max: 15000,
-		values: [ 0, 15000 ],
+		max: 100000,
+		values: [ 0, 100000 ],
 		slide: function( event, ui ) {
 			$( "#amount-1" ).text(ui.values[ 0 ]);
 			$( "#amount-2" ).text(ui.values[ 1 ]);
+
+            minPrice = ui.values[ 0 ];
+            maxPrice = ui.values[ 1 ];
+
+            runFilter();
 		}
 	});
 	$( "#amount-1" ).text( $( "#slider-range" ).slider( "values", 0 ) );
@@ -208,4 +218,37 @@ function videoPlay() {
 		}
 		return false;
 	});
+}
+
+//filter by category
+function filterProducts() {
+    $('.category-checkbox').on('click', function() {
+		runFilter();
+    });
+}
+
+//run Filter
+function runFilter() {
+    var selectedCategories = [];
+
+    $("input:checked").each(function() {
+        selectedCategories.push($(this).data( "category" ))
+    });
+
+    $('.product-item').each(function() {
+        $(this).removeClass('hidden');
+
+        var categoriesArray = $(this).data("category").split(',').map(Number);
+        var show = [];
+
+        $(selectedCategories).each(function(index) {
+            show.push(categoriesArray.includes(selectedCategories[index]));
+        });
+
+        var currentPrice = $(this).data("price");
+
+        if (show.length > 0 && !(show.includes(true)) || !(currentPrice >= minPrice && currentPrice <= maxPrice)) {
+            $(this).addClass('hidden');
+        }
+    });
 }

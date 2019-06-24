@@ -13,6 +13,7 @@ return [
                 'dbname' => 'legion_sport',
                 'driver' => 'mysqli',
                 'host' => '127.0.0.1',
+                'initCommands' => 'SET SESSION sql_mode=\'\'',
                 'password' => 'xubuntu',
                 'port' => 3306,
                 'user' => 'root',
